@@ -9,10 +9,14 @@ import './App.css';
 //TODO : switch over to making calls to od-api and/or get CORS working
 
 const source = {
-  'ES-es': 'Spain',
-  'TH-th': 'Thailand',
-  'EN-gb': 'England',
-  'EN-en': 'USA'
+  'ES-es': 'LGBTQ',
+  'TH-th': 'Lesbian',
+  'EN-gb': 'Lipstick lesbian',
+  'EN-en': 'Feminist',
+  'a': 'Feminsm',
+  'b': 'Femme',
+  'c': 'Queer',
+  'd': 'Genderqueer'
 };
 
 class App extends Component {
@@ -21,7 +25,7 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      countries: ['ES-es', 'TH-th']
+      countries: []
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -51,10 +55,11 @@ class App extends Component {
     <Autocomplete
         direction="down"
         selectedPosition="above"
-        label="Choose countries"
+        label="Choose a term"
         onChange={this.handleChange}
         source={source}
         value={this.state.countries}
+        suggestionMatch="anywhere"
       />
     <SearchResults def={this.state.def} />
     </div>
