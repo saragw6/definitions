@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
+import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
+import RTAutocomplete from './assets/react-toolbox/theme.js';
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
 import './App.css';
 
-
 //TODO : switch over to making calls to od-api and/or get CORS working
+
+const source = {
+  'ES-es': 'Spain',
+  'TH-th': 'Thailand',
+  'EN-gb': 'England',
+  'EN-en': 'USA'
+};
 
 class App extends Component {
   constructor() {
   super();
     this.state = {
       searchTerm: 'filler text',
-      def: ''
+      def: '',
+      countries: ['ES-es', 'TH-th']
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,9 +29,9 @@ class App extends Component {
   }
   
   
-  handleChange(event) {
+  /*handleChange(event) {
     this.setState({searchTerm: event.target.value});
-  }
+  }*/
 
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.searchTerm);
@@ -29,15 +40,31 @@ class App extends Component {
     this.setState({def: def});
   }
 
+  handleChange = (value) => {
+    this.setState({countries: value});
+  };
+
   render() {
   return(
+    <ThemeProvider theme={RTAutocomplete}>
     <div>
-    <SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
+    <Autocomplete
+        direction="down"
+        selectedPosition="above"
+        label="Choose countries"
+        onChange={this.handleChange}
+        source={source}
+        value={this.state.countries}
+      />
     <SearchResults def={this.state.def} />
     </div>
+    </ThemeProvider>
   );
   }
 }
+
+    //<SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
+
 
 class SearchResults extends Component {
   constructor(props) {
@@ -61,7 +88,7 @@ class SearchResults extends Component {
 
 }
 
-class SearchForm extends Component {
+/*class SearchForm extends Component {
   constructor(props) {
     super(props);
     this.state = {searchTerm: ''};
@@ -80,7 +107,7 @@ class SearchForm extends Component {
       </div>
     );
   }
-}
+}*/
 
   function httpGet(theUrl)
   {
