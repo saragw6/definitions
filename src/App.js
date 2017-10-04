@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
-import RTAutocomplete from './assets/react-toolbox/theme.js';
+import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
+
+import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
@@ -8,15 +10,19 @@ import './App.css';
 
 //TODO : switch over to making calls to od-api and/or get CORS working
 
-const source = {
-  'ES-es': 'LGBTQ',
-  'TH-th': 'Lesbian',
-  'EN-gb': 'Lipstick lesbian',
-  'EN-en': 'Feminist',
-  'a': 'Feminsm',
-  'b': 'Femme',
-  'c': 'Queer',
-  'd': 'Genderqueer'
+const source = [
+  'LGBTQ',
+  'Lesbian',
+  'Lipstick lesbian',
+  'Feminist',
+  'Feminsm',
+  'Femme',
+  'Queer',
+  'Genderqueer'
+];
+
+const defs = {
+  'LGBTQ': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities'
 };
 
 class App extends Component {
@@ -25,10 +31,10 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      countries: []
+      countries: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleTermChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
@@ -44,23 +50,25 @@ class App extends Component {
     this.setState({def: def});
   }
 
-  handleChange = (value) => {
+  handleTermChange = (value) => {
     this.setState({countries: value});
   };
 
   render() {
   return(
-    <ThemeProvider theme={RTAutocomplete}>
+    <ThemeProvider theme={theme}>
     <div>
     <Autocomplete
         direction="down"
         selectedPosition="above"
         label="Choose a term"
-        onChange={this.handleChange}
+        onChange={this.handleTermChange}
         source={source}
         value={this.state.countries}
         suggestionMatch="anywhere"
+        multiple={false}
       />
+      <ResultCard term={this.state.countries} />
     <SearchResults def={this.state.def} />
     </div>
     </ThemeProvider>
@@ -88,6 +96,24 @@ class SearchResults extends Component {
     this.getDef();
     return(
       <div>{this.setDef[0]["defenition"]}</div>
+    );
+  }
+
+}
+
+class ResultCard extends Component {
+
+  render() {
+
+    return(
+      <div>
+        <Card style={{width: '350px'}}>
+        <CardTitle
+          title={this.props.term}
+        />
+        <CardText>{ defs[this.props.term] }</CardText>
+      </Card>
+    </div>
     );
   }
 
