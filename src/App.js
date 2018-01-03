@@ -31,7 +31,7 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      countries: ''
+      my_term: ''
     };
 
     this.handleChange = this.handleTermChange.bind(this);
@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   handleTermChange = (value) => {
-    this.setState({countries: value});
+    this.setState({my_term: value});
   };
 
   render() {
@@ -64,11 +64,11 @@ class App extends Component {
         label="Choose a term"
         onChange={this.handleTermChange}
         source={source}
-        value={this.state.countries}
+        value={this.state.my_term}
         suggestionMatch="anywhere"
         multiple={false}
       />
-      <ResultCard term={this.state.countries} />
+      <ResultCard term={this.state.my_term} />
     <SearchResults def={this.state.def} />
     </div>
     </ThemeProvider>
