@@ -8,7 +8,8 @@ import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
 import './App.css';
 
-import ResultCard from './ResultCard.js';
+//import ResultCard from './ResultCard.js';
+import ResultList from './ResultList.js';
 
 //TODO : switch over to making calls to od-api and/or get CORS working
 
@@ -22,6 +23,12 @@ const source = [
   'Queer',
   'Genderqueer'
 ];
+
+const defs = [
+  { 'term': 'LGBTQ',
+    'definition': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities' },
+  { 'term': 'LGBTQ',
+    'definition': 'AKA Lesbian, Gay, Bisexual, Transgender, Queer'}];
 
 
 //uses broken searchresults component
@@ -38,6 +45,19 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
+
+  getDefList(searchterm) {
+    var searchdefs = defs.filter((entry) => { return entry["term"] === searchterm });
+
+
+    if (!(searchdefs[0] === undefined)) {
+      console.log(searchdefs[0]["definition"]);
+    }
+
+    var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
+
+    return resultList;
+  }
   
   /*handleChange(event) {
     this.setState({searchTerm: event.target.value});
@@ -54,6 +74,8 @@ class App extends Component {
     this.setState({my_term: value});
   };
 
+//<ResultCard term={this.state.my_term} />
+
   render() {
   return(
     <ThemeProvider theme={theme}>
@@ -68,7 +90,7 @@ class App extends Component {
         suggestionMatch="anywhere"
         multiple={false}
       />
-      <ResultCard term={this.state.my_term} />
+      <ResultList entries={this.getDefList(this.state.my_term)} />
     <SearchResults def={this.state.def} />
     </div>
     </ThemeProvider>
