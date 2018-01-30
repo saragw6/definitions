@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
-import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
+
 
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
 import './App.css';
+
+import ResultCard from './ResultCard.js';
 
 //TODO : switch over to making calls to od-api and/or get CORS working
 
@@ -21,10 +23,8 @@ const source = [
   'Genderqueer'
 ];
 
-const defs = {
-  'LGBTQ': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities'
-};
 
+//uses broken searchresults component
 class App extends Component {
   constructor() {
   super();
@@ -78,7 +78,7 @@ class App extends Component {
 
     //<SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
 
-
+//BROKEN!!
 class SearchResults extends Component {
   constructor(props) {
     super(props);
@@ -101,23 +101,6 @@ class SearchResults extends Component {
 
 }
 
-class ResultCard extends Component {
-
-  render() {
-
-    return(
-      <div>
-        <Card style={{width: '350px'}}>
-        <CardTitle
-          title={this.props.term}
-        />
-        <CardText>{ defs[this.props.term] }</CardText>
-      </Card>
-    </div>
-    );
-  }
-
-}
 
 /*class SearchForm extends Component {
   constructor(props) {
