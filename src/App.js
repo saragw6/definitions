@@ -24,12 +24,15 @@ const source = [
   'Genderqueer'
 ];
 
-const defs = [
-  { 'term': 'LGBTQ',
-    'definition': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities' },
-  { 'term': 'LGBTQ',
-    'definition': 'AKA Lesbian, Gay, Bisexual, Transgender, Queer'}];
+// const defs = [
+//   { 'term': 'LGBTQ',
+//     'definition': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities' },
+//   { 'term': 'LGBTQ',
+//     'definition': 'AKA Lesbian, Gay, Bisexual, Transgender, Queer'}];
 
+import * as myConstClass from './defs.js';
+
+const defs = myConstClass.defs;
 
 //uses broken searchresults component
 class App extends Component {
@@ -48,7 +51,6 @@ class App extends Component {
 
   getDefList(searchterm) {
     var searchdefs = defs.filter((entry) => { return entry["term"] === searchterm });
-
 
     if (!(searchdefs[0] === undefined)) {
       console.log(searchdefs[0]["definition"]);
