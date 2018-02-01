@@ -50,7 +50,7 @@ class App extends Component {
   
 
   getDefList(searchterm) {
-    var searchdefs = defs.filter((entry) => { return entry["term"] === searchterm });
+    var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
 
     if (!(searchdefs[0] === undefined)) {
       console.log(searchdefs[0]["definition"]);
@@ -74,6 +74,7 @@ class App extends Component {
 
   handleTermChange = (value) => {
     this.setState({my_term: value});
+    alert(value);
   };
 
 //<ResultCard term={this.state.my_term} />
@@ -83,6 +84,7 @@ class App extends Component {
     <ThemeProvider theme={theme}>
     <div>
     <Autocomplete
+        allowCreate
         direction="down"
         selectedPosition="above"
         label="Choose a term"
