@@ -12,27 +12,15 @@ import './App.css';
 import ResultList from './ResultList.js';
 
 //TODO : switch over to making calls to od-api and/or get CORS working
-
-const source = [
-  'LGBTQ',
-  'Lesbian',
-  'Lipstick lesbian',
-  'Feminist',
-  'Feminsm',
-  'Femme',
-  'Queer',
-  'Genderqueer'
-];
-
-// const defs = [
-//   { 'term': 'LGBTQ',
-//     'definition': 'An acronym that stands for Lesbian, Gay, Bisexual, Transgender, Queer. Used as an umbrella term for several gender and sexual minorities' },
-//   { 'term': 'LGBTQ',
-//     'definition': 'AKA Lesbian, Gay, Bisexual, Transgender, Queer'}];
+//TODO : don't display duplicate suggestions for autocomplete
 
 import * as myConstClass from './defs.js';
 
 const defs = myConstClass.defs;
+const available_terms = defs.map((entry) => {return entry["term"].toLowerCase()});
+const no_dup = Array.from(new Set(available_terms));
+console.log(available_terms);
+console.log(no_dup);
 
 //uses broken searchresults component
 class App extends Component {
@@ -74,10 +62,8 @@ class App extends Component {
 
   handleTermChange = (value) => {
     this.setState({my_term: value});
-    alert(value);
   };
 
-//<ResultCard term={this.state.my_term} />
 
   render() {
   return(
@@ -89,13 +75,12 @@ class App extends Component {
         selectedPosition="above"
         label="Choose a term"
         onChange={this.handleTermChange}
-        source={source}
+        source={no_dup}
         value={this.state.my_term}
         suggestionMatch="anywhere"
         multiple={false}
       />
       <ResultList entries={this.getDefList(this.state.my_term)} />
-    <SearchResults def={this.state.def} />
     </div>
     </ThemeProvider>
   );
@@ -104,28 +89,29 @@ class App extends Component {
 
     //<SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
 
+//    <SearchResults def={this.state.def} />
 //BROKEN!!
-class SearchResults extends Component {
-  constructor(props) {
-    super(props);
-    this.setDef = [{"defenition": ""}]; 
-  }
+// class SearchResults extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.setDef = [{"defenition": ""}]; 
+//   }
   
-  getDef() {
-    if (typeof this.props.def === 'undefined' || this.props.def === null || this.props.def === '') {
-    } else {
-          this.setDef = JSON.parse(this.props.def);
-    }
-  }
+//   getDef() {
+//     if (typeof this.props.def === 'undefined' || this.props.def === null || this.props.def === '') {
+//     } else {
+//           this.setDef = JSON.parse(this.props.def);
+//     }
+//   }
 
-  render() {
-    this.getDef();
-    return(
-      <div>{this.setDef[0]["defenition"]}</div>
-    );
-  }
+//   render() {
+//     this.getDef();
+//     return(
+//       <div>{this.setDef[0]["defenition"]}</div>
+//     );
+//   }
 
-}
+// }
 
 
 /*class SearchForm extends Component {

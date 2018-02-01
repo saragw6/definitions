@@ -9,7 +9,7 @@ function ResultList(props) {
   );
 
   return (
-    <div style={{display: 'flex', width: '100vw'}}>{listItems}</div>
+    <div style={{display: 'flex', width: '100vw', overflow: 'wrap' }}>{listItems}</div>
   );
 }
 
