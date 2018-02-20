@@ -15,6 +15,7 @@ import ResultList from './ResultList.js';
 //TODO : switch over to making calls to od-api and/or get CORS working
 
 //TODO: separate out buttons div into new component?
+//TODO stop inline styling -- use className on buttons
 
 import * as myConstClass from './defs.js';
 
@@ -84,9 +85,10 @@ class App extends Component {
       />
       <ResultList entries={this.getDefList(this.state.my_term)} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
-        <Button icon='info' floating accent style={{margin: '5px'}}/>
-        <Button icon='feedback' floating accent style={{margin: '5px'}}/>
-        <Button icon='live_help' floating accent style={{margin: '5px'}}/>
+        <Button icon='live_help' mini floating primary style={{margin: '5px'}}/>
+        <Button icon='feedback' mini floating primary style={{margin: '5px'}}/>
+        <Button icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" style={{margin: '5px'}}/>
+        
       </div>
     </div>
     </ThemeProvider>
