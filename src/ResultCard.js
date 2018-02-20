@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
 
+//TODO: tooltip explanation that one is the author and one is the author's identity?
+//TODO: stop inline styling
 
 class ResultCard extends Component {
 
@@ -18,7 +20,7 @@ class ResultCard extends Component {
     );
   }
 
-//stop inline styling
+
 
 }
 

@@ -2,7 +2,8 @@
   "reactToolbox": {
     "include": [
       "AUTOCOMPLETE",
-      "CARD"
+      "CARD",
+      "BUTTON"
     ],
     "customProperties": {
       "animation-duration": "0.3s",

@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
 
-
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
+
+import Button from 'react-toolbox/lib/button/Button';
+
 import './App.css';
 
-//import ResultCard from './ResultCard.js';
 import ResultList from './ResultList.js';
 
 //TODO : switch over to making calls to od-api and/or get CORS working
-//TODO : don't display duplicate suggestions for autocomplete
+
+//TODO: separate out buttons div into new component?
 
 import * as myConstClass from './defs.js';
 
@@ -22,7 +24,7 @@ const no_dup = Array.from(new Set(available_terms));
 console.log(available_terms);
 console.log(no_dup);
 
-//uses broken searchresults component
+
 class App extends Component {
   constructor() {
   super();
@@ -81,6 +83,11 @@ class App extends Component {
         multiple={false}
       />
       <ResultList entries={this.getDefList(this.state.my_term)} />
+      <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
+        <Button icon='info' floating accent style={{margin: '5px'}}/>
+        <Button icon='feedback' floating accent style={{margin: '5px'}}/>
+        <Button icon='live_help' floating accent style={{margin: '5px'}}/>
+      </div>
     </div>
     </ThemeProvider>
   );
