@@ -65,7 +65,7 @@ export const defs = [
     {
         "timestamp": "2017-12-27T02:38:05.084Z",
         "name": "Mandy Lynn",
-        "term": "Trannsgender",
+        "term": "Transgender",
         "definition": "Switching to the sex I was supposed to be born with ",
         "identity": "White, Battle Creek Michigan, 38, female, unemployed, make money on the streets"
     },
@@ -1283,15 +1283,8 @@ export const defs = [
     {
         "timestamp": "2018-01-02T21:35:15.278Z",
         "name": "Dante B",
-        "term": "Bisexuality (sometimes Pansexual seems like a better label)",
-        "definition": "A sexuality where romantic and sexual attraction is experienced towards two or more genders. ",
-        "identity": "White (hispanic), Indiana (hate it but leaving as soon as I can), 21, cis bi male, poor middle class ("
-    },
-    {
-        "timestamp": "2018-01-02T21:35:27.855Z",
-        "name": "Dante B",
-        "term": "Bisexuality (sometimes Pansexual seems like a better label)",
-        "definition": "A sexuality where romantic and sexual attraction is experienced towards two or more genders. ",
+        "term": "Bisexuality",
+        "definition": "A sexuality where romantic and sexual attraction is experienced towards two or more genders.  (sometimes Pansexual seems like a better label)",
         "identity": "White (hispanic), Indiana (hate it but leaving as soon as I can), 21, cis bi male, poor middle class ("
     },
     {
