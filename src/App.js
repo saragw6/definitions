@@ -75,6 +75,10 @@ class App extends Component {
 
   render() {
     console.log(this.state.my_term);
+
+    const my_entries = this.getDefList(this.state.my_term);
+
+
   return(
     <ThemeProvider theme={theme}>
     <div>
@@ -89,10 +93,13 @@ class App extends Component {
         suggestionMatch="anywhere"
         multiple={false}
       />
+      {(this.state.my_term !== "" && my_entries.length === 0) &&
+        <div style={{textAlign: 'center', color: '#212121'}}> No definitions yet. You can add one or request that this term be defined. </div>
+      }
       <ResultList entries={this.getDefList(this.state.my_term)} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
         <Button icon='live_help' mini floating primary style={{margin: '5px'}}/>
-        <Button icon='feedback' mini floating primary style={{margin: '5px'}}/>
+        <Button icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}}/>
         <Button icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}}/>
         
       </div>
