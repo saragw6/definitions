@@ -311,7 +311,7 @@ export const defs = [
     {
         "timestamp": "2017-12-27T16:47:08.524Z",
         "name": "Oli",
-        "term": "Nonbinary maculine",
+        "term": "Nonbinary masculine",
         "definition": "A nonbinary person who most identifys as male but doesn't genital dysphoria. I have horrible dysphoria with my voice, height, muscle mass (more lack of) and breasts ",
         "identity": "A biracial, middle lower class, queer male who sadly enough has to live in the USA "
     },
