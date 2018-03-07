@@ -64,11 +64,17 @@ class App extends Component {
   }
 
   handleTermChange = (value) => {
+    if (value === "") {
+      alert("empty");
+      this.setState({my_term: " "});
+    } else {
     this.setState({my_term: value});
+    }
   };
 
 
   render() {
+    console.log(this.state.my_term);
   return(
     <ThemeProvider theme={theme}>
     <div>
@@ -87,7 +93,7 @@ class App extends Component {
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
         <Button icon='live_help' mini floating primary style={{margin: '5px'}}/>
         <Button icon='feedback' mini floating primary style={{margin: '5px'}}/>
-        <Button icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" style={{margin: '5px'}}/>
+        <Button icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}}/>
         
       </div>
     </div>
