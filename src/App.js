@@ -92,7 +92,7 @@ class App extends Component {
   return(
     <ThemeProvider theme={theme}>
     <div>
-    <div style={{textAlign:'right', marginTop:'-50px', marginLeft:'-80px',color:'white',fontFamily:'Helvetica Neue',fontSize:'40px',fontWeight:'100'}}>Queer Undefined</div>
+    <div className="header">Queer Undefined</div>
     <Autocomplete
         allowCreate
         direction="down"
@@ -105,10 +105,10 @@ class App extends Component {
         multiple={false}
       />
       {(this.state.my_term !== "" && my_entries.length === 0) &&
-        <div style={{textAlign: 'center', color: '#5c5c5c', fontWeight:'100'}}> No definitions yet. You can add one or request that this term be defined. </div>
+        <div className="blurb"> No definitions yet. You can add one or request that this term be defined. </div>
       }
       {(this.state.my_term === "") &&
-        <div style={{textAlign: 'center', color: '#5c5c5c', fontWeight:'100', padding:'10vw 20vw',lineHeight:'24px'}}>
+        <div className="blurb">
         welcome to queer undefined, a site detailing  the many
 meanings of lgbtq+ labels and phrases. each definition
 you see here was submitted by an individual and may
@@ -116,7 +116,7 @@ not align with your understanding or even with the
 other definitions displayed alongside it. the lgbtq+
 community is multi-faceted and ever-shifting,
 as is our vernacular. none of these definitions are
-official or final. this site is not all enompassing.
+official or final. this site is not all-enompassing.
 it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing. </div>

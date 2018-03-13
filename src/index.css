@@ -7,3 +7,21 @@ body {
   background-repeat: no-repeat;
   /*note - you can set 2 background images on top of each other*/
 }
+
+.header {
+  text-align:right;
+  margin-top:-50px;
+  margin-left:-80px;
+  color:white;
+  font-family: "Helvetica Neue";
+  font-size:40px;
+  font-weight:100;
+}
+
+.blurb {
+  text-align: center;
+  color: #5c5c5c;
+  font-weight:100;
+  padding: 5vw 15vw;
+  line-height: 24px;
+}
