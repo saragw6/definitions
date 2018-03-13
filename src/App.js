@@ -75,9 +75,9 @@ class App extends Component {
     //TODO: handle empty query location pushState...what do?
     this.setState({my_term: value});
     if (value === "") {
-      window.location.assign("/");
+      window.location.assign("/definitions/"); //because its hosted on github for now
     } else {
-      history.pushState(null, null, "/?=" + value); //add term to url
+      history.pushState(null, null, "/definitions/?=" + value); //add term to url //definitions bc github
     }    
   };
 
