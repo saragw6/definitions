@@ -117,7 +117,7 @@ other definitions displayed alongside it. the lgbtq+
 community is multi-faceted and ever-shifting,
 as is our vernacular. none of these definitions are
 official or final. this site is not all enompassing.
-what it is is an attempt to decrease barriers to
+it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing. </div>
       }
