@@ -1760,5 +1760,388 @@ export const defs = [
         "name": "pan-in-space",
         "term": "Pansexual",
         "definition": "Pansexual is the sexual attraction to all genders - even if you may prefer some genders over others, you are still pansexual "
+    },
+    {
+        "timestamp": "2018-01-31T22:17:36.567Z",
+        "term": "Asexual",
+        "definition": "A person who does not feel sexually attracted to any genders. It does not have to be the same as a person's romantic orientation or any other orientations. This can refer to the asexual spectrum as a whole.",
+        "identity": "Asexual, homoromantic or biromantic, non-binary"
+    },
+    {
+        "timestamp": "2018-01-31T22:30:27.779Z",
+        "name": "Dan",
+        "term": "Demiboy",
+        "definition": "Someone who does not completely identify as a male, usually go by he-him and/or they-them pronouns."
+    },
+    {
+        "timestamp": "2018-02-01T15:17:35.488Z",
+        "name": "Eli (@pan-rants on tumblr and twitter)",
+        "term": "Pansexual",
+        "definition": "Pansexuality is the attraction to people of all gender identities. It’s also described as attraction that is not determined by gender identity. (This is not to be confused with bisexuality which is an entirely different identity)",
+        "identity": "I am a upper lower class caucasian 16 year old nonbinary (agender) aromantic pansexual person"
+    },
+    {
+        "timestamp": "2018-02-01T15:26:32.862Z",
+        "name": "Eli (@aro-rants on tumblr)",
+        "term": "Aromantic",
+        "definition": "A person who is aromantic does not experience romantic attraction or experiences little to no romantic attraction. A person who is aromantic does not have to be asexual (a person who does not experience sexualitet attraction), and they might still experience sensual and aesthetic attraction.",
+        "identity": "A upper lower class caucasian nonbinary (agender) aromantic pansexual 16 year old"
+    },
+    {
+        "timestamp": "2018-02-01T16:42:33.049Z",
+        "term": "Pansexual",
+        "definition": "Pansexuality means to be attracted emotionally, physically and aesthetically to anyone, regardless of gender, but that does not mean they cannot have types or kinks.",
+        "identity": "Pansexual "
+    },
+    {
+        "timestamp": "2018-02-01T18:27:33.183Z",
+        "term": "Pansexual",
+        "definition": "Attraction to all genders. Sometimes with or without preferences for a specific gender.",
+        "identity": "Canadian, 21, cis, pansexual"
+    },
+    {
+        "timestamp": "2018-02-02T17:06:08.367Z",
+        "name": "Tailor",
+        "term": "pansexual",
+        "definition": "Being attracted to all genders, not just ",
+        "identity": "Pansexual/demi girl"
+    },
+    {
+        "timestamp": "2018-02-03T04:25:07.939Z",
+        "name": "Theo",
+        "term": "Pansexual",
+        "definition": "the capacity to be sexually attracted to anyone, no matter their perceived gender.",
+        "identity": "asian-american, USA, 15, genderfluid, demiboy, pansexual"
+    },
+    {
+        "timestamp": "2018-02-03T08:11:19.744Z",
+        "name": "Hayden",
+        "term": "Transgender",
+        "definition": "Someone who experiences gender dysphoria and wants to be who they are on the inside, on the outside. They are not trapped in the wrong body, it just doesn’t look the way it does in their mind. Usually goes through Hormone Replacement Therapy in order to change their physical appareance, sometimes Sex Reassigment Surgery is followed. I believe to identify as trans you must experience gender dysphoria and go through the process of transitioning. I know that financially not everyone is able to, but I believe you must socially and physically transition to be consider transgender. ",
+        "identity": "Transgender FTM, Caucasian, 18, living in America."
+    },
+    {
+        "timestamp": "2018-02-03T11:55:17.479Z",
+        "name": "Malte",
+        "term": "Agender",
+        "definition": "Agender is not identifying to neither male and female stereotypes (to me)",
+        "identity": "Panromantic/agender/middle class/paris suburbs/anarchist/15 yo"
+    },
+    {
+        "timestamp": "2018-02-03T12:56:03.588Z",
+        "name": "jaspo baby",
+        "term": "genderqueer'",
+        "definition": "a transphobic identity that confuses real gender dysphoria with gender roles. people who identify as 'genderqueer' will have dyed hair 90% of the time and have a shitty tumblr page about being 'queer' (wich harms real gays). they give trans people a bad name, and are actually the reason america is becoming less tolerant.",
+        "identity": "what the fuck "
+    },
+    {
+        "timestamp": "2018-02-03T12:58:25.008Z",
+        "name": "*pterodactyl noises*",
+        "term": "pansexual",
+        "definition": "bisexuals who think they're special for being attracted to trans people too",
+        "identity": "two trucks having sex, two trucks having sex, my muscles, my muscles, involuntarily flex"
+    },
+    {
+        "timestamp": "2018-02-03T12:59:51.250Z",
+        "name": "jasper the third",
+        "term": "autigender",
+        "definition": "literally just a term that exists to mock autistic people",
+        "identity": "*overplayed attack helicopter joke*"
+    },
+    {
+        "timestamp": "2018-02-03T13:01:46.107Z",
+        "name": "fuck",
+        "term": "polyamory",
+        "definition": "when multiple people are in a consentual relationship. this isn't an LGBT identity because polyam people are making a conscious choice",
+        "identity": "shit"
+    },
+    {
+        "timestamp": "2018-02-03T15:18:48.626Z",
+        "name": "Max",
+        "term": "Pangender",
+        "definition": "Most of the time identifying as all genders or multiple genders.",
+        "identity": "Pangender"
+    },
+    {
+        "timestamp": "2018-02-04T01:35:43.151Z",
+        "name": "alex",
+        "term": "trigender",
+        "definition": "trigender means there is times you can feel like a guy girl or in between",
+        "identity": "trigender, im irish"
+    },
+    {
+        "timestamp": "2018-02-05T04:31:49.807Z",
+        "name": "Silva Bonetti ",
+        "term": "Xenine, propeest (duo-myr-abro-aroacefluidflux paro-plura biflux nofin-semiflexbible)",
+        "definition": "My gender is out of human comprehension.\nI have fluid flexibility being fraysexual with men and enbies, and nanox  (gray-caligo) with women. Having a lot of aspec and mspec identities and fluctuating among them.",
+        "identity": "Brazilian, triracial (parde), 2.0, enby, peripheral, only child."
+    },
+    {
+        "timestamp": "2018-02-06T22:33:29.299Z",
+        "name": "Rey Wolfe",
+        "term": "Lgbt",
+        "definition": "It means being accepted, no matter who you are attracted to or your gender indentity.",
+        "identity": "Genderflux Aromantic Pansexual"
+    },
+    {
+        "timestamp": "2018-02-08T05:57:18.821Z",
+        "term": "Pansexual ",
+        "definition": "1. Attraction to all genders \n2. Attraction regardless of gender identity ",
+        "identity": "Black, 18, Proud Pansexual "
+    },
+    {
+        "timestamp": "2018-02-09T04:54:26.206Z",
+        "name": "Esmerelda",
+        "term": "Polysexual/Polyromantic",
+        "definition": "Attraction to more than two, but not all genders. May or may not lean towards certain genders/certain groups of genders within those attracted to. Falls under the bisexual umbrella.",
+        "identity": "American, young adult, cis female"
+    },
+    {
+        "timestamp": "2018-02-09T17:16:03.282Z",
+        "name": "Ezra",
+        "term": "demiboy",
+        "definition": "between male and nb but closer to male"
+    },
+    {
+        "timestamp": "2018-02-11T03:14:56.081Z",
+        "term": "bisexual",
+        "definition": "the attraction to 2 genders (commonly thought of as attraction to both those who identify as male and female but it does include attraction to any 2 genders)",
+        "identity": "bisexual girl"
+    },
+    {
+        "timestamp": "2018-02-17T22:56:08.579Z",
+        "name": "Introvertedgirlsarentshy",
+        "term": "Bisexuality",
+        "definition": "Bisexuality is the attraction to people of your own gender and others. To me, bisexuality means being capable of attraction, wether it be sexual or romantic towards people of all kinds without being limited by a gender binary or genders themselves. I’m quite young so I don’t know yet if gender plays a part in my attraction at all, or just partially, but the label bisexual fits what I feel very well.",
+        "identity": "I’m a white 17 year old biromantic asexual girl from a well off family."
+    },
+    {
+        "timestamp": "2018-02-17T22:56:16.648Z",
+        "name": "Introvertedgirlsarentshy",
+        "term": "Bisexuality",
+        "definition": "Bisexuality is the attraction to people of your own gender and others. To me, bisexuality means being capable of attraction, wether it be sexual or romantic towards people of all kinds without being limited by a gender binary or genders themselves. I’m quite young so I don’t know yet if gender plays a part in my attraction at all, or just partially, but the label bisexual fits what I feel very well.",
+        "identity": "I’m a white 17 year old biromantic asexual girl from a well off family."
+    },
+    {
+        "timestamp": "2018-02-19T21:05:47.297Z",
+        "name": "alex",
+        "term": "bisexual",
+        "definition": "for myself, it’s mainly that i like\nmales and females, but i also like nonbinary people",
+        "identity": "white, 17, nonbinary"
+    },
+    {
+        "timestamp": "2018-02-22T02:50:22.323Z",
+        "term": "Omnisexual",
+        "definition": "Attraction to all genders and all people who identify as otherkin or therians",
+        "identity": "Transmasculine polygender dude, omnisexual, omnialterous, omniromanric, and omnisensual"
+    },
+    {
+        "timestamp": "2018-02-22T08:59:37.962Z",
+        "name": "Alex",
+        "term": "bisexual",
+        "definition": "I define it as potential for attraction to two or more genders, but what it means to me is understanding and loving myself, and feeling like I belong.",
+        "identity": "cis girl, white, mid teens, middle class (I don't like class identifiers but idk what else to call it)"
+    },
+    {
+        "timestamp": "2018-02-22T10:02:03.242Z",
+        "name": "Lara",
+        "term": "Intersex",
+        "definition": "A group of medical conditions where genetic mutations cause chromosomal abnormalities, hormonal imbalances, and/or physical variations on body type and sex organs. Intersex disorders represent variation on male or female, not new sexes. Intersex disorders are health problems ranging from heart irregularities to learning disabilities. ",
+        "identity": "Bisexual biological female diagnosed with Congenital Adrenal Hyperplasia at birth"
+    },
+    {
+        "timestamp": "2018-02-22T20:08:08.446Z",
+        "name": "Monday",
+        "term": "Pansexuality",
+        "definition": "The attraction to all gender, sometimes without caring about the person's gender, but not always. Pansexuality isn't the same thing as bisexuality.",
+        "identity": "panromantic pansexual "
+    },
+    {
+        "timestamp": "2018-02-22T21:10:09.515Z",
+        "name": "Brynn",
+        "term": "Lesbian ",
+        "definition": "Girls who are attracted to other girls",
+        "identity": "North Carolina, 14, Female "
+    },
+    {
+        "timestamp": "2018-02-23T16:21:46.462Z",
+        "term": "queer homophobe",
+        "definition": "it’s when someone insists that you can be heteroromantic homosexual"
+    },
+    {
+        "timestamp": "2018-02-27T00:52:56.574Z",
+        "term": "Demiboy",
+        "definition": "A person who doesn’t feel strongly with either the male or female identity, but expresses themselves as maculine. Basically, a nonbinary person who feels masculine.",
+        "identity": "Androsexual Nonbinary"
+    },
+    {
+        "timestamp": "2018-02-27T00:53:49.969Z",
+        "term": "Androsexual",
+        "definition": "One who feels romantic and sexual attraction towards masculine individuals ",
+        "identity": "Androsexual Demiboy"
+    },
+    {
+        "timestamp": "2018-02-28T21:13:05.779Z",
+        "name": "Alix Bohem",
+        "term": "Pansexual",
+        "definition": "It means that I don't like you based on what's on your face or in your pants, I care about you for who you are, not how you identify.",
+        "identity": "American, New Jersey, 13, genderfluid, pansexual, and proud."
+    },
+    {
+        "timestamp": "2018-03-01T13:56:55.738Z",
+        "name": "Quinn",
+        "term": "bisexual",
+        "definition": "being sexually attracted to two genders ",
+        "identity": "bisexual genderfluid"
+    },
+    {
+        "timestamp": "2018-03-01T14:13:22.373Z",
+        "name": "Skylar (birthname kimberly)",
+        "term": "Pansexual",
+        "definition": "To not have a boundary on who you like based in sexuality or gender. To me it just means that I like you for your personality and not your body parts. ",
+        "identity": "Latina, California, 13, I'm still questioning my gender but ik I'm not only female"
+    },
+    {
+        "timestamp": "2018-03-02T18:49:27.084Z",
+        "term": "Demisexual",
+        "definition": "You don't have sexual desire until you become emotionally close ore connected to a person!",
+        "identity": "21 year old biromantic demisexual female from Ohio (US)"
+    },
+    {
+        "timestamp": "2018-03-02T20:56:24.951Z",
+        "term": "Genderqueer",
+        "definition": "Similar to the weird queer, genderqueer is a sort of “catch all term” that means a gender that is out of the ordinary. Some folks (like me) like to identify with trans along with this label, others non binary, and some just simply genderqueer. To me it means that you don’t fit into a binary but you may not be outside it either; you’re a mix in your own way, similar to how if you look up the definitions of the colors of the genderqueer flag you’ll get some beautiful results about the chartreuse, white, and lavender. ",
+        "identity": "Genderqueer, white, American, middle class, 18"
+    },
+    {
+        "timestamp": "2018-03-04T04:07:21.305Z",
+        "name": "Echo",
+        "term": "agender",
+        "definition": "not having a gender identity, being genderless",
+        "identity": "aroace, agender"
+    },
+    {
+        "timestamp": "2018-03-07T05:28:01.037Z",
+        "name": "Spencer",
+        "term": "diamoric",
+        "definition": "attraction that's neither gay nor straight because you're nonbinary"
+    },
+    {
+        "timestamp": "2018-03-09T22:18:47.846Z",
+        "name": "Kat",
+        "term": "Pansexual",
+        "definition": "Someone who likes people regardless of their gender identity or physical sex",
+        "identity": "She/Her, Lesbian"
+    },
+    {
+        "timestamp": "2018-03-12T22:15:55.263Z",
+        "name": "Maria S.",
+        "term": "Lesbian",
+        "definition": "A woman that has romantic and/or sexual attraction to another woman",
+        "identity": "Cis female, 17, Canada"
+    },
+    {
+        "timestamp": "2018-03-12T22:18:14.622Z",
+        "name": "Maria S.",
+        "term": "Homoflexible",
+        "definition": "Someone that mostly develops feelings and/or attraction to the same sex but occasionally develops feelings and/or attraction to the opposite sex",
+        "identity": "Cis female, 17, Canada"
+    },
+    {
+        "timestamp": "2018-03-12T22:47:53.182Z",
+        "name": "Ryland",
+        "term": "Pansexual",
+        "definition": "Pansexual means that you are attracted to any gender, or at least more than one. It is similar to being Bisexual, and there seems to be an ongoing argument about the two and what they exactly mean. But, it's a label, and people are able to choose which label they want. People can consider themselves Pansexual while still mainly liking  only liking two genders, and vice versa. For me, Pansexual means attracted to any person, without really caring about gender. As a pansexual person, I usually don't find myself to be attracted to a specific person because of their body (unlike a lot of guys I've seen at my school). It's more of a personality thing with me, even though I know that many people care a lot about how a person looks. Other people probably have their own definitions for Pansexual, but that is my definition.",
+        "identity": "A trans teen boy living in the U.S"
+    },
+    {
+        "timestamp": "2018-03-12T23:48:37.513Z",
+        "name": "Coral",
+        "term": "Genderqueer",
+        "definition": "Identifying as a gender other than what you were assigned at birth",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-12T23:46:18.837Z",
+        "name": "Coral",
+        "term": "Pansexual / Panromantic",
+        "definition": "can be defined in one of two ways - sexual/romantic attraction to ALL genders, or sexual/romantic attraction REGARDLESS of gender.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-12T23:51:08.396Z",
+        "name": "Coral",
+        "term": "Gender Binary",
+        "definition": "The classification of gender as two opposite genders: male and female.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-12T23:55:07.213Z",
+        "name": "Coral",
+        "term": "Non-binary Gender",
+        "definition": "Identifying outsite of the gender binary. Either identifying as neither male nor female, identifying as a mix of both or somewhere in between, or identifying as a mix of multiple genders.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-12T23:57:49.718Z",
+        "name": "Coral",
+        "term": "WLW",
+        "definition": "Stands for woman loving women. Meaning any woman or woman aligned individual attracted to women or women aligned individuals.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:03:34.449Z",
+        "term": "demisexual",
+        "definition": "not sexually aroused until after a deeper platonic bond if ever. talking about sex stuff is uncomfortable in almost all circumstances. different than asexual tho bcos when you do have that connection with someone you are aroused and still enjoy intimacy ",
+        "identity": "white, USA, 21, female, middle class"
+    },
+    {
+        "timestamp": "2018-03-13T00:03:43.934Z",
+        "name": "Coral",
+        "term": "Enby / NB",
+        "definition": "(Noun) A person who identifies as non-binary. Used in place of \"man\", \"woman\", \"boy\", or \"girl\". (Ex. \"Date an enby who makes you feel special\" or \"'Are you a boy or a girl?' 'Actually, I'm an enby!'\")",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:08:06.148Z",
+        "name": "Coral",
+        "term": "Queer",
+        "definition": "Used to be more commonly used as a slur for the LGBTQ+ community. Now it is being reclaimed by the LGBTQ+ community as an umbrella term for anybody who is not straight / cisgender. Whether or not an individual is comfortable using the term for themselves varies from person to person.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:10:16.462Z",
+        "name": "Coral",
+        "term": "Cishet",
+        "definition": "Short for a person who is cisgender and heterosexual / straight",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:25:36.865Z",
+        "name": "Coral",
+        "term": "Bisexual",
+        "definition": "Attraction to two or more genders",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:34:02.335Z",
+        "name": "Coral",
+        "term": "Androsexual",
+        "definition": "Sexual attraction to men or masculine individuals. Commonly used by people who are non-binary if they want a more gender neutral term for attraction to men or masculine individuals.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:36:08.429Z",
+        "name": "Coral",
+        "term": "Gynesexual",
+        "definition": "Sexual attraction to women or feminine individuals. Commonly used by people who are non-binary if they want a more gender neutral term for attraction to women or feminine individuals.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:38:51.815Z",
+        "name": "Coral",
+        "term": "Skoliosexual",
+        "definition": "Sexual attraction to genderqueer or nonbinary people.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
     }
 ];

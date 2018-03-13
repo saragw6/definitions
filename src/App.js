@@ -66,13 +66,13 @@ class App extends Component {
   handleTermChange = (value) => {
     if (value === "") {
       alert("empty");
-      this.setState({my_term: " "});
     } else {
     this.setState({my_term: value});
     }
   };
 
 
+//the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
     console.log(this.state.my_term);
 
