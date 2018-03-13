@@ -19,6 +19,11 @@ import ResultList from './ResultList.js';
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
 
+//TODO: change theme colors to be from rainblog
+
+//todo: change the css so when you collapse the page all the way, the overflowing title makes the grainblog extend further
+
+
 import * as myConstClass from './defs.js';
 
 const defs = myConstClass.defs;
@@ -34,7 +39,7 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: window.location.pathname.substring(1) //grab term from url
+      my_term: window.location.search.substring(2) //grab term from url
     };
 
     this.handleChange = this.handleTermChange.bind(this);
@@ -70,7 +75,7 @@ class App extends Component {
       alert("empty"); //TODO: remove this
     } else {
     this.setState({my_term: value});
-    history.pushState(null, null, value); //add term to url
+    history.pushState(null, null, "/?=" + value); //add term to url
     }
   };
 
@@ -85,6 +90,7 @@ class App extends Component {
   return(
     <ThemeProvider theme={theme}>
     <div>
+    <div style={{textAlign:'right', marginTop:'-50px',color:'white',fontFamily:'Helvetica Neue',fontSize:'40px',fontWeight:'100'}}>Queer Undefined</div>
     <Autocomplete
         allowCreate
         direction="down"
