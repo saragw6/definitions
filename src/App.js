@@ -32,11 +32,11 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: ''
+      my_term: window.location.pathname.substring(1) //grab term from url
     };
 
     this.handleChange = this.handleTermChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
   }
   
 
@@ -56,18 +56,19 @@ class App extends Component {
     this.setState({searchTerm: event.target.value});
   }*/
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.searchTerm);
-    event.preventDefault();
-    let def = httpGet("https://owlbot.info/api/v1/dictionary/" + this.state.searchTerm + "?format=json");
-    this.setState({def: def});
-  }
+  // handleSubmit(event) {
+  //   alert('A name was submitted: ' + this.state.searchTerm);
+  //   event.preventDefault();
+  //   let def = httpGet("https://owlbot.info/api/v1/dictionary/" + this.state.searchTerm + "?format=json");
+  //   this.setState({def: def});
+  // }
 
   handleTermChange = (value) => {
     if (value === "") {
-      alert("empty");
+      alert("empty"); //TODO: remove this
     } else {
     this.setState({my_term: value});
+    history.pushState(null, null, value); //add term to url
     }
   };
 
@@ -157,13 +158,13 @@ class App extends Component {
   }
 }*/
 
-  function httpGet(theUrl)
-  {
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-      xmlHttp.send( null );
-      return xmlHttp.responseText;
-  }
+  // function httpGet(theUrl)
+  // {
+  //     var xmlHttp = new XMLHttpRequest();
+  //     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+  //     xmlHttp.send( null );
+  //     return xmlHttp.responseText;
+  // }
 
 
 export default App;
