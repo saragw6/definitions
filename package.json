@@ -3,7 +3,8 @@
     "include": [
       "AUTOCOMPLETE",
       "CARD",
-      "BUTTON"
+      "BUTTON",
+      "TOOLTIP"
     ],
     "customProperties": {
       "animation-duration": "0.3s",

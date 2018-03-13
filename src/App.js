@@ -7,6 +7,8 @@ import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
 
 import Button from 'react-toolbox/lib/button/Button';
+import Tooltip from 'react-toolbox/lib/tooltip';
+const TooltipButton = Tooltip(Button);
 
 import './App.css';
 
@@ -99,16 +101,17 @@ class App extends Component {
       }
       <ResultList entries={this.getDefList(this.state.my_term)} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
-        <Button icon='live_help' mini floating primary style={{margin: '5px'}}/>
-        <Button icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}}/>
-        <Button icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}}/>
-        
+        <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}} tooltip='Define'/>
+        <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='Request'/>
+        <TooltipButton icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}} tooltip="About"/>
+
       </div>
     </div>
     </ThemeProvider>
   );
   }
 }
+
 
     //<SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
 
