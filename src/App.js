@@ -22,6 +22,7 @@ import ResultList from './ResultList.js';
 //TODO: change theme colors to be from rainblog
 
 //todo: change the css so when you collapse the page all the way, the overflowing title makes the grainblog extend further
+// - right now it has negative left margin on the title to simply avoid the title collapsing
 
 
 import * as myConstClass from './defs.js';
@@ -90,7 +91,7 @@ class App extends Component {
   return(
     <ThemeProvider theme={theme}>
     <div>
-    <div style={{textAlign:'right', marginTop:'-50px',color:'white',fontFamily:'Helvetica Neue',fontSize:'40px',fontWeight:'100'}}>Queer Undefined</div>
+    <div style={{textAlign:'right', marginTop:'-50px', marginLeft:'-80px',color:'white',fontFamily:'Helvetica Neue',fontSize:'40px',fontWeight:'100'}}>Queer Undefined</div>
     <Autocomplete
         allowCreate
         direction="down"
