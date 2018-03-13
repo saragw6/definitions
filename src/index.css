@@ -9,19 +9,32 @@ body {
 }
 
 .header {
-  text-align:right;
+  text-align: center;
   margin-top:-50px;
-  margin-left:-80px;
   color:white;
   font-family: "Helvetica Neue";
-  font-size:40px;
-  font-weight:100;
+  font-size:26px;
+  font-weight: 200;
 }
 
 .blurb {
   text-align: center;
   color: #5c5c5c;
   font-weight:100;
-  padding: 5vw 15vw;
   line-height: 24px;
+  padding: 5vw 0;
 }
+
+@media only screen and (min-width: 495px) {
+  .header {
+    text-align:right;
+    font-weight: 200;
+    font-size:40px;
+  }
+
+  .blurb {
+    padding: 5vw 15vw;
+  }
+}
+
+
