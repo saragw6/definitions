@@ -133,7 +133,13 @@ export const defs = [
     },
     {
         "timestamp": "2017-12-27T05:43:09.755Z",
-        "term": "Pansexual/romantic",
+        "term": "Pansexual",
+        "definition": "Attraction to people regardless of gender identity or sex.",
+        "identity": "Desi, Canadian, middle class, queer feminist. "
+    },
+    {
+        "timestamp": "2017-12-27T05:43:09.755Z",
+        "term": "Panromantic",
         "definition": "Attraction to people regardless of gender identity or sex.",
         "identity": "Desi, Canadian, middle class, queer feminist. "
     },
@@ -300,6 +306,20 @@ export const defs = [
         "name": "Ary Ruth",
         "term": "Afab/amab",
         "definition": "Afab- assigned female at birth\nAmab- assigned male at birth\nThese phrases are usually used with people who do not cisgender aka: non-binary,trans,graygender,\nagender,ect.",
+        "identity": "Afab nonbinary gay"
+    },
+    {
+        "timestamp": "2017-12-27T13:50:08.639Z",
+        "name": "Ary Ruth",
+        "term": "Afab",
+        "definition": "Afab- assigned female at birth\nAmab and Afab are usually used with people who do not cisgender aka: non-binary,trans,graygender,\nagender,ect.",
+        "identity": "Afab nonbinary gay"
+    },
+    {
+        "timestamp": "2017-12-27T13:50:08.639Z",
+        "name": "Ary Ruth",
+        "term": "Amab",
+        "definition": "Amab- assigned male at birth\nAmab and Afab are usually used with people who do not cisgender aka: non-binary,trans,graygender,\nagender,ect.",
         "identity": "Afab nonbinary gay"
     },
     {
@@ -617,13 +637,6 @@ export const defs = [
         "definition": "All of these are nonbinary terms for a parent! Mom/Dad = Ren, mommy/daddy = renny, Papa/Mama = Rara"
     },
     {
-        "timestamp": "2017-12-28T04:37:22.219Z",
-        "name": "Noelia",
-        "term": "Pansexual",
-        "definition": "I don't know :(",
-        "identity": "I'm a ecuadorian girl...lesbian ;)"
-    },
-    {
         "timestamp": "2017-12-28T04:38:32.523Z",
         "name": "Agender Al",
         "term": "Hijra",
@@ -752,7 +765,7 @@ export const defs = [
     {
         "timestamp": "2017-12-28T09:19:57.764Z",
         "term": "Nonbinary",
-        "definition": "A gender I dentist that is not 100% always male or female",
+        "definition": "A gender identity that is not 100% always male or female",
         "identity": "Nonbinary, white, teen"
     },
     {
@@ -775,13 +788,6 @@ export const defs = [
         "term": "Queer",
         "definition": "An umbrella term that can be used to describe anyone in the LGBTQ+ community. Useful when your identity is an uncommon one and you don’t feel like constantly having to explain what your identity means.",
         "identity": "Pansexual cis woman."
-    },
-    {
-        "timestamp": "2017-12-28T16:13:46.356Z",
-        "name": "Grace Calcagno",
-        "term": "Bisexual",
-        "definition": "The sexual attraction to two genders (typically male and female)",
-        "identity": "bisexual female"
     },
     {
         "timestamp": "2017-12-28T16:22:45.579Z",
@@ -897,7 +903,7 @@ export const defs = [
         "timestamp": "2017-12-29T00:03:47.109Z",
         "name": "Rachel/Robyn",
         "term": "demigirl",
-        "definition": "demigirl: an identity leaning more towards feminine, but not quite identifying as a   female. This can mean someone afab who feels a disconnect from their gender, but still feels more feminine than nonbinary or masculine,  or someone amab who is transfeminine but not wholly binary, who feels more feminine than masculine or nonbinary, but not enough to identify fully as female. Basically \"I'm a girl, but not really\". A demigirl will probably use she/her pronouns or they/them. Demigirl can be an in between space between a feminine and nonbinary identity ",
+        "definition": "demigirl: an identity leaning more towards feminine, but not quite identifying as a female. This can mean someone afab who feels a disconnect from their gender, but still feels more feminine than nonbinary or masculine,  or someone amab who is transfeminine but not wholly binary, who feels more feminine than masculine or nonbinary, but not enough to identify fully as female. Basically \"I'm a girl, but not really\". A demigirl will probably use she/her pronouns or they/them. Demigirl can be an in between space between a feminine and nonbinary identity ",
         "identity": "I'm a demigirl and a lesbian, currently questioning other nonbinary identities. "
     },
     {
@@ -1469,6 +1475,16 @@ export const defs = [
         "definition": "Assigned Male/Female At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
     },
     {
+        "timestamp": "2018-01-23T18:47:24.720Z",
+        "term": "AFAB",
+        "definition": "Assigned Female At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
+    },
+    {
+        "timestamp": "2018-01-23T18:47:24.720Z",
+        "term": "AMAB",
+        "definition": "Assigned Male At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
+    },
+    {
         "timestamp": "2018-01-23T18:48:22.771Z",
         "term": "Sexuality",
         "definition": "The sex/es you're attracted to in relation to the sex that you are. "
@@ -1521,6 +1537,11 @@ export const defs = [
     {
         "timestamp": "2018-01-23T18:56:31.656Z",
         "term": "Transexual",
+        "definition": "Someone who has sex dysphoria. They may or may not transition because of their dysphoria, but thus term can be used by anyone who feels they should have been born as the opposite sex. "
+    },
+    {
+        "timestamp": "2018-01-23T18:56:31.656Z",
+        "term": "Transsexual",
         "definition": "Someone who has sex dysphoria. They may or may not transition because of their dysphoria, but thus term can be used by anyone who feels they should have been born as the opposite sex. "
     },
     {
@@ -1828,34 +1849,6 @@ export const defs = [
         "identity": "Panromantic/agender/middle class/paris suburbs/anarchist/15 yo"
     },
     {
-        "timestamp": "2018-02-03T12:56:03.588Z",
-        "name": "jaspo baby",
-        "term": "genderqueer'",
-        "definition": "a transphobic identity that confuses real gender dysphoria with gender roles. people who identify as 'genderqueer' will have dyed hair 90% of the time and have a shitty tumblr page about being 'queer' (wich harms real gays). they give trans people a bad name, and are actually the reason america is becoming less tolerant.",
-        "identity": "what the fuck "
-    },
-    {
-        "timestamp": "2018-02-03T12:58:25.008Z",
-        "name": "*pterodactyl noises*",
-        "term": "pansexual",
-        "definition": "bisexuals who think they're special for being attracted to trans people too",
-        "identity": "two trucks having sex, two trucks having sex, my muscles, my muscles, involuntarily flex"
-    },
-    {
-        "timestamp": "2018-02-03T12:59:51.250Z",
-        "name": "jasper the third",
-        "term": "autigender",
-        "definition": "literally just a term that exists to mock autistic people",
-        "identity": "*overplayed attack helicopter joke*"
-    },
-    {
-        "timestamp": "2018-02-03T13:01:46.107Z",
-        "name": "fuck",
-        "term": "polyamory",
-        "definition": "when multiple people are in a consentual relationship. this isn't an LGBT identity because polyam people are making a conscious choice",
-        "identity": "shit"
-    },
-    {
         "timestamp": "2018-02-03T15:18:48.626Z",
         "name": "Max",
         "term": "Pangender",
@@ -1868,13 +1861,6 @@ export const defs = [
         "term": "trigender",
         "definition": "trigender means there is times you can feel like a guy girl or in between",
         "identity": "trigender, im irish"
-    },
-    {
-        "timestamp": "2018-02-05T04:31:49.807Z",
-        "name": "Silva Bonetti ",
-        "term": "Xenine, propeest (duo-myr-abro-aroacefluidflux paro-plura biflux nofin-semiflexbible)",
-        "definition": "My gender is out of human comprehension.\nI have fluid flexibility being fraysexual with men and enbies, and nanox  (gray-caligo) with women. Having a lot of aspec and mspec identities and fluctuating among them.",
-        "identity": "Brazilian, triracial (parde), 2.0, enby, peripheral, only child."
     },
     {
         "timestamp": "2018-02-06T22:33:29.299Z",
@@ -1907,13 +1893,6 @@ export const defs = [
         "term": "bisexual",
         "definition": "the attraction to 2 genders (commonly thought of as attraction to both those who identify as male and female but it does include attraction to any 2 genders)",
         "identity": "bisexual girl"
-    },
-    {
-        "timestamp": "2018-02-17T22:56:08.579Z",
-        "name": "Introvertedgirlsarentshy",
-        "term": "Bisexuality",
-        "definition": "Bisexuality is the attraction to people of your own gender and others. To me, bisexuality means being capable of attraction, wether it be sexual or romantic towards people of all kinds without being limited by a gender binary or genders themselves. I’m quite young so I don’t know yet if gender plays a part in my attraction at all, or just partially, but the label bisexual fits what I feel very well.",
-        "identity": "I’m a white 17 year old biromantic asexual girl from a well off family."
     },
     {
         "timestamp": "2018-02-17T22:56:16.648Z",
@@ -1962,11 +1941,6 @@ export const defs = [
         "term": "Lesbian ",
         "definition": "Girls who are attracted to other girls",
         "identity": "North Carolina, 14, Female "
-    },
-    {
-        "timestamp": "2018-02-23T16:21:46.462Z",
-        "term": "queer homophobe",
-        "definition": "it’s when someone insists that you can be heteroromantic homosexual"
     },
     {
         "timestamp": "2018-02-27T00:52:56.574Z",
@@ -2069,6 +2043,20 @@ export const defs = [
         "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
     },
     {
+        "timestamp": "2018-03-12T23:46:18.837Z",
+        "name": "Coral",
+        "term": "Pansexual",
+        "definition": "can be defined in one of two ways - sexual attraction to ALL genders, or sexual attraction REGARDLESS of gender.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-12T23:46:18.837Z",
+        "name": "Coral",
+        "term": "Panromantic",
+        "definition": "can be defined in one of two ways - romantic attraction to ALL genders, or romantic attraction REGARDLESS of gender.",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
         "timestamp": "2018-03-12T23:51:08.396Z",
         "name": "Coral",
         "term": "Gender Binary",
@@ -2099,6 +2087,20 @@ export const defs = [
         "timestamp": "2018-03-13T00:03:43.934Z",
         "name": "Coral",
         "term": "Enby / NB",
+        "definition": "(Noun) A person who identifies as non-binary. Used in place of \"man\", \"woman\", \"boy\", or \"girl\". (Ex. \"Date an enby who makes you feel special\" or \"'Are you a boy or a girl?' 'Actually, I'm an enby!'\")",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:03:43.934Z",
+        "name": "Coral",
+        "term": "Enby",
+        "definition": "(Noun) A person who identifies as non-binary. Used in place of \"man\", \"woman\", \"boy\", or \"girl\". (Ex. \"Date an enby who makes you feel special\" or \"'Are you a boy or a girl?' 'Actually, I'm an enby!'\")",
+        "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
+    },
+    {
+        "timestamp": "2018-03-13T00:03:43.934Z",
+        "name": "Coral",
+        "term": "NB",
         "definition": "(Noun) A person who identifies as non-binary. Used in place of \"man\", \"woman\", \"boy\", or \"girl\". (Ex. \"Date an enby who makes you feel special\" or \"'Are you a boy or a girl?' 'Actually, I'm an enby!'\")",
         "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist"
     },
