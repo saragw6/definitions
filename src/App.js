@@ -46,6 +46,10 @@ class App extends Component {
     this.handleChange = this.handleTermChange.bind(this);
     //this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount(){
+    document.title = this.state.my_term === "" ? "queer undefined" : "queer undefined | " + this.state.my_term;
+  }
   
 
   getDefList(searchterm) {
