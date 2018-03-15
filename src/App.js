@@ -96,12 +96,12 @@ class App extends Component {
   return(
     <ThemeProvider theme={theme}>
     <div>
-    <div className="header">Queer Undefined</div>
+    <div className="header">queer undefined</div>
     <Autocomplete
         allowCreate
         direction="down"
         selectedPosition="above"
-        label="Choose a term"
+        label="enter a term"
         onChange={this.handleTermChange}
         source={no_dup}
         value={this.state.my_term}
@@ -127,9 +127,9 @@ space of learning and knowledge-sharing. </div>
       }
       <ResultList entries={this.getDefList(this.state.my_term)} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
-        <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}} tooltip='Define'/>
-        <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='Request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new" />
-        <TooltipButton icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}} tooltip="About"/>
+        <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}} tooltip='define'/>
+        <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new" />
+        <TooltipButton icon='info' mini floating primary href="http://saragw6.github.io/capstone/about.html" target="new" style={{margin: '5px'}} tooltip="about"/>
 
       </div>
     </div>
