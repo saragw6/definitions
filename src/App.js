@@ -40,7 +40,7 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: window.location.search.substring(2) //grab term from url
+      my_term: decodeURIComponent(window.location.search.substring(2)) //grab term from url
     };
 
     this.handleChange = this.handleTermChange.bind(this);
