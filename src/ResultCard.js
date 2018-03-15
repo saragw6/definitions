@@ -13,6 +13,17 @@ class ResultCard extends Component {
     }).join(' ');
   }
 
+//uses definitions in link bc github
+  defWithLinks(def) {
+    return def.split('\`').map(function(word, index) {
+      var url = "/definitions/?=" + word;
+      var newWord = index % 2 !== 0 ? <a href={url}>{word}</a> : word;
+      return newWord;
+    });
+
+  }
+
+
   render() {
 
     return(
@@ -21,7 +32,7 @@ class ResultCard extends Component {
         <CardTitle
           title={this.titleCase(this.props.term)}
         />
-        <CardText>{ this.props.def }<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.name}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.id}</p></CardText>
+        <CardText>{this.defWithLinks(this.props.def)}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.name}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.id}</p></CardText>
       </Card>
     </div>
     );

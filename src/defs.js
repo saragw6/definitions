@@ -3,7 +3,7 @@ export const defs = [
         "timestamp": "2017-12-27T01:08:34.868Z",
         "name": "Agender Al",
         "term": "Polysexual",
-        "definition": "Person who is attracted to more than one gender, synonyms can include pansexual, & bisexual"
+        "definition": "Person who is attracted to more than one gender, synonyms can include `pansexual`, & `bisexual`"
     },
     {
         "timestamp": "2017-12-27T01:11:37.394Z",
@@ -596,6 +596,18 @@ export const defs = [
         "timestamp": "2017-12-27T23:52:50.688Z",
         "term": "Pansexuality / Panromantic",
         "definition": "An potential to be attracted (whether sexually  or romantically) to people of any gender.  This does not meet an attraction to everyone, it means that the people you find attractive do not have to be male, female, or other.",
+        "identity": "Agender, pansexual"
+    },
+    {
+        "timestamp": "2017-12-27T23:52:50.688Z",
+        "term": "Pansexuality",
+        "definition": "An potential to be sexually attracted to people of any gender.  This does not meet an attraction to everyone, it means that the people you find attractive do not have to be male, female, or other.",
+        "identity": "Agender, pansexual"
+    },
+    {
+        "timestamp": "2017-12-27T23:52:50.688Z",
+        "term": "Panromantic",
+        "definition": "An potential to be romantically attracted to people of any gender.  This does not meet an attraction to everyone, it means that the people you find attractive do not have to be male, female, or other.",
         "identity": "Agender, pansexual"
     },
     {

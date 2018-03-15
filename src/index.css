@@ -8,6 +8,15 @@ body {
   /*note - you can set 2 background images on top of each other*/
 }
 
+a {
+  color: #C488FB;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .header {
   text-align: center;
   margin-top:-50px;
