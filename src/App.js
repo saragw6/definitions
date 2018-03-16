@@ -29,7 +29,7 @@ import * as myConstClass from './defs.js';
 
 const defs = myConstClass.defs;
 const available_terms = defs.map((entry) => {return entry["term"].toLowerCase()});
-const no_dup = Array.from(new Set(available_terms));
+const no_dup = Array.from(new Set(available_terms)).sort();
 
 
 class App extends Component {
@@ -114,7 +114,7 @@ not align with your understanding or even with the
 other definitions displayed alongside it. the lgbtq+
 community is multi-faceted and ever-shifting,
 as is our vernacular. none of these definitions are
-official or final. this site is not all-enompassing.
+official or final. this site is not all-encompassing.
 it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing. </div>

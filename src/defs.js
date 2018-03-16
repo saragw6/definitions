@@ -29,7 +29,7 @@ export const defs = [
         "timestamp": "2017-12-27T01:39:22.655Z",
         "name": "Shaw",
         "term": "Demisexual",
-        "definition": "The term means being sexually attracted to a person who you feel an emotional connection with. I do believe this term is more open because it doesn’t focus on any gender so really anyone is free to define themselves as such. For me I like to say I’m a queer demi because I’ve only had connections with the same sex. I also like to say I’m a lesbian but I do feel comfortable with either label. I don’t feel like I should just limit myself to one label. ",
+        "definition": "The term means being sexually attracted to a person who you feel an emotional connection with. I do believe this term is more open because it doesn’t focus on any gender so really anyone is free to define themselves as such. For me I like to say I’m a `queer` demi because I’ve only had connections with the same sex. I also like to say I’m a `lesbian` but I do feel comfortable with either label. I don’t feel like I should just limit myself to one label. ",
         "identity": "19yo Latina Lesbian "
     },
     {
@@ -42,7 +42,7 @@ export const defs = [
     {
         "timestamp": "2017-12-27T02:02:54.594Z",
         "term": "dyke",
-        "definition": "a slur for a lesbian, usually a butch or gender nonconforming lesbian; sometimes reclaimed and used as a term of pride or endearment. Example: The Dyke March"
+        "definition": "a slur for a `lesbian`, usually a `butch` or gender nonconforming lesbian; sometimes reclaimed and used as a term of pride or endearment. Example: The Dyke March"
     },
     {
         "timestamp": "2017-12-27T02:05:21.725Z",
@@ -94,7 +94,7 @@ export const defs = [
         "timestamp": "2017-12-27T03:45:07.004Z",
         "name": "Charlie",
         "term": "queer",
-        "definition": "Queer means you are either not cis or not het or both -- i'm personally asexual/aromatic exclusionary as I think that's an entirely different (medical) spectrum. Cis is identifying satisfactorily(happily i guess?) with the gender you were assigned at birth (male or female). Anyone that doesn't identify with their assigned gender could be queer. Anyone that's on the gender binary and is attracted to the opposite gender (a trans man being solely attracted to women is het) would be het but still queer. I think people that are off the traditional gender binary (man, woman) are automatically not heterosexual just because those terms aren't meant to define them. I suppose that means anyone attracted to nonbinary people is also not heterosexual and therefore queer.",
+        "definition": "Queer means you are either not cis or not het or both -- i'm personally `asexual`/`aromantic` exclusionary as I think that's an entirely different (medical) spectrum. Cis is identifying satisfactorily(happily i guess?) with the gender you were assigned at birth (male or female). Anyone that doesn't identify with their assigned gender could be queer. Anyone that's on the gender binary and is attracted to the opposite gender (a `trans` man being solely attracted to women is het) would be het but still queer. I think people that are off the traditional gender binary (man, woman) are automatically not heterosexual just because those terms aren't meant to define them. I suppose that means anyone attracted to `nonbinary` people is also not heterosexual and therefore queer.",
         "identity": "White, midwestern, 18, bigender lesbian, college student"
     },
     {
@@ -1257,7 +1257,7 @@ export const defs = [
     {
         "timestamp": "2018-01-01T05:46:39.247Z",
         "name": "stormysapphic (tumblr url)",
-        "term": "\"sapphic\"",
+        "term": "sapphic",
         "definition": "Anyone who identifies as (partly) female/(partly) female aligned and is (exclusively or not) attracted to people who identify as female/female aligned. For example a pansexual trans woman, a female aligned nonbinary lesbian, and a genderfluid (between, say, male and female) bisexual person who is attracted to girls and nonbinary people can all identify as sapphic.",
         "identity": "18, nonbinary, sapphic/queer"
     },

@@ -4,6 +4,8 @@ import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
 //TODO: tooltip explanation that one is the author and one is the author's identity?
 //TODO: stop inline styling
 
+//todo: link identities too?
+
 class ResultCard extends Component {
 
 
