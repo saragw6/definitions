@@ -96,8 +96,9 @@ class App extends Component {
   return(
     <ThemeProvider theme={theme}>
     <div>
-    <div className="header">queer undefined</div>
-    <Autocomplete
+    <div className="header-wrapper">
+      <div className="header">queer undefined</div>
+      <Autocomplete
         allowCreate
         direction="down"
         selectedPosition="above"
@@ -108,6 +109,7 @@ class App extends Component {
         suggestionMatch="anywhere"
         multiple={false}
       />
+    </div>
       {(this.state.my_term !== "" && my_entries.length === 0) &&
         <div className="blurb"> No definitions yet. You can add one or request that this term be defined. </div>
       }
