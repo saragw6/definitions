@@ -30,8 +30,6 @@ import * as myConstClass from './defs.js';
 const defs = myConstClass.defs;
 const available_terms = defs.map((entry) => {return entry["term"].toLowerCase()});
 const no_dup = Array.from(new Set(available_terms));
-console.log(available_terms);
-console.log(no_dup);
 
 
 class App extends Component {
@@ -54,10 +52,6 @@ class App extends Component {
 
   getDefList(searchterm) {
     var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
-
-    if (!(searchdefs[0] === undefined)) {
-      console.log(searchdefs[0]["definition"]);
-    }
 
     var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
@@ -88,8 +82,6 @@ class App extends Component {
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
-    console.log(this.state.my_term);
-
     const my_entries = this.getDefList(this.state.my_term);
 
 
