@@ -2,7 +2,6 @@ body {
   margin: 100px;
   padding: 0;
   font-family: sans-serif;
-  /*note - you can set 2 background images on top of each other*/
 }
 
 a {
@@ -53,4 +52,19 @@ a:hover {
   }
 }
 
+.defs {
+  left: calc(50vw - 285px); /*TODO: put a transition on this to match the masonry animation*/
+}
+
+@media only screen and (min-width: 1309px) {
+  .defs {
+    left: calc(50vw - 655px); /*TODO: put a transition on this to match the masonry animation*/
+  }
+}
+
+@media only screen and (min-width: 940px) and (max-width: 1309px) {
+  .defs {
+    left: calc(50vw - 470px); /*TODO: put a transition on this to match the masonry animation*/
+  }
+}
 

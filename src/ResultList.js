@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Masonry from 'react-masonry-component';
+
 import ResultCard from './ResultCard.js'
 
 function ResultList(props) {
@@ -9,8 +11,10 @@ function ResultList(props) {
   );
 
   return (
-    <div style={{display: 'flex', width: 'inherit', 'flexWrap': 'wrap', justifyContent: 'center'}}>{listItems}</div>
+    <Masonry className="defs">{listItems}</Masonry>
   );
 }
+
+//<div style={{display: 'flex', width: 'inherit', 'flexWrap': 'wrap', justifyContent: 'center'}}>{listItems}</div>
 
 export default ResultList;

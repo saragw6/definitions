@@ -29,14 +29,14 @@ export const defs = [
         "timestamp": "2017-12-27T01:39:22.655Z",
         "name": "Shaw",
         "term": "Demisexual",
-        "definition": "The term means being sexually attracted to a person who you feel an emotional connection with. I do believe this term is more open because it doesn’t focus on any gender so really anyone is free to define themselves as such. For me I like to say I’m a `queer` demi because I’ve only had connections with the same sex. I also like to say I’m a `lesbian` but I do feel comfortable with either label. I don’t feel like I should just limit myself to one label. ",
+        "definition": "The term means being sexually attracted to a person who you feel an emotional connection with. I do believe this term is more open because it doesn’t focus on any gender so really anyone is free to define themselves as such. For me I like to say I’m a `queer` demi because I’ve only had connections with the same sex. I also like to say I’m a `lesbian` but I do feel comfortable with either label. I don’t feel like I should just limit myself to one label.",
         "identity": "19yo Latina Lesbian "
     },
     {
         "timestamp": "2017-12-27T01:52:52.047Z",
         "name": "Hattie",
         "term": "Lesbian",
-        "definition": "A girl who likes girls. Or a woman aligned person who likes other women. ",
+        "definition": "A girl who likes girls. Or a woman aligned person who likes other women.",
         "identity": "White, England, 19, girl/butch, working class?"
     },
     {
@@ -59,14 +59,14 @@ export const defs = [
     {
         "timestamp": "2017-12-27T02:12:53.666Z",
         "term": "Asexual",
-        "definition": "Not being attracted to people in a sexual way, but there is still the option of wanting sex for different reasons. ",
+        "definition": "Not being attracted to people in a sexual way, but there is still the option of wanting sex for different reasons.",
         "identity": "I am a Mexican lesbian asexual "
     },
     {
         "timestamp": "2017-12-27T02:38:05.084Z",
         "name": "Mandy Lynn",
         "term": "Transgender",
-        "definition": "Switching to the sex I was supposed to be born with ",
+        "definition": "Switching to the sex I was supposed to be born with",
         "identity": "White, Battle Creek Michigan, 38, female, unemployed, make money on the streets"
     },
     {
@@ -80,7 +80,7 @@ export const defs = [
         "timestamp": "2017-12-27T03:22:13.159Z",
         "name": "Michayla Barg",
         "term": "Transgender*",
-        "definition": "When someone was born into a body that doesn't match what their soul sees them as. A person who has now known thy self to a new level and wishes to find to become the person their soul sees them as. ",
+        "definition": "When someone was born into a body that doesn't match what their soul sees them as. A person who has now known thy self to a new level and wishes to find to become the person their soul sees them as.",
         "identity": "Caucasian, Transgender Female, 27 years old. "
     },
     {
@@ -101,7 +101,7 @@ export const defs = [
         "timestamp": "2017-12-27T04:50:01.846Z",
         "name": "FlyteWizard",
         "term": "Bisexual",
-        "definition": "Attraction to yours and others. ",
+        "definition": "Attraction to yours and others.",
         "identity": "Queer / Bisexual, Female"
     },
     {
@@ -128,7 +128,7 @@ export const defs = [
         "timestamp": "2017-12-27T05:41:39.237Z",
         "name": "Vana/Evan/Eden",
         "term": "Genderfluidflux",
-        "definition": "Its is where your gender switches between different genders and the intensity of the gender. Like you can feel super masculine or only a little feminine. It could also mean Non-binary then switching to very light male. It is different for each person. ",
+        "definition": "Its is where your gender switches between different genders and the intensity of the gender. Like you can feel super masculine or only a little feminine. It could also mean Non-binary then switching to very light male. It is different for each person.",
         "identity": "Pansexual Panromantic Genderfluidflux"
     },
     {
@@ -158,7 +158,7 @@ export const defs = [
         "timestamp": "2017-12-27T05:44:58.160Z",
         "name": "Max",
         "term": "Demiboy",
-        "definition": "To me being a demiboy means feeling nonbinary and also masculine or as though you are mostly a boy. The term is a grey area and the person who identifies as a demiboy can use whatever pronouns they prefer but most seem to use they/them or he/him. ",
+        "definition": "To me being a demiboy means feeling nonbinary and also masculine or as though you are mostly a boy. The term is a grey area and the person who identifies as a demiboy can use whatever pronouns they prefer but most seem to use they/them or he/him.",
         "identity": "Teenage Demiboy"
     },
     {
@@ -172,28 +172,28 @@ export const defs = [
         "timestamp": "2017-12-27T06:01:26.733Z",
         "name": "Breeze",
         "term": "Lesbian",
-        "definition": "Liking only women and women aligned people ",
+        "definition": "Liking only women and women aligned people",
         "identity": "Latina"
     },
     {
         "timestamp": "2017-12-27T06:28:31.755Z",
         "name": "Carter",
         "term": "Queer",
-        "definition": "Queer to me means that I identify with having a hard to describe and fluctuating sexuality, with attraction to people of all genders. ",
+        "definition": "Queer to me means that I identify with having a hard to describe and fluctuating sexuality, with attraction to people of all genders.",
         "identity": "Queer man"
     },
     {
         "timestamp": "2017-12-27T06:34:40.268Z",
         "name": "Quinn",
         "term": "Agender",
-        "definition": "The absence of experiencing gender, or experiencing a lack of gender. For some it means experiencing a neutral gender. To me, it means experiencing a lack of gender, or not seeing myself as anything other than a person, rather than a boy, girl, or anything else. ",
+        "definition": "The absence of experiencing gender, or experiencing a lack of gender. For some it means experiencing a neutral gender. To me, it means experiencing a lack of gender, or not seeing myself as anything other than a person, rather than a boy, girl, or anything else.",
         "identity": "Agender, white amab person."
     },
     {
         "timestamp": "2017-12-27T06:53:12.975Z",
         "name": "Nicole Tracii",
         "term": "Pansexual",
-        "definition": "Non binary bisexual ",
+        "definition": "Non binary bisexual",
         "identity": "Pansexual "
     },
     {
@@ -206,7 +206,7 @@ export const defs = [
         "timestamp": "2017-12-27T07:25:08.264Z",
         "name": "Nicole H. ",
         "term": "Non-Binary Bisexual",
-        "definition": "It means that I can love either gender. ",
+        "definition": "It means that I can love either gender.",
         "identity": "An 18 year old black-Irish woman"
     },
     {
@@ -232,7 +232,7 @@ export const defs = [
         "timestamp": "2017-12-27T09:30:07.566Z",
         "name": "Navaha",
         "term": "Pansexual",
-        "definition": "Someone who is attracted to all gender identities ",
+        "definition": "Someone who is attracted to all gender identities",
         "identity": "Biracial, Trans-nonbinary, pansexual"
     },
     {
@@ -245,7 +245,7 @@ export const defs = [
     {
         "timestamp": "2017-12-27T10:25:54.311Z",
         "term": "Bisexual",
-        "definition": "Attraction to people of your own gender and genders different from your own. ",
+        "definition": "Attraction to people of your own gender and genders different from your own.",
         "identity": "Queer"
     },
     {
@@ -482,11 +482,6 @@ export const defs = [
         "timestamp": "2017-12-27T21:58:00.346Z",
         "term": "Achillean",
         "definition": "A man attracted to other men. May or may not be exclusive. Invented to unite gay and bi men alike."
-    },
-    {
-        "timestamp": "2017-12-27T21:59:07.807Z",
-        "term": "Demisexual",
-        "definition": "When you think not being able to experience sexual attraction until an emotional bond is formed is the same thing as a sexual orientation."
     },
     {
         "timestamp": "2017-12-27T22:00:55.369Z",
@@ -1883,7 +1878,7 @@ export const defs = [
     },
     {
         "timestamp": "2018-02-08T05:57:18.821Z",
-        "term": "Pansexual ",
+        "term": "Pansexual",
         "definition": "1. Attraction to all genders \n2. Attraction regardless of gender identity ",
         "identity": "Black, 18, Proud Pansexual "
     },
@@ -1950,7 +1945,7 @@ export const defs = [
     {
         "timestamp": "2018-02-22T21:10:09.515Z",
         "name": "Brynn",
-        "term": "Lesbian ",
+        "term": "Lesbian",
         "definition": "Girls who are attracted to other girls",
         "identity": "North Carolina, 14, Female "
     },
