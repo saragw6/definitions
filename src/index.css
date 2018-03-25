@@ -1,5 +1,5 @@
 body {
-  margin: 100px;
+  margin: 25px;
   padding: 0;
   font-family: sans-serif;
 }
@@ -13,9 +13,11 @@ a:hover {
   text-decoration: underline;
 }
 
+
+
 .header-wrapper {
-  margin: -100px -100px 10px -100px;
-  padding: 100px 100px 0px 100px;
+  margin: -25px -25px 10px -25px;
+  padding: 25px 25px 0px 25px;
   background-image: url("assets/grainblog.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,10 +26,10 @@ a:hover {
 
 .header {
   text-align: center;
-  margin-top:-50px;
   color:white;
   font-family: "Helvetica Neue";
-  font-size:24px;
+  /*font-size:24px;*/
+  font-size: 40px;
   font-weight: 200;
 }
 
@@ -37,7 +39,7 @@ a:hover {
   font-weight:100;
   line-height: 24px;
   padding: 10vw 0;
-  margin: 0px -50px;
+  /*margin: 0px -50px;*/
 }
 
 @media only screen and (min-width: 495px) {
@@ -45,10 +47,20 @@ a:hover {
     text-align:right;
     font-weight: 200;
     font-size:40px;
+    /*margin-top:-50px;*/
+  }
+
+  .header-wrapper {
+    margin: -100px -100px 10px -100px;
   }
 
   .blurb {
     padding: 5vw 15vw;
+    margin: 0px -75px;
+  }
+
+  body {
+    margin: 100px;
   }
 }
 
