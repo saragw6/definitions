@@ -28,7 +28,6 @@ a:hover {
   text-align: center;
   color:white;
   font-family: "Helvetica Neue";
-  /*font-size:24px;*/
   font-size: 40px;
   font-weight: 200;
 }
@@ -39,7 +38,6 @@ a:hover {
   font-weight:100;
   line-height: 24px;
   padding: 10vw 0;
-  /*margin: 0px -50px;*/
 }
 
 @media only screen and (min-width: 495px) {
@@ -47,7 +45,6 @@ a:hover {
     text-align:right;
     font-weight: 200;
     font-size:40px;
-    /*margin-top:-50px;*/
   }
 
   .header-wrapper {
@@ -66,7 +63,7 @@ a:hover {
 
 .defs {
   transition: left .25s;
-  left: calc(50vw - 285px); /*TODO: put a transition on this to match the masonry animation*/
+  left: calc(50vw - 285px);
 }
 
 @media only screen and (min-width: 1285px) and (max-width: 1335px), only screen and (min-width: 915px) and (max-width: 965px) {
@@ -77,13 +74,13 @@ a:hover {
 
 @media only screen and (min-width: 1309px) {
   .defs {
-    left: calc(50vw - 655px); /*TODO: put a transition on this to match the masonry animation*/
+    left: calc(50vw - 655px);
   }
 }
 
 @media only screen and (min-width: 940px) and (max-width: 1309px) {
   .defs {
-    left: calc(50vw - 470px); /*TODO: put a transition on this to match the masonry animation*/
+    left: calc(50vw - 470px);
   }
 }
 
