@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 25px;
   padding: 0;
@@ -25,7 +28,7 @@ a:hover {
 }
 
 .header {
-  text-align: center;
+  text-align: right;
   color:white;
   font-family: "Helvetica Neue";
   font-size: 40px;
@@ -40,15 +43,16 @@ a:hover {
   padding: 10vw 0;
 }
 
+
 @media only screen and (min-width: 495px) {
   .header {
-    text-align:right;
     font-weight: 200;
     font-size:40px;
   }
 
   .header-wrapper {
     margin: -100px -100px 10px -100px;
+    padding: 25px 25px 0px 100px;
   }
 
   .blurb {
