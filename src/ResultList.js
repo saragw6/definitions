@@ -4,6 +4,10 @@ import Masonry from 'react-masonry-component';
 
 import ResultCard from './ResultCard.js'
 
+var masonryOptions = {
+    transitionDuration: ".5s"
+};
+
 function ResultList(props) {
   const entries = props.entries;
   const listItems = entries.map((entry) =>
@@ -11,7 +15,7 @@ function ResultList(props) {
   );
 
   return (
-    <Masonry className="defs">{listItems}</Masonry>
+    <Masonry className="defs" options={masonryOptions}>{listItems}</Masonry>
   );
 }
 

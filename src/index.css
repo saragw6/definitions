@@ -53,7 +53,14 @@ a:hover {
 }
 
 .defs {
+  transition: left .25s;
   left: calc(50vw - 285px); /*TODO: put a transition on this to match the masonry animation*/
+}
+
+@media only screen and (min-width: 1285px) and (max-width: 1335px), only screen and (min-width: 915px) and (max-width: 965px) {
+  .defs {
+    transition: left .5s;
+  }
 }
 
 @media only screen and (min-width: 1309px) {
