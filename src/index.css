@@ -52,7 +52,6 @@ a:hover {
   }
 
   .header-wrapper {
-    margin: -100px -100px 10px -100px;
     padding: 25px 100px 0px 100px;
   }
 
@@ -60,16 +59,16 @@ a:hover {
     padding: 5vw 15vw;
     margin: 0px -75px;
   }
-
-  body {
-    margin: 100px;
-  }
 }
 
 .defs {
   transition: left .25s;
-  left: calc(50vw - 285px);
+  left: calc(50vw - 210px); /* 285 */
 }
+
+/* 1160px - min for 3col with 25px body margin  */
+/* 1309 - min for 3col with 100px body margin */
+
 
 @media only screen and (min-width: 1285px) and (max-width: 1335px), only screen and (min-width: 915px) and (max-width: 965px) {
   .defs {
@@ -77,15 +76,17 @@ a:hover {
   }
 }
 
-@media only screen and (min-width: 1309px) {
+@media only screen and (min-width: 1160px) {
   .defs {
-    left: calc(50vw - 655px);
+    left: calc(50vw - 580px);
   }
 }
 
-@media only screen and (min-width: 940px) and (max-width: 1309px) {
+/* 940px - min for 2col with 100px margin */
+
+@media only screen and (min-width: 790px) and (max-width: 1160px) {
   .defs {
-    left: calc(50vw - 470px);
+    left: calc(50vw - 395px);
   }
 }
 

@@ -24,6 +24,9 @@ import ResultList from './ResultList.js';
 //todo: change the css so when you collapse the page all the way, the overflowing title makes the grainblog extend further
 // - right now it has negative left margin on the title to simply avoid the title collapsing
 
+//TODO: make a modal for the info page
+//TODO: could use js to adjust css to center defs when there are only 1 or 2 defs
+
 
 import * as myConstClass from './defs.js';
 
