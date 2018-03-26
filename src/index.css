@@ -57,7 +57,7 @@ a:hover {
 
   .blurb {
     padding: 5vw 15vw;
-    margin: 0px -75px;
+    margin: 0px -25px;
   }
 }
 
@@ -70,13 +70,13 @@ a:hover {
 /* 1309 - min for 3col with 100px body margin */
 
 
-@media only screen and (min-width: 1285px) and (max-width: 1335px), only screen and (min-width: 915px) and (max-width: 965px) {
+@media only screen and (min-width: 1135px) and (max-width: 1185px), only screen and (min-width: 765px) and (max-width: 815px) {
   .defs {
     transition: left .5s;
   }
 }
 
-@media only screen and (min-width: 1160px) {
+@media only screen and (min-width: 1159px) {
   .defs {
     left: calc(50vw - 580px);
   }
@@ -84,7 +84,7 @@ a:hover {
 
 /* 940px - min for 2col with 100px margin */
 
-@media only screen and (min-width: 790px) and (max-width: 1160px) {
+@media only screen and (min-width: 790px) and (max-width: 1159px) {
   .defs {
     left: calc(50vw - 395px);
   }
