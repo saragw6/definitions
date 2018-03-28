@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+
+
+
+// COMMENT THESE IN FOR PRODUCTION BUILD
+// import ReactGA from 'react-ga';
+// ReactGA.initialize('UA-58549536-4');
+// ReactGA.pageview(window.location.pathname + window.location.search);
+
 import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
 
 import theme from './assets/react-toolbox/theme.js';
@@ -79,7 +87,10 @@ class App extends Component {
       window.location.assign("/definitions/"); //because its hosted on github for now
     } else {
       history.pushState(null, null, "/definitions/?=" + value); //add term to url //definitions bc github
-    }    
+    }
+
+    //COMMENT IN FOR PRODUCTION BUILD
+    // ReactGA.pageview(window.location.pathname + window.location.search);    
   };
 
  //TODO: edit the request form to say the url/title instead of "the site"
@@ -106,7 +117,7 @@ class App extends Component {
       />
     </div>
       {(this.state.my_term !== "" && my_entries.length === 0) &&
-        <div className="blurb"> No definitions yet. You can add one or request that this term be defined. </div>
+        <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>
       }
       {(this.state.my_term === "") &&
         <div className="blurb">
