@@ -1477,21 +1477,6 @@ export const defs = [
         "definition": "A female who identifies as a man"
     },
     {
-        "timestamp": "2018-01-23T18:47:24.720Z",
-        "term": "A(F/M)AB",
-        "definition": "Assigned Male/Female At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
-    },
-    {
-        "timestamp": "2018-01-23T18:47:24.720Z",
-        "term": "AFAB",
-        "definition": "Assigned Female At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
-    },
-    {
-        "timestamp": "2018-01-23T18:47:24.720Z",
-        "term": "AMAB",
-        "definition": "Assigned Male At Birth. Used by intersex people to describe which sex the doctor said they were when they were born, regardless of their actual sex. Non intersex people shouldn't use it because they are not assigned a sex at birth, their sex is observed and recorded. "
-    },
-    {
         "timestamp": "2018-01-23T18:48:22.771Z",
         "term": "Sexuality",
         "definition": "The sex/es you're attracted to in relation to the sex that you are. "
@@ -1828,13 +1813,6 @@ export const defs = [
         "identity": "Canadian, 21, cis, pansexual"
     },
     {
-        "timestamp": "2018-02-02T17:06:08.367Z",
-        "name": "Tailor",
-        "term": "pansexual",
-        "definition": "Being attracted to all genders, not just ",
-        "identity": "Pansexual/demi girl"
-    },
-    {
         "timestamp": "2018-02-03T04:25:07.939Z",
         "name": "Theo",
         "term": "Pansexual",
@@ -1927,13 +1905,6 @@ export const defs = [
         "term": "bisexual",
         "definition": "I define it as potential for attraction to two or more genders, but what it means to me is understanding and loving myself, and feeling like I belong.",
         "identity": "cis girl, white, mid teens, middle class (I don't like class identifiers but idk what else to call it)"
-    },
-    {
-        "timestamp": "2018-02-22T10:02:03.242Z",
-        "name": "Lara",
-        "term": "Intersex",
-        "definition": "A group of medical conditions where genetic mutations cause chromosomal abnormalities, hormonal imbalances, and/or physical variations on body type and sex organs. Intersex disorders represent variation on male or female, not new sexes. Intersex disorders are health problems ranging from heart irregularities to learning disabilities. ",
-        "identity": "Bisexual biological female diagnosed with Congenital Adrenal Hyperplasia at birth"
     },
     {
         "timestamp": "2018-02-22T20:08:08.446Z",

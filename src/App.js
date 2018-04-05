@@ -36,9 +36,12 @@ import ResultList from './ResultList.js';
 //TODO: could use js to adjust css to center defs when there are only 1 or 2 defs
 
 
-import * as myConstClass from './defs.js';
+import * as mydefs from './defs.js';
+import * as mydefswithsort from './defswithsort.js';
 
-const defs = myConstClass.defs;
+const defs = mydefs.defs;
+const defswithsort = mydefswithsort.defswithsort;
+
 const available_terms = defs.map((entry) => {return entry["term"].toLowerCase()});
 const no_dup = Array.from(new Set(available_terms)).sort();
 
@@ -63,6 +66,19 @@ class App extends Component {
 
   getDefList(searchterm) {
     var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
+
+    var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
+
+    return resultList;
+  }
+
+  getDefListWithSortAs(searchterm) {
+    //console.log(defswithsort[0]["sort-as"].includes(searchterm));
+    //search term will always be lowercase
+
+    var searchdefs = defswithsort.filter((entry) => { return entry["sort-as"].includes(searchterm) || entry["term"].toLowerCase() === searchterm });
+
+    console.log(searchdefs);
 
     var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
@@ -96,8 +112,10 @@ class App extends Component {
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
-    const my_entries = this.getDefList(this.state.my_term);
+    const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
 
+    console.log("my_entries: ");
+    console.log(my_entries);
 
   return(
     <ThemeProvider theme={theme}>
@@ -133,7 +151,7 @@ it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing. </div>
       }
-      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.getDefList(this.state.my_term)} />
+      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
         <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new" style={{margin: '5px'}} tooltip='define'/>
         <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new" />
