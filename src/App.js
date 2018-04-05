@@ -52,7 +52,8 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: decodeURIComponent(window.location.search.substring(2)) //grab term from url
+      my_term: decodeURIComponent(window.location.search.substring(2)), //grab term from url
+      info_modal: decodeURIComponent(window.location).includes("about")
     };
 
     this.handleChange = this.handleTermChange.bind(this);
@@ -84,6 +85,11 @@ class App extends Component {
 
     return resultList;
   }
+
+  aboutOnClick() {
+    this.setState({info_modal: !this.state.info_modal});
+    history.pushState(null, null, "/about");
+  }
   
   /*handleChange(event) {
     this.setState({searchTerm: event.target.value});
@@ -102,20 +108,17 @@ class App extends Component {
     if (value === "") {
       window.location.assign("/definitions/"); //because its hosted on github for now
     } else {
-      history.pushState(null, null, "/definitions/?=" + value); //add term to url //definitions bc github
+      history.pushState(null, null, "/definitions/?=" + encodeURIComponent(value)); //add term to url //definitions bc github
     }
 
     //COMMENT IN FOR PRODUCTION BUILD
-    // ReactGA.pageview(window.location.pathname + window.location.search);    
+    //ReactGA.pageview(window.location.pathname + window.location.search);    
   };
 
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
     const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
-
-    console.log("my_entries: ");
-    console.log(my_entries);
 
   return(
     <ThemeProvider theme={theme}>
@@ -132,6 +135,7 @@ class App extends Component {
         value={this.state.my_term}
         suggestionMatch="anywhere"
         multiple={false}
+        showSuggestionsWhenValueIsSet={true}
       />
     </div>
       {(this.state.my_term !== "" && my_entries.length === 0) &&
@@ -144,8 +148,8 @@ meanings of lgbtq+ labels and phrases. each definition
 you see here was submitted by an individual and may
 not align with your understanding or even with the
 other definitions displayed alongside it. the lgbtq+
-community is multi-faceted and ever-shifting,
-as is our vernacular. none of these definitions are
+community is multifaceted and ever-shifting,
+as is our vernacular. none of these definitions is
 official or final. this site is not all-encompassing.
 it is an attempt to decrease barriers to
 conversation and understanding by opening a
