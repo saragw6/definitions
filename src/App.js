@@ -24,18 +24,10 @@ import './App.css';
 
 import ResultList from './ResultList.js';
 
-//TODO : switch over to making calls to od-api and/or get CORS working
-
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
 
 //TODO: change theme colors to be from rainblog
-
-//todo: change the css so when you collapse the page all the way, the overflowing title makes the grainblog extend further
-// - right now it has negative left margin on the title to simply avoid the title collapsing
-
-//TODO: make a modal for the info page
-//TODO: could use js to adjust css to center defs when there are only 1 or 2 defs
 
 
 import * as mydefs from './defs.js';
@@ -59,7 +51,6 @@ class App extends Component {
     };
 
     this.handleChange = this.handleTermChange.bind(this);
-    //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount(){
@@ -76,13 +67,9 @@ class App extends Component {
   }
 
   getDefListWithSortAs(searchterm) {
-    //console.log(defswithsort[0]["sort-as"].includes(searchterm));
     //search term will always be lowercase
 
     var searchdefs = defswithsort.filter((entry) => { return entry["sort-as"].includes(searchterm) || entry["term"].toLowerCase() === searchterm });
-
-    console.log(searchdefs);
-
     var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
     return resultList;
@@ -104,25 +91,13 @@ class App extends Component {
     }
   }
 
-  
-  /*handleChange(event) {
-    this.setState({searchTerm: event.target.value});
-  }*/
-
-  // handleSubmit(event) {
-  //   alert('A name was submitted: ' + this.state.searchTerm);
-  //   event.preventDefault();
-  //   let def = httpGet("https://owlbot.info/api/v1/dictionary/" + this.state.searchTerm + "?format=json");
-  //   this.setState({def: def});
-  // }
-
   handleTermChange = (value) => {
     var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
     this.setState({my_term: value});
     history.pushState(null, null, "/definitions/" + new_query); //add term to url //definitions bc github
 
     //COMMENT IN FOR PRODUCTION BUILD
-    //ReactGA.pageview(window.location.pathname + window.location.search);    
+    // ReactGA.pageview(window.location.pathname + window.location.search);    
   };
 
  //TODO: edit the request form to say the url/title instead of "the site"
@@ -205,65 +180,5 @@ space of learning and knowledge-sharing, where we can collaboratively make meani
   );
   }
 }
-
-//href="http://saragw6.github.io/capstone/about.html" target="new"
-
-
-    //<SearchForm handleChangeFn={this.handleChange} handleSubmitFn={this.handleSubmit} searchTerm={this.searchTerm} />
-
-//    <SearchResults def={this.state.def} />
-//BROKEN!!
-// class SearchResults extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.setDef = [{"defenition": ""}]; 
-//   }
-  
-//   getDef() {
-//     if (typeof this.props.def === 'undefined' || this.props.def === null || this.props.def === '') {
-//     } else {
-//           this.setDef = JSON.parse(this.props.def);
-//     }
-//   }
-
-//   render() {
-//     this.getDef();
-//     return(
-//       <div>{this.setDef[0]["defenition"]}</div>
-//     );
-//   }
-
-// }
-
-
-/*class SearchForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {searchTerm: ''};
-  }
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.props.handleSubmitFn}>
-          <label>
-            Name:
-            <input type="text" value={this.props.searchTerm} onChange={this.props.handleChangeFn} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    );
-  }
-}*/
-
-  // function httpGet(theUrl)
-  // {
-  //     var xmlHttp = new XMLHttpRequest();
-  //     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-  //     xmlHttp.send( null );
-  //     return xmlHttp.responseText;
-  // }
-
 
 export default App;
