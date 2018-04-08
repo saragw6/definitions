@@ -117,13 +117,9 @@ class App extends Component {
   // }
 
   handleTermChange = (value) => {
-    //TODO: handle empty query location pushState...what do?
+    var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
     this.setState({my_term: value});
-    if (value === "") {
-      window.location.assign("/definitions/"); //because its hosted on github for now
-    } else {
-      history.pushState(null, null, "/definitions/?=" + encodeURIComponent(value)); //add term to url //definitions bc github
-    }
+    history.pushState(null, null, "/definitions/" + new_query); //add term to url //definitions bc github
 
     //COMMENT IN FOR PRODUCTION BUILD
     //ReactGA.pageview(window.location.pathname + window.location.search);    
@@ -145,11 +141,12 @@ class App extends Component {
         selectedPosition="above"
         label="enter a term"
         onChange={this.handleTermChange}
+        onQueryChange={this.handleTermChange}
         source={no_dup}
         value={this.state.my_term}
         suggestionMatch="anywhere"
         multiple={false}
-        showSuggestionsWhenValueIsSet={true}
+        showSuggestionsWhenValueIsSet={false}
       />
     </div>
     <Dialog
