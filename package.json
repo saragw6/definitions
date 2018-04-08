@@ -4,7 +4,8 @@
       "AUTOCOMPLETE",
       "CARD",
       "BUTTON",
-      "TOOLTIP"
+      "TOOLTIP",
+      "DIALOG"
     ],
     "customProperties": {
       "animation-duration": "0.3s",
