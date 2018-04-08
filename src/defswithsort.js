@@ -352,7 +352,7 @@ export const defswithsort = [
         "timestamp": "2017-12-27T13:50:08.639Z",
         "name": "Ary Ruth",
         "term": "Afab/amab",
-        "definition": "Afab- assigned female at birth\nAmab- assigned male at birth\nThese phrases are usually used with people who do not `cisgender` aka: non-binary,trans,graygender,\nagender,ect.",
+        "definition": "Afab- assigned female at birth\nAmab- assigned male at birth\nThese phrases are usually used with people who do not `cisgender` aka: `non-binary`, `trans`, graygender,\n`agender`, ect.",
         "identity": "Afab nonbinary gay",
         "sort-as": ["afab", "amab", "afab/amab", "amab/afab", "a(f/m)ab"]
     },
