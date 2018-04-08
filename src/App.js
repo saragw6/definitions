@@ -55,7 +55,7 @@ class App extends Component {
       searchTerm: 'filler text',
       def: '',
       my_term: decodeURIComponent(window.location.search.substring(2)), //grab term from url
-      info_modal: false//decodeURIComponent(window.location).includes("about")
+      info_modal: decodeURIComponent(window.location).includes("about")
     };
 
     this.handleChange = this.handleTermChange.bind(this);
