@@ -53,13 +53,11 @@ class App extends Component {
     };
 
     this.handleChange = this.handleTermChange.bind(this);
-    console.log("term in state " + this.state.my_term);
   }
 
   handleHashChange = () => {
     var hash = decodeURIComponent(window.location.hash.substring(2));
     this.setState({my_term: hash});
-    console.log("term in handle " + this.state.my_term);
   }
 
   componentDidMount() {
