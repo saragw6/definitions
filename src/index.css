@@ -64,6 +64,7 @@ a:hover {
 .defs {
   transition: left .25s;
   left: calc(50vw - 210px); /* 285 */
+  max-width: 370px;
 }
 
 /* 1160px - min for 3col with 25px body margin  */
@@ -79,6 +80,7 @@ a:hover {
 @media only screen and (min-width: 1159px) {
   .defs {
     left: calc(50vw - 580px);
+    max-width: 1110px;
   }
 }
 
@@ -87,6 +89,7 @@ a:hover {
 @media only screen and (min-width: 790px) and (max-width: 1159px) {
   .defs {
     left: calc(50vw - 395px);
+    max-width: 740px;
   }
 }
 
