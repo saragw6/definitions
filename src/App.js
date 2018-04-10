@@ -101,6 +101,20 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname + window.location.search);    
   };
 
+//   handleQueryChange = (value) => {
+// //    alert(value + " - " + value.length);
+//     if (value === "") {
+//       //this.setState({my_term: value});
+//       //history.pushState(null, null, "/");
+//     }
+//     //var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
+//     //this.setState({my_term: value});
+//     //history.pushState(null, null, "/" + new_query); //add term to url
+
+//     //COMMENT IN FOR PRODUCTION BUILD
+//     // ReactGA.pageview(window.location.pathname + window.location.search);    
+//   };
+
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
@@ -117,12 +131,12 @@ class App extends Component {
         selectedPosition="above"
         label="enter a term"
         onChange={this.handleTermChange}
-        onQueryChange={this.handleTermChange}
+        // onQueryChange={this.handleQueryChange}
         source={no_dup}
         value={this.state.my_term}
         suggestionMatch="anywhere"
-        multiple={false}
         showSuggestionsWhenValueIsSet={false}
+        multiple={false}
       />
     </div>
     <Dialog
@@ -131,6 +145,7 @@ class App extends Component {
       onEscKeyDown={this.aboutOnClick}
       onOverlayClick={this.aboutOnClick}
       title='About queer undefined'
+      style={{overflow:"scroll"}}
     >
 
             <p>I'm making a site that defines terms having to do with gender and sexuality. This site will be for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
