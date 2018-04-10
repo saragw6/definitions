@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 
 
 // COMMENT THESE IN FOR PRODUCTION BUILD
-// import ReactGA from 'react-ga';
-// ReactGA.initialize('UA-58549536-4');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-58549536-5');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
 
@@ -85,19 +85,20 @@ class App extends Component {
     // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
     // history.pushState(null, null, newURL);
     if (!this.state.info_modal) {
-      history.pushState(null, null, "/definitions/about");
+      history.pushState(null, null, "/#about");
     } else {
       this.handleTermChange(this.state.my_term);
     }
   }
 
+//took definitions out of link
   handleTermChange = (value) => {
     var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
     this.setState({my_term: value});
-    history.pushState(null, null, "/definitions/" + new_query); //add term to url //definitions bc github
+    history.pushState(null, null, "/" + new_query); //add term to url
 
     //COMMENT IN FOR PRODUCTION BUILD
-    // ReactGA.pageview(window.location.pathname + window.location.search);    
+    ReactGA.pageview(window.location.pathname + window.location.search);    
   };
 
  //TODO: edit the request form to say the url/title instead of "the site"
@@ -149,7 +150,7 @@ class App extends Component {
 
             
 
-            <p> If you have any questions/feedback, email me at <a href="mailto:sgwcapstone@gmail.com">sgwcapstone@gmail.com</a>.</p>
+            <p> If you have any questions/feedback, email me at <a href="mailto:info@queerundefined.com">info@queerundefined.com</a>.</p>
     </Dialog>
       {(this.state.my_term !== "" && my_entries.length === 0) &&
         <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>

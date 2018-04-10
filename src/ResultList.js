@@ -14,9 +14,6 @@ function ResultList(props) {
     <ResultCard key={entry["definition"]} term={entry["term"]} def={entry["definition"]} name={entry["name"]} id={entry["identity"]} /> //just pass the whole json object
   );
 
-  console.log("entries: ");
-  console.log(entries);
-
   return (
     <Masonry className="defs" options={masonryOptions}>{listItems}</Masonry>
   );

@@ -19,10 +19,10 @@ class ResultCard extends Component {
     return str.toLowerCase();
   }
 
-//uses definitions in link bc github
+//took definitions out of link
   defWithLinks(def) {
     return def.split('`').map(function(word, index) {
-      var url = "/definitions/?=" + word;
+      var url = "/?=" + word;
       var newWord = index % 2 !== 0 ? <a href={url}>{word}</a> : word;
       return newWord;
     });

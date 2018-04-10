@@ -277,7 +277,7 @@ export const defswithsort = [
         "term": "Trans-Non binary",
         "definition": "Trans-non binary: Transgender but not full binary trans (male/female) but still not identifying as full non binary so a mixture of both trans and non binary",
         "identity": "Biracial, Trans-non binary, Pansexual",
-        "sort-as": ["pan", "pansexual", "pansexuality"]
+        "sort-as": ["trans", "non-binary", "trans non-binary", "trans nonbinary", "trans non binary", "trans enby", "trans nb", "transgender nonbinary", "transgender non-binary"]
     },
     {
         "timestamp": "2017-12-27T10:25:54.311Z",
@@ -849,7 +849,7 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-28T08:46:27.003Z",
         "term": "Asexual",
-        "definition": "Someone who doesn't experience `sexual attraction`. Whether or not someone is asexual doesn't affect whether or not they enjoy the act of sex itself; though there is a higher number of outwardly sex repulsed aces, that is likely due to the community being accepting of a lack of sex",
+        "definition": "Someone who doesn't experience sexual attraction. Whether or not someone is asexual doesn't affect whether or not they enjoy the act of sex itself; though there is a higher number of outwardly sex repulsed aces, that is likely due to the community being accepting of a lack of sex",
         "identity": "Asexual, white, disabled, queer, middle class, neurodivergent, British, early twenties",
         "sort-as": ["ace", "asexual", "asexuality"]
     },
@@ -888,7 +888,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T16:22:45.579Z",
         "name": "Grace Calcagno",
         "term": "Bisexual",
-        "definition": "The `sexual attraction` to two genders (typically male and female), bisexual means (to me) just a label of my sexual appeal that IS VALID and definitely not fake, a phase, the step before being gay, greedy, or means you're always down for a threesome.",
+        "definition": "The sexual attraction to two genders (typically male and female), bisexual means (to me) just a label of my sexual appeal that IS VALID and definitely not fake, a phase, the step before being gay, greedy, or means you're always down for a threesome.",
         "identity": "bisexual female",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
@@ -896,7 +896,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T16:25:31.600Z",
         "name": "Emma",
         "term": "Asexual",
-        "definition": "Experiencing no `sexual attraction` towards person's of any `gender`. This term does not dictate how a person feels about having sex, if they ever want to, how active their libido is, whether or not they want romantic relationship, or a person's `romantic orientation`. As an umbrella term, any person who identifies as asexual or on the asexual spectrum",
+        "definition": "Experiencing no sexual attraction towards person's of any `gender`. This term does not dictate how a person feels about having sex, if they ever want to, how active their libido is, whether or not they want romantic relationship, or a person's `romantic orientation`. As an umbrella term, any person who identifies as asexual or on the asexual spectrum",
         "identity": "Asexual, agender, demiromantic",
         "sort-as": ["ace", "asexual", "asexuality"]
     },
@@ -949,7 +949,7 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-28T22:38:21.240Z",
         "term": "Panromantic",
-        "definition": "Feeling or being able to feel `romantic attraction` to anyone regardless of `gender` ",
+        "definition": "Feeling or being able to feel romantic attraction to anyone regardless of `gender` ",
         "identity": "17, Virginia USA, cis girl, panromantic demisexual, middle class, white, ",
         "sort-as": ["pan", "panromantic"]
     },
