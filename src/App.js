@@ -20,6 +20,8 @@ const TooltipButton = Tooltip(Button);
 
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
 
+import DocumentTitle from 'react-document-title'
+
 import './App.css';
 
 import ResultList from './ResultList.js';
@@ -119,8 +121,10 @@ class App extends Component {
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
     const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+    const pageTitle = this.state.my_term === "" ? "queer undefined" : "queer undefined | " + this.state.my_term;
 
   return(
+    <DocumentTitle title={pageTitle}>
     <ThemeProvider theme={theme}>
     <div>
     <div className="header-wrapper">
@@ -193,6 +197,7 @@ space of learning and knowledge-sharing, where we can collaboratively make meani
       </div>
     </div>
     </ThemeProvider>
+    </DocumentTitle>
   );
   }
 }
