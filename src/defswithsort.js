@@ -2360,5 +2360,63 @@ export const defswithsort = [
         "definition": "Sexual attraction to `genderqueer` or `nonbinary` people.",
         "identity": "Genderqueer, pansexual, panromantic, white, mentally ill, feminist",
         "sort-as": []
+    },
+    {
+        "timestamp": "2018-03-18T02:13:46.159Z",
+        "name": "Leo Dixon",
+        "term": "Uranic",
+        "definition": "It means that I’m attracted to trans and cis guys, neutral nonbinary people, masculine nonbinary people,  and agender people but not feminine nonbinary people, cis women, or trans women.",
+        "identity": "I’m a 16 year old afab demiboy from Texas. ",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-03-19T00:59:43.954Z",
+        "term": "Pansexual",
+        "definition": "attracted to all people regardless of gender",
+        "sort-as": ["pan", "pansexual", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-03-23T15:07:01.979Z",
+        "name": "Caleb Pelliccia",
+        "term": "Belong",
+        "definition": "I think It means to be comfortable as yourself ",
+        "identity": "Ftm male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-03-28T11:38:47.074Z",
+        "name": "Joi'",
+        "term": "Bisexuality",
+        "definition": "Choosing to be your own you and not sticking to social standards, also like who you want to like people don't own us.",
+        "identity": "16,African American,Chattanooga Tennessee",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-03-31T19:56:29.183Z",
+        "term": "Bisexual ",
+        "definition": "Attraction to at least two genders.",
+        "identity": "Bisexual.",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-04-08T21:06:20.072Z",
+        "term": "bisexual",
+        "definition": "being bi means you're attracted to multiple genders (not just girls and boys)",
+        "identity": "biro ace",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-03-06T04:49:46.057Z",
+        "term": "Bisexual",
+        "definition": "Attraction to two or more genders, not necessarily in the same way and not necessarily to the same degree. People tell me I'm not bi because I'm dating a man - but I'm bisexual no matter who I'm dating. I'd be bi if I were dating a woman or a non binary person too. When I get married to spend the rest of my life with someone, I'll be bi then too. ",
+        "identity": "White, bisexual, cis woman, age 22",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-03-06T12:49:39.891Z",
+        "term": "Queer",
+        "definition": "\"Queer\" is used in lots of ways -- rather than undermining the term, this diversity is part of why it's so beautiful. It can be a version of \"bi\" that acknowledges more than 2 genders. It can highlight the way that attraction is more complicated than \"women + men,\" especially in a world where gender is flexible and complex. It can reflect an entire lifestyle based on appreciating the performativity and power in gender, and playing with that. It can be an umbrella term for the entire LGBTQ+ rainbow. Ever since I was little, I felt attracted to women's bodies but to \"masculine\" energy. I wanted someone to shovel the car out of the snow for me, and then to let me play with her boobs. For a long time I wondered if I was just a repressed lesbian, or a confused straight person. The term \"queer\" felt liberating for me in its nonspecificity -- it also fit nicely into my lifestyle of primarily dating butch women and transmasculine folks, which also doesn't fit a \"lesbian\" or a \"straight\" label.",
+        "identity": "Queer, Boston, 26, White cis woman",
+        "sort-as": []
     }
 ];
