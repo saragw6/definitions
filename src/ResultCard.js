@@ -22,7 +22,7 @@ class ResultCard extends Component {
 //took definitions out of link
   defWithLinks(def) {
     return def.split('`').map(function(word, index) {
-      var url = "/?=" + word;
+      var url = "/#/" + word;
       var newWord = index % 2 !== 0 ? <a href={url}>{word}</a> : word;
       return newWord;
     });

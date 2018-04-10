@@ -48,17 +48,27 @@ class App extends Component {
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: decodeURIComponent(window.location.search.substring(2)), //grab term from url
-      info_modal: decodeURIComponent(window.location).includes("about")
+      my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
+      info_modal: decodeURIComponent(window.hash) === "#/about"
     };
 
     this.handleChange = this.handleTermChange.bind(this);
+    console.log("term in state " + this.state.my_term);
   }
 
-  componentDidMount(){
-    document.title = this.state.my_term === "" ? "queer undefined" : "queer undefined | " + this.state.my_term;
+  handleHashChange = () => {
+    var hash = decodeURIComponent(window.location.hash.substring(2));
+    this.setState({my_term: hash});
+    console.log("term in handle " + this.state.my_term);
   }
-  
+
+  componentDidMount() {
+    window.addEventListener("hashchange", this.handleHashChange, false);
+  }
+
+  componentWillUnmount() {
+      window.removeEventListener("hashchange", this.handleHashChange, false);
+  }
 
   getDefList(searchterm) {
     var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
@@ -87,7 +97,7 @@ class App extends Component {
     // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
     // history.pushState(null, null, newURL);
     if (!this.state.info_modal) {
-      history.pushState(null, null, "/#about");
+      history.pushState(null, null, "/#/about");
     } else {
       this.handleTermChange(this.state.my_term);
     }
@@ -95,12 +105,12 @@ class App extends Component {
 
 //took definitions out of link
   handleTermChange = (value) => {
-    var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
+    var new_query = value === "" ? "" : "#/" + encodeURIComponent(value);
     this.setState({my_term: value});
     history.pushState(null, null, "/" + new_query); //add term to url
 
     //COMMENT IN FOR PRODUCTION BUILD
-    ReactGA.pageview(window.location.pathname + window.location.search);    
+    ReactGA.pageview(window.location.hash);    
   };
 
 //   handleQueryChange = (value) => {
