@@ -411,7 +411,7 @@ export const defswithsort = [
         "timestamp": "2017-12-27T21:06:00.129Z",
         "name": "Lucas",
         "term": "Queer",
-        "definition": "\n\nQueer, in its modern sense, can be used to identify anyone in the LGBTQIA+ community. It’s literal definition is equivalent to “weird” or “strange” but in its evolution it became an insult and was later reclaimed by the people it targeted. Because of this, it’s meaning can change from person to person, and (a least in my personal view) should only be used if the person referred to identifies as queer (apposed to reffering anyone in the LGBTQIA+ community as queer as a default). ",
+        "definition": "\n\nQueer, in its modern sense, can be used to identify anyone in the LGBTQIA+ community. It’s literal definition is equivalent to \"weird\" or \"strange\" but in its evolution it became an insult and was later reclaimed by the people it targeted. Because of this, it’s meaning can change from person to person, and (a least in my personal view) should only be used if the person referred to identifies as queer (apposed to reffering anyone in the LGBTQIA+ community as queer as a default). ",
         "identity": "I identify as a pansexual trans guy ",
         "sort-as": []
     },
@@ -1016,7 +1016,7 @@ export const defswithsort = [
         "timestamp": "2017-12-29T00:16:29.456Z",
         "name": "Grace Moon",
         "term": "Queer",
-        "definition": "A queer person is someone who defies the “norm” someone who may be outcasted or shunned due to some defining trait (especially with regards to sexuality). However this “queerness” is a strength, a power: breaking the mold and owning your true self is the bravest and most beautiful trait",
+        "definition": "A queer person is someone who defies the \"norm\" someone who may be outcasted or shunned due to some defining trait (especially with regards to sexuality). However this \"queerness\" is a strength, a power: breaking the mold and owning your true self is the bravest and most beautiful trait",
         "identity": "Cis female, lesbian, white, 18 y/o",
         "sort-as": []
     },
@@ -1358,7 +1358,7 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-31T07:09:00.561Z",
         "term": "Butch",
-        "definition": "A `gender nonconforming` `lesbian` who focuses on a more “masculine” physical presentation and centers their identity firmly around their attraction to and protection of fellow `wlw` ",
+        "definition": "A `gender nonconforming` `lesbian` who focuses on a more \"masculine\" physical presentation and centers their identity firmly around their attraction to and protection of fellow `wlw` ",
         "sort-as": []
     },
     {
@@ -1616,7 +1616,7 @@ export const defswithsort = [
         "timestamp": "2018-01-23T15:51:13.026Z",
         "name": "El",
         "term": "Nonbinary",
-        "definition": "Someone who is not strictly male or female. The “strictly” part is important since many nonbinary people do experience feelings of maleness/manhood or femaleness/womanhood and some may consider themselves as a man but not just a man, or a woman but not just a woman, or someone who is both a man and a woman, or their gender may fluctuate between the two or not exist on that spectrum at all. Being nonbinary does not in any way relate to presentation and there are infinite ways to be nonbinary, there is no standard to follow. ",
+        "definition": "Someone who is not strictly male or female. The \"strictly\" part is important since many nonbinary people do experience feelings of maleness/manhood or femaleness/womanhood and some may consider themselves as a man but not just a man, or a woman but not just a woman, or someone who is both a man and a woman, or their gender may fluctuate between the two or not exist on that spectrum at all. Being nonbinary does not in any way relate to presentation and there are infinite ways to be nonbinary, there is no standard to follow. ",
         "identity": "White, British, nonbinary, bisexual, queer, disabled, age 20",
         "sort-as": ["nb", "enby", "non-binary", "nonbinary", "non binary"]
     },
@@ -1921,7 +1921,7 @@ export const defswithsort = [
         "timestamp": "2018-01-28T15:50:53.870Z",
         "name": "Gillian (spacerockets)",
         "term": "bisexuality",
-        "definition": "my favorite definition is one by Robyn Ochs. it’s incredibly inclusive and makes it easy for anyone who wants to identify as bi, to be able to; “i call myself bisexual because i acknowledge that i have in myself the potential to be attracted romantically and/or sexually to people of more than one gender, not necessarily at the same time, not necessarily in the same way, and not necessarily to the same degree.” this definition includes ALL genders, ALL attractions (romantic & sexual), and validates people who think that they aren’t “bi enough” to id as bisexual because they aren’t 50/50 on all attractions. it’s the best definition i have found to date. ",
+        "definition": "my favorite definition is one by Robyn Ochs. it’s incredibly inclusive and makes it easy for anyone who wants to identify as bi, to be able to; \"i call myself bisexual because i acknowledge that i have in myself the potential to be attracted romantically and/or sexually to people of more than one gender, not necessarily at the same time, not necessarily in the same way, and not necessarily to the same degree.\" this definition includes ALL genders, ALL attractions (romantic & sexual), and validates people who think that they aren’t \"bi enough\" to id as bisexual because they aren’t 50/50 on all attractions. it’s the best definition i have found to date. ",
         "identity": "i’m 17, female, bisexual",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
@@ -2207,7 +2207,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-03-02T20:56:24.951Z",
         "term": "Genderqueer",
-        "definition": "Similar to the word `queer`, genderqueer is a sort of “catch all term” that means a gender that is out of the ordinary. Some folks (like me) like to identify with `trans` along with this label, others `non binary`, and some just simply genderqueer. To me it means that you don’t fit into a binary but you may not be outside it either; you’re a mix in your own way, similar to how if you look up the definitions of the colors of the genderqueer flag you’ll get some beautiful results about the chartreuse, white, and lavender. ",
+        "definition": "Similar to the word `queer`, genderqueer is a sort of \"catch all term\" that means a gender that is out of the ordinary. Some folks (like me) like to identify with `trans` along with this label, others `non binary`, and some just simply genderqueer. To me it means that you don’t fit into a binary but you may not be outside it either; you’re a mix in your own way, similar to how if you look up the definitions of the colors of the genderqueer flag you’ll get some beautiful results about the chartreuse, white, and lavender. ",
         "identity": "Genderqueer, white, American, middle class, 18",
         "sort-as": ["genderqueer", "gender queer"]
     },
@@ -2418,5 +2418,287 @@ export const defswithsort = [
         "definition": "\"Queer\" is used in lots of ways -- rather than undermining the term, this diversity is part of why it's so beautiful. It can be a version of \"bi\" that acknowledges more than 2 genders. It can highlight the way that attraction is more complicated than \"women + men,\" especially in a world where gender is flexible and complex. It can reflect an entire lifestyle based on appreciating the performativity and power in gender, and playing with that. It can be an umbrella term for the entire LGBTQ+ rainbow. Ever since I was little, I felt attracted to women's bodies but to \"masculine\" energy. I wanted someone to shovel the car out of the snow for me, and then to let me play with her boobs. For a long time I wondered if I was just a repressed lesbian, or a confused straight person. The term \"queer\" felt liberating for me in its nonspecificity -- it also fit nicely into my lifestyle of primarily dating butch women and transmasculine folks, which also doesn't fit a \"lesbian\" or a \"straight\" label.",
         "identity": "Queer, Boston, 26, White cis woman",
         "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-10T23:49:04.474Z",
+        "term": "Pansexual",
+        "definition": "The ability to be attracted to people without gender being a defining aspect (though it is still possible to have preferences, similar to preferring brown hair, etc. you may prefer a certain gender). \nThis term has given me the freedom to work out what type of person I want to be with without worrying about fitting into gay or straight narratives.",
+        "sort-as": ["pan", "pansexual", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-04-11T00:53:51.482Z",
+        "name": "Charlie",
+        "term": "demiboy",
+        "definition": "A gender identity that pertains to identifying partly as a boy and partly something else. \n I identify as a boy and `nonbinary`. The nonbinary part of me is more ambiguous and changes sometimes. In the past, I've identified with being `genderfluid`, `genderflux`, `agender`, etc.",
+        "identity": "USA, 18",
+        "sort-as": ["demi", "demiboy", "demi-boy", "demi boy"]
+    },
+    {
+        "timestamp": "2018-04-11T00:58:19.662Z",
+        "name": "Charlie",
+        "term": "aceflux",
+        "definition": "When your sexual orientation is in flux between being `asexual` and allosexual (experiencing sexual attraction). \nSometimes I'll get sex repulsed and not experience sexual attraction or desire at all, but sometimes I feel sexual attraction and I'm all for having sex. Sometimes, the shift between being DTF and sex repulsed can happen very quickly, and when that happens, it's really hard because it can trigger my anxiety/panic attacks",
+        "sort-as": ["ace", "aceflux"]
+    },
+    {
+        "timestamp": "2018-04-11T01:05:51.357Z",
+        "term": "Soft Butch",
+        "definition": "A soft butch is a woman who exhibits some stereotypical `butch` and lesbian traits without fitting the masculine stereotype associated with butch lesbians",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T02:16:31.671Z",
+        "name": "Ava Elisabeth ",
+        "term": "Demiromantic ",
+        "definition": "The way I explain demiromanticism is having no romantic attraction (and at least for me, no interest in having a romantic relationship), except when you form a really strong connection and bond with a person, then for that person and only that person are you romantically attracted. \nFor me this mean, I won't have a crush on anyone, unless I am like they are like my best friend. \nI have had very few crushes throughout my life and I barely ever understand the allure of romantic relationships. When I do have crushes, they are always on my best friend, regardless of gender, and they are very intense. This term has made me feel less alienated from my peers, but I also kinda hate it. ",
+        "identity": "white ace girl ",
+        "sort-as": ["demi", "demiromantic"]
+    },
+    {
+        "timestamp": "2018-04-11T03:36:57.791Z",
+        "name": "Michael",
+        "term": "Polyam",
+        "definition": "Loving/dating more then one person consentually with all parties of the relationship knowing each other. \nI am polyam, and currently in a triangle relationship (all dating eachother)",
+        "identity": "16, trans-non binary guy (he/him)",
+        "sort-as": ["poly", "polyam", "polyamorous"]
+    },
+    {
+        "timestamp": "2018-04-11T03:51:41.244Z",
+        "name": "Jack",
+        "term": "high femme",
+        "definition": "A high femme, also called 'stone femme' is the opposite of a `stone butch`. They want to receive sexual contact but don't want to reciprocate.  \nSometimes this can carry a negative connotation, but as a stone butch, an ideal girlfriend would be a high femme. Another example of how lesbian relationships can often be vastly different than heterosexual ones.",
+        "identity": "nb stone butch lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T03:53:04.407Z",
+        "name": "Jack",
+        "term": "bigender",
+        "definition": "someone who experiences multiple gender identities at once. possibly feeling them simultaneously or switching between the two",
+        "identity": "nb stone butch lesbian",
+        "sort-as": ["bi", "bigender"]
+    },
+    {
+        "timestamp": "2018-04-11T04:01:51.766Z",
+        "name": "Jack",
+        "term": "queer",
+        "definition": "queer is a slur that many LGBT community members have reclaimed. it is often used to describe an amalgamous or hard to define attraction that is not-straight. it is important to be sensitive to those who still view it as a slur. our community's comfort should come first. ",
+        "identity": "nb stone butch lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T04:03:51.442Z",
+        "name": "Patrick",
+        "term": "Gender Burnout",
+        "definition": "Quite literally, exhaustion with experiencing gender and/or gender expression. \nI have felt this often, but haven't found a good definition for it. Hopefully by adding it here, other people who have felt this way will know that they're not alone. For me, it was the beginning of me questioning my `gender identity`.",
+        "identity": "Caucasian cis male (maybe?), pansexual/bisexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T04:14:08.212Z",
+        "term": "Baby lesbian",
+        "definition": "A young `lesbian` new to the identity. An affectionate pet name for older lesbians to call very young lesbian. \nBaby lesbian was a comfortable place to sit while accepting my lesbianness. Not really an identity into itself but a good way to signify that I still had a lot to learn about myself. It's also just cute in a kinda dorky way. It made me feel safe and accepted when others used the term.",
+        "identity": "Cis butch lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T04:30:16.730Z",
+        "term": "Butch",
+        "definition": "A masculine woman attracted to other women. Has its roots in working class `lesbian` communities, so it's usually represented by \"men's\" work clothes with maybe one nice suit. Sometimes used as a `gender identity` on its own, with some relation to `trans` and `nonbinary` communities.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T07:28:46.070Z",
+        "term": "wig",
+        "definition": "The moment of surprise akin to when a wig is snatched away",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T07:29:57.239Z",
+        "term": "deadname/birthname",
+        "definition": "the name given to a person at birth, which as a result of change in that individuals life no longer applies to them",
+        "sort-as": ["deadname", "birthname", "deadname/birthname"]
+    },
+    {
+        "timestamp": "2018-04-11T08:17:36.397Z",
+        "term": "Queer-platonic relationships",
+        "definition": "A commited consenting relationship that's beyond simply friends and not romantic( it's in a gray area). It's not to be confused with being best friends, this is a relationship that is a platonic alternative for `aro`-spec people and non aro-spec people who don't want or like romantic relationships but want a partner. \nTo me this is an important relationship I want, but haven't yet got. As an `aromantic` it person I was hurt by the fact I didn't think I'd back able to have a partner as I didn't want a romantic or sexual relationship so I was really happy to find out I could still have a partner platonically",
+        "identity": "White, non-binary, aromantic asexual",
+        "sort-as": ["queer-platonic", "queerplatonic", "queer platonic", "queer-platonic relationships", "queer-platonic relationship"]
+    },
+    {
+        "timestamp": "2018-04-11T11:59:17.192Z",
+        "name": "Clare",
+        "term": "Demi Lesbian",
+        "definition": "A demi lesbian is a girl who experiences sexual and or romantic attraction to other girls when they first connect with them. It is possible for them to have an initial interest in someone, but that feeling is usually fleeting. ",
+        "identity": "20, Cis Female, Lesbian",
+        "sort-as": ["demi", "demi lesbian"]
+    },
+    {
+        "timestamp": "2018-04-11T13:14:40.988Z",
+        "name": "Mae",
+        "term": "GNC (Gender nonconforming)",
+        "definition": "GNC can be anyone who doesn’t fit traditional gender roles, even `cisgender` people, such as a `butch` lesbian, `nonbinary` people, boys who wear dresses, etc. Both cis and `trans` people can use this label and it can affect your gender or not. \nI myself am questioning my gender and currently ID as a cis/`demigirl` butch lesbian and have always identified as gnc",
+        "identity": "16 butch lesbian ",
+        "sort-as": ["gnc", "gender-nonconforming", "gender nonconforming", "gender non-conforming"]
+    },
+    {
+        "timestamp": "2018-04-11T13:17:58.289Z",
+        "name": "Mae",
+        "term": "Butch",
+        "definition": "Butch is a term created by and for lesbians only that describes a masculine `lesbian` who rejects traditional feminine gender roles. This can be intertwined with a use of non she/her pronouns or even a `nonbinary` gender or a masculine sheher lesbian",
+        "def2": "I’m a gender questioning butch",
+        "identity": "16 year old butch",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T16:56:06.619Z",
+        "name": "Selina",
+        "term": "Gender Fluid",
+        "definition": "People who sometimes are female and sometimes male. My gender depends on the moment, I may awake feeling female and during the day start feeling male ",
+        "identity": "Latina, USA, 16, Gender Fluid, attracted to girls",
+        "sort-as": ["genderfluid", "gender fluid", "gender-fluid"]
+    },
+    {
+        "timestamp": "2018-04-11T17:06:10.789Z",
+        "name": "closet-keys",
+        "term": "compulsory heterosexuality",
+        "definition": "Compulsory heterosexuality is essentially a function of patriarchy that encourages women to form intimate relationships with men and discourages women forming intimate relationships with women through structural and interpersonal violence and oppression. \n\nFor example, the wage gap encourages women to form relationships with men in order to sustain a higher standard of living only accessible to some women through men’s income. In many places women are not allowed to adopt or face very real discrimination in seeking infertility treatments if they are not partnered with men. Women who form relationships with other women in our media are always shown as either dying or ending up partnered with men to create the cultural idea that relationships between women are not lasting or are doomed to fail. Our culture fetishizes relationships between women but shames love between them, so girls think that even if they’re attracted to women, they should pursue relationships with men as their public or primary relationship. Compulsory heterosexuality is teaching girls to understand attraction to mean responding to who is attracted to you or being attractive rather than who they actually want to form relationships with. It’s the insistence that `wlw` \"just haven’t met the right man yet\" or that they’re \"confused\" or \"will grow out of it.\" Compulsory heterosexuality is `trans` women being denied medication unless they tell therapists they’re attracted to men. It’s trans `lesbian`s being told that they’re not \"real women\" unless they’re straight.  It’s trans women being assaulted and stalked and killed for not adhering to `cis` men’s expectations of femininity or for not wanting to sleep with them. It’s `butch` lesbians being punished for not performing femininity for men by means of workplace and housing discrimination and physical assault. It’s corrective rape. It’s conversion therapy. It’s forced marriages. It’s straight male abusers isolating their `bisexual` partners from wlw communities and enacting physical or psychological violence on them for being attracted to women. \n\nAll of these things, from the direct physical violence to the subtle cultural ideology, create an effect where young `sapphic` women growing up try to understand their feelings for men and women through this context, and are often forced or coerced into interpreting their attraction to women as platonic or meaningless or wrong, and interpreting their unease or discomfort around men as attraction or arousal. \n\nIt’s a deeply distressing and disorienting phenomenon, and it’s a big part of the reason that the average age for `gay` women to come out is about a full decade later in life than gay men. ",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T17:07:47.449Z",
+        "term": "Lesbian",
+        "definition": "Lesbians are women (including `cis` women, `trans` women, and women-aligned `non-binary` people) who are exclusively attracted to other women.",
+        "identity": "butch",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T17:11:32.372Z",
+        "term": "Woman",
+        "definition": "I think it’s useful to conceptualize womanhood using a \"family resemblances\" definition model. This model of definition suggests that some concepts cannot be defined by reducing them to their most fundamental parts because they have no single common characteristic. Instead we must understand them as drawing from a common pool of interrelated or similar qualities. \n\nTo me, \"woman\" is a combination of the sensory experience of being a woman (something you can understand about yourself), the way we define gender as a culture and what it means in terms of our interactions with others, and the state of being an oppressed class under patriarchy whose oppression is enforced by various manifestations of misogyny. \n\nDifferent women will relate to these aspects of womanhood in unique ways, but I believe those aspects of selfhood, experience, and material reality create the common pool of characteristics that define womanhood. ",
+        "identity": "somewhere between woman and non-binary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T17:18:48.125Z",
+        "term": "trans woman",
+        "definition": "A woman who was mistakenly assigned male at birth and, as a consequence of that mistake, was likely raised as boy. \nTrans women often face a particular intersection of misogyny and transphobia in our culture that leads to disproportionate rates of experiencing sexual violence, relationship abuse, employment and housing discrimination, and suicidal feelings. ",
+        "sort-as": ["trans", "trans woman", "transgender woman", "transgender"]
+    },
+    {
+        "timestamp": "2018-04-11T23:17:29.822Z",
+        "name": "Henry J",
+        "term": "Graysexual",
+        "definition": "Graysexual can be considered in between `Asexual` and Sexual. Someone who is graysexual experiences sexual attraction, but only sometimes and in varying degrees. Note: this does not mean that they require a certain gender or \"type\" to become aroused. If anything it is similar to being `aceflux`.",
+        "identity": "Trans Male, Graysexual, Polya",
+        "sort-as": ["graysexual", "gray asexual", "gray ace", "grey ace", "greysexual", "grey asexual"]
+    },
+    {
+        "timestamp": "2018-04-11T23:20:00.098Z",
+        "name": "ava (my url is @ablesisters)",
+        "term": "bambi lesbian",
+        "definition": "a lesbian who prefers cuddles, kisses, etc. over sex. \ni embody this term because i prefer nonsexual contact over, well, sexual contact.",
+        "identity": "latine nonbinary femme lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-11T23:23:01.186Z",
+        "name": "Henry J",
+        "term": "Polya",
+        "definition": "Shortened term meaning Polyamorous. This is someone who is in a relationship of three or more people. Note: This does not mean that they are cheating. In order to be in a poly relationship, everyone should understand the situation and give consent.",
+        "identity": "Trans Male, Graysexual, Polya",
+        "sort-as": ["poly", "polyam", "polyamorous"]
+    },
+    {
+        "timestamp": "2018-04-12T00:22:44.011Z",
+        "term": "Gold Star",
+        "definition": "A lesbian that has only had sex with women. ",
+        "sort-as": ["gold star lesbian", "gold star"]
+    },
+    {
+        "timestamp": "2018-04-12T01:01:01.458Z",
+        "name": "K. ",
+        "term": "Androgyne",
+        "definition": "Literally \"an androgynous individual\"; someone who identifies with androgyny and/or feels that their `gender identity` has both \"male\"/\"masculine\" and \"female\"/\"feminine\" elements to it. ",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-12T01:06:46.562Z",
+        "name": "K. ",
+        "term": "Gender-nonconforming (GNC)",
+        "definition": "Anyone whose identity or expression doesn't fit with traditional ideas of maleness and femaleness; a GNC person might describe themselves as neither male nor female, or they might describe themselves as one but express themselves in ways, and take on societal roles, traditionally associated with the other. (I.e., someone might describe themselves as female, but express masculinely and take on the roles of a man; someone might describe themselves as male, but express femininely and take on the roles of a woman; both of these people would be GNC.)",
+        "sort-as": ["gnc", "gender-nonconforming", "gender nonconforming", "gender non-conforming"]
+    },
+    {
+        "timestamp": "2018-04-12T01:25:07.932Z",
+        "term": "Fuch-- a lesbian marker/identity term",
+        "definition": "Futch is a literal mixing of the terms `femme` and `butch`, signifying that users of the term take elements from both labels. \nI've found myself very comfortable as a `lesbian` mixing elements of both masculine and feminine elements within the lesbian subculture. It's a more hybrid and fluid term to me than simply butch or femme. ",
+        "identity": "Lesbian teen",
+        "sort-as": ["futch", "Fuch-- a lesbian marker/identity term"]
+    },
+    {
+        "timestamp": "2018-04-12T04:19:49.627Z",
+        "name": "CJames",
+        "term": "stem",
+        "definition": "Stud + Femme = stem",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-12T15:43:43.856Z",
+        "name": "Alex",
+        "term": "Demisexual",
+        "definition": "To me, demisexual means that you only become sexually attracted to someone after developing a strong emotional bond/connection with them. \nThis term has meant that while I can still get little crushes on people, that feeling becomes more intense if I become close to the person emotionally. ",
+        "identity": "Korean-American, 14, genderfluid, bi/demisexual",
+        "sort-as": ["demi", "demisexual", "demisexuality"]
+    },
+    {
+        "timestamp": "2018-04-12T22:10:35.831Z",
+        "term": "Transmasc",
+        "definition": "A term to describe all `trans` guys and masculine-identifying `nonbinary` people",
+        "sort-as": ["transmasc", "transmasculine", "trans masc"]
+    },
+    {
+        "timestamp": "2018-04-12T22:12:04.519Z",
+        "term": "Transsexual",
+        "definition": "An older term for `transgender` that can be seen as offensive today.",
+        "sort-as": ["transexual", "transsexual"]
+    },
+    {
+        "timestamp": "2018-04-12T22:29:27.222Z",
+        "term": "mlm",
+        "definition": "a man or male-aligned person who experiences attraction to other men",
+        "sort-as": ["mlm", "man loving man", "men loving men", "men loving man", "man-loving-man"]
+    },
+    {
+        "timestamp": "2018-04-12T22:55:38.149Z",
+        "name": "Ross",
+        "term": "Questioning",
+        "definition": "Someone who is unsure of their gender and/or `sexual orientation`. \nI once questioned my sexuality and gender. All throughout 6th grade and present. I wasn't sure if I was straight or `bi`- or `poly`- or `pansexual`. i wasn't even sure if I was 100% female.",
+        "identity": "Transmasc Bigender (Demigender + Agender) Bisexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-12T23:14:53.281Z",
+        "name": "Samantha Egnew",
+        "term": "Demigirl",
+        "definition": "Someone who identifies partly as a girl, but also as `non-binary`. Usually preferring she and they pronouns. \nI identify as a demigirl, `afab` I’m usually referred to by she/her pronouns, I’m ok with this but it makes me somewhat uncomfortable. People that I’ve come out to will now sometimes use they pronouns, which feels more right to me.  ",
+        "identity": "15, Demigirl (she/they pronouns)",
+        "sort-as": ["demi", "demigirl", "demi girl", "demi-girl"]
+    },
+    {
+        "timestamp": "2018-04-13T00:31:51.592Z",
+        "name": "Zara",
+        "term": "Polyamorous",
+        "definition": "To have the capacity to be in love with more than one person at a time.",
+        "identity": "A polyamorous, bisexual, cis woman",
+        "sort-as": ["poly", "polyam", "polyamorous", "polya"]
+    },
+    {
+        "timestamp": "2018-04-13T01:13:25.896Z",
+        "name": "Craigory Byrd",
+        "term": "Butch-Femme Lesbian",
+        "definition": "I like to use the term Butch femme to describe myself as a lesbian because I feel like while I show many masculine traits I also tend to remain relatively feminine, and it's just the way I like to say that. ",
+        "sort-as": ["butch femme", "butch-femme", "butch femme lesbian", "butch-femme lesbian"]
     }
 ];

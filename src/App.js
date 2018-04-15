@@ -19,6 +19,7 @@ import Tooltip from 'react-toolbox/lib/tooltip';
 const TooltipButton = Tooltip(Button);
 
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
+import {Helmet} from 'react-helmet'
 
 import DocumentTitle from 'react-document-title'
 
@@ -32,13 +33,13 @@ import ResultList from './ResultList.js';
 //TODO: change theme colors to be from rainblog
 
 
-import * as mydefs from './defs.js';
+//import * as mydefs from './defs.js';
 import * as mydefswithsort from './defswithsort.js';
 
-const defs = mydefs.defs;
+//const defs = mydefs.defs;
 const defswithsort = mydefswithsort.defswithsort;
 
-const available_terms = defs.map((entry) => {return entry["term"].toLowerCase()});
+const available_terms = defswithsort.map((entry) => {return entry["term"].toLowerCase()});
 const no_dup = Array.from(new Set(available_terms)).sort();
 
 
@@ -49,7 +50,7 @@ class App extends Component {
       searchTerm: 'filler text',
       def: '',
       my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
-      info_modal: decodeURIComponent(window.hash) === "#/about"
+      info_modal: decodeURIComponent(window.location.hash) === "#/about"
     };
 
     this.handleChange = this.handleTermChange.bind(this);
@@ -68,13 +69,13 @@ class App extends Component {
       window.removeEventListener("hashchange", this.handleHashChange, false);
   }
 
-  getDefList(searchterm) {
-    var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
+  // getDefList(searchterm) {
+  //   var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
 
-    var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
+  //   var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
-    return resultList;
-  }
+  //   return resultList;
+  // }
 
   getDefListWithSortAs(searchterm) {
     //search term will always be lowercase
@@ -95,7 +96,7 @@ class App extends Component {
     // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
     // history.pushState(null, null, newURL);
     if (!this.state.info_modal) {
-      history.pushState(null, null, "/#/about");
+      //history.pushState(null, null, "/#/about");
     } else {
       this.handleTermChange(this.state.my_term);
     }
@@ -129,12 +130,20 @@ class App extends Component {
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
     const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
-    const pageTitle = this.state.my_term === "" ? "queer undefined" : "queer undefined | " + this.state.my_term;
+    const pageTitle = this.state.my_term === "" ? "queer undefined" : this.state.my_term + " | Queer Undefined" ;
+    const description = "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
 
   return(
     <DocumentTitle title={pageTitle}>
     <ThemeProvider theme={theme}>
     <div>
+    <Helmet>
+      <meta property="og:image" content="http://queerundefined.com/quthumbnail.png" />
+      <meta property="og:description" content={description} />
+      <meta property="description" content={description} />
+      <meta property="og:site_name" content="Queer Undefined"/>
+      <meta property="og:title" content={pageTitle}/>
+    </Helmet>
     <div className="header-wrapper">
       <div className="header">queer undefined</div>
       <Autocomplete
