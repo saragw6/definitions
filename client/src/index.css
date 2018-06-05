@@ -1,0 +1,95 @@
+
+
+
+body {
+  margin: 25px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: #9b55da;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+.header-wrapper {
+  margin: -25px -25px 10px -25px;
+  padding: 25px 25px 0px 25px;
+  background-image: url("assets/grainblog.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  transition: padding .5s;
+}
+
+.header {
+  text-align: right;
+  color:white;
+  font-family: "Helvetica Neue";
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.blurb {
+  text-align: center;
+  color: #5c5c5c;
+  font-weight:100;
+  line-height: 24px;
+  padding: 10vw 0;
+}
+
+
+@media only screen and (min-width: 495px) {
+  .header {
+    font-weight: 200;
+    font-size:40px;
+  }
+
+  .header-wrapper {
+    padding: 25px 100px 0px 100px;
+  }
+
+  .blurb {
+    padding: 5vw 15vw;
+    margin: 0px -25px;
+  }
+}
+
+.defs {
+  transition: left .25s;
+  left: calc(50vw - 210px); /* 285 */
+  max-width: 370px;
+}
+
+/* 1160px - min for 3col with 25px body margin  */
+/* 1309 - min for 3col with 100px body margin */
+
+
+@media only screen and (min-width: 1135px) and (max-width: 1185px), only screen and (min-width: 765px) and (max-width: 815px) {
+  .defs {
+    transition: left .5s;
+  }
+}
+
+@media only screen and (min-width: 1159px) {
+  .defs {
+    left: calc(50vw - 580px);
+    max-width: 1110px;
+  }
+}
+
+/* 940px - min for 2col with 100px margin */
+
+@media only screen and (min-width: 790px) and (max-width: 1159px) {
+  .defs {
+    left: calc(50vw - 395px);
+    max-width: 740px;
+  }
+}
+
