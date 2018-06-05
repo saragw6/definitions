@@ -26,7 +26,7 @@ export const defswithsort = [
         "timestamp": "2017-12-27T01:30:36.567Z",
         "name": "Agender Al",
         "term": "Agender",
-        "definition": "Usually a person lacking gender. An agender person might be aligned with male, female, both, neutral, or neither. ",
+        "definition": "Usually a person lacking gender. An agender person might be aligned with male, female, both, neutral, or neither.",
         "sort-as": []
     },
     {
@@ -34,7 +34,7 @@ export const defswithsort = [
         "name": "Shaw",
         "term": "Demisexual",
         "definition": "The term means being sexually attracted to a person who you feel an emotional connection with. I do believe this term is more open because it doesn’t focus on any gender so really anyone is free to define themselves as such. For me I like to say I’m a `queer` demi because I’ve only had connections with the same sex. I also like to say I’m a `lesbian` but I do feel comfortable with either label. I don’t feel like I should just limit myself to one label.",
-        "identity": "19yo Latina Lesbian ",
+        "identity": "19yo Latina Lesbian",
         "sort-as": ["demi", "demisexual", "demisexuality"]
     },
     {
@@ -69,7 +69,7 @@ export const defswithsort = [
         "timestamp": "2017-12-27T02:12:53.666Z",
         "term": "Asexual",
         "definition": "Not being attracted to people in a sexual way, but there is still the option of wanting sex for different reasons.",
-        "identity": "I am a Mexican lesbian asexual ",
+        "identity": "I am a Mexican lesbian asexual",
         "sort-as": ["ace", "asexual", "asexuality"]
     },
     {
@@ -93,7 +93,7 @@ export const defswithsort = [
         "name": "Michayla Barg",
         "term": "Transgender*",
         "definition": "When someone was born into a body that doesn't match what their soul sees them as. A person who has now known thy self to a new level and wishes to find to become the person their soul sees them as.",
-        "identity": "Caucasian, Transgender Female, 27 years old. ",
+        "identity": "Caucasian, Transgender Female, 27 years old.",
         "sort-as": ["trans", "transgender", "trans*", "transgender*"]
     },
     {
@@ -155,14 +155,14 @@ export const defswithsort = [
         "timestamp": "2017-12-27T05:43:09.755Z",
         "term": "Pansexual",
         "definition": "Attraction to people regardless of gender identity or sex.",
-        "identity": "Desi, Canadian, middle class, queer feminist. ",
+        "identity": "Desi, Canadian, middle class, queer feminist.",
         "sort-as": []
     },
     {
         "timestamp": "2017-12-27T05:43:09.755Z",
         "term": "Panromantic",
         "definition": "Attraction to people regardless of `gender identity` or sex.",
-        "identity": "Desi, Canadian, middle class, queer feminist. ",
+        "identity": "Desi, Canadian, middle class, queer feminist.",
         "sort-as": []
     },
     {
@@ -191,7 +191,7 @@ export const defswithsort = [
         "name": "Li",
         "term": "Enby",
         "definition": "Shorthand for NB or Nonbinary, a gender identity that isn’t within the binary of male and female. This term is used for those who don’t identify wholly or at all with the gender binary.",
-        "identity": " I’m an Asian/White enby who’s fifteen and pan. ",
+        "identity": " I’m an Asian/White enby who’s fifteen and pan.",
         "sort-as": ["nb", "nonbinary", "enby"]
     },
     {
@@ -223,7 +223,7 @@ export const defswithsort = [
         "name": "Nicole Tracii",
         "term": "Pansexual",
         "definition": "Non binary `bisexual`",
-        "identity": "Pansexual ",
+        "identity": "Pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -235,7 +235,7 @@ export const defswithsort = [
     },
     {
         "timestamp": "2017-12-27T07:25:08.264Z",
-        "name": "Nicole H. ",
+        "name": "Nicole H.",
         "term": "Non-Binary Bisexual",
         "definition": "It means that I can love either gender.",
         "identity": "An 18 year old black-Irish woman",
@@ -308,9 +308,9 @@ export const defswithsort = [
     },
     {
         "timestamp": "2017-12-27T11:05:42.138Z",
-        "name": "Viv ",
+        "name": "Viv",
         "term": "Gay",
-        "definition": "Physically and emotionally invested in, and attracted to someone of the same sex. ",
+        "definition": "Physically and emotionally invested in, and attracted to someone of the same sex.",
         "identity": "Middle/working class 20 year old gay",
         "sort-as": []
     },
@@ -367,14 +367,14 @@ export const defswithsort = [
         "timestamp": "2017-12-27T16:47:08.524Z",
         "name": "Oli",
         "term": "Nonbinary masculine",
-        "definition": "A `nonbinary` person who most identifys as male but doesn't genital dysphoria. I have horrible `dysphoria` with my voice, height, muscle mass (more lack of) and breasts ",
-        "identity": "A biracial, middle lower class, queer male who sadly enough has to live in the USA ",
+        "definition": "A `nonbinary` person who most identifys as male but doesn't genital dysphoria. I have horrible `dysphoria` with my voice, height, muscle mass (more lack of) and breasts",
+        "identity": "A biracial, middle lower class, queer male who sadly enough has to live in the USA",
         "sort-as": []
     },
     {
         "timestamp": "2017-12-27T16:47:09.505Z",
         "term": "Queer",
-        "definition": "Queer is a word the `LGBT` community has reclaimed. It can be used as an umbrella term for the LGBT community, however, some people do not identify with this word because of its historically negative connotations. \nSome LGBT people such as myself exclusively identify with the label queer, I use it because I am attracted to all genders but with an emphasis on my own gender.  ",
+        "definition": "Queer is a word the `LGBT` community has reclaimed. It can be used as an umbrella term for the LGBT community, however, some people do not identify with this word because of its historically negative connotations. \nSome LGBT people such as myself exclusively identify with the label queer, I use it because I am attracted to all genders but with an emphasis on my own gender. ",
         "identity": "Queer",
         "sort-as": []
     },
@@ -395,8 +395,8 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-27T19:50:43.273Z",
         "term": "Pansexuality",
-        "definition": "Pansexuality is to me loving someone no matter their gender, expression, ... Seeing the person before their part ",
-        "identity": "Canadian teenager ",
+        "definition": "Pansexuality is to me loving someone no matter their gender, expression, ... Seeing the person before their part",
+        "identity": "Canadian teenager",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -411,8 +411,8 @@ export const defswithsort = [
         "timestamp": "2017-12-27T21:06:00.129Z",
         "name": "Lucas",
         "term": "Queer",
-        "definition": "\n\nQueer, in its modern sense, can be used to identify anyone in the LGBTQIA+ community. It’s literal definition is equivalent to \"weird\" or \"strange\" but in its evolution it became an insult and was later reclaimed by the people it targeted. Because of this, it’s meaning can change from person to person, and (a least in my personal view) should only be used if the person referred to identifies as queer (apposed to reffering anyone in the LGBTQIA+ community as queer as a default). ",
-        "identity": "I identify as a pansexual trans guy ",
+        "definition": "\n\nQueer, in its modern sense, can be used to identify anyone in the LGBTQIA+ community. It’s literal definition is equivalent to \"weird\" or \"strange\" but in its evolution it became an insult and was later reclaimed by the people it targeted. Because of this, it’s meaning can change from person to person, and (a least in my personal view) should only be used if the person referred to identifies as queer (apposed to reffering anyone in the LGBTQIA+ community as queer as a default).",
+        "identity": "I identify as a pansexual trans guy",
         "sort-as": []
     },
     {
@@ -597,16 +597,16 @@ export const defswithsort = [
     },
     {
         "timestamp": "2017-12-27T23:26:53.192Z",
-        "name": "Adrian ",
+        "name": "Adrian",
         "term": "Queer",
         "definition": "I see it as anything out of the ordinary boxes that people think of. So really anything not heterosexual or `cis`.",
-        "identity": "I'm genderfluid/agender, 16 and i grew up in seattle Washington ",
+        "identity": "I'm genderfluid/agender, 16 and i grew up in seattle Washington",
         "sort-as": []
     },
     {
         "timestamp": "2017-12-27T23:32:05.630Z",
         "term": "Bisexual",
-        "definition": "Being attracted to two or more genders ",
+        "definition": "Being attracted to two or more genders",
         "identity": "White, Ireland, 21, Non binary, working class",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
@@ -623,7 +623,7 @@ export const defswithsort = [
         "name": "Daniel",
         "term": "Fag",
         "definition": "This word is one of the worst words ever in my opinion. It comes from the age where you would burn witches and anyone `LGBT+` but the LGBT+ weren't \"important enough\" to waste the logs on so they got burned with the fags",
-        "identity": "Pansexual ",
+        "identity": "Pansexual",
         "sort-as": ["faggot", "fag"]
     },
     {
@@ -661,7 +661,7 @@ export const defswithsort = [
         "timestamp": "2017-12-27T23:49:38.047Z",
         "name": "MPC",
         "term": "Sex Assigned At Birth (SAAB)",
-        "definition": "The designation made at birth of either male, female, or something else, based on physical anatomy at the time and/or karyotyping. This is separate from one’s gender identity, which is formed in terms of social/cultural definitions of different genders.\n\nAnother side note - Transstudent.org/definitions has a lot of great definitions! It’s my favorite I’ve found thus far ",
+        "definition": "The designation made at birth of either male, female, or something else, based on physical anatomy at the time and/or karyotyping. This is separate from one’s gender identity, which is formed in terms of social/cultural definitions of different genders.\n\nAnother side note - Transstudent.org/definitions has a lot of great definitions! It’s my favorite I’ve found thus far",
         "identity": "Multiracial , from SoCal, 16, nonbinary (also genderqueer), queer attraction, middle class",
         "sort-as": []
     },
@@ -699,7 +699,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T01:49:52.904Z",
         "term": "wlw",
         "definition": "a girl who has a romantic and sexual attraction to girls",
-        "identity": "white 16 year old middle class lesbian ",
+        "identity": "white 16 year old middle class lesbian",
         "sort-as": ["wlw", "woman-loving-woman", "woman loving woman"]
     },
     {
@@ -720,7 +720,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T04:38:32.523Z",
         "name": "Agender Al",
         "term": "Hijra",
-        "definition": "`Trans` women/trans feminine people from the Indian-subcontinent. There is a lot of history & culture behind them, that was denied due to British & Christian colonialism. Hijras are once again recognized as a third gender in India & slowly gaining recognition again. While in India & Bangladesh they still face battle for legal recognition. ",
+        "definition": "`Trans` women/trans feminine people from the Indian-subcontinent. There is a lot of history & culture behind them, that was denied due to British & Christian colonialism. Hijras are once again recognized as a third gender in India & slowly gaining recognition again. While in India & Bangladesh they still face battle for legal recognition.",
         "identity": "Agender/trans woman-ish",
         "sort-as": []
     },
@@ -728,7 +728,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T04:49:52.210Z",
         "name": "Hayden",
         "term": "Polysexual",
-        "definition": "Being attracted to some genders but not all. So someone could be attracted to women and `nonbinary` people but not men. Someone else could only be attracted to `genderfluid` individuals, women, and `trans` men. ",
+        "definition": "Being attracted to some genders but not all. So someone could be attracted to women and `nonbinary` people but not men. Someone else could only be attracted to `genderfluid` individuals, women, and `trans` men.",
         "identity": "16, genderfluid",
         "sort-as": ["poly", "polysexual", "polysexuality"]
     },
@@ -751,7 +751,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T04:55:33.377Z",
         "name": "Julianna",
         "term": "Bisexual",
-        "definition": "Being bisexual is being attracted (sexually, romantically, or any other way) to 2+ genders. Traditionally, it only meant men and women. However, `nonbinary` genders are included. Some bi people only feel attracted to women and nonbinary people or vice versa. It does not mean that you automatically like threesomes or that you will one day \"decide\" on a gender. ",
+        "definition": "Being bisexual is being attracted (sexually, romantically, or any other way) to 2+ genders. Traditionally, it only meant men and women. However, `nonbinary` genders are included. Some bi people only feel attracted to women and nonbinary people or vice versa. It does not mean that you automatically like threesomes or that you will one day \"decide\" on a gender.",
         "identity": "18 cis girl",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
@@ -765,14 +765,14 @@ export const defswithsort = [
         "timestamp": "2017-12-28T05:06:20.640Z",
         "name": "Brianna Wray",
         "term": "Bisexual",
-        "definition": "It means you are attracted to two genders, typically male and female, with it being ok to have a preference to either. ",
+        "definition": "It means you are attracted to two genders, typically male and female, with it being ok to have a preference to either.",
         "identity": "I’m a white, lower middle class, demigirl, who is bisexual.",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
     {
         "timestamp": "2017-12-28T05:18:25.052Z",
         "term": "Queer",
-        "definition": "Our history with the word queer is very complicated, and I believe that is what leaves us with two definitions. For some, queer is a reminder of how far our community has come, and how much we have endured. It labels us as proudly different; it demonstrates that we have a different flavor and a different rhythm than our non-queer counterparts. However, there are those of us who reject the term and who see it as a reminder of the hate and ignorance that surround us still. (I will never forget the first time I heard my uncle reminisce about playing \"smear the queer\" in grade school). I, however, find myself on the fence about the term. Like sanction, which has two oposite meanings, I believe that both have their place. I love the vagueness of queer; it lets me tell others that I am a part of the `LGBT` umbrella without having to chose a more specific term. But I would never use the word to refer to the community as a whole, nor would I use it to refer to anyone without first knowing how they feel about it. ",
+        "definition": "Our history with the word queer is very complicated, and I believe that is what leaves us with two definitions. For some, queer is a reminder of how far our community has come, and how much we have endured. It labels us as proudly different; it demonstrates that we have a different flavor and a different rhythm than our non-queer counterparts. However, there are those of us who reject the term and who see it as a reminder of the hate and ignorance that surround us still. (I will never forget the first time I heard my uncle reminisce about playing \"smear the queer\" in grade school). I, however, find myself on the fence about the term. Like sanction, which has two oposite meanings, I believe that both have their place. I love the vagueness of queer; it lets me tell others that I am a part of the `LGBT` umbrella without having to chose a more specific term. But I would never use the word to refer to the community as a whole, nor would I use it to refer to anyone without first knowing how they feel about it.",
         "identity": "Hispanic, cis, lesbian, lower middle class, well educated, American.",
         "sort-as": []
     },
@@ -828,7 +828,7 @@ export const defswithsort = [
         "term": "Quoi-sexual/romantic/gender",
         "definition": "To me, it means I do not understand these conceits and therefore cannot definitively say if I experience them in any meaningful capacity. Hence, they are nonsensical as applied to me.",
         "identity": "Mentally ill, quoi(all 3), middle class, white, australian",
-        "sort-as": []
+        "sort-as": ["quoisexual", "quoiromantic", "quoigender"]
     },
     {
         "timestamp": "2017-12-28T08:44:24.481Z",
@@ -843,7 +843,7 @@ export const defswithsort = [
         "name": "Josie",
         "term": "Queer",
         "definition": "An umbrella term for anyone in the `LGBT+` community to simply state that they are in the LGBT+ community.",
-        "identity": "Bisexual ",
+        "identity": "Bisexual",
         "sort-as": []
     },
     {
@@ -873,7 +873,7 @@ export const defswithsort = [
         "name": "Rena",
         "term": "Pansexual",
         "definition": "The ability to be sexually attracted to anyone, where `gender` is not the main influence or does not influence the attraction",
-        "identity": "Pansexual ",
+        "identity": "Pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -919,8 +919,8 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-28T20:26:53.325Z",
         "term": "Lesbian",
-        "definition": "A person (normally a woman but also someone who is `non-binary` or woman aligned non-binary) who loves other women ",
-        "identity": "Non-binary Lesbian ",
+        "definition": "A person (normally a woman but also someone who is `non-binary` or woman aligned non-binary) who loves other women",
+        "identity": "Non-binary Lesbian",
         "sort-as": []
     },
     {
@@ -937,7 +937,7 @@ export const defswithsort = [
         "term": "Transman",
         "definition": "A dfab person who identifies with a male social role, and typically pursues elements of physical transition to more consistently be understood in that role",
         "identity": "Colonially descended white Canadian, bisexual transman, working class with a middle-aged class family background",
-        "sort-as": ["transman", "trans", "trans man", "trans-man", "trans* man", "transmen", "transgender"]
+        "sort-as": ["transman", "trans", "trans man", "trans-man", "trans* man", "transmen", "transgender", "transgender men", "trans men"]
     },
     {
         "timestamp": "2017-12-28T22:03:25.495Z",
@@ -949,8 +949,8 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-28T22:38:21.240Z",
         "term": "Panromantic",
-        "definition": "Feeling or being able to feel romantic attraction to anyone regardless of `gender` ",
-        "identity": "17, Virginia USA, cis girl, panromantic demisexual, middle class, white, ",
+        "definition": "Feeling or being able to feel romantic attraction to anyone regardless of `gender`",
+        "identity": "17, Virginia USA, cis girl, panromantic demisexual, middle class, white,",
         "sort-as": ["pan", "panromantic"]
     },
     {
@@ -985,7 +985,7 @@ export const defswithsort = [
         "timestamp": "2017-12-28T23:56:18.109Z",
         "name": "morgan",
         "term": "lgbt+",
-        "definition": "not cisgender or heterosexual ",
+        "definition": "not cisgender or heterosexual",
         "identity": "white, georgia (US), 14, lesbian",
         "sort-as": ["lgbt", "lgbtq", "lgbt+", "lgbtq+"]
     },
@@ -1000,8 +1000,8 @@ export const defswithsort = [
         "timestamp": "2017-12-29T00:03:47.109Z",
         "name": "Rachel/Robyn",
         "term": "demigirl",
-        "definition": "demigirl: an identity leaning more towards feminine, but not quite identifying as a female. This can mean someone `afab` who feels a disconnect from their gender, but still feels more feminine than `nonbinary` or masculine,  or someone `amab` who is transfeminine but not wholly binary, who feels more feminine than masculine or nonbinary, but not enough to identify fully as female. Basically \"I'm a girl, but not really\". A demigirl will probably use she/her pronouns or they/them. Demigirl can be an in between space between a feminine and nonbinary identity ",
-        "identity": "I'm a demigirl and a lesbian, currently questioning other nonbinary identities. ",
+        "definition": "demigirl: an identity leaning more towards feminine, but not quite identifying as a female. This can mean someone `afab` who feels a disconnect from their gender, but still feels more feminine than `nonbinary` or masculine,  or someone `amab` who is transfeminine but not wholly binary, who feels more feminine than masculine or nonbinary, but not enough to identify fully as female. Basically \"I'm a girl, but not really\". A demigirl will probably use she/her pronouns or they/them. Demigirl can be an in between space between a feminine and nonbinary identity",
+        "identity": "I'm a demigirl and a lesbian, currently questioning other nonbinary identities.",
         "sort-as": ["demigirl", "demi", "demi-girl"]
     },
     {
@@ -1033,7 +1033,7 @@ export const defswithsort = [
         "name": "Cheyenne Carr",
         "term": "Polysexual",
         "definition": "Polysexual is when a person is attracted to 3 or more genders, but not all of them. It can be any combination (Example: `cis` men, cis women, `non-binary`) of any genders as long as they are three or more and exclude at least one gender. This is a term that is often compared to `pansexual` and `bisexual`.",
-        "identity": "I am a white, cis, panromantic, polysexual woman ",
+        "identity": "I am a white, cis, panromantic, polysexual woman",
         "sort-as": ["poly", "polysexual", "polysexuality"]
     },
     {
@@ -1041,7 +1041,7 @@ export const defswithsort = [
         "name": "Charlie",
         "term": "Bi",
         "definition": "Short for bisexual or biromantic, not necessarily a binary term. Denotes attraction to multiple genders. Similar meaning to `pansexual` or `panromantic`, the choice to use either bi or pan as a self-description is usually just personal preference.",
-        "identity": "Queer Canadian college student ",
+        "identity": "Queer Canadian college student",
         "sort-as": ["bi", "bisexual", "bisexuality", "biromantic"]
     },
     {
@@ -1062,7 +1062,7 @@ export const defswithsort = [
         "timestamp": "2017-12-29T02:21:03.352Z",
         "name": "Liv",
         "term": "Butch",
-        "definition": "A `lesbian` who rejects traditionally feminine presentations and attitudes. Different from `gender non-conforming`, as butches are defined in a major way by their love for women along with their rejection of traditional femininity. ",
+        "definition": "A `lesbian` who rejects traditionally feminine presentations and attitudes. Different from `gender non-conforming`, as butches are defined in a major way by their love for women along with their rejection of traditional femininity.",
         "identity": "Butch lesbian",
         "sort-as": []
     },
@@ -1090,7 +1090,7 @@ export const defswithsort = [
         "timestamp": "2017-12-29T05:22:20.933Z",
         "term": "Biromantic",
         "definition": "Romantic attraction to two or more genders",
-        "identity": "17, asexual, questioning for romantic orientation ",
+        "identity": "17, asexual, questioning for romantic orientation",
         "sort-as": ["bi", "biromantic"]
     },
     {
@@ -1110,8 +1110,8 @@ export const defswithsort = [
         "timestamp": "2017-12-29T07:41:53.736Z",
         "name": "El",
         "term": "Demiromantic",
-        "definition": "To have an emotional attraction to somebody before a romantic attraction. To me, this means developing a deeper connection to the person, getting to know them better. ",
-        "identity": "Demiromantic, lesbian ",
+        "definition": "To have an emotional attraction to somebody before a romantic attraction. To me, this means developing a deeper connection to the person, getting to know them better.",
+        "identity": "Demiromantic, lesbian",
         "sort-as": ["demi", "demiromantic", "demi-romantic"]
     },
     {
@@ -1141,8 +1141,8 @@ export const defswithsort = [
         "timestamp": "2017-12-29T18:30:47.493Z",
         "name": "Casey",
         "term": "Nonbinary",
-        "definition": "The term, to me, means a person who identifies outside of normal binary norm. For me it means a form of androgyny where I can be what I want, when I want, and don’t have to say I’m a binary gender or someone who switches. I just exist outside of a binary. ",
-        "identity": "Caucasian, 16, Nonbinary, Pansexual ",
+        "definition": "The term, to me, means a person who identifies outside of normal binary norm. For me it means a form of androgyny where I can be what I want, when I want, and don’t have to say I’m a binary gender or someone who switches. I just exist outside of a binary.",
+        "identity": "Caucasian, 16, Nonbinary, Pansexual",
         "sort-as": ["nonbinary", "non-binary", "nb", "enby", "non binary"]
     },
     {
@@ -1157,8 +1157,8 @@ export const defswithsort = [
         "timestamp": "2017-12-29T18:32:51.102Z",
         "name": "Casey",
         "term": "Pansexual",
-        "definition": "Pansexual is being attracted to anyone despite their gender / sexual identity. If doesn’t matter who they are in that sense, it matters more that you love them for who they are. It is a love that isn’t defined by gender or sex. ",
-        "identity": "Caucasian, 16, Nonbinary, Pansexual ",
+        "definition": "Pansexual is being attracted to anyone despite their gender / sexual identity. If doesn’t matter who they are in that sense, it matters more that you love them for who they are. It is a love that isn’t defined by gender or sex.",
+        "identity": "Caucasian, 16, Nonbinary, Pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -1173,7 +1173,7 @@ export const defswithsort = [
         "timestamp": "2017-12-29T18:43:43.401Z",
         "name": "Jay",
         "term": "Neptunic",
-        "definition": "Attracted to women and `nonbinary` people, but not men and commonly masc-aligned people. ",
+        "definition": "Attracted to women and `nonbinary` people, but not men and commonly masc-aligned people.",
         "identity": "Neptunic",
         "sort-as": []
     },
@@ -1188,7 +1188,7 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-29T19:04:59.185Z",
         "term": "femme",
-        "definition": "A `lesbian` who presents in a femenine way but subverts femininity by not aiming it at attracting boys. Basically a lesbian that dresses feminine but in a way straight men wouldn't generally like/without caring about men's opinion ",
+        "definition": "A `lesbian` who presents in a femenine way but subverts femininity by not aiming it at attracting boys. Basically a lesbian that dresses feminine but in a way straight men wouldn't generally like/without caring about men's opinion",
         "identity": "white nonbinary lesbian",
         "sort-as": []
     },
@@ -1196,23 +1196,23 @@ export const defswithsort = [
         "timestamp": "2017-12-29T19:19:07.043Z",
         "name": "Kai",
         "term": "Gender-fluid",
-        "definition": "Gender-fluid to me means that my gender is exactly that. Fluid. One day I feel like a girl the next day a guy and then in the middle of the day I could feel like both or neither. Being gender-fluid doesn’t mean you can change your gender at will. It just happens. ",
+        "definition": "Gender-fluid to me means that my gender is exactly that. Fluid. One day I feel like a girl the next day a guy and then in the middle of the day I could feel like both or neither. Being gender-fluid doesn’t mean you can change your gender at will. It just happens.",
         "identity": "Gender identity/sexuality- Pansexual/panromantic gender-fluid",
         "sort-as": ["gender-fluid", "genderfluid"]
     },
     {
         "timestamp": "2017-12-29T19:21:44.612Z",
         "term": "Pansexual",
-        "definition": "Being Pan means I want to kiss guys girls, `non-binary` people, `bigender` people and all other genders (if they are attractive of course) I’m not into people’s souls.  ",
-        "identity": "Gender-fluid/ Pansexual/panromantic ",
+        "definition": "Being Pan means I want to kiss guys girls, `non-binary` people, `bigender` people and all other genders (if they are attractive of course) I’m not into people’s souls. ",
+        "identity": "Gender-fluid/ Pansexual/panromantic",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
         "timestamp": "2017-12-29T19:26:03.397Z",
         "name": "Sav",
         "term": "Sapphic",
-        "definition": "Sapphic is an identity some choose to use to describe their sexual oritentation. It could also be used as an umbrella term for girls (or feminine aligning people) who are attracted to other girls (and/or feminine aligning people). As this is an umbrella term, multiple different kinds of girls can use this term, like `lesbian`s, `bi` girls, `pan` girls, questioning girls, `ace` girls, and a whole lot of other labels could fall under this description. This is a feminine-specific identity. The term sapphic originates from Sappho, the famous lesbian poet from the island of Lesbos. ",
-        "identity": "I identify as a white lesbian who's 17 years old, middle class, and fairly privileged. ",
+        "definition": "Sapphic is an identity some choose to use to describe their sexual oritentation. It could also be used as an umbrella term for girls (or feminine aligning people) who are attracted to other girls (and/or feminine aligning people). As this is an umbrella term, multiple different kinds of girls can use this term, like `lesbian`s, `bi` girls, `pan` girls, questioning girls, `ace` girls, and a whole lot of other labels could fall under this description. This is a feminine-specific identity. The term sapphic originates from Sappho, the famous lesbian poet from the island of Lesbos.",
+        "identity": "I identify as a white lesbian who's 17 years old, middle class, and fairly privileged.",
         "sort-as": []
     },
     {
@@ -1273,8 +1273,8 @@ export const defswithsort = [
         "timestamp": "2017-12-30T00:45:40.568Z",
         "name": "August Nielsen",
         "term": "Gender dysphoria",
-        "definition": "An intense discomfort that can happen off and on or at any time, with your assigned gender at birth. This can be body dysphoria or `social dysphoria`. Body dysphoria can be anything from discomfort with your voice or discomfort with your sexual organs, to give two examples. An example of social dysphoria is simply the discomfort that is caused when someone uses the wrong pronouns for you. ",
-        "identity": "White. 16. Trans male. Gay. ",
+        "definition": "An intense discomfort that can happen off and on or at any time, with your assigned gender at birth. This can be body dysphoria or `social dysphoria`. Body dysphoria can be anything from discomfort with your voice or discomfort with your sexual organs, to give two examples. An example of social dysphoria is simply the discomfort that is caused when someone uses the wrong pronouns for you.",
+        "identity": "White. 16. Trans male. Gay.",
         "sort-as": ["dysphoria", "gender dysphoria"]
     },
     {
@@ -1289,7 +1289,7 @@ export const defswithsort = [
         "timestamp": "2017-12-30T06:55:49.567Z",
         "term": "Agender",
         "definition": "To me, agender is just being myself and not feeling strictly feminine or masculine at any given time. It is feeling neutral and comfortable in my body.",
-        "identity": "16 and agender ",
+        "identity": "16 and agender",
         "sort-as": []
     },
     {
@@ -1311,8 +1311,8 @@ export const defswithsort = [
         "timestamp": "2017-12-30T17:52:17.924Z",
         "name": "Maxwell",
         "term": "Demiboy",
-        "definition": "When someone, no matter what their birth gender is, feels partially like a boy, but not fully. They normally feel part boy, and then the other half is normally but not always `nonbinary`. A lot of the time, they actually can't pick out what the other gender part is exactly, and just know its there. I saw this video once, and it was all like\" Make a pizza. Most people think of pizza as pepperoni and cheese, but you instead have a pizza with tomatoes, spinach, and beef. It's still pizza, but it's just not exactly what would come to mind first thing you think of pizza. Its just like demiboy. I'm not what you'd think of as a boy, but I'm still a boy... just a different kind of boy\".   ",
-        "identity": "I'm a teen Demiboy (FAB), genderqueer NB, Pansexual Demisexual ",
+        "definition": "When someone, no matter what their birth gender is, feels partially like a boy, but not fully. They normally feel part boy, and then the other half is normally but not always `nonbinary`. A lot of the time, they actually can't pick out what the other gender part is exactly, and just know its there. I saw this video once, and it was all like\" Make a pizza. Most people think of pizza as pepperoni and cheese, but you instead have a pizza with tomatoes, spinach, and beef. It's still pizza, but it's just not exactly what would come to mind first thing you think of pizza. Its just like demiboy. I'm not what you'd think of as a boy, but I'm still a boy... just a different kind of boy\".  ",
+        "identity": "I'm a teen Demiboy (FAB), genderqueer NB, Pansexual Demisexual",
         "sort-as": ["demiboy", "demi", "demi-boy"]
     },
     {
@@ -1332,33 +1332,33 @@ export const defswithsort = [
     {
         "timestamp": "2017-12-30T23:51:16.065Z",
         "term": "Bisexual",
-        "definition": "The attraction to two or more gender identities. ",
-        "identity": "Mixed race, indigenous, South Florida, 36 years old, CIS female, poor, Bisexual, physically and mentally disabled. ",
+        "definition": "The attraction to two or more gender identities.",
+        "identity": "Mixed race, indigenous, South Florida, 36 years old, CIS female, poor, Bisexual, physically and mentally disabled.",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
     {
         "timestamp": "2017-12-31T07:05:19.402Z",
         "term": "Twink",
-        "definition": "A slender `gay` man who has a slightly athletic build. Not necessarily unintelligent. Often caring and mischevous ",
+        "definition": "A slender `gay` man who has a slightly athletic build. Not necessarily unintelligent. Often caring and mischevous",
         "sort-as": []
     },
     {
         "timestamp": "2017-12-31T07:06:44.344Z",
         "term": "Nonbinary lesbian",
-        "definition": "A `lesbian` who has a tumultous connection to womanhood and chooses to focus on her attraction to women over her gender ",
-        "identity": "16 y/o middle class white south eastern american nonbinary lesbian ",
+        "definition": "A `lesbian` who has a tumultous connection to womanhood and chooses to focus on her attraction to women over her gender",
+        "identity": "16 y/o middle class white south eastern american nonbinary lesbian",
         "sort-as": ["non-binary lesbian", "nb lesbian", "nonbinary lesbian", "non binary lesbian"]
     },
     {
         "timestamp": "2017-12-31T07:07:43.203Z",
         "term": "Queer",
-        "definition": "Adjective used as a catch all to describe any aspect of the `lgbt` community. Use with caution, its a slur ",
+        "definition": "Adjective used as a catch all to describe any aspect of the `lgbt` community. Use with caution, its a slur",
         "sort-as": []
     },
     {
         "timestamp": "2017-12-31T07:09:00.561Z",
         "term": "Butch",
-        "definition": "A `gender nonconforming` `lesbian` who focuses on a more \"masculine\" physical presentation and centers their identity firmly around their attraction to and protection of fellow `wlw` ",
+        "definition": "A `gender nonconforming` `lesbian` who focuses on a more \"masculine\" physical presentation and centers their identity firmly around their attraction to and protection of fellow `wlw`",
         "sort-as": []
     },
     {
@@ -1388,7 +1388,7 @@ export const defswithsort = [
         "timestamp": "2018-01-01T00:53:39.802Z",
         "name": "Adelina",
         "term": "Queer",
-        "definition": "Queer was originally a synonym for \"odd\" or \"unusual\"; it's now a label available for anyone who doesn't fit the straight, `cisgender`, allosexual, alloromantic mold society forces upon people and sees as \"normal\" and \"the default\". Queer began to be used as a slur against LGBTAI and `non gender-conforming` people in the late 19th century, and was reclaimed by activists in the 1980's (mostly radicals who wanted an alternative to the mainstream LGBTAI movement, which stressed conformity to the model to gain acceptance and rights). However queer is still often used as a slur, so you shouldn't use it to describe someone who doesn't use the label themselves; the entire LGBTAI community should not be referred to as the queer community. ",
+        "definition": "Queer was originally a synonym for \"odd\" or \"unusual\"; it's now a label available for anyone who doesn't fit the straight, `cisgender`, allosexual, alloromantic mold society forces upon people and sees as \"normal\" and \"the default\". Queer began to be used as a slur against LGBTAI and `non gender-conforming` people in the late 19th century, and was reclaimed by activists in the 1980's (mostly radicals who wanted an alternative to the mainstream LGBTAI movement, which stressed conformity to the model to gain acceptance and rights). However queer is still often used as a slur, so you shouldn't use it to describe someone who doesn't use the label themselves; the entire LGBTAI community should not be referred to as the queer community.",
         "identity": "Queer (possibly? gay), sapphic, cis woman, WLW, teenager, white, middle-class, American, Californian, Romanian born, perisex, able-bodied, neurotypical, alloromantic, allosexual, agnostic atheist from secular family with Catholic and Eastern Orthodox roots, fat",
         "sort-as": []
     },
@@ -1405,7 +1405,7 @@ export const defswithsort = [
         "name": "ilona",
         "term": "lesbian / butch",
         "definition": "it means a lot to me, because its the first time im this comfortable with a label. i used to use the split attraction model, but ive come to realise that just held me back in discovering who i truly am. `butch` is a specification, but to me its just as important. i feel like it explains what i stand for and who i am. it makes me feel comfortable in my skin, and it helps me with my confidence.",
-        "identity": "white, the netherlands, 15, nonbinary, and i dont know? we arent poor but do need to watch what we spend. i live in with my grandparents who are sort of my foster parents because my mom had problems with addiction. ",
+        "identity": "white, the netherlands, 15, nonbinary, and i dont know? we arent poor but do need to watch what we spend. i live in with my grandparents who are sort of my foster parents because my mom had problems with addiction.",
         "sort-as": ["lesbian", "butch"]
     },
     {
@@ -1418,20 +1418,20 @@ export const defswithsort = [
     {
         "timestamp": "2018-01-02T14:35:14.816Z",
         "term": "bisexuality",
-        "definition": "attraction to genders similar and different to your own ",
+        "definition": "attraction to genders similar and different to your own",
         "identity": "genderqueer, biromamtic bisexual, european",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
     {
         "timestamp": "2018-01-02T14:41:49.417Z",
         "term": "queer",
-        "definition": "not heterosexual/`cisgender`; sometimes used as a slur for not straight people ",
+        "definition": "not heterosexual/`cisgender`; sometimes used as a slur for not straight people",
         "sort-as": []
     },
     {
         "timestamp": "2018-01-02T16:03:17.514Z",
         "term": "In the life",
-        "definition": "A way to identify if someone was `LGBTQ` in a somewhat discreet way. ",
+        "definition": "A way to identify if someone was `LGBTQ` in a somewhat discreet way.",
         "identity": "Native Hawaiian (ethnically), Queer, male, Native New Yorker",
         "sort-as": []
     },
@@ -1453,23 +1453,23 @@ export const defswithsort = [
     },
     {
         "timestamp": "2018-01-03T22:17:10.338Z",
-        "name": "Robin ",
+        "name": "Robin",
         "term": "Asexual",
         "definition": "Someone who doesn’t experience sexual attraction, but may possibly experience ROMANTIC attraction. If they don’t, that’s called `Aromantic`.",
         "sort-as": ["ace", "asexual", "asexuality"]
     },
     {
         "timestamp": "2018-01-04T16:21:46.724Z",
-        "name": "Bradley Detmers ",
+        "name": "Bradley Detmers",
         "term": "Polysexual",
-        "definition": "It means the attraction to some genders but not all ",
-        "identity": "I’m a demiboy ",
+        "definition": "It means the attraction to some genders but not all",
+        "identity": "I’m a demiboy",
         "sort-as": ["poly", "polysexual", "polysexuality"]
     },
     {
         "timestamp": "2018-01-08T00:18:52.100Z",
         "term": "Sapphic",
-        "definition": "A person who identifies as female is attracted to other people who identify as female or present themselves as feminine, i.e a girl who likes girls. ",
+        "definition": "A person who identifies as female is attracted to other people who identify as female or present themselves as feminine, i.e a girl who likes girls.",
         "sort-as": []
     },
     {
@@ -1517,13 +1517,6 @@ export const defswithsort = [
         "definition": "When someone expresses their gender as either both or their gender expression changes from day, mood, etc.",
         "identity": "Genderqueer",
         "sort-as": ["genderfluid", "gender fluid"]
-    },
-    {
-        "timestamp": "2018-01-14T05:42:00.906Z",
-        "term": "Lesbian",
-        "definition": "A female who's only sexually and / or romantically attracted to other females.",
-        "identity": "Lesbian",
-        "sort-as": []
     },
     {
         "timestamp": "2018-01-14T05:43:13.920Z",
@@ -1585,7 +1578,7 @@ export const defswithsort = [
         "timestamp": "2018-01-20T08:31:11.363Z",
         "name": "Iecaras",
         "term": "Pansexual",
-        "definition": "Attraction towards all genders / atrraction regardless of `gender identity` ",
+        "definition": "Attraction towards all genders / atrraction regardless of `gender identity`",
         "identity": "Age:15, Location:USA, Ethnicity: Hispanic/Latino",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
@@ -1594,7 +1587,7 @@ export const defswithsort = [
         "name": "Abigail jones",
         "term": "Gender fluid",
         "definition": "It means.   To me. I. Larger. Wardrobe.    Also. It.   Mean s I can. Who.  Want to be.  Pis off parent to much",
-        "identity": "Gender fluid trans gender.  Pansexual ",
+        "identity": "Gender fluid trans gender.  Pansexual",
         "sort-as": ["gender-fluid", "gender fluid", "genderfluid"]
     },
     {
@@ -1608,34 +1601,28 @@ export const defswithsort = [
         "timestamp": "2018-01-23T15:46:58.336Z",
         "name": "El",
         "term": "Sapphic",
-        "definition": "A person with an attachment to/alignment with/identifies with womanhood who is attracted romantically &/or sexually to other people who experience womanhood. ",
-        "identity": "White, British, nonbinary, bisexual, queer, disabled ",
+        "definition": "A person with an attachment to/alignment with/identifies with womanhood who is attracted romantically &/or sexually to other people who experience womanhood.",
+        "identity": "White, British, nonbinary, bisexual, queer, disabled",
         "sort-as": []
     },
     {
         "timestamp": "2018-01-23T15:51:13.026Z",
         "name": "El",
         "term": "Nonbinary",
-        "definition": "Someone who is not strictly male or female. The \"strictly\" part is important since many nonbinary people do experience feelings of maleness/manhood or femaleness/womanhood and some may consider themselves as a man but not just a man, or a woman but not just a woman, or someone who is both a man and a woman, or their gender may fluctuate between the two or not exist on that spectrum at all. Being nonbinary does not in any way relate to presentation and there are infinite ways to be nonbinary, there is no standard to follow. ",
+        "definition": "Someone who is not strictly male or female. The \"strictly\" part is important since many nonbinary people do experience feelings of maleness/manhood or femaleness/womanhood and some may consider themselves as a man but not just a man, or a woman but not just a woman, or someone who is both a man and a woman, or their gender may fluctuate between the two or not exist on that spectrum at all. Being nonbinary does not in any way relate to presentation and there are infinite ways to be nonbinary, there is no standard to follow.",
         "identity": "White, British, nonbinary, bisexual, queer, disabled, age 20",
         "sort-as": ["nb", "enby", "non-binary", "nonbinary", "non binary"]
     },
     {
-        "timestamp": "2018-01-23T18:39:11.731Z",
-        "term": "Lesbian",
-        "definition": "Female `homosexual`, a female who is exclusively attracted to females",
-        "sort-as": []
-    },
-    {
         "timestamp": "2018-01-23T18:40:07.569Z",
         "term": "Febfem",
-        "definition": "Female exclusive `bisexual` female, a bisexual woman who chooses to only date women. Different from a `lesbian` because she still experiences attraction to men, she just doesn't pursue it. ",
+        "definition": "Female exclusive `bisexual` female, a bisexual woman who chooses to only date women. Different from a `lesbian` because she still experiences attraction to men, she just doesn't pursue it.",
         "sort-as": []
     },
     {
         "timestamp": "2018-01-23T18:41:33.406Z",
         "term": "Agender",
-        "definition": "A person who doesn't believe in gender, like atheist means not believing in a higher power. ",
+        "definition": "A person who doesn't believe in gender, like atheist means not believing in a higher power.",
         "sort-as": []
     },
     {
@@ -1648,18 +1635,18 @@ export const defswithsort = [
         "timestamp": "2018-01-23T18:44:36.888Z",
         "term": "Trans woman",
         "definition": "A male who identifies as a woman",
-        "sort-as": ["transgender woman"]
+        "sort-as": ["transgender woman", "trans women", "transgender women"]
     },
     {
         "timestamp": "2018-01-23T18:44:57.116Z",
         "term": "Trans man",
         "definition": "A female who identifies as a man",
-        "sort-as": ["transgender man"]
+        "sort-as": ["transgender man", "transgender men", "trans men"]
     },
     {
         "timestamp": "2018-01-23T18:48:22.771Z",
         "term": "Sexuality",
-        "definition": "The sex/es you're attracted to in relation to the sex that you are. ",
+        "definition": "The sex/es you're attracted to in relation to the sex that you are.",
         "sort-as": ["sexuality", "sexual orientation"]
     },
     {
@@ -1719,14 +1706,14 @@ export const defswithsort = [
     {
         "timestamp": "2018-01-23T18:56:31.656Z",
         "term": "Transsexual",
-        "definition": "Someone who has sex `dysphoria`. They may or may not transition because of their dysphoria, but thus term can be used by anyone who feels they should have been born as the opposite sex. ",
+        "definition": "Someone who has sex `dysphoria`. They may or may not transition because of their dysphoria, but thus term can be used by anyone who feels they should have been born as the opposite sex.",
         "sort-as": ["trans", "transexual", "transsexual"]
     },
     {
         "timestamp": "2018-01-23T22:32:03.846Z",
         "term": "Bi",
-        "definition": "Attraction to multiple genders ",
-        "identity": "Bi 19 Caucasian ",
+        "definition": "Attraction to multiple genders",
+        "identity": "Bi 19 Caucasian",
         "sort-as": ["bi", "bisexual", "bisexuality", "biromantic"]
     },
     {
@@ -1775,7 +1762,7 @@ export const defswithsort = [
         "timestamp": "2018-01-24T01:48:42.266Z",
         "term": "Bisexual",
         "definition": "Being attracted to more then one gender",
-        "identity": "Bisexual ",
+        "identity": "Bisexual",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
     {
@@ -1787,7 +1774,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-01-24T15:08:31.726Z",
         "term": "stone butch",
-        "definition": "a `butch` `lesbian` who does not want to be touched sexually in certain ways, especially because of `dysphoria` and/or trauma. there are different levels of stone-ness, with some stone butches desiring to receive oral sex but not to be penetrated, others to have their genitals touched through their clothes, and others not to have either their genitals nor chest touched at all. sometimes, \"soapstone butch\" is used for butches who have similar wishes but may relax these boundaries at certain times or with a specific partner. ",
+        "definition": "a `butch` `lesbian` who does not want to be touched sexually in certain ways, especially because of `dysphoria` and/or trauma. there are different levels of stone-ness, with some stone butches desiring to receive oral sex but not to be penetrated, others to have their genitals touched through their clothes, and others not to have either their genitals nor chest touched at all. sometimes, \"soapstone butch\" is used for butches who have similar wishes but may relax these boundaries at certain times or with a specific partner.",
         "identity": "early 20s white butch lesbian",
         "sort-as": []
     },
@@ -1851,8 +1838,8 @@ export const defswithsort = [
         "timestamp": "2018-01-24T23:05:50.779Z",
         "name": "A",
         "term": "Pansexual",
-        "definition": "I define it as pansexuals can date/love anyone no matter how the other may define themselves (Including pronounces, sexuality, and race ect.) Pansexuals also can have standards or preferences and still identify themselves as pansexual. ",
-        "identity": "Panromantic Acesexual. Her/She. ",
+        "definition": "I define it as pansexuals can date/love anyone no matter how the other may define themselves (Including pronounces, sexuality, and race ect.) Pansexuals also can have standards or preferences and still identify themselves as pansexual.",
+        "identity": "Panromantic Acesexual. Her/She.",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -1866,9 +1853,9 @@ export const defswithsort = [
         "timestamp": "2018-01-25T18:57:56.499Z",
         "name": "Earl",
         "term": "Aromantic",
-        "definition": "The lack of romantic attraction, not to be confused with feelings towards romance in general ",
+        "definition": "The lack of romantic attraction, not to be confused with feelings towards romance in general",
         "identity": "Bigender (they/them pronouns)",
-        "sort-as": ["aro", "aromantic"]
+        "sort-as": ["aro", "aromantic", "aromanticism"]
     },
     {
         "timestamp": "2018-01-28T04:31:53.822Z",
@@ -1883,7 +1870,7 @@ export const defswithsort = [
         "name": "Jace/Alec",
         "term": "Abrogender",
         "definition": "I define it as a sort of layer gender. When I was first learning it, someone explained it as like when your gender is a Russian doll, and each layer is connected and goes into the next layer. That was the first time I had a perfect label for myself. I was so happy, and even happier as I knew someone who also was that gender.",
-        "identity": "Abrogender, abrosexual, abroromantic, trans masc person. ",
+        "identity": "Abrogender, abrosexual, abroromantic, trans masc person.",
         "sort-as": []
     },
     {
@@ -1897,7 +1884,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-01-28T05:15:08.416Z",
         "term": "Demigender",
-        "definition": "Demigender is having strong feelings to a certain gender, but not completely. Ex: feeling 60% one gender and 40% another ",
+        "definition": "Demigender is having strong feelings to a certain gender, but not completely. Ex: feeling 60% one gender and 40% another",
         "identity": "I’m genderfluid",
         "sort-as": ["demi", "demigender", "demi-gender"]
     },
@@ -1905,7 +1892,7 @@ export const defswithsort = [
         "timestamp": "2018-01-28T05:42:52.495Z",
         "name": "Nick",
         "term": "Genderqueer",
-        "definition": "Meaning not restricted to male, female, neither, both, demiboy/girl, etc. Its a term that can fit anyone not `cisgendered`. Its like an umbrella term for when someone doesnt want to identify as one single term. ",
+        "definition": "Meaning not restricted to male, female, neither, both, demiboy/girl, etc. Its a term that can fit anyone not `cisgendered`. Its like an umbrella term for when someone doesnt want to identify as one single term.",
         "identity": "A genderqueer panromantic asexual human",
         "sort-as": ["genderqueer", "gender queer"]
     },
@@ -1913,7 +1900,7 @@ export const defswithsort = [
         "timestamp": "2018-01-28T08:46:59.011Z",
         "name": "Wera",
         "term": "wlw",
-        "definition": "Woman loving woman without specifying sexuality (can be `lesbian`, `bi`, `pan`, etc.). It is important for me when I look for uplifting photos because the lesbian tag occasionally has non-lesbian erasing or porn while bi doesn't focus on women. ",
+        "definition": "Woman loving woman without specifying sexuality (can be `lesbian`, `bi`, `pan`, etc.). It is important for me when I look for uplifting photos because the lesbian tag occasionally has non-lesbian erasing or porn while bi doesn't focus on women.",
         "identity": "Sweden, 18, gender questioning",
         "sort-as": ["wlw", "woman-loving-woman", "woman loving woman"]
     },
@@ -1921,14 +1908,14 @@ export const defswithsort = [
         "timestamp": "2018-01-28T15:50:53.870Z",
         "name": "Gillian (spacerockets)",
         "term": "bisexuality",
-        "definition": "my favorite definition is one by Robyn Ochs. it’s incredibly inclusive and makes it easy for anyone who wants to identify as bi, to be able to; \"i call myself bisexual because i acknowledge that i have in myself the potential to be attracted romantically and/or sexually to people of more than one gender, not necessarily at the same time, not necessarily in the same way, and not necessarily to the same degree.\" this definition includes ALL genders, ALL attractions (romantic & sexual), and validates people who think that they aren’t \"bi enough\" to id as bisexual because they aren’t 50/50 on all attractions. it’s the best definition i have found to date. ",
+        "definition": "my favorite definition is one by Robyn Ochs. it’s incredibly inclusive and makes it easy for anyone who wants to identify as bi, to be able to; \"i call myself bisexual because i acknowledge that i have in myself the potential to be attracted romantically and/or sexually to people of more than one gender, not necessarily at the same time, not necessarily in the same way, and not necessarily to the same degree.\" this definition includes ALL genders, ALL attractions (romantic & sexual), and validates people who think that they aren’t \"bi enough\" to id as bisexual because they aren’t 50/50 on all attractions. it’s the best definition i have found to date.",
         "identity": "i’m 17, female, bisexual",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
     {
         "timestamp": "2018-01-28T15:52:12.938Z",
         "term": "Biromantic/Panromantic",
-        "definition": "Being romantically attracted to both(bi) or all(pan) genders. Only romantically though, this term does not identify one’s sexual preferences. ",
+        "definition": "Being romantically attracted to both(bi) or all(pan) genders. Only romantically though, this term does not identify one’s sexual preferences.",
         "identity": "White, New Jersey, 16, female, homosexual biromantic/queer",
         "sort-as": ["bi", "biromantic", "pan", "panromantic"]
     },
@@ -1948,8 +1935,8 @@ export const defswithsort = [
         "timestamp": "2018-01-28T17:32:07.568Z",
         "name": "Natalie",
         "term": "Demisexual",
-        "definition": "Demisexual is where someone doesn’t feel sexual attraction until there is an emotional bond. For me personally, I may think someone looks nice/beautiful/attractive (I call that aesthetic attraction), or I may want to start a romantic relationship with them (romantic attraction), but I don’t want to see them naked or have sex with them. It’s not like a light switch for me either, like I suddenly want to do everything sexual with them all at once. It’s more gradual; I usually want to kiss someone before seeing them naked. In my own experience, it hasn’t been any emotional bond (ie friendship), but it has to be romantic in nature. I started knowing I was demisexual when my friends and I were discussing which celebrity we would sleep with. I said someone I admire and think is pretty, but I definitely wouldn’t want to sleep with them. ",
-        "identity": "A young white cisgender demisexual heteroromantic woman. ",
+        "definition": "Demisexual is where someone doesn’t feel sexual attraction until there is an emotional bond. For me personally, I may think someone looks nice/beautiful/attractive (I call that aesthetic attraction), or I may want to start a romantic relationship with them (romantic attraction), but I don’t want to see them naked or have sex with them. It’s not like a light switch for me either, like I suddenly want to do everything sexual with them all at once. It’s more gradual; I usually want to kiss someone before seeing them naked. In my own experience, it hasn’t been any emotional bond (ie friendship), but it has to be romantic in nature. I started knowing I was demisexual when my friends and I were discussing which celebrity we would sleep with. I said someone I admire and think is pretty, but I definitely wouldn’t want to sleep with them.",
+        "identity": "A young white cisgender demisexual heteroromantic woman.",
         "sort-as": ["demi", "demi-sexual", "demisexual"]
     },
     {
@@ -1964,7 +1951,7 @@ export const defswithsort = [
         "timestamp": "2018-01-28T20:01:33.966Z",
         "name": "Issac :)",
         "term": "Top",
-        "definition": "Top is your breast area and is normally stated as top when discussing `gender Dysphoria`, where your breasts or lack of there of doesn't match up with the gender you present yourself as. You may hear \"top surgery\" if you're planning on transitioning. Female to male transition: removal of breast tissue. Male to female: breast implants. ",
+        "definition": "Top is your breast area and is normally stated as top when discussing `gender Dysphoria`, where your breasts or lack of there of doesn't match up with the gender you present yourself as. You may hear \"top surgery\" if you're planning on transitioning. Female to male transition: removal of breast tissue. Male to female: breast implants.",
         "identity": "Transgender",
         "sort-as": []
     },
@@ -1972,7 +1959,7 @@ export const defswithsort = [
         "timestamp": "2018-01-28T20:05:43.983Z",
         "name": "Issac :)",
         "term": "Bottom",
-        "definition": "Bottom is a name for your Genitalia in generalized terms. It is very common to refer to your genitalia as your bottom half when talking about `gender dysphoria`. You may hear \"bottom Surgery\" if you plan on transitioning from your current sex (genitalia) to the opposite one. There are a multitude of different bottom surgeries for everyones needs. Bottom surgery consists of either : Female to Male: Creating a penis and testicles. Male to female: Creating a vagina and clitoris. ",
+        "definition": "Bottom is a name for your Genitalia in generalized terms. It is very common to refer to your genitalia as your bottom half when talking about `gender dysphoria`. You may hear \"bottom Surgery\" if you plan on transitioning from your current sex (genitalia) to the opposite one. There are a multitude of different bottom surgeries for everyones needs. Bottom surgery consists of either : Female to Male: Creating a penis and testicles. Male to female: Creating a vagina and clitoris.",
         "identity": "Transgender",
         "sort-as": []
     },
@@ -1988,7 +1975,7 @@ export const defswithsort = [
         "timestamp": "2018-01-29T17:16:15.958Z",
         "name": "pan-in-space",
         "term": "Pansexual",
-        "definition": "Pansexual is the sexual attraction to all genders - even if you may prefer some genders over others, you are still pansexual ",
+        "definition": "Pansexual is the sexual attraction to all genders - even if you may prefer some genders over others, you are still pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -2019,13 +2006,13 @@ export const defswithsort = [
         "term": "Aromantic",
         "definition": "A person who is aromantic does not experience romantic attraction or experiences little to no romantic attraction. A person who is aromantic does not have to be `asexual` (a person who does not experience sexualitet attraction), and they might still experience sensual and aesthetic attraction.",
         "identity": "A upper lower class caucasian nonbinary (agender) aromantic pansexual 16 year old",
-        "sort-as": ["aro", "aromantic"]
+        "sort-as": ["aro", "aromantic", "aromanticism"]
     },
     {
         "timestamp": "2018-02-01T16:42:33.049Z",
         "term": "Pansexual",
         "definition": "Pansexuality means to be attracted emotionally, physically and aesthetically to anyone, regardless of gender, but that does not mean they cannot have types or kinks.",
-        "identity": "Pansexual ",
+        "identity": "Pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -2047,7 +2034,7 @@ export const defswithsort = [
         "timestamp": "2018-02-03T08:11:19.744Z",
         "name": "Hayden",
         "term": "Transgender",
-        "definition": "Someone who experiences `gender dysphoria` and wants to be who they are on the inside, on the outside. They are not trapped in the wrong body, it just doesn’t look the way it does in their mind. Usually goes through Hormone Replacement Therapy in order to change their physical appareance, sometimes Sex Reassigment Surgery is followed. I believe to identify as trans you must experience gender dysphoria and go through the process of transitioning. I know that financially not everyone is able to, but I believe you must socially and physically transition to be consider transgender. ",
+        "definition": "Someone who experiences `gender dysphoria` and wants to be who they are on the inside, on the outside. They are not trapped in the wrong body, it just doesn’t look the way it does in their mind. Usually goes through Hormone Replacement Therapy in order to change their physical appareance, sometimes Sex Reassigment Surgery is followed. I believe to identify as trans you must experience gender dysphoria and go through the process of transitioning. I know that financially not everyone is able to, but I believe you must socially and physically transition to be consider transgender.",
         "identity": "Transgender FTM, Caucasian, 18, living in America.",
         "sort-as": ["trans", "transgender", "trans*", "transgender*"]
     },
@@ -2086,8 +2073,8 @@ export const defswithsort = [
     {
         "timestamp": "2018-02-08T05:57:18.821Z",
         "term": "Pansexual",
-        "definition": "1. Attraction to all genders \n2. Attraction regardless of gender identity ",
-        "identity": "Black, 18, Proud Pansexual ",
+        "definition": "1. Attraction to all genders \n2. Attraction regardless of gender identity",
+        "identity": "Black, 18, Proud Pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -2148,7 +2135,7 @@ export const defswithsort = [
         "name": "Monday",
         "term": "Pansexuality",
         "definition": "The attraction to all gender, sometimes without caring about the person's gender, but not always. Pansexuality isn't the same thing as bisexuality.",
-        "identity": "panromantic pansexual ",
+        "identity": "panromantic pansexual",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
     {
@@ -2156,7 +2143,7 @@ export const defswithsort = [
         "name": "Brynn",
         "term": "Lesbian",
         "definition": "Girls who are attracted to other girls",
-        "identity": "North Carolina, 14, Female ",
+        "identity": "North Carolina, 14, Female",
         "sort-as": []
     },
     {
@@ -2169,7 +2156,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-02-27T00:53:49.969Z",
         "term": "Androsexual",
-        "definition": "One who feels romantic and sexual attraction towards masculine individuals ",
+        "definition": "One who feels romantic and sexual attraction towards masculine individuals",
         "identity": "Androsexual Demiboy",
         "sort-as": []
     },
@@ -2185,7 +2172,7 @@ export const defswithsort = [
         "timestamp": "2018-03-01T13:56:55.738Z",
         "name": "Quinn",
         "term": "bisexual",
-        "definition": "being sexually attracted to two genders ",
+        "definition": "being sexually attracted to two genders",
         "identity": "bisexual genderfluid",
         "sort-as": ["bi", "bisexual", "bisexuality"]
     },
@@ -2193,7 +2180,7 @@ export const defswithsort = [
         "timestamp": "2018-03-01T14:13:22.373Z",
         "name": "Skylar (birthname kimberly)",
         "term": "Pansexual",
-        "definition": "To not have a boundary on who you like based in sexuality or gender. To me it just means that I like you for your personality and not your body parts. ",
+        "definition": "To not have a boundary on who you like based in sexuality or gender. To me it just means that I like you for your personality and not your body parts.",
         "identity": "Latina, California, 13, I'm still questioning my gender but ik I'm not only female",
         "sort-as": ["pan", "pansexual", "pansexuality"]
     },
@@ -2207,7 +2194,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-03-02T20:56:24.951Z",
         "term": "Genderqueer",
-        "definition": "Similar to the word `queer`, genderqueer is a sort of \"catch all term\" that means a gender that is out of the ordinary. Some folks (like me) like to identify with `trans` along with this label, others `non binary`, and some just simply genderqueer. To me it means that you don’t fit into a binary but you may not be outside it either; you’re a mix in your own way, similar to how if you look up the definitions of the colors of the genderqueer flag you’ll get some beautiful results about the chartreuse, white, and lavender. ",
+        "definition": "Similar to the word `queer`, genderqueer is a sort of \"catch all term\" that means a gender that is out of the ordinary. Some folks (like me) like to identify with `trans` along with this label, others `non binary`, and some just simply genderqueer. To me it means that you don’t fit into a binary but you may not be outside it either; you’re a mix in your own way, similar to how if you look up the definitions of the colors of the genderqueer flag you’ll get some beautiful results about the chartreuse, white, and lavender.",
         "identity": "Genderqueer, white, American, middle class, 18",
         "sort-as": ["genderqueer", "gender queer"]
     },
@@ -2301,7 +2288,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-03-13T00:03:34.449Z",
         "term": "demisexual",
-        "definition": "not sexually aroused until after a deeper platonic bond if ever. talking about sex stuff is uncomfortable in almost all circumstances. different than `asexual` tho bcos when you do have that connection with someone you are aroused and still enjoy intimacy ",
+        "definition": "not sexually aroused until after a deeper platonic bond if ever. talking about sex stuff is uncomfortable in almost all circumstances. different than `asexual` tho bcos when you do have that connection with someone you are aroused and still enjoy intimacy",
         "identity": "white, USA, 21, female, middle class",
         "sort-as": ["demi", "demisexual", "demi-sexual"]
     },
@@ -2366,7 +2353,7 @@ export const defswithsort = [
         "name": "Leo Dixon",
         "term": "Uranic",
         "definition": "It means that I’m attracted to trans and cis guys, neutral nonbinary people, masculine nonbinary people,  and agender people but not feminine nonbinary people, cis women, or trans women.",
-        "identity": "I’m a 16 year old afab demiboy from Texas. ",
+        "identity": "I’m a 16 year old afab demiboy from Texas.",
         "sort-as": []
     },
     {
@@ -2379,7 +2366,7 @@ export const defswithsort = [
         "timestamp": "2018-03-23T15:07:01.979Z",
         "name": "Caleb Pelliccia",
         "term": "Belong",
-        "definition": "I think It means to be comfortable as yourself ",
+        "definition": "I think It means to be comfortable as yourself",
         "identity": "Ftm male",
         "sort-as": []
     },
@@ -2393,7 +2380,7 @@ export const defswithsort = [
     },
     {
         "timestamp": "2018-03-31T19:56:29.183Z",
-        "term": "Bisexual ",
+        "term": "Bisexual",
         "definition": "Attraction to at least two genders.",
         "identity": "Bisexual.",
         "sort-as": ["bi", "bisexual", "bisexuality"]
@@ -2408,7 +2395,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-03-06T04:49:46.057Z",
         "term": "Bisexual",
-        "definition": "Attraction to two or more genders, not necessarily in the same way and not necessarily to the same degree. People tell me I'm not bi because I'm dating a man - but I'm bisexual no matter who I'm dating. I'd be bi if I were dating a woman or a non binary person too. When I get married to spend the rest of my life with someone, I'll be bi then too. ",
+        "definition": "Attraction to two or more genders, not necessarily in the same way and not necessarily to the same degree. People tell me I'm not bi because I'm dating a man - but I'm bisexual no matter who I'm dating. I'd be bi if I were dating a woman or a non binary person too. When I get married to spend the rest of my life with someone, I'll be bi then too.",
         "identity": "White, bisexual, cis woman, age 22",
         "sort-as": []
     },
@@ -2448,10 +2435,10 @@ export const defswithsort = [
     },
     {
         "timestamp": "2018-04-11T02:16:31.671Z",
-        "name": "Ava Elisabeth ",
-        "term": "Demiromantic ",
-        "definition": "The way I explain demiromanticism is having no romantic attraction (and at least for me, no interest in having a romantic relationship), except when you form a really strong connection and bond with a person, then for that person and only that person are you romantically attracted. \nFor me this mean, I won't have a crush on anyone, unless I am like they are like my best friend. \nI have had very few crushes throughout my life and I barely ever understand the allure of romantic relationships. When I do have crushes, they are always on my best friend, regardless of gender, and they are very intense. This term has made me feel less alienated from my peers, but I also kinda hate it. ",
-        "identity": "white ace girl ",
+        "name": "Ava Elisabeth",
+        "term": "Demiromantic",
+        "definition": "The way I explain demiromanticism is having no romantic attraction (and at least for me, no interest in having a romantic relationship), except when you form a really strong connection and bond with a person, then for that person and only that person are you romantically attracted. \nFor me this mean, I won't have a crush on anyone, unless I am like they are like my best friend. \nI have had very few crushes throughout my life and I barely ever understand the allure of romantic relationships. When I do have crushes, they are always on my best friend, regardless of gender, and they are very intense. This term has made me feel less alienated from my peers, but I also kinda hate it.",
+        "identity": "white ace girl",
         "sort-as": ["demi", "demiromantic"]
     },
     {
@@ -2482,7 +2469,7 @@ export const defswithsort = [
         "timestamp": "2018-04-11T04:01:51.766Z",
         "name": "Jack",
         "term": "queer",
-        "definition": "queer is a slur that many LGBT community members have reclaimed. it is often used to describe an amalgamous or hard to define attraction that is not-straight. it is important to be sensitive to those who still view it as a slur. our community's comfort should come first. ",
+        "definition": "queer is a slur that many LGBT community members have reclaimed. it is often used to describe an amalgamous or hard to define attraction that is not-straight. it is important to be sensitive to those who still view it as a slur. our community's comfort should come first.",
         "identity": "nb stone butch lesbian",
         "sort-as": []
     },
@@ -2530,7 +2517,7 @@ export const defswithsort = [
         "timestamp": "2018-04-11T11:59:17.192Z",
         "name": "Clare",
         "term": "Demi Lesbian",
-        "definition": "A demi lesbian is a girl who experiences sexual and or romantic attraction to other girls when they first connect with them. It is possible for them to have an initial interest in someone, but that feeling is usually fleeting. ",
+        "definition": "A demi lesbian is a girl who experiences sexual and or romantic attraction to other girls when they first connect with them. It is possible for them to have an initial interest in someone, but that feeling is usually fleeting.",
         "identity": "20, Cis Female, Lesbian",
         "sort-as": ["demi", "demi lesbian"]
     },
@@ -2539,7 +2526,7 @@ export const defswithsort = [
         "name": "Mae",
         "term": "GNC (Gender nonconforming)",
         "definition": "GNC can be anyone who doesn’t fit traditional gender roles, even `cisgender` people, such as a `butch` lesbian, `nonbinary` people, boys who wear dresses, etc. Both cis and `trans` people can use this label and it can affect your gender or not. \nI myself am questioning my gender and currently ID as a cis/`demigirl` butch lesbian and have always identified as gnc",
-        "identity": "16 butch lesbian ",
+        "identity": "16 butch lesbian",
         "sort-as": ["gnc", "gender-nonconforming", "gender nonconforming", "gender non-conforming"]
     },
     {
@@ -2555,7 +2542,7 @@ export const defswithsort = [
         "timestamp": "2018-04-11T16:56:06.619Z",
         "name": "Selina",
         "term": "Gender Fluid",
-        "definition": "People who sometimes are female and sometimes male. My gender depends on the moment, I may awake feeling female and during the day start feeling male ",
+        "definition": "People who sometimes are female and sometimes male. My gender depends on the moment, I may awake feeling female and during the day start feeling male",
         "identity": "Latina, USA, 16, Gender Fluid, attracted to girls",
         "sort-as": ["genderfluid", "gender fluid", "gender-fluid"]
     },
@@ -2563,7 +2550,7 @@ export const defswithsort = [
         "timestamp": "2018-04-11T17:06:10.789Z",
         "name": "closet-keys",
         "term": "compulsory heterosexuality",
-        "definition": "Compulsory heterosexuality is essentially a function of patriarchy that encourages women to form intimate relationships with men and discourages women forming intimate relationships with women through structural and interpersonal violence and oppression. \n\nFor example, the wage gap encourages women to form relationships with men in order to sustain a higher standard of living only accessible to some women through men’s income. In many places women are not allowed to adopt or face very real discrimination in seeking infertility treatments if they are not partnered with men. Women who form relationships with other women in our media are always shown as either dying or ending up partnered with men to create the cultural idea that relationships between women are not lasting or are doomed to fail. Our culture fetishizes relationships between women but shames love between them, so girls think that even if they’re attracted to women, they should pursue relationships with men as their public or primary relationship. Compulsory heterosexuality is teaching girls to understand attraction to mean responding to who is attracted to you or being attractive rather than who they actually want to form relationships with. It’s the insistence that `wlw` \"just haven’t met the right man yet\" or that they’re \"confused\" or \"will grow out of it.\" Compulsory heterosexuality is `trans` women being denied medication unless they tell therapists they’re attracted to men. It’s trans `lesbian`s being told that they’re not \"real women\" unless they’re straight.  It’s trans women being assaulted and stalked and killed for not adhering to `cis` men’s expectations of femininity or for not wanting to sleep with them. It’s `butch` lesbians being punished for not performing femininity for men by means of workplace and housing discrimination and physical assault. It’s corrective rape. It’s conversion therapy. It’s forced marriages. It’s straight male abusers isolating their `bisexual` partners from wlw communities and enacting physical or psychological violence on them for being attracted to women. \n\nAll of these things, from the direct physical violence to the subtle cultural ideology, create an effect where young `sapphic` women growing up try to understand their feelings for men and women through this context, and are often forced or coerced into interpreting their attraction to women as platonic or meaningless or wrong, and interpreting their unease or discomfort around men as attraction or arousal. \n\nIt’s a deeply distressing and disorienting phenomenon, and it’s a big part of the reason that the average age for `gay` women to come out is about a full decade later in life than gay men. ",
+        "definition": "Compulsory heterosexuality is essentially a function of patriarchy that encourages women to form intimate relationships with men and discourages women forming intimate relationships with women through structural and interpersonal violence and oppression. \n\nFor example, the wage gap encourages women to form relationships with men in order to sustain a higher standard of living only accessible to some women through men’s income. In many places women are not allowed to adopt or face very real discrimination in seeking infertility treatments if they are not partnered with men. Women who form relationships with other women in our media are always shown as either dying or ending up partnered with men to create the cultural idea that relationships between women are not lasting or are doomed to fail. Our culture fetishizes relationships between women but shames love between them, so girls think that even if they’re attracted to women, they should pursue relationships with men as their public or primary relationship. Compulsory heterosexuality is teaching girls to understand attraction to mean responding to who is attracted to you or being attractive rather than who they actually want to form relationships with. It’s the insistence that `wlw` \"just haven’t met the right man yet\" or that they’re \"confused\" or \"will grow out of it.\" Compulsory heterosexuality is `trans` women being denied medication unless they tell therapists they’re attracted to men. It’s trans `lesbian`s being told that they’re not \"real women\" unless they’re straight.  It’s trans women being assaulted and stalked and killed for not adhering to `cis` men’s expectations of femininity or for not wanting to sleep with them. It’s `butch` lesbians being punished for not performing femininity for men by means of workplace and housing discrimination and physical assault. It’s corrective rape. It’s conversion therapy. It’s forced marriages. It’s straight male abusers isolating their `bisexual` partners from wlw communities and enacting physical or psychological violence on them for being attracted to women. \n\nAll of these things, from the direct physical violence to the subtle cultural ideology, create an effect where young `sapphic` women growing up try to understand their feelings for men and women through this context, and are often forced or coerced into interpreting their attraction to women as platonic or meaningless or wrong, and interpreting their unease or discomfort around men as attraction or arousal. \n\nIt’s a deeply distressing and disorienting phenomenon, and it’s a big part of the reason that the average age for `gay` women to come out is about a full decade later in life than gay men.",
         "sort-as": []
     },
     {
@@ -2576,15 +2563,15 @@ export const defswithsort = [
     {
         "timestamp": "2018-04-11T17:11:32.372Z",
         "term": "Woman",
-        "definition": "I think it’s useful to conceptualize womanhood using a \"family resemblances\" definition model. This model of definition suggests that some concepts cannot be defined by reducing them to their most fundamental parts because they have no single common characteristic. Instead we must understand them as drawing from a common pool of interrelated or similar qualities. \n\nTo me, \"woman\" is a combination of the sensory experience of being a woman (something you can understand about yourself), the way we define gender as a culture and what it means in terms of our interactions with others, and the state of being an oppressed class under patriarchy whose oppression is enforced by various manifestations of misogyny. \n\nDifferent women will relate to these aspects of womanhood in unique ways, but I believe those aspects of selfhood, experience, and material reality create the common pool of characteristics that define womanhood. ",
+        "definition": "I think it’s useful to conceptualize womanhood using a \"family resemblances\" definition model. This model of definition suggests that some concepts cannot be defined by reducing them to their most fundamental parts because they have no single common characteristic. Instead we must understand them as drawing from a common pool of interrelated or similar qualities. \n\nTo me, \"woman\" is a combination of the sensory experience of being a woman (something you can understand about yourself), the way we define gender as a culture and what it means in terms of our interactions with others, and the state of being an oppressed class under patriarchy whose oppression is enforced by various manifestations of misogyny. \n\nDifferent women will relate to these aspects of womanhood in unique ways, but I believe those aspects of selfhood, experience, and material reality create the common pool of characteristics that define womanhood.",
         "identity": "somewhere between woman and non-binary",
         "sort-as": []
     },
     {
         "timestamp": "2018-04-11T17:18:48.125Z",
         "term": "trans woman",
-        "definition": "A woman who was mistakenly assigned male at birth and, as a consequence of that mistake, was likely raised as boy. \nTrans women often face a particular intersection of misogyny and transphobia in our culture that leads to disproportionate rates of experiencing sexual violence, relationship abuse, employment and housing discrimination, and suicidal feelings. ",
-        "sort-as": ["trans", "trans woman", "transgender woman", "transgender"]
+        "definition": "A woman who was mistakenly assigned male at birth and, as a consequence of that mistake, was likely raised as boy. \nTrans women often face a particular intersection of misogyny and transphobia in our culture that leads to disproportionate rates of experiencing sexual violence, relationship abuse, employment and housing discrimination, and suicidal feelings.",
+        "sort-as": ["trans", "trans woman", "transgender woman", "transgender", "trans women", "transgender women"]
     },
     {
         "timestamp": "2018-04-11T23:17:29.822Z",
@@ -2613,19 +2600,19 @@ export const defswithsort = [
     {
         "timestamp": "2018-04-12T00:22:44.011Z",
         "term": "Gold Star",
-        "definition": "A lesbian that has only had sex with women. ",
+        "definition": "A lesbian that has only had sex with women.",
         "sort-as": ["gold star lesbian", "gold star"]
     },
     {
         "timestamp": "2018-04-12T01:01:01.458Z",
-        "name": "K. ",
+        "name": "K.",
         "term": "Androgyne",
-        "definition": "Literally \"an androgynous individual\"; someone who identifies with androgyny and/or feels that their `gender identity` has both \"male\"/\"masculine\" and \"female\"/\"feminine\" elements to it. ",
+        "definition": "Literally \"an androgynous individual\"; someone who identifies with androgyny and/or feels that their `gender identity` has both \"male\"/\"masculine\" and \"female\"/\"feminine\" elements to it.",
         "sort-as": []
     },
     {
         "timestamp": "2018-04-12T01:06:46.562Z",
-        "name": "K. ",
+        "name": "K.",
         "term": "Gender-nonconforming (GNC)",
         "definition": "Anyone whose identity or expression doesn't fit with traditional ideas of maleness and femaleness; a GNC person might describe themselves as neither male nor female, or they might describe themselves as one but express themselves in ways, and take on societal roles, traditionally associated with the other. (I.e., someone might describe themselves as female, but express masculinely and take on the roles of a man; someone might describe themselves as male, but express femininely and take on the roles of a woman; both of these people would be GNC.)",
         "sort-as": ["gnc", "gender-nonconforming", "gender nonconforming", "gender non-conforming"]
@@ -2633,7 +2620,7 @@ export const defswithsort = [
     {
         "timestamp": "2018-04-12T01:25:07.932Z",
         "term": "Fuch-- a lesbian marker/identity term",
-        "definition": "Futch is a literal mixing of the terms `femme` and `butch`, signifying that users of the term take elements from both labels. \nI've found myself very comfortable as a `lesbian` mixing elements of both masculine and feminine elements within the lesbian subculture. It's a more hybrid and fluid term to me than simply butch or femme. ",
+        "definition": "Futch is a literal mixing of the terms `femme` and `butch`, signifying that users of the term take elements from both labels. \nI've found myself very comfortable as a `lesbian` mixing elements of both masculine and feminine elements within the lesbian subculture. It's a more hybrid and fluid term to me than simply butch or femme.",
         "identity": "Lesbian teen",
         "sort-as": ["futch", "Fuch-- a lesbian marker/identity term"]
     },
@@ -2648,7 +2635,7 @@ export const defswithsort = [
         "timestamp": "2018-04-12T15:43:43.856Z",
         "name": "Alex",
         "term": "Demisexual",
-        "definition": "To me, demisexual means that you only become sexually attracted to someone after developing a strong emotional bond/connection with them. \nThis term has meant that while I can still get little crushes on people, that feeling becomes more intense if I become close to the person emotionally. ",
+        "definition": "To me, demisexual means that you only become sexually attracted to someone after developing a strong emotional bond/connection with them. \nThis term has meant that while I can still get little crushes on people, that feeling becomes more intense if I become close to the person emotionally.",
         "identity": "Korean-American, 14, genderfluid, bi/demisexual",
         "sort-as": ["demi", "demisexual", "demisexuality"]
     },
@@ -2682,7 +2669,7 @@ export const defswithsort = [
         "timestamp": "2018-04-12T23:14:53.281Z",
         "name": "Samantha Egnew",
         "term": "Demigirl",
-        "definition": "Someone who identifies partly as a girl, but also as `non-binary`. Usually preferring she and they pronouns. \nI identify as a demigirl, `afab` I’m usually referred to by she/her pronouns, I’m ok with this but it makes me somewhat uncomfortable. People that I’ve come out to will now sometimes use they pronouns, which feels more right to me.  ",
+        "definition": "Someone who identifies partly as a girl, but also as `non-binary`. Usually preferring she and they pronouns. \nI identify as a demigirl, `afab` I’m usually referred to by she/her pronouns, I’m ok with this but it makes me somewhat uncomfortable. People that I’ve come out to will now sometimes use they pronouns, which feels more right to me. ",
         "identity": "15, Demigirl (she/they pronouns)",
         "sort-as": ["demi", "demigirl", "demi girl", "demi-girl"]
     },
@@ -2698,7 +2685,1437 @@ export const defswithsort = [
         "timestamp": "2018-04-13T01:13:25.896Z",
         "name": "Craigory Byrd",
         "term": "Butch-Femme Lesbian",
-        "definition": "I like to use the term Butch femme to describe myself as a lesbian because I feel like while I show many masculine traits I also tend to remain relatively feminine, and it's just the way I like to say that. ",
+        "definition": "I like to use the term Butch femme to describe myself as a lesbian because I feel like while I show many masculine traits I also tend to remain relatively feminine, and it's just the way I like to say that.",
         "sort-as": ["butch femme", "butch-femme", "butch femme lesbian", "butch-femme lesbian"]
+    },
+    {
+        "timestamp": "2018-04-13T10:44:49.121Z",
+        "term": "Bottom",
+        "definition": "In sexual intercourse, the \"bottom\" is the recieving party. Used specifically in homosexual context.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-13T17:16:47.384Z",
+        "name": "alice",
+        "term": "pansexual",
+        "definition": "i only love people for their personalities, gender doesn't matter",
+        "sort-as": ["pan", "pansexual", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-04-13T19:31:26.651Z",
+        "term": "Futch",
+        "definition": "Futch is a term that was originally created as a joke, though many now identify with it in earnest. The word comes from a combination of butch and femme; the identity itself is related to embodying both identities in some way or another. Although \"kiki\" has its root in derogatory language, \"Kiki\" is perhaps the closest historical identity to futch in the lesbian community. ",
+        "identity": "white butch nb lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-13T19:31:42.234Z",
+        "term": "pangender",
+        "definition": "Pangender is identifying as all genders, however it is a racist term as this includes culture-specific genders.",
+        "sort-as": ["pan", "pangender"]
+    },
+    {
+        "timestamp": "2018-04-13T19:35:02.422Z",
+        "term": "Gold Star Lesbian",
+        "definition": "Most simply, this term can be defined as \"a lesbian that has never had sex with a man.\" However in its actual usage is deeply linked to trans-misogyny, gate-keeping and biphobia. Often trans-misogynists will misgender trans women when using this term and others will use it as a way of implying someone is superior or \"more of a lesbian\" if they have never had sex with a man.",
+        "identity": "white nb butch lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-13T21:35:25.931Z",
+        "name": "Timothy Green",
+        "term": "stone butch/fem(me)",
+        "definition": "stone is a 'lesbian' identity that adds on to either 'butch' or 'femme'/'fem'. a stone butch is a butch lesbian who does not like to be touched or to \"receive\" sexually and a stone fem(me) does not like to touch, top, or \"give\" sexually, both for reasons of trauma, dysphoria, and/or gender identity. Stone butches and fem/mes often have very strong presentations, but \"stone butch\" does not inherently mean very/hard butch.\nI am a stone butch lesbian due to trauma, dysphoria, and gender identity. a lot of people think that stone butch just means hard in presentation and it's frustrating. read stone butch blues.",
+        "identity": "stone butch lesbian",
+        "sort-as": ["stone butch", "stone femme", "stone butch/fem(me)"]
+    },
+    {
+        "timestamp": "2018-04-14T04:18:44.861Z",
+        "term": "Ipsogender",
+        "definition": "The simultaneous states of identifying with the gender assigned to you at birth, and being an intersex person whose experience with that gender is ultimately not protected or centered by cissexism.",
+        "identity": "Genderqueer intersex middle eastern",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T04:29:50.260Z",
+        "term": "androgynous gay",
+        "definition": "A homosexual that takes on both masculine and feminine traits, interests, or characteristics. \nI've noticed a lot of these terms for females, but none for males. I am a male who dresses masculine and (to my own knowledge) acts masculine, but there are a lot of female-esque things I like, and there's nothing that defines me. I have also been described on some occasions, as looking male or female.",
+        "identity": "caucasian, usa, 16, male, gay, liberal, agnostic",
+        "sort-as": ["androgynous", "androgynous gay"]
+    },
+    {
+        "timestamp": "2018-04-14T04:44:54.717Z",
+        "name": "River",
+        "term": "Pansexual",
+        "definition": "Potential attraction (romantic and sexual) to any person, regardless of gender/gender identity. \"Liking someone for their personality and/or aesthetically pleasing features, not what's in their pants.\"\nI previously thought I was bi, but when I came across this term, I felt it much more applicable. Since then I have embraced being pan further and really tapped into my side of loving all genders. Having this label and being able to belong to this group makes me so happy and I want people to know about my identity and other pansexuals to be able to identify a early as they can.",
+        "identity": "Lower Middle class, teens, American, pansexual, female and she/her pronouns, ADHD and low sensory processing disorder",
+        "sort-as": ["pan", "pansexual", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-04-14T04:48:59.109Z",
+        "name": "Benton",
+        "term": "Polygender",
+        "definition": "A multigender identity in which one experiences multiple genders.",
+        "identity": "Polygender Transsexual man",
+        "sort-as": ["poly", "polysexual", "polysexuality"]
+    },
+    {
+        "timestamp": "2018-04-14T04:51:14.120Z",
+        "term": "Sexual Orientation",
+        "definition": "The orientation that describes your sexual attraction and desires",
+        "sort-as": ["orientation", "sexual orientation"]
+    },
+    {
+        "timestamp": "2018-04-14T09:26:36.077Z",
+        "term": "Omnigay",
+        "definition": "A term defined by gay being an important part of one’s identity but the gender is fluctuating. Regardless of gender, they’re always gay.",
+        "identity": "Asexual, demibiromantic, demigirl, 17, white, Florida",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T13:15:27.104Z",
+        "name": "Theo",
+        "term": "bigender",
+        "definition": "Someone who is two or more genders, either at the same time or being fluid between them. There is no restriction on what the genders can be. Someone who is fluid may prefer the term 'genderfluid'.",
+        "sort-as": ["bi", "bigender"]
+    },
+    {
+        "timestamp": "2018-04-14T13:19:00.654Z",
+        "name": "Theo",
+        "term": "biromantic",
+        "definition": "Romantic attraction to two or more genders. It doesn't matter what specific genders these are.",
+        "sort-as": ["bi", "biromantic"]
+    },
+    {
+        "timestamp": "2018-04-14T13:39:08.517Z",
+        "term": "Pansexual",
+        "definition": "Some one who can flirt with anybody without worrying about their gender/gender identity",
+        "identity": "Midwest pansexual",
+        "sort-as": ["pan", "pansexual", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-04-14T13:50:54.545Z",
+        "term": "Polygender",
+        "definition": "Identifying with multiple genders at the same time or a combination/mix of different genders. 'Bigender', 'trigender' and 'pangender' can be considered specifications of polygender.",
+        "identity": "White, european, teenager, non-binary fluidflux who's usually polygender",
+        "sort-as": ["poly", "polygender"]
+    },
+    {
+        "timestamp": "2018-04-14T13:52:33.562Z",
+        "term": "Ceasesexual",
+        "definition": "An a-spec orientation where sexual attraction will often come to a suddeb hault for a while.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T13:53:22.535Z",
+        "term": "trigender",
+        "definition": "Identifying as three genders at the same time.",
+        "identity": "european teen, non-binary fluidflux and polygender.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T14:01:14.448Z",
+        "term": "Aporagender",
+        "definition": "Specific gender that is not male, masculine, female, feminine, neutral, androgyne, a lack of gender or combination. It is a third specific gender in addition to male and female. Similar to 'maverique'.",
+        "identity": "white european teen, non-binary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T14:05:23.284Z",
+        "term": "Maverique",
+        "definition": "How I understand it, its a third specific gender, like 'aporagender', only more specific to people who only and always identify as this. It is a specific gender, so not a lack of or neutral gender, and only one gender, not more, and yet it is not male, masculine, female or feminine.",
+        "identity": "European non-binary teen",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-14T17:31:38.572Z",
+        "name": "Theo",
+        "term": "stellarian",
+        "definition": "A person who has gender experiences in a purely nonbinary manner.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-15T16:38:48.226Z",
+        "term": "agender",
+        "definition": "A non-binary gender identity characterized as having/experiencing a lack of a gender. People who are agender can still identify with terms such as `transmasculine` and `transfeminine`.",
+        "identity": "aroace, transmasc agender",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-15T22:32:48.170Z",
+        "term": "Autochorissexual",
+        "definition": "The term autochorissexual was coined by Anthony Bogaert and is derived from ‘autochoris’ which translates to 'identity-less sexuality’. It is a subset of asexuality which is defined as: a disconnection between oneself and a sexual target/object of arousal; may involve sexual fantasies or arousal in response to erotica or pornography, but lacking any desire to be a participant in the sexual activities therein.\n\nAutochorissexuals are known to:\n\n- Get aroused by sexual content but not actually want to engage in any sexual activities\n- Masturbate, but are neutral or repulsed by the idea of having sex with another person.\n- Fantasize about sex, but envision people other than themselves, and/or view it in third person, as though they're watching it on TV, rather than imagining it in first person, through their own eyes.\n- Predominantly or entirely fantasize about fictional characters or celebrities, rather than people in real life they know.\n\nIdentify as asexual and feel no sexual attraction to people, but enjoy masturbating, are aroused by sexually explicit content, and/or have sexual fantasies.\n\nWhile this mostly occurs in asexual people, an analogous feeling may occur in aromantic people with romantic fantasies instead of sexual ones.\n\nAnthony Bogaert explains his investigations about asexuality and autochorissexualism in his book 'Understanding Sexuality'. If someone interested I recommend to read it, it's a pretty good book.\n\nAutochorissexuality is also refered to as 'aegosexuality'.",
+        "identity": "Aro Ace Autochorissexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-16T08:13:09.545Z",
+        "name": "Olivia",
+        "term": "Bisexuality",
+        "definition": "Sexual attraction to more than one gender",
+        "identity": "Metis, Canadian, 20, Trans Female, Poor, Bi/Ace",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-04-16T19:45:39.271Z",
+        "name": "Ray",
+        "term": "abrosexual",
+        "definition": "Abrosexual is when a person's sexual orientation is fluid. At one time they could be attracted to only women,  another time only men, sometimes both, or even attracted to nonbinary people, or sometimes to no gender at all. It's different from being just bi or pan, because who they are attracted to completely changes, where as with bi or pan, only the preference to a gender changes but they are still attracted to that gender.",
+        "identity": "White Genderfluid person who is questioning their sexual identity, from a mid class family in america. ",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-16T21:13:23.763Z",
+        "name": "Aiden",
+        "term": "agenderflux",
+        "definition": "Agenderflux is a term to define a person whose gender fluctuates in strength from 'agender' to another gender on either or both sides of the spectrum.",
+        "identity": "pansexual genderqueer girl",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:23:35.746Z",
+        "name": "Malachai",
+        "term": "DFAB",
+        "definition": "Stands for Designated Female At Birth.\nEssentially when a DFAB person was born the doctor looked at their genitals and wrote f for female on the birth certificate and congratulated their parents on their beautiful baby girl.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:29:15.219Z",
+        "name": "Malachai",
+        "term": "Soft boy",
+        "definition": "A feminine boy who has a sort of flower crown aesthetic. Often, but not exclusively used by trans boys.",
+        "identity": "White, NB/agenderflux, transmasc",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:36:19.157Z",
+        "term": "Visigender",
+        "definition": "A gender that is best described using images, visual aides etc., as you are unable to put it into words due to neurodivergence. For neurodivergent people only.",
+        "identity": "I'm a gay trans man from MA.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:44:08.578Z",
+        "term": "nonbinary lesbian",
+        "definition": "Someone who is a lesbian, but also nonbinary. This individual could view themself as nonbinary because of how their being a lesbian affects their gender and how they perceive it, or may consider their lesbian identity their only connection to womanhood. It could be because they are, for instance, agender, but feel a connection to womanhood and are exclusively attracted to women and other people who are partially women or consider themselves exclusively connected to womanhood, or it could be because they're bigender, for example both neutrois and female, and are exclusively attracted to women and other nb people who associate themselves with womanhood and sapphic identity. The experience of being a nonbinary lesbian cannot be pinned to a single definition or experience, and many nonbinary lesbians will have varying experiences with their gender. However, the nonbinary identity does not negate or diminish the lesbian one, and vice versa.",
+        "identity": "nonbinary, questioning but wlw & likely a lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:45:02.314Z",
+        "term": "Transsexual",
+        "definition": "A term that was originally designed by the medical and psychology fields, Now defines someone who wishes to transition their body to a sex that differs than their assigned birth. They either plan to physically transition, are currently doing so, or have already physically transitioned. These transitions may include any of the following, not all are listed: Top surgery(breast implants/breast removal/breast reduction), Bottom surgery (female to male/male to female genital surgery, bigenital surgery, or non-genital surgery), Hormones, facial surgeries, vocal chord surgery, or Hair reduction/implants.\nNot all transgender people identify as transsexual, and not all transsexual people necessarily identify with transgender.\nAddresings:\nTranssexual Male/Man\nTranssexual Woman/female\nTranssexual Androgynous (Or Androgynous)\nTranssexual Angenital (Or simply Angenital)\nTranssexual Bigenital/Salmacian(Or simply Bigenital/Salmacian)\nI am Transsexual. I'm a transsexual male that is considering keeping my bottom genitals and just adding a penis as well. (Also nonbinary/transgender)",
+        "identity": "Transsexual male, Bigenitalflux, Polygender/Vaguefluidflux. Omnisexual/Polyromantic. Polyamorous. Aceflux/Sensualflux. Twinkby",
+        "sort-as": ["transexual", "transsexual", "trans"]
+    },
+    {
+        "timestamp": "2018-04-17T01:47:44.929Z",
+        "term": "Agenderflux",
+        "definition": "Having fluctuating feelings of being agender (Someone may feel agenderflux and also boyflux, for example.)",
+        "identity": "I'm a gay trans man from MA.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:48:01.289Z",
+        "name": "Benton",
+        "term": "Twinkby",
+        "definition": "A nonbinary boy/masculine aligned person who presents similarly to a Twink and is attracted to males, either exclusively or not. They tend to be submissive during intimate times and in relationships.\nThe name is made from the words \"Twink\" and \"Enby\"",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:48:49.190Z",
+        "term": "Amaregender",
+        "definition": "A gender that changes depending on who you are currently romantically attracted to",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:52:05.513Z",
+        "term": "Cloudgender",
+        "definition": "a gender that cannot be fully realized or seen clearly due to depersonalization/derealization disorder",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:53:56.727Z",
+        "term": "Domgender",
+        "definition": "having more than one gender yet one being more dominant than the others",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:54:47.933Z",
+        "term": "Egogender",
+        "definition": "a gender that is so personal to your experience that it can only be described as “you”",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:55:07.701Z",
+        "term": "Maverique",
+        "definition": "Maverique is a gender that is neither male or female, but is also not neutral, and also not a lack of gender. If genders were colors, and female was red and male was blue, maverique could be seen as yellow. The term was coined by Vesper (@queerascat on tumblr and QueerAsCat on YouTube) around 2014, the first time they mentioned the term on their YouTube channel (in a video titled \"Goodbye Neutrois, Hello Maverique (ie. me changing labels)\"). \n\nPeople who refer to themselves as maverique can include people whose only gender is maverique, people who are bigender and one of their genders is maverique, people who are genderfluid and one of their genders is maverique, people who are genderflux maverique, and so forth. \n\nA person who is maverique may refer to themself as a mav, and maveriques as a whole may be called mavs. For instance, \"Those three people are mavs and are all happy with their gender.\"",
+        "identity": "Genderfluid person who shifts between maverique and other genders",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:56:45.505Z",
+        "term": "Femfluid",
+        "definition": "having fluctuating or fluid gender feelings that are limited to feminine genders",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:58:00.867Z",
+        "term": "Genderfuzz",
+        "definition": "the feeling of having more than one gender that are somehow blurred together to the point of not being able to distinguish or identify individual genders",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:58:53.666Z",
+        "name": "Lee",
+        "term": "genderqueer",
+        "definition": "Genderqueer is sometimes used as a blanket term for multiple nonbinary identities, but can also be used as a more specific term that describes someone whose gender is, well, queer. It’s similar to describing a difficult-to-explain sexuality as queer, and so it gives genderqueer people a lot more freedom to identify a certain way while still using a commonly-known term.\n\nIn response to the definition that shows first on the page's results for genderqueer- I'm genderqueer and I've identified as genderqueer for years, and while non-binary is a better label to refer to people who are not male or female, genderqueer is not \"outdated\" as a self-identifer for gender identity. I'm non-binary and genderqueer and it's a perfect label for me, I've never found a term that makes me more comfortable than that. Just because the person who created the genderqueer pride flag supports some problematic things it doesn't mean the genderqueer label or identity is inherently \"offensive\" like that other definition says.",
+        "identity": "Black,genderqueer,18",
+        "sort-as": ["genderqueer", "gender queer", "gender-queer"]
+    },
+    {
+        "timestamp": "2018-04-17T01:59:35.243Z",
+        "term": "Solarian",
+        "definition": "A nonbinary person who has similarities in identity or experience with men. The term functions as a less easily abused form of ‘male aligned.’",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T01:59:54.430Z",
+        "term": "Lunarian",
+        "definition": "A nonbinary person who has similarities in identity or experience with women. The term functions as a less easily abused form of ‘female aligned.’",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T02:00:10.918Z",
+        "term": "Social Dysphoria",
+        "definition": "Typically refers to aspects of dysphoria that do not have to do directly with the body. Common types of social dysphoria relate to being called by one's dead name, or being referred to with incorrect pronouns, honorifics, or terminology. Social dysphoria not \"lesser\" than physical dysphoria, and if a person requests to use different names, pronouns, or terminology but does not express a desire to medically transition, they are no less transgender for that.",
+        "identity": "Genderfluid",
+        "sort-as": ["dysphoria", "social dysphoria"]
+    },
+    {
+        "timestamp": "2018-04-17T02:09:00.932Z",
+        "name": "Charlie",
+        "term": "Asexual",
+        "definition": "Someone who doesn't experience sexual attraction. They may have, want, or enjoy sex, or they may not, but they don't experience sexual attraction.",
+        "sort-as": ["ace", "asexual", "asexuality"]
+    },
+    {
+        "timestamp": "2018-04-17T02:10:42.560Z",
+        "term": "Quoigender",
+        "definition": "Someone who can't tell whether they experience a gender or not, or feel that gender doesn't apply to them, or that they are unable to define their gender in any meaningful way. This term is sometimes used as an alternative to \"questioning,\" but it is also a full identity on its own.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T02:15:11.763Z",
+        "term": "Genderqueer",
+        "definition": "A word for people who are not fully a boy or a girl. Another term for `nonbinary`",
+        "identity": "Panromantic trans man",
+        "sort-as": ["genderqueer", "gender queer", "gender-queer"]
+    },
+    {
+        "timestamp": "2018-04-17T02:15:50.318Z",
+        "term": "Solarian",
+        "definition": "Someone who identifies as male aligned nonbinary. That is, a nonbinary person who feels more masculine than say an agender person. The term comes from the cultural association between masculinity and the sun (for example, the Greek god of the sun Apollo).\nThis term helped me figure out what exactly it was that I identified as. While I prefer they/them pronouns overall, I am perfectly fine with he/him pronouns as well, and I plan on getting corrective surgery as well as going on T when I'm older so that I look more traditionally masculine. I am not a guy, though.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T02:21:17.404Z",
+        "name": "aj",
+        "term": "greygender",
+        "definition": "experiencing gender, but not having too much attachment to it/experiencing it less intensely than non-greygender people. it's like a modifying term you add to the beginning of another gender identity. for example, i, myself, identify as greygender genderfluid",
+        "identity": "taiwanese american, trans nonbinary/gender nonconforming/genderqueer/greygender genderfluid, bisexual/queer",
+        "sort-as": ["graygender", "greygender"]
+    },
+    {
+        "timestamp": "2018-04-17T02:23:54.816Z",
+        "name": "aj",
+        "term": "androgyne",
+        "definition": "the gender identity form of androgynous; feeling both masculine and feminine genders equally intensely. androgyne is not referring to gender presentation (that would be androgynous), but rather an actual gender identity.",
+        "identity": "taiwanese american, trans nonbinary/gnc/genderqueer/greygender genderfluid (flowing between agender, androgyne, transmasc), bisexual/queer",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T02:51:22.339Z",
+        "term": "Platonic relationship",
+        "definition": "To be in a loving relationship with out sex.\nIt’s honestly awesome.  In my opinion it’s like friends with benefits but instead of sex it’s cuddling or debating the meaning of life.  It’s having you best friend with you to always support you.",
+        "identity": "Asexual/Female/U.S",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T03:09:57.380Z",
+        "term": "Aplatonic",
+        "definition": "A term coined within the asexual/aromantic community for use by people who have trouble forming platonic relationships. This can be due to trauma or mental health reasons but it doesn't have to be. Not to be confused with nonamory.\nAn extension of my aroace identity to further explain my relationship to those around me.",
+        "identity": "Aroace nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T03:12:39.004Z",
+        "term": "Nonamory",
+        "definition": "An aromatic/asexual  term referring to someone who does not want a committed platonic relationship (more commonly referred to as a QPR or queer/quasiplatonic relationship) but can be extended to mean not being interested in an kind of amorous relationship at all.",
+        "identity": "Aroace nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T03:22:25.283Z",
+        "term": "QTPOC/QPOC",
+        "definition": "\"Queer/Trans person on color\" and \"Queer person of color\" an umbrella term for poc that are queer/trans or both.\nA term I use to connect with my community.",
+        "identity":", non binary, latine",
+        "sort-as": ["qtpoc", "qpoc", "qtpoc/qpoc", "qpoc/qtpoc", "queer trans person of color", "queer person of color", "queer/trans person of color"]
+    },
+    {
+        "timestamp": "2018-04-17T03:40:57.749Z",
+        "term": "Demigirl",
+        "definition": "Indentifying as feeling partly a woman, but also feeling partly of another gender. Often used when someone identifies as feminine genders, but does not wholly know what other genders they may identify as. A sort of middle ground between binary woman and nonbinary. Not to be confused with bigender. \nThis term has made me feel like I belong; that I'm not a confused identity floating in the wind. This term allows me to get some sort of grasp on who I am, as identifying partly as something and not knowing the other part(s) I identify as can be hard and discouraging.",
+        "identity": "I am a Caucasian high school student who identifies as a panromantic asexual demigirl",
+        "sort-as": ["demi", "demigirl"]
+    },
+    {
+        "timestamp": "2018-04-17T03:51:09.393Z",
+        "term": "asexual",
+        "definition": "not experiencing sexual attraction to anyone. may still have libido/want to have sex but not always.",
+        "identity": "asexual biromantic girl",
+        "sort-as": ["ace", "asexual", "asexuality"]
+    },
+    {
+        "timestamp": "2018-04-17T03:53:02.114Z",
+        "term": "biromantic",
+        "definition": "romantic attraction to two or more genders. may or may not experience sexual attraction.",
+        "identity": "asexual, biromantic, female, 14",
+        "sort-as": ["bi", "biromantic"]
+    },
+    {
+        "timestamp": "2018-04-17T05:21:47.238Z",
+        "name": "James",
+        "term": "Bisexual and biromantic",
+        "definition": "Bisexual means being sexually attracted to two or more genders. Biromantic is similar; being romantically attracted to two or more genders. A person can be both biromantic and bisexual, of course. \n\nA bi person doesn’t have to like all of the genders they are attracted to equally. Some may be more attracted to men, for example. Some may have a more fluid sexuality where the levels in which they like certain genders change day to day, week to week, etc. Some may be romantically attracted to certain genders and sexually attracted to other genders. Some do, of course, like all of the genders they are attracted to equally. It is a very broad definition and the only way to “fit” the label is being someway attracted to more than one gender.\nIn my experience (because I am bi I’ve done a lot of research haha), it means being attracted to more than one gender and simply that. Explaining it too much gets too confusing as many people have different ideas on what it means to them! \n\nFor me I like all genders but I don’t call myself pansexual because I don’t like people regardless of their gender. Sometimes I have more “straight” days (I like girls or feminine people more) or “gay” days (where I like guys or masculine people more) and mostly I have days where it’s very evenly mixed. I don’t like describing it like that because technically I’m never straight and it feels weird (because I feel like it sounds like I am saying femininity=girl and vice versa and I’m not saying that) haha but it’s the quickest way to get my point across and this is already very long haha. I hope this is helpful",
+        "identity": "I am a white, Canadian, 16-year-old guy who is also bisexual.",
+        "sort-as": ["bi", "bisexual", "biromantic"]
+    },
+    {
+        "timestamp": "2018-04-17T05:37:30.241Z",
+        "name": "James",
+        "term": "Trans guy",
+        "definition": "An AFAB (assigned female at birth; people thought they were a female at birth because of their sex) person who’s gender identity is male. This person may transition (change their name and/or pronouns, get HRT, get surgeries, or anything else or any mix of these OR none of the listed) to feel more comfortable.\n\nA trans guy may have gender dysphoria (when presenting as female)/gender euphoria (when presenting as male), which is the extreme discomfort of having to pretend to be the wrong gender/the good feeling of not having to pretend to be the wrong gender. Of course not all trans guys have this.\nI am a trans guy and it basically just means that my gender doesn’t match what everyone else’s thought I was when I was born. I have gender dysphoria so I’m trying to transition so I have a binder, new name, new pronouns, etc. so I can feel a bit better but I can’t get hormones yet :(\n\nIn general it feels nice to have a label for it (which is why I like the idea of this website) because I thought it was normal to have a longing to be a guy. I’ve wanted it very desperately since puberty started. If I hadn’t figured out what being trans was id probably still be confused!\n\nFor me being trans is a lot like having a broken bone; you don’t really notice your bones until they are broken. It’s hard to describe the feeling of gender dysphoria unless you’ve experienced it so I hope my definition is ok",
+        "identity": "I’m a white Canadian 16 year old trans guy.",
+        "sort-as": ["trans", "trans guy", "trans man", "transgender", "trans men", "transgender men", "transgender man", "transgender guy"]
+    },
+    {
+        "timestamp": "2018-04-17T06:39:16.293Z",
+        "term": "proxvir",
+        "definition": "A gender that is neither male nor female, but is related to male.\nPersonally, I’m neither/nonbinary, but have some masculine traits and think of myself as a boy or man in certain situations.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T06:41:55.346Z",
+        "name": "Fy",
+        "term": "nblnb",
+        "definition": "Anyone who is `non-binary` and attracted to other non-binary people",
+        "identity": "Genderfluid Pansexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:08:59.182Z",
+        "term": "DFAB",
+        "definition": "An acronym standing for \"designated female at birth\". Synonym of `AFAB.`",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:20:11.443Z",
+        "term": "Quoiromantic",
+        "definition": "Unable to distinguish between romantic and platonic attraction, or that those categories are not applicable. An aromantic spectrum identity.\nI don't find it helpful to categorize my relationships as romantic vs. platonic. The definition of \"romantic attraction\" is so subjective as to be practically meaningless - specific actions like cuddling or spending time alone together aren't always and inherently romantic, what makes them romantic is the underlying ~feeling~. Since I can't tell if I get that ~feeling~ at all, it's more helpful for me to define my relationships on a more case by case basis, in terms of level of closeness, commitment, types of physical intimacy, etc. I often have moments of \"aaah is this a crush or a squish\" when figuring out I like someone, but I've started embracing that grey area more.",
+        "identity": "Quoiromantic, asexual, polyamorous, non-binary (androgyne), sapphic, white, american northwest, 18",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:30:58.074Z",
+        "term": "Squish",
+        "definition": "Like a crush but platonic - really wanting to be someone's friend.\nThere are some people I meet where I get this sense of \"wow they're so cool! I wish I were their friend!\". Sometimes I smile when I think about them, or I just really wish I could hug them.",
+        "identity": "quoiromantic, asexual, polyamorous, non-binary (androgyne), sapphic, white, american northwest, 18",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:31:12.252Z",
+        "term": "Stud",
+        "definition": "Similar to `butch`, stud is primarily used in black lesbian/bisexual communities to refer to a dominant, masculine-presenting woman whose style is typically influenced by urban and hip-hop fashion.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:45:38.287Z",
+        "term": "febfem",
+        "definition": "Short for \"female-exclusive bisexual female\". While it technically means a bisexual woman who only dates other women, in practice it's almost exclusively used by transphobes (specifically `TERFs`) to mean a bisexual woman who will only date `cis` women and `trans` men.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:50:30.385Z",
+        "name": "Aaron",
+        "term": "Biromantic",
+        "definition": "Somebody of any gender who is attracted to two genders. Does not strictly mean an attraction to females and males, but does in most cases.",
+        "identity": "Biromantic grey-ace/pansexual demiboy",
+        "sort-as": ["bi", "biromantic"]
+    },
+    {
+        "timestamp": "2018-04-16T21:03:27.888Z",
+        "name": "Sarah",
+        "term": "Compulsory Heterosexuality",
+        "definition": "Compulsory Heterosexuality refers exclusively to a Lesbian-exclusive experience of ingrained false attraction to men,  including wanting attention and validation from men. All of this is rooted exclusively in social conditioning and not in legitimate attraction or desire. This is distinct from Coercive Heteronormativity, which is experienced by Lesbians, bisexuals, gays, queer people, and all sorts of not-straight people, which refers to the general coercive societal forces pushing everybody towards heterosexuality that often manifests in not recognizing same-sex attraction or experiencing false conditioned attraction.\nThese two things are very closely interlinked, and can both manifest in the same way (e.g. gay boys having childhood crushes on girls, bi women not realizing they love women until they're much older). But Compulsory Heterosexuality is a uniquely Lesbian experience because of the specific combination of gender and orientation, the context of being raised from birth expected to center their lives, emotions, and desires around men and, while not experiencing real attraction to men, being so deeply conditioned to ignore their own feelings in favor of men's desires that they believe themselves attracted to men.",
+        "identity": "white, Southern California, 28, Bisexual woman",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T11:41:09.998Z",
+        "term": "Queer",
+        "definition": "Queer, to me, is an umbrella term, or could be used to describe one's specific sexuality and/or gender identity. For example, I find my sexuality to not really fit into a label comfortably, so I say that I'm queer. It's a non-specific term that's inclusive and helpful for those who are questioning or don't like any current labels.",
+        "identity": "I'm white-passing, queer, a trans man, a minor, and a member of the cult of Santa Mierda.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:20:46.839Z",
+        "term": "Relationship Anarchy",
+        "definition": "It’s a type of polyamory with a focus on relationships with community-centric values, not couple-centric values. A political movement that offers an alternative to the capitalist hetero-patriarchy’s commodification of bodies, sex, and love and to the idea of amatonormativity. It’s about valuing relationships as you choose to, not based on imposed structures. It’s about each person following their own path, and coming together based on mutual desires, not duty and obligation. It means not separating partners from friends. In other words, it’s about relating to other human beings without coercive authority in play and without hierarchy in your group of relationships or in any relationship itself. \nAs someone who is aromantic this is extremely important to me. I don't experience romantic love, so how do I decide which relationships I \"need\" to place before my friendships? When you start to think about it, it all breaks down. Romantic relationships are a social construct. There's no reason to place them before your friendships. As someone who is into polyamory, there is no alternative way for me to ethically approach how to organize the relationships in my life. Every single connection is important to me because, at their base, they all are derived from friendship.",
+        "identity": "Neptunian, Demigrey-polysexual, Aromantic, Polyamorous",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T07:56:50.048Z",
+        "term": "TERF",
+        "definition": "Trans-Exclusionary Radical Feminist. Created in 2008 to refer to transphobic radical feminists who don't believe `trans women` are women or experience misogyny and usually claim that `trans men` are victims of internalized misogyny. They regularly harass trans people in the name of \"helping women\", and many prominent TERFs have teamed up with far-right organizations just to harm trans communities, yet somehow they still believe this term is a slur.",
+        "sort-as": ["trans-exclusionary radical feminist", "trans exclusionary radical feminist"]
+    },
+    {
+        "timestamp": "2018-04-17T08:10:50.510Z",
+        "term": "butch",
+        "definition": "a masculine-presenting lesbian or bisexual woman",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T08:13:29.743Z",
+        "term": "femme",
+        "definition": "A feminine `lesbian` or `bisexual` woman.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T08:17:39.074Z",
+        "term": "pillow princess",
+        "definition": "A woman who will let another woman go down on her but refuses to reciprocate. Named after the fact their head is always on the pillow. Usually derogatory.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T10:37:14.248Z",
+        "name": "sam",
+        "term": "trans",
+        "definition": "identifying as a gender different from what you were assigned at birth",
+        "identity": "swedish 16 y/o enby",
+        "sort-as": ["transgender", "trans", "trans*"]
+    },
+    {
+        "timestamp": "2018-04-17T14:24:47.635Z",
+        "name": "Nova",
+        "term": "nblnb",
+        "definition": "A `nonbinary` person attracted to other nonbinary people in a sexual or romantic or alterous way. \nI am nblnb! I look at cute nonbinary people and my heart practically melts they are so CUTE!",
+        "identity": "Agender, asexual, transfeminine, demiromantic, nblnb, autistic, mentally ill, system/DID",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T14:31:16.938Z",
+        "term": "bisexual",
+        "definition": "Feeling attraction to both different and similar genders",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-04-17T14:33:11.244Z",
+        "name": "Nova",
+        "term": "afab/amab/agab",
+        "definition": "AFAB: Assigned Female At Birth\nAMAB: Assigned Male At Birth\nAGAB: Assigned Gender At Birth (ex. my AGAB is male but I am `agender`)\n\nThis is used to describe the birth sex of a `trans`/`nonbinary` person, equivalent to \"biologically male/female,\" without inferring that their gender is related to their sex. \nI'm trans myself and so I may use this online to show problems I face with transition and such",
+        "identity": "Agender asexual transfeminine demiromantic nblnb autistic",
+        "sort-as": ["afab", "amab", "agab", "afab/amab/agab"]
+    },
+    {
+        "timestamp": "2018-04-17T16:04:35.975Z",
+        "term": "Dfab",
+        "definition": "Designated female at birth",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:05:57.077Z",
+        "term": "Solarian",
+        "definition": "A `non-binary` person who considers themself male-aligned",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:10:16.347Z",
+        "term": "Maverique",
+        "definition": "A `nonbinary` gender that’s neither male nor female, neither maculine nor feminine, but also not nothing. One way to explain it if you think of male and blue and female as pink, maverique would be yellow.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:12:57.871Z",
+        "term": "Trans butch",
+        "definition": "A `transgender` `lesbian` woman who identifies as `butch`",
+        "sort-as": ["transgender butch", "trans butch"]
+    },
+    {
+        "timestamp": "2018-04-17T16:13:45.999Z",
+        "term": "Compulsory heterosexuality",
+        "definition": "Made famous by Adrienne Rich in her essay \"Compulsory Heterosexuality and Lesbian Existence\" the term is defined as: the cultural assumption that both males and females are predisposed to heterosexuality and the assumption that biology excludes a naturalized explanation for homosexuality. Further it is the assumption that women and men are innately attracted to each other emotionally and sexually and that heterosexuality is normal and universal. This institutionalization of heterosexuality in our society leads to an institutionalized inequality of power not only between heterosexuals and non-heterosexuals, but also between men and women, and a patriarchal society structured by compulsory heterosexuality where women are exploited (sexual slavery i.e. because there is no choice). It is built on 8 pillers: 1) the denial of women's own sexuality 2) the forcing of male sexuality upon women 3) the command and exploitation of female labor for male gain 4) the robbing of women of their children (fathers-right laws) to ensure compliance 5) the physical binding of woman to men to ensure compliance 6) the use and view of women as objects for male use 7) the suppression of woman's creativeness and expression of self and 8) the withhold women from education, knowledge and culture. Therefore the breaking away from this, the very act of rejecting men and male access to women and the centering of women in your life is an active choice to engage the lesbian experience. \n\nIt must be noted that Adrienne Rich was a trans-exclusionary feminist and contributed to the writing of \"The Transexual Empire\" and the acknowledgments of which state \"Adrienne Rich has been a very special friend and critic. She has read the manuscript through all its stages and provided resources, creative criticism, and constant encouragement.” I must be stated then that the term 'compulsory heterosexuality' though an important historical term for the lesbian community, is, in its very nature, trans-exclusive and does not extend to the experiences of trans women. \nThe act of rejecting men from all aspects of life is one that is an active struggle, not a passive one. The centering of men in society is so prominent that it must be forcefully over come constantly every day.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:14:07.134Z",
+        "term": "Grey asexual",
+        "definition": "Someone who mostly doesn’t experience sexual attraction and is asexual but on rare instances they will feel sexual attraction.",
+        "sort-as": ["grey ace", "gray ace", "gray asexual", "grey asexual"]
+    },
+    {
+        "timestamp": "2018-04-17T16:15:43.060Z",
+        "term": "dfab",
+        "definition": "Designated female at birth, aka born with genitalia within the range of 'female'. \nTo me, a dfab person, it is a simple way to clear up miscommunication between original label and actual identity, albeit an intrusive one which shouldn't be used too casually.",
+        "identity": "White, middle class, nonbinary, bisexual, aromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:17:42.441Z",
+        "term": "lesbian existence",
+        "definition": "The lesbian existence is defined by Adrienne Rich as a profoundly female experience similar to that of motherhood. It comes with its own struggles, oppressions, and meanings and stands against the term gay which only serves to blur the lines that are critical for `lesbian`s to discern in their very existence. Lesbian experience is centering woman in your life in every way, in every aspect, and, in such, rejecting maleness and men from these experiences which are exclusively womanhood. \nAnyone who chooses to center woman in their lives, in every way, is choosing a lesbian existance. It is a term to bring together all women in choosing to center and celebrate their womenhood together.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:18:58.982Z",
+        "term": "Arospec",
+        "definition": "A spectrum which encompasses romantic orientations between completely alloromantic and completely `aromantic`, an example being `demi` or `quoiromantic`. \nI am somewhere on the aromantic spectrum- I really don't know where just yet. However, even though it is easier to not mention it at all because most people don't (or aren't willing to try and) understand, around people who know about it, it's a good way for me to describe how I feel without going into all the rambling details.",
+        "identity": "A white, nonbinary arospec teen",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:25:09.186Z",
+        "term": "Agab",
+        "definition": "Assigned gender at birth",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:28:08.912Z",
+        "term": "Nblm",
+        "definition": "Nonbinary loving men. A `nonbinary` individual who feels romantic and/or sexual attraction to men.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:29:05.436Z",
+        "term": "Nblnb",
+        "definition": "Nonbinary loving nonbinary. A `nonbinary` person who feels romantic and/or sexual attraction to other nonbinary people",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T16:31:52.873Z",
+        "term": "M-spec",
+        "definition": "Multi-attraction spectrum. A broad categorical term used to describe invididuals who are attracted to more than one gender. This term can encompass `bi`, `Pan`, `poly` people and many other identities.",
+        "sort-as": ["mspec", "m spec", "m-spec"]
+    },
+    {
+        "timestamp": "2018-04-17T16:48:48.758Z",
+        "name": "Vitor",
+        "term": "Maverique",
+        "definition": "A gender identity that exists separately from common conceptions of gender; male, female, neutral and androgynous. It is defined by independence of the other genders and conviction in its own existence, like saying, \"Hey, I'm here, I'm real, I'm unique\". \nIt was one of the first `nonbinary` gender identities I heard of. And even though I knew from beginning it wasn't my gender, it showed me how fascinating a gender can be, and how awesome is gender diversity.",
+        "identity": "A person.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:13:30.819Z",
+        "name": "Tath",
+        "term": "nonvirmina",
+        "definition": "An identity which is both very masculine and feminine, but that isn't male or female at all. Nonvirmina can be used as a masculine and feminine gender on its own, or can be used to describe another gender identity (as in, someone can identify as `egogender` and nonvirmina and mean that it's because, while they have a very personal gender, that gender is also very masculine and feminine without being male or female at all). \nBoth masculinity and femininity are an integral part of my gender experience, but I can't relate to being male or female, and I also don't want to be called either of those.",
+        "identity": "gaúche, bi, aroflux, demisexual, nonvirmina, over 20",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:14:01.421Z",
+        "term": "Viramoric",
+        "definition": "Viramoric is a term for `nonbinary` individuals who are attracted to men. It is meant to be an alternative for existing attraction terms such as \"`gay`\" or \"`straight`\" for people who are neither.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:15:24.116Z",
+        "term": "Feminamoric",
+        "definition": "Feminamoric is a term for `nonbinary` individuals who are attracted to men. It is meant to be an alternative for existing attraction terms such as \"`gay`\" or \"`straight`\" for people who are neither. It is a subset of `diamoric` identities and the equivalent for attraction to men is `viramoric`.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:23:26.823Z",
+        "name": "Oliver",
+        "term": "esogender",
+        "definition": "the feeling that even though you only have one gender, how you relate to that gender can change over time. \nFor example, a proxvir person may feel like how they relate to masculinity may change but they always identify as `proxvir`, or a `demigirl` who may feel like they are 75% a girl on somedays but only 25% on other days.\n\nIt can also be used for people who are not quite sure what their gender is, but do feel that they have one gender identity even though how they relate to that identity may change.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:26:58.778Z",
+        "name": "Oliver",
+        "term": "esomorphous",
+        "definition": "The feeling that even though you only have one gender, how you relate to that gender can change over time. It differs in usage from `esogender` in that esogender is a gender identity in it's own right, and may be used if an individual doesn't have any other label for for their experiences. Esomorphous is supposed to be more general, and anyone can use it to describe their experiences with gender-not just `trans` people. \nThe main difference is that with `genderflux`, the intensity of how you feel a certain gender is what changes. Somebody who is esomorphous still feels the same “amount” of the gender that they identify is, though how they relate in other ways may differ. \n\nFor example, I am always 100% proxvir- the intensity of that changes. For me personally, I feel like I’m “moving around” within the definition of my gender- since proxvir just means “a gender that relates to masculinity”, that could mean that somedays I feel more masculine than others, or somedays my relation to masculinity changes but I may feel more `agender` one day and more `neutrois` the next.\n",
+        "identity": "Proxvir",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T17:28:16.098Z",
+        "name": "Oliver",
+        "term": "proxvir",
+        "definition": "a gender that is related to masculinity, but is separate from \"man\" or \"boy\".",
+        "identity": "proxvir",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T18:08:19.741Z",
+        "term": "Genderfae",
+        "definition": "A fluid gender that never encompasses being masculine.",
+        "identity": " Genderfae panromantic ace",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T18:09:45.926Z",
+        "name": "Unaligned-nblm",
+        "term": "Nblm",
+        "definition": "A `nonbinary` person who loves men and encompasses all nonbinary attraction to men. An orientation that is neither straight nor gay. \nThis term was coined for nonbinary people who feel that terms like gay/`mlm` were forcing them to identify with a binary gender. For me this term isnt just a celebration not only of my attention to men but it's a celebration of how my nonbinary gender relates to my love for men",
+        "identity": "nblm nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T18:10:10.268Z",
+        "term": "Faesari",
+        "definition": "A gender identity where one feels most comfortable within the gender neutral spectrum, but still feels a strong attachment to femininity.",
+        "identity": "Genderfae panromantic ace",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T18:16:43.486Z",
+        "name": "Unaligned-nblm",
+        "term": "mlnb",
+        "definition": "\"Men loving nonbinary\" aka: men who love/are attracted to `nonbinary` people. \nA term for any man attracted to me/that I date. A term that validates both my gender identity and their attraction to me, not despite my gender, but because of it.",
+        "identity": "Nblm nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T19:16:41.800Z",
+        "term": "Maverique",
+        "definition": "A distinct gender outside of male and female. It is not in between male and female, it is not a mixture of male and female and it is not neutral.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T19:20:32.657Z",
+        "term": "dfab",
+        "definition": "An acronym standing for \"designated female at birth\". It means someone who, when a doctor looked at them after being born, had \"female\" put on their birth certificate.",
+        "identity": "I am dfab",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T19:59:58.290Z",
+        "term": "Solarian",
+        "definition": "A `nonbinary` person who is aligned with manhood/masculinity/maleness but is not male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:01:08.985Z",
+        "term": "Grey asexual (or greysexual)",
+        "definition": "Someone who rarely feels sexual attraction, or feels very little sexual attraction.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:10:07.391Z",
+        "term": "Aroflux",
+        "definition": "Someone who's levels of romantic attraction fluctuates. They may feel a little attraction one day, no attraction another day, and a lot of attraction a different day.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:11:15.919Z",
+        "term": "Polyamory",
+        "definition": "The desire or capacity to have multiple consensual romantic relationships at once.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:12:50.812Z",
+        "term": "Quoiromantic",
+        "definition": "Someone who cannot distinguish between romantic and platonic attraction, or someone who cannot identify what romantic attraction feels like.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:20:22.857Z",
+        "term": "Genderfuck/genderpunk",
+        "definition": "A `nonbinary` person who radically and completely rejects the gender binary.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T20:21:58.669Z",
+        "name": "Neo",
+        "term": "Genderfluid",
+        "definition": "Genderfluid is when your gender identity changes. Based on activities your doing or maybe based on nothing!",
+        "identity": "Genderfluid",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T21:43:25.191Z",
+        "name": "Keam",
+        "term": "Chaoti - gender/girl/boy",
+        "definition": "It is a term for people who believes that their ADHD affects their gender identity in any way. \nFor me, it is a logical conclusion, an explanation of the diffrence vetween mine and other people's experince. My gender is unclear for me - but for a reason, unlike gendervague people who may simply experince their gender is not clear. If I did not have ADHD, I wouldn't feel this way about my gender.",
+        "identity": "18 y/o, chaotigender person from Sweden",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T21:46:02.498Z",
+        "name": "mabanglo",
+        "term": "maverique",
+        "definition": "a gender identity independent from and directly rejecting the gender binary and the roles assigned by it",
+        "identity": "pinoy genderfluid kid in college",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-17T22:45:38.466Z",
+        "name": "Gina",
+        "term": "Cupiosexual",
+        "definition": "Wanting a sexual relationship but not having any sexual attraction. \nIt means being `asexual` but wanting sex. So people that use this term sometimes just go by `ace`",
+        "identity": "I’m non bianary, gay(nblw),and ace (cupio)",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T00:33:01.442Z",
+        "name": "Raphael",
+        "term": "quoiromantic",
+        "definition": "A romantic identity in which one is unable to distinguish between romantic and platonic interest/attraction/love.",
+        "explanation": "I fall in love with all of my friends but I'm not sure if maybe I just feel really strongly about them.",
+        "identity": "Quoiromantic, heterosexual, transgender male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T00:33:39.651Z",
+        "term": "dfab",
+        "definition": "Designated Female at Birth\n\nRefers to someone who's assigned gender (and thus, the one initially put on their birth certificate) was female. Someone who is DFAB and a man is called a `trans man`.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T00:58:31.632Z",
+        "name": "leoneregina.tumblr.com",
+        "term": "Lesbian Jesus",
+        "definition": "A nickname given to Hayley Kiyoko by her fans",
+        "explanation": "Lesbian Jesus saved my 20gayteen and blessed us all with her first full length album, Expectations.",
+        "identity": "18 y/o lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T00:59:46.005Z",
+        "term": "Lesbian Jesus",
+        "definition": "Hayley Kiyoko, savior of the gays",
+        "explanation": "She has represented lesbian relationships in her music videos and they are very accurate. They do not over sexualize girl on girl action or present them in a stereotipical way.",
+        "identity": "Latina, 19, ciswoman, lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:02:01.411Z",
+        "term": "Binder or Chest Binder",
+        "definition": "Clothing item that can be used by a person to give the apperance of smaller breasts or a flatter chest.",
+        "explanation": "I have never used a binder but i do not feel comfortable with my breasts so i have considered using one",
+        "identity": "Latina, 19, ciswoman, lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:06:54.166Z",
+        "name": "Mady",
+        "term": "lipstick lesbians",
+        "definition": "a `lesbian` who is attracted to feminine women",
+        "identity": "lesbian, ohio",
+        "sort-as": ["lipstick lesbian"]
+    },
+    {
+        "timestamp": "2018-04-18T01:13:06.684Z",
+        "name": "Galexy",
+        "term": "Gai",
+        "definition": "Gay, but in a `non-binary` way.",
+        "identity": "Gai and Pomogender and Aspec",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:13:49.106Z",
+        "name": "Sequoia",
+        "term": "Strayt",
+        "definition": "Straight, but in a `nonbinary` way",
+        "identity": "Strayt, Nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:15:58.032Z",
+        "term": "Gai",
+        "definition": "Experiencing attraction in a `nonbinary` way. Gai is neither straight nor gay, it is the attraction experience by a nonbinary person towards anyone (no matter the gender of the person they are attracted to). Ex: I saw the most gorgeous woman today!! I'm so gai for her!",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:26:33.061Z",
+        "name": "Sarah",
+        "term": "qwoc",
+        "definition": "An acronym for queer women of color. Women of color who identify themselves as `queer`.",
+        "explanation": "This term creates a family for non-white LGBT+ women who have often experience racial discrimination within the LGBT+ community from their white counterparts.",
+        "identity": "26, black lesbian in the American Midwest",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:36:36.417Z",
+        "name": "@gladosscience",
+        "term": "Lesbian Jesus",
+        "definition": "Hayley Kiyoko",
+        "explanation": "https://www.youtube.com/watch?v=qa9POrJw6wk --see 00:02:31 and on for reference",
+        "identity": "lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:50:40.015Z",
+        "term": "Aspec",
+        "definition": "Short for aspectrum, meaning someone who is on the `aromantic` and/or `asexual` spectra",
+        "identity": "Demisexual",
+        "sort-as": ["a-spec", "a spec"]
+    },
+    {
+        "timestamp": "2018-04-18T01:53:00.690Z",
+        "term": "Binder",
+        "definition": "Short-hand for chest binder. It's an article of clothing that is used to compress a `trans` person's chest in order to be perceived as not having breasts.",
+        "identity": "Trans nonbinary",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:58:07.168Z",
+        "term": "Sapiosexual",
+        "definition": "A term created by straight men on Reddit meaning \"attraction to intelligence\". This term is typically considered ableist and is not accepted by the majority of the LGBTQ+ community.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T01:55:46.465Z",
+        "term": "Gai",
+        "definition": "An alternative to \"gay\" to be used specifically by `nonbinary`/`genderqueer` people, it expresses that a nonbinary person's attraction is not straight or hetero but is meant to avoid the controversy that may arise from using \"gay\" to describe attraction that is not \"same gender\".",
+        "identity": "Nonbinary queer",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:00:40.086Z",
+        "term": "Lithromantic",
+        "definition": "Someone who experiences romantic attraction but does not wish to have it reciprocated, OR someone who experiences romantic attraction but loses the attraction once the feelings are reciprocated.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:03:26.072Z",
+        "term": "Genderfaun",
+        "definition": "Someone with a fluid gender that is never feminine, female, or female aligned. The person may or may not be able to identify their genders further.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:04:55.078Z",
+        "term": "Finromantic",
+        "definition": "Romantic attraction to those with feminine genders.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:05:52.905Z",
+        "term": "Aqueerplatonic",
+        "definition": "Someone who doesn't experience `queerplatonic` attraction.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:30:08.488Z",
+        "name": "Alecz",
+        "term": "DFAB",
+        "definition": "Designated female at birth. The case where female was assigned on your birth certificate. See 'afab/amab'",
+        "identity": "Queer nonbinary male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:35:11.801Z",
+        "name": "Alecz",
+        "term": "Binder",
+        "definition": "A binder is an article of clothing many nonbinary or trans `afab` people wear to reduce visibility of their breasts, to create an illusion of a flat chest.",
+        "identity": "Queer nonbinary male",
+        "sort-as": ["chest binder"]
+    },
+    {
+        "timestamp": "2018-04-18T02:39:08.628Z",
+        "name": "Alecz",
+        "term": "Enbyfriend",
+        "definition": "Gender neutral term for a romantic partner, similar to boyfriend/girlfriend.",
+        "identity": "Queer nonbinary male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:44:50.195Z",
+        "name": "Alecz",
+        "term": "Lipstick lesbian",
+        "definition": "A very `femme` lesbian; a female-aligned person who presents extremely femininely.",
+        "identity": "Queer nonbinary male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:47:54.333Z",
+        "name": "Alecz",
+        "term": "Intersex",
+        "definition": "A person born with both male and female reproductive organs. Not necessarily visibly born differently, as the \"different\" organs may be internal.",
+        "identity": "Queer nonbinary male",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:52:19.757Z",
+        "name": "Alecz",
+        "term": "Camab/Cafab",
+        "definition": "Coercively assigned (male/female) at birth. A term used with `intersex` people who was medically forced into a binary gender/genitalia.",
+        "identity": "Queer nonbinary male",
+        "sort-as": ["camab", "cafab"]
+    },
+    {
+        "timestamp": "2018-04-18T02:57:02.110Z",
+        "term": "Genderfaun",
+        "definition": "Genderfaun is a form of genderfluidity that never encompasses feeling femininity. It can include male and any `nonbinary` gender, but never encompasses feeling female",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:57:53.696Z",
+        "term": "Genderfae",
+        "definition": "Genderfae is a form of genderfluidity that never encompasses feeling masculine.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T02:59:04.320Z",
+        "term": "Neptunian",
+        "definition": "A `nonbinary` gender that is linked to the void and fluctuates with softer celestial masculine energy.",
+        "identity": "Neptunian Demigrey-polysexual aromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:03:25.632Z",
+        "term": "Venusarian",
+        "definition": "A `nonbinary` gender that is linked to the void and fluctuates with softer celestial femenine energy.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:03:49.887Z",
+        "term": "Juparian",
+        "definition": "A `nonbinary` gender that is linked to softer celestial masculine energy. It is never hyper masculine and it’s not male-aligned nonbinary, but instead is simply linked. Someone who is juparian can feel different amounts of masculine energy at different times.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:04:06.550Z",
+        "term": "Lunettian",
+        "definition": " A `nonbinary` gender that is linked to softer celestial feminine energy.It is never hyper feminine and it’s not female-aligned nonbinary, but instead is simply linked. Someone who is lunettian can feel different amounts of feminine energy at different times.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:04:19.371Z",
+        "term": "Starfluid",
+        "definition": "A form of genderfluid linked to either the energy or the aesthetics of space/stars. Someone who identifies as starfluid can be fluid towards any gender as the only consistentcy is the tie to stellar energy/aesthetics",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:04:34.995Z",
+        "term": "Mercurian",
+        "definition": "A `nonbinary` gender that is connected to a softer celestial energy. This energy can feel “gendered”, but is neither masculine or feminine. Someone who is Mercurian can also be “void” of gender itself.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:04:48.779Z",
+        "term": "Saturnian",
+        "definition": "A  `nonbinary` gender that is linked to both softer celestial masculine and femenine energy. Like the others it is not masculine/femenine aligned, simply linked. And the amount of energy one feels can vary and change.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:06:47.823Z",
+        "term": "Femcat",
+        "definition": "A gender that is denying the expectation that `non-binary` people can’t be feminine, that non-binary has no place for femininity. It’s being ‘feminine’ but challenging that femininity is linked to being a woman.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:07:25.880Z",
+        "term": "Jackhound",
+        "definition": "A gender or presentation that is denying the expectation that non-binary people shouldn’t be masculine, that non-binary is about achieving androgyny. It’s being ‘masculine’ but challenging that masculinity is linked to being a man.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:09:25.070Z",
+        "term": "Cupiosexual",
+        "definition": "Doesn't experience sexual attraction, but still desires a sexual relationship",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:09:44.668Z",
+        "term": "Cupioromantic",
+        "definition": "doesn't experience romantic attraction, but desires a romantic relationship",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T03:11:27.900Z",
+        "term": "Greysexual",
+        "definition": "Someone who experiences occasional and/or mild sexual attraction",
+        "identity": "Neptunian, Demigrey-polysexual, Aromantic",
+        "sort-as": ["grey asexual", "grey ace", "graysexual", "gray asexual", "gray ace"]
+    },
+    {
+        "timestamp": "2018-04-18T03:22:47.098Z",
+        "term": "Alterous Attraction",
+        "definition": "the desire to be emotionally intimate with that person, a desire that is wholly other than romantic and platonic. As in: “I’d be cool with dating this person but being their friend is just as good. Like I wouldn’t actively start a romantic relationship, but I wouldn’t turn one down.”",
+        "explanation": "As someone who is aromantic, I experience alterous attraction so strongly. It's the feeling that I need to want to date someone. But I know it's not romantic because it doesn't hurt to not be in a relationship with them, to have my feelings not be returned.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T11:45:56.817Z",
+        "name": "Sean",
+        "term": "Pangender",
+        "definition": "Pangender is a `non-binary` gender identity which refers to a vast and diverse multiplicity of genders in the same individual that can extend infinitely, always within the person's own culture and life experience. This gender experience can be either simultaneously or over time.",
+        "sort-as": ["pan"]
+    },
+    {
+        "timestamp": "2018-04-18T14:45:56.812Z",
+        "name": "Michel",
+        "term": "gray-pansexual",
+        "definition": "A person who may not always or not fully experience sexual attraction to other people but when they do — gender/sex doesn't matter to them.",
+        "explanation": "For me it means I really rarely experience sexual attraction to people themselves, but I am sexually attracted to certain situations which can involve other people and also I am generally not against sex and can enjoy it.",
+        "identity": "Non-binary, gray-pansexual",
+        "sort-as": ["gray pansexual"]
+    },
+    {
+        "timestamp": "2018-04-18T14:51:18.644Z",
+        "name": "Bones",
+        "term": "Pansexual",
+        "definition": "Attraction to someone regardless of their gender identity. You're attracted to their personality more than anything.",
+        "explanation": "I'm pansexual and living life!",
+        "identity": "Turkish / 18 / Nonbinary",
+        "sort-as": ["pan", "pansexuality"]
+    },
+    {
+        "timestamp": "2018-04-18T14:52:22.343Z",
+        "name": "Meez",
+        "term": "Genderfluid",
+        "definition": "Your gender fluctuates.  Sometimes in the same day, sometimes each day, sometimes a week later.  It isn't limited to just fluctuating between the binary genders (male/female), as it can involve one of any `non-binary` genders.  For example, someone can go between female and male, female and `agender`, female and male AND agender...",
+        "explanation": "Some days I can wake up female and by noon be agender.  Sometimes out of the blue I'm male.  It just happens.",
+        "identity": "30ish, southern US, genderfluid afab lesbian, disabled",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T14:54:38.408Z",
+        "name": "perish op",
+        "term": "Bear",
+        "definition": "A gay man who is of hairy and large physica stature. Most bears present in a very masculine manner.",
+        "explanation": "i'm big and gay and hairy. i'm not old enough to drink so i don't hang out in the sports bars w/ all the older bears but yea u get the picture.",
+        "identity": "tired and gay",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T15:21:43.423Z",
+        "name": "Lai",
+        "term": "aspec",
+        "definition": "A combined term for \"aromantic spectrum\" and \"asexual spectrum\". An umbrella term for the collective `ace` and `aro` community.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T15:21:58.743Z",
+        "term": "From Trans",
+        "definition": "from trans: a masculine gender that feels like its been auto-corrected by the phone of life (exclusive to `afab`)",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T18:22:04.755Z",
+        "name": "Harley Black",
+        "term": "Aromantic",
+        "definition": "Someone who is aromantic is someone who goes not feel any romantic attraction. It can also be used as an umbrella for some people on the aromantic spectrum. Although aromantics do not experience romantic attraction, they may still engage in relationships that may or may not be of a romantic nature.",
+        "explanation": "Being aromantic is a big part of my identity as a person, I never had much of a sense of self before discovering the term. For me it means I know I am not broken and it gives me a community. It means wholeness and love that is still love, just different than other peoples love.",
+        "identity": "I identify as aromantic grey asexual.",
+        "sort-as": ["aro", "aromantic", "aromanticism"]
+    },
+    {
+        "timestamp": "2018-04-18T18:41:11.512Z",
+        "name": "GD",
+        "term": "Bisexual",
+        "definition": "being sexually attracted to two and/or more genders.",
+        "identity": "I am a bisexual genderfluid white high school student",
+        "sort-as": ["bi", "bisexual", "bisexuality"]
+    },
+    {
+        "timestamp": "2018-04-18T18:42:59.910Z",
+        "name": "Chip",
+        "term": "Autigender",
+        "definition": "A term for when a person perceives that their experience of gender is influenced by their autism. For example if something about their gender is influenced by a special interest, a sensory experience, or a disconnect from neurotypical definitions of gender. Not usually used as someone's whole identity but a part of it, though some may use this as their only identifier. Not available for use by allistic (non-autistic) people.",
+        "identity": "Nonbinary, queer/pan, androgynous, autistic, disabled",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T18:44:07.279Z",
+        "name": "GD",
+        "term": "aspec",
+        "definition": "Identifying as somewhere on the spectrum of `asexuality`/`aromanticism`.",
+        "explanation": "I've identified as `demisexual` in the past, which is a aspec sexuality. It's useful to me because I don't quite know why I experience sexual attraction differently from others but I know that I do.",
+        "identity": "bisexual genderfluid white high school student",
+        "sort-as": ["a-spec", "a spec"]
+    },
+    {
+        "timestamp": "2018-04-18T19:02:35.699Z",
+        "term": "Queer Platonic Relationship / QPR",
+        "definition": "A queer platonic relationship is a term created by the `aromantic` community to describe a relationship that is neither romantic nor platonic/ is stronger or different than a platonic relationship. The attraction people in the relationship feel for each other can be platonic, queer platonic (different than or stronger than platonic attraction) or `alterous attraction`.",
+        "explanation": "To me, a queer platonic relationship is about being closer and more intimate than a friendship and the individuals are committed to each other without any romantic feelings or qualities. To me, it could be comparable to having a dating partner. I once wanted a queer platonic partner and I sought a qpr, but in more recent years I find myself not wanting or seeking one at all. I personally do not want much intimacy at all and instead I seek deep and true friendships to last a long time.",
+        "identity": "Aromantic",
+        "sort-as": ["queer platonic relationship", "qpr", "queer platonic", "queerplatonic"]
+    },
+    {
+        "timestamp": "2018-04-18T19:22:49.848Z",
+        "name": "Chip",
+        "term": "Gendervague",
+        "definition": "Used by neurodivergent people to describe a lack of/vague sense of gender as it is affected by one's neurodivergence. For example may be affected by a mental disorder/condition that causes flat affect or alexithymia making it difficult to feel anything about one's gender beyond a vague sense of something undefinable.",
+        "identity": "Nonbinary, pan/queer, autistic, disabled",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-18T19:25:30.071Z",
+        "name": "Kerry C",
+        "term": "aspec",
+        "definition": "An umbrella term for the `asexual` and `aromantic` spectrums (a-, demi-, grey-, etc).",
+        "explanation": "It is often used in discussions of experiences or issues that apply to both the asexual and aromantic communities.  It's also helpful for when one is certain they have an ace and/or aro identity, but isn't sure on what specific one it is yet.",
+        "identity": "demi-bisexual aromantic",
+        "sort-as": ["a-spec", "a spec"]
+    },
+    {
+        "timestamp": "2018-04-18T19:30:40.782Z",
+        "term": "a-spec",
+        "definition": "An encompassing term that includes the spectra of both `asexuality` and `aromanticism`. Can be narrowed to ace-spec (asexual spectrum) and aro-spec (aromantic spectrum) to indicate a specific group. The spectrum includes any identity that may fall under the asexual and aromantic umbrellas, including demi-, gray/grey-, cupio-, lith-, and so on.\nNot to be confused with Autism Spectrum Disorder, which uses \"the spectrum\" (without any other definers) or \"ASD\" as slang terminology.",
+        "explanation": "i have identified as a-spec for about 4 years because it's easier, shorter, and more convenient for me to use to describe my orientation, as well as the ace and aro community at large, since it's an inclusive and all-encompassing term and doesn't leave any identities out.",
+        "identity": "white, american, a-spec queer",
+        "sort-as": ["a-spec", "a spec", "aspec"]
+    },
+    {
+        "timestamp": "2018-04-18T20:08:03.504Z",
+        "name": "Harri",
+        "term": "Asexual",
+        "definition": "Not being sexually attracted to anybody, this does not exclude romance.",
+        "identity": "14 year old pansexual from England <3",
+        "sort-as": ["ace", "asexual", "asexuality"]
+    },
+    {
+        "timestamp": "2018-04-18T20:12:21.345Z",
+        "name": "Harri",
+        "term": "Tea",
+        "definition": "A drink I have every day, at least twice.",
+        "explanation": "100/10 would recommend",
+        "identity": "Pansexual from England",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T00:06:41.075Z",
+        "name": "Breck",
+        "term": "Enbian",
+        "definition": "The term enbian is used for someone who is `non-binary` and is attracted to/in a relationship with someone who also is non-binary",
+        "identity": "I'm a 14 y/o non-binary lesbian.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T00:48:41.947Z",
+        "name": "eri",
+        "term": "sapiosexual",
+        "definition": "Being attracted to a person only based on a display of intelligence, intellect, wisdom, understanding, knowledge, etc. In recent years, misunderstanding of its use has caused a backlash, citing the \"intelligence\" part as being ableist. However, the term has a bit more nuance than just being attracted to \"smart\" people, and mostly refers to passionate learning and sharing information about a favored topic(s), rather than strict book-learning, or academia.",
+        "explanation": "I don't use the label in public because of the backlash/accusations of ableism, but for me I find that I am attracted to, say, someone who is passionate about planes, and will tell me all about their favorite planes and why those are their favorite planes, whether or not they were considered \"intelligent\" or \"high IQ\" or what have you.",
+        "identity": "19, nonbinary, bisexual, quoiromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T00:50:01.625Z",
+        "name": "eri",
+        "term": "apothiromantic",
+        "definition": "being on the `aromantic` spectrum and being romance repulsed",
+        "identity": "19, nonbinary, quoiromantic/apothiromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T01:02:46.348Z",
+        "term": "gai",
+        "definition": "Orientation of a `nonbinary`/`genderqueer`/otherwise not-exclusively-male and not-exclusively-female person, who feels that while they are attracted to other people with similar (a) gender(s) to their own, they cannot accurately call this attraction \"gay\" for any given reason, often because there are so many varied experiences with nonbinary genders that they feel that two cannot accurately be called the same. In other words, gay but for nonbinary attraction.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T01:05:20.009Z",
+        "term": "aspec",
+        "definition": "being on the `asexual` spectrum, `aromantic` spectrum, or both.",
+        "identity": "19, nonbinary, bisexual, quoiromantic",
+        "sort-as": ["a-spec", "a spec"]
+    },
+    {
+        "timestamp": "2018-04-19T02:09:40.510Z",
+        "name": "Raphael",
+        "term": "a-spec",
+        "definition": "A spectrum of sexualities that experience little to no sexual attraction or experience it differently than allosexual people. This includes asexual, `demisexual`, greysexual/`greyasexual`, and many others.",
+        "sort-as": ["aspec", "a spec"]
+    },
+    {
+        "timestamp": "2018-04-19T02:13:49.344Z",
+        "name": "Raphael",
+        "term": "gatekeeping",
+        "definition": "Trying to keep others out of a community with rules that not the whole community agrees on. E.g. some LGBT+ people saying `asexuality` is not LGBT+.",
+        "identity": "Trans and bisexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-19T19:57:43.567Z",
+        "name": "Alex",
+        "term": "Genderfluid",
+        "definition": "This term is used to refer to a person who's gender identity fluctuates (changes). Typically, a genderfluid goes through phases of Male, female, and the in between.",
+        "identity": "genderfluid, pansexual, possibly asexual",
+        "sort-as": ["genderfluidity"]
+    },
+    {
+        "timestamp": "2018-04-19T21:46:54.488Z",
+        "term": "Xenogender",
+        "definition": "Xenogender is an umbrella term within the `nonbinary` umbrella term, that refers to \"that cannot be contained by human understandings of gender; more concerned with crafting other methods of gender categorization and hierarchy such as those relating to animals, plants, or other creatures/things.\" My personal perspective on this in regards to my gender, as a xenogender person, is that due to the impacts of the gender binary on mine and others' perceptions, there are genders that exist outside the binary but are extremely difficult to put into language and explain due to how heavily the binary and binary perceptions have been ingrained into society. So the best way to conceptualize and explain my gender is through aesthetic terms and things I associate it with, since I don't feel that current language and binary perceptions can actually put my gender into words in a suitable manner.",
+        "identity": "Xenogender, United States",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-20T02:52:08.509Z",
+        "term": "Lesbian Jesus",
+        "definition": "A nickname given to Hayley Kiyoko, a `lesbian` singer (she has explicitly identified herself as gay in interviews), due to the fact that she is very popular among lesbians and the fact that the majority of her music and music videos all center around her love for women, providing many lesbians (and other `wlw`) with a form of `sapphic` entertainment that is usually uncommon.",
+        "identity": "Lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-20T02:57:37.867Z",
+        "term": "Neutrois",
+        "definition": "Neutrois is a gender that is neutral, or in some instances, a lack of gender. It is not defined by neutral pronouns or presentation, as anyone of any gender can have these things. Rather, it refers to a gender or someone who has a gender that is neutral. The term was originally coined in 1995 by H.A. Burnham, making it one of the earlier gender identities in the `nonbinary` community.",
+        "identity": "Neutrois",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-20T03:17:30.611Z",
+        "name": "Aegosexualmoments.tumblr.com",
+        "term": "Aegosexual",
+        "definition": "Sexual attraction that is not followed by the desire to engage in activities with another person. But may enjoy others enjoying the sensation.",
+        "explanation": "Often accompanied by daydreaming behaviors and previous identification as `asexual`",
+        "identity": "Female College Student",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-20T05:14:31.132Z",
+        "name": "Perma",
+        "term": "acoromantic",
+        "definition": "Acoromantic means, that you feel lack in the romance department because of your negative aspects toward romance. You can eventually feel something for people, but overall you don't trust people because of these negative feelings and misconceptions.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-20T21:47:07.449Z",
+        "term": "Aroflux",
+        "definition": "Arofulx means your romantic orientation fluctuates, but remains on the `aromantic` spectrum.",
+        "identity": "Asexual Aromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-21T04:33:43.206Z",
+        "name": "sky",
+        "term": "stellunarian",
+        "definition": "A `nonbinary` gender from the galactian family (`solarian`, `lunarian`, `stellarian` etc) that denotes someone who feels some form of kinship with both woman/feminine-aligned and agender/non-aligned gender.  \"Stellunarian\" can denote someone who fluctuates between lunarian and stellarian, someone who experiences a connection to both at the same time, someone who feels in between the two, someone who feels demigendered, or any other combination.",
+        "explanation": "Personally, I identify as mostly stellarian and think of myself as someone who doesn't have a gender, who is just \"me\".  But some aspects of my personality and presentation are on the more feminine side of the spectrum, I don't feel any connection to maleness or masculinity, and as an `AFAB` person my outer looks will almost always cause me to be grouped in with women, so I have a lot of the same experiences/exposure to oppression that women do.  For me \"stellunarian\" acknowledges that I may not be a woman, but I'm a non-gendered person who still has some things in common with women.",
+        "identity": "USA, age 30, stellunarian nonbinary, asexual neptunic lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-21T11:39:43.097Z",
+        "name": "Remi",
+        "term": "Panromantic",
+        "definition": "Available to be attracted to all genders in a romantic way yet not in a sexual way.",
+        "explanation": "I've met a few panromantic people in my life and I'm still trying to come out as it to my family and friends.",
+        "identity": "Genderfluid",
+        "sort-as": ["pan", "panromantic", "panromanticism"]
+    },
+    {
+        "timestamp": "2018-04-21T18:24:53.709Z",
+        "name": "Mere",
+        "term": "girlflux",
+        "definition": "A feminine subset of `genderflux`. Girlflux is to fluctuate between `girl` and `agender`, but may include other labels, such as `demigirl`. \nA good visual to imagine girlflux is a dimmer light switch. One end is girl, and the other is agender, but the middle would be demigirl or another gender.",
+        "explanation": "I myself identify as girlflux, so letting other people know what it means is extremely important to me.",
+        "identity": "Girlflux lesbian",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-22T16:37:15.312Z",
+        "name": "Shadow",
+        "term": "Masexual/romantic",
+        "definition": "Sexual or romantic attraction to males or masculinity",
+        "explanation": "Gives me the freedom to say I really enjoy guys and masculine presenting people,  including `nb`'s and some women",
+        "identity": "Transmasculine asexual maromantic",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-22T19:26:21.142Z",
+        "name": "Kate",
+        "term": "Aroflux",
+        "definition": "Aroflux is when you fluctuate between `aromantic` and alloromantic (experiencing romantic attraction), or between different areas of the aromantic spectrum.",
+        "explanation": "I embody this term because I’m aroflux myself, and experience the above. I fluctuate between being aromantic and `sapphic` almost daily.",
+        "identity": "aroflux ace",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-22T21:23:25.306Z",
+        "name": "Alois",
+        "term": "Queer",
+        "definition": "A term that is used to define anyone who isn't `cisgender`, heteromantic, heterosexual, or perisex. Often used as an umbrella term specifically to describe people who identify as queer.",
+        "explanation": "Some people do not align with this term or are uncomfortable with it, which is perfectly fine, but they are not allowed to declare that other people cannot identify as queer. Queer is an important word for some people, especially non-cis people who aren't gay or lesbian (ex. bisexuals, pansexuals, nonbinary people, asexuals, aromantics, and some people with identities too complicated to condense into one word). Anyone in the LGBTQIAPN+ community is welcome to call themselves queer if they are comfortable with it.",
+        "identity": "Proud arospec queer (both in sexuality and gender) college student",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-22T21:25:27.728Z",
+        "name": "Alois",
+        "term": "Endogender",
+        "definition": "Similar to genderflux, a fluctuating gender that always has at least partial feelings of a certain alignment. That alignment may be masculine (endoboy), feminine (endogirl) or nonaligned (endogender or endononbinary).",
+        "identity": "Proud arospec queer (in both sexuality and in gender) college student",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-23T00:15:33.678Z",
+        "name": "maxlikesbbroadway",
+        "term": "Genderfae",
+        "definition": "genderfae is a branch of genderfluid, which is basically your gender identity changes throughout time. genderfae is to change between gender identities (as genderfluid) but to never feel completely masculine.\nthat was probably really complicated.\nbasically genderfae is genderfluid but never feeling completely masculine.",
+        "identity": "demigirl/genderfae, but iM gAy (i'm basically just lesbian -i use she/they. i'm 14",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-23T00:22:11.731Z",
+        "name": "maxlikesbbroadway",
+        "term": "demigirl",
+        "definition": "identifying as female, but not completely \n//\na gender that is close to/related to female but somewhat different/in between.",
+        "identity": "genderfae/demigirl. lesbian. 14",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-23T17:52:23.613Z",
+        "name": "Kwame-Marie Tillmxn",
+        "term": "Afrogender",
+        "definition": "A gender identity (also afroboy, afrogirl and afroenby) influenced by the experiences of the Afrikan people/diaspora. For use by Black people only.",
+        "identity": "Black/Mvskoki Afroindigenous nonbinary femme and radical femmeinist/womxnist",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-23T18:02:49.762Z",
+        "term": "Otter",
+        "definition": "A gay man who is very hairy all over his body, but is smaller in frame and weighs considerably less than a bear",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-23T20:37:53.987Z",
+        "term": "minromantic",
+        "definition": "Exclusively experiencing romantic attraction to people who are masculine in some way, regardless of their gender identity.  For example, one could be attracted to a masculine presenting agender person, but not a feminine presenting one, etc.",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-24T00:57:11.813Z",
+        "name": "robin",
+        "term": "demifluid",
+        "definition": "having a fluid gender between demigenders. to put it more simply, it's genderfluid but never 100% male or female. it's everything in between the two binary genders.",
+        "explanation": "it's my gender identity! it's who i am and i often just call myself genderfluid for easier understanding, but i hope for more people to understand and know the term demifluid.",
+        "identity": "white, 18, demifluid, bisexual",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-24T01:08:55.659Z",
+        "name": "Devin XXX",
+        "term": "Demiflux",
+        "definition": "Demiflux means that part of the person's gender is fluid, and the rest of it being static (as in, one part demiboy and other parts fluctuating). It's very similar to demigender because like it, it has two parts, but the difference is that one part fluctuates.\nIt could also mean that the intensity of the person's demigender identity fluctuates. For example, the same demiboy might fluctuate between full demiboy and agender, and anywhere in between. This term means diffrent things for diffrent people. If you know or meet a demiflux person, you may consider asking them what the term means for them.",
+        "identity": "White lesbian demiflux nonbinary human being",
+        "sort-as": []
+    },
+    {
+        "timestamp": "2018-04-24T01:09:36.343Z",
+        "name": "Andy",
+        "term": "Kingender",
+        "definition": "Feeling that your gender is effected by your kintype(s). “Kin” can be replaced, for ex, Demongender, Dragongender, etc.",
+        "sort-as": []
     }
 ];

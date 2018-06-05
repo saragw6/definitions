@@ -58,7 +58,11 @@ class App extends Component {
 
   handleHashChange = () => {
     var hash = decodeURIComponent(window.location.hash.substring(2));
-    this.setState({my_term: hash});
+    if (hash === "about") {
+      this.setState({info_modal: true});
+    } else {
+      this.setState({my_term: hash});
+    }
   }
 
   componentDidMount() {
@@ -77,10 +81,15 @@ class App extends Component {
   //   return resultList;
   // }
 
+  // defsMatchWithSort = (entry) => {
+  //   var sort_as = entry["sort-as"] === undefined ? false : entry["sort-as"].includes(searchterm);
+  //   return sortas || entry["term"].toLowerCase() === searchterm;
+  // }
+
   getDefListWithSortAs(searchterm) {
     //search term will always be lowercase
 
-    var searchdefs = defswithsort.filter((entry) => { return entry["sort-as"].includes(searchterm) || entry["term"].toLowerCase() === searchterm });
+    var searchdefs = defswithsort.filter((entry) => { return (entry["sort-as"] !== undefined && entry["sort-as"].includes(searchterm)) || entry["term"].toLowerCase() === searchterm });
     var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
     return resultList;
@@ -98,7 +107,8 @@ class App extends Component {
     if (!this.state.info_modal) {
       //history.pushState(null, null, "/#/about");
     } else {
-      this.handleTermChange(this.state.my_term);
+      var new_term = this.state.my_term === "about" ? "" : this.state.my_term;
+      this.handleTermChange(new_term);
     }
   }
 
@@ -131,7 +141,8 @@ class App extends Component {
   render() {
     const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     const pageTitle = this.state.my_term === "" ? "queer undefined" : this.state.my_term + " | Queer Undefined" ;
-    const description = "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
+    const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
+
 
   return(
     <DocumentTitle title={pageTitle}>
