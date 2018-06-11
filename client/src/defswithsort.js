@@ -2534,7 +2534,7 @@ export const defswithsort = [
         "name": "Mae",
         "term": "Butch",
         "definition": "Butch is a term created by and for lesbians only that describes a masculine `lesbian` who rejects traditional feminine gender roles. This can be intertwined with a use of non she/her pronouns or even a `nonbinary` gender or a masculine sheher lesbian",
-        "def2": "I’m a gender questioning butch",
+        "explanation": "I’m a gender questioning butch",
         "identity": "16 year old butch",
         "sort-as": []
     },
