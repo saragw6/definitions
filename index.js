@@ -10,15 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //use validator?
 
-// app.use(function (err, req, res, next) {
-//   console.log("** in next **");
-//   console.error(err.stack);
-//   //res.status(500).send('Something broke!');
-//   console.log("res status in next: " + res.statusCode);
-//   res.sendStatus(err.httpStatusCode).json(err);
-  
-// })
-
 const db_url = "postgres://cvbxymodwgcdog:6ca64c4362716069e239320eec8ae06097e66f573126ae33027e5e593fe663d2@ec2-54-243-235-153.compute-1.amazonaws.com:5432/d6i5mdoncrqtm0";
 
 const { Client } = require('pg');
@@ -80,24 +71,24 @@ app.use(express.static(path.join(__dirname, 'client/build')));
   //     });
   // });
 
-app.delete('/api/delete_requested/:term', (req, res, next) => {
+// app.delete('/api/delete_requested/:term', (req, res, next) => {
 
-  var term = req.params.term;
+  //   var term = req.params.term;
 
-  var queryString = 'DELETE FROM requested WHERE term=\'' + term + '\';';
+  //   var queryString = 'DELETE FROM requested WHERE term=\'' + term + '\';';
 
-  client.query(queryString, (err, result) => {
-      if (err) {
-        console.error(err.stack);
-        res.status(500).send('Error while deleting requested: ' + term); //could make more specific
-        return; //end client?
-      } else {
-        const response = "deleted requested: " + term;
-        res.json(response);
-      }
-      //client.end();
-    });
-});
+  //   client.query(queryString, (err, result) => {
+  //       if (err) {
+  //         console.error(err.stack);
+  //         res.status(500).send('Error while deleting requested: ' + term); //could make more specific
+  //         return; //end client?
+  //       } else {
+  //         const response = "deleted requested: " + term;
+  //         res.json(response);
+  //       }
+  //       //client.end();
+  //     });
+  // });
 
 
 // The "catchall" handler: for any request that doesn't
