@@ -36,9 +36,9 @@ class ResultCard extends Component {
       return;
     }
     var paragraphs = def.split("\n");
-    console.log(paragraphs);
+    //console.log(paragraphs);
     if (paragraphs.length === 1) {return this.defWithLinks(def);}
-    console.log("paragraphs > 1:\n" + paragraphs);
+    //console.log("paragraphs > 1:\n" + paragraphs);
     return paragraphs.map((paragraph, index) => {
       if (paragraph === "") {return "";}
       if (paragraphs.length - 1 === index) {return this.defWithLinks(paragraph);}
@@ -47,6 +47,16 @@ class ResultCard extends Component {
   }
 
   render() {
+    console.log(this.props);
+    // var name;
+    // var identity;
+    // if (this.props.author !== undefined) {
+    //   console.log(this.props.author);
+    //   var result = fetch('http://localhost:5000/authors/' + this.props.author).then(res => {return res.json()}).then(json => {name = json.name; identity = json.identity});
+    //   console.log(result);
+    // }
+
+
 
     return(
       <div>
@@ -59,7 +69,6 @@ class ResultCard extends Component {
     </div>
     );
   }
-
 
 
 }

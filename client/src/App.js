@@ -34,13 +34,14 @@ import ResultList from './ResultList.js';
 
 
 //import * as mydefs from './defs.js';
-import * as mydefswithsort from './defswithsort.js';
+
+//import * as mydefswithsort from './defswithsort.js';
 
 //const defs = mydefs.defs;
-const defswithsort = mydefswithsort.defswithsort;
+//const defswithsort = mydefswithsort.defswithsort;
 
-const available_terms = defswithsort.map((entry) => {return entry["term"].toLowerCase()});
-const no_dup = Array.from(new Set(available_terms)).sort();
+//const available_terms = defswithsort.map((entry) => {return entry["term"].toLowerCase()});
+//const no_dup = Array.from(new Set(available_terms)).sort();
 
 
 class App extends Component {
@@ -50,9 +51,13 @@ class App extends Component {
       searchTerm: 'filler text',
       def: '',
       my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
-      info_modal: decodeURIComponent(window.location.hash) === "#/about"
+      info_modal: decodeURIComponent(window.location.hash) === "#/about",
+      entries: [],
+      terms: []
     };
 
+    fetch('http://localhost:5000/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res})}).then(console.log(this.state.terms));
+    this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     this.handleChange = this.handleTermChange.bind(this);
   }
 
@@ -89,10 +94,18 @@ class App extends Component {
   getDefListWithSortAs(searchterm) {
     //search term will always be lowercase
 
-    var searchdefs = defswithsort.filter((entry) => { return (entry["sort-as"] !== undefined && entry["sort-as"].includes(searchterm)) || entry["term"].toLowerCase() === searchterm });
-    var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
+    //var searchdefs = defswithsort.filter((entry) => { return (entry["sort-as"] !== undefined && entry["sort-as"].includes(searchterm)) || entry["term"].toLowerCase() === searchterm });
+    //var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
-    return resultList;
+//broken:
+    if (searchterm === "") {return [];}
+    var url = 'http://localhost:5000/entries/' + searchterm;
+    var my_json;
+    fetch(url).then(res => {my_json = res.json(); console.log(my_json); return my_json}).then(res => {this.setState({entries: res})}).then(console.log(this.state.entries));
+
+    //console.log();
+
+    //return resultList;
   }
 
 
@@ -117,6 +130,7 @@ class App extends Component {
     var new_query = value === "" ? "" : "#/" + encodeURIComponent(value);
     this.setState({my_term: value});
     history.pushState(null, null, "/" + new_query); //add term to url
+    this.getDefListWithSortAs(this.state.my_term.toLowerCase());
 
     //COMMENT IN FOR PRODUCTION BUILD
     ReactGA.pageview(window.location.hash);    
@@ -139,7 +153,11 @@ class App extends Component {
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
-    const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+    //this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+    const terms = this.state.terms;
+    console.log(terms);
+    const my_entries = this.state.entries;
+    //const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     const pageTitle = this.state.my_term === "" ? "queer undefined" : this.state.my_term + " | Queer Undefined" ;
     const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
 
@@ -164,7 +182,8 @@ class App extends Component {
         label="enter a term"
         onChange={this.handleTermChange}
         // onQueryChange={this.handleQueryChange}
-        source={no_dup}
+        //source={no_dup}
+        source={terms}
         value={this.state.my_term}
         suggestionMatch="anywhere"
         showSuggestionsWhenValueIsSet={false}

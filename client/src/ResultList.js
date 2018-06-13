@@ -9,10 +9,12 @@ var masonryOptions = {
 };
 
 function ResultList(props) {
+
   const entries = props.entries;
   //const long_def = entry["definition"] + " \n" + entry["whatHasThisTermMeantInYourExperienceHowHaveYouEmbodiedThisTerm"];
   const listItems = entries.map((entry) =>
-    <ResultCard key={entry["definition"] + entry["timestamp"]} term={entry["term"]} def={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} id={entry["identity"]} /> //just pass the whole json object
+    <ResultCard key={entry["entry_id"]} term={entry["term"]} def={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} id={entry["identity"]} /> //just pass the whole json object
+    //<ResultCard key={entry["definition"] + entry["timestamp"]} term={entry["term"]} def={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} id={entry["identity"]} /> //just pass the whole json object
   );
 
   return (
