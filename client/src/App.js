@@ -56,7 +56,7 @@ class App extends Component {
       terms: []
     };
 
-    fetch('http://localhost:5000/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res})}).then(console.log(this.state.terms));
+    fetch('http://localhost:5000/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}).then(console.log(this.state.terms));
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     this.handleChange = this.handleTermChange.bind(this);
   }
