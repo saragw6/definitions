@@ -46,3 +46,22 @@ router.post('/', async (req, res) => {
   client.end();
 
 });
+
+router.delete('/:id', async (req, res) => {
+  const client = new Client({ connectionString: db_url, ssl: true });
+  client.connect();
+
+  const { id } = req.params;
+  var queryString = 'DELETE FROM potential WHERE potential_id = $1;';
+
+  try {
+    await client.query(queryString, [id]);
+    res.send("Deleted potential entry by id: " + id);
+  } catch (err) {
+    console.error(err.stack);
+    res.status(500).send('Error while deleting potential entry'); //could make more specific
+  }
+
+  client.end();
+
+});

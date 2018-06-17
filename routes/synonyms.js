@@ -26,3 +26,13 @@ router.post('/:term/:synonym', async (req, res, next) => {
 
   client.end();
 });
+
+router.get('/:term', async (req, res) => {
+  const client = new Client({ connectionString: db_url, ssl: true });
+  client.connect();
+
+    var queryString = 'SELECT * FROM synonym WHERE term = $1';
+
+    
+
+});
