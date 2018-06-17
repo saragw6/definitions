@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
 
+// import Button from 'react-toolbox/lib/button/Button';
+// import Tooltip from 'react-toolbox/lib/tooltip';
+// const TooltipButton = Tooltip(Button);
+
+
 //TODO: tooltip explanation that one is the author and one is the author's identity?
 //TODO: stop inline styling
 
@@ -72,5 +77,10 @@ class ResultCard extends Component {
 
 
 }
+
+//report button on corner: 
+//<div style={{textAlign: 'right', marginTop: '-65px', marginBottom: '25px', paddingRight: '5px'}}>
+//          <TooltipButton icon='error_outline' tooltip="report"  style={{minWidth:'30px', padding:'0', paddingLeft:'6px', marginRight:'-6px'}}/>
+//        </div>
 
 export default ResultCard;

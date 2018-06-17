@@ -41,7 +41,6 @@ router.get('/:term', async (req, res, next) => {
 
   try {
     const { rows } = await client.query(queryString, [req.params.term]);
-    console.log(rows);
     res.json(rows);
   } catch (err) {
     console.error(err.stack);
