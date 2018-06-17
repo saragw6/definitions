@@ -67,6 +67,7 @@ class App extends Component {
       this.setState({info_modal: true});
     } else {
       this.setState({my_term: hash});
+      this.getDefListWithSortAs(hash); //is this needed?
     }
   }
 
@@ -97,7 +98,6 @@ class App extends Component {
     //var searchdefs = defswithsort.filter((entry) => { return (entry["sort-as"] !== undefined && entry["sort-as"].includes(searchterm)) || entry["term"].toLowerCase() === searchterm });
     //var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
-//broken:
     if (searchterm === "") {return [];}
     var url = 'http://localhost:5000/entries/' + searchterm;
     var my_json;
@@ -130,7 +130,7 @@ class App extends Component {
     var new_query = value === "" ? "" : "#/" + encodeURIComponent(value);
     this.setState({my_term: value});
     history.pushState(null, null, "/" + new_query); //add term to url
-    this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+    this.getDefListWithSortAs(value);
 
     //COMMENT IN FOR PRODUCTION BUILD
     ReactGA.pageview(window.location.hash);    
