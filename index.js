@@ -99,8 +99,8 @@ app.get('*', (req, res) => {
 
 
 const port = process.env.PORT || 5000;
-//app.listen(port);
+app.listen(port);
 
 console.log(`Queer Undefined listening on ${port}`);
 
-module.exports = app.listen(5000);
+//module.exports = app.listen(5000);
