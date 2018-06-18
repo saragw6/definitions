@@ -56,7 +56,7 @@ class App extends Component {
       terms: []
     };
 
-    fetch('http://localhost:5000/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}).then(console.log(this.state.terms));
+    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}).then(console.log(this.state.terms));
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     this.handleChange = this.handleTermChange.bind(this);
   }
@@ -99,7 +99,7 @@ class App extends Component {
     //var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
 
     if (searchterm === "") {return [];}
-    var url = 'http://localhost:5000/entries/' + searchterm;
+    var url = '/entries/' + searchterm;
     var my_json;
     fetch(url).then(res => {my_json = res.json(); console.log(my_json); return my_json}).then(res => {this.setState({entries: res})}).then(console.log(this.state.entries));
 

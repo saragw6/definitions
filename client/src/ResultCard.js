@@ -57,7 +57,7 @@ class ResultCard extends Component {
     // var identity;
     // if (this.props.author !== undefined) {
     //   console.log(this.props.author);
-    //   var result = fetch('http://localhost:5000/authors/' + this.props.author).then(res => {return res.json()}).then(json => {name = json.name; identity = json.identity});
+    //   var result = fetch('/authors/' + this.props.author).then(res => {return res.json()}).then(json => {name = json.name; identity = json.identity});
     //   console.log(result);
     // }
 

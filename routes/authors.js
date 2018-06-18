@@ -9,7 +9,7 @@ module.exports = router;
 router.get('/:id', async (req, res, next) => {
 //return entries with author id or name and identity???
 
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  //res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
