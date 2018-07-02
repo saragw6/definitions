@@ -32,18 +32,6 @@ import ResultList from './ResultList.js';
 
 //TODO: change theme colors to be from rainblog
 
-
-//import * as mydefs from './defs.js';
-
-//import * as mydefswithsort from './defswithsort.js';
-
-//const defs = mydefs.defs;
-//const defswithsort = mydefswithsort.defswithsort;
-
-//const available_terms = defswithsort.map((entry) => {return entry["term"].toLowerCase()});
-//const no_dup = Array.from(new Set(available_terms)).sort();
-
-
 class App extends Component {
   constructor() {
   super();
@@ -56,7 +44,7 @@ class App extends Component {
       terms: []
     };
 
-    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}).then(console.log(this.state.terms));
+    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})});
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     this.handleChange = this.handleTermChange.bind(this);
   }
@@ -79,33 +67,10 @@ class App extends Component {
       window.removeEventListener("hashchange", this.handleHashChange, false);
   }
 
-  // getDefList(searchterm) {
-  //   var searchdefs = defs.filter((entry) => { return entry["term"].toUpperCase() === searchterm.toUpperCase() });
-
-  //   var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
-
-  //   return resultList;
-  // }
-
-  // defsMatchWithSort = (entry) => {
-  //   var sort_as = entry["sort-as"] === undefined ? false : entry["sort-as"].includes(searchterm);
-  //   return sortas || entry["term"].toLowerCase() === searchterm;
-  // }
-
   getDefListWithSortAs(searchterm) {
-    //search term will always be lowercase
-
-    //var searchdefs = defswithsort.filter((entry) => { return (entry["sort-as"] !== undefined && entry["sort-as"].includes(searchterm)) || entry["term"].toLowerCase() === searchterm });
-    //var resultList = searchdefs[0] === undefined ? [] : searchdefs; //change this
-
     if (searchterm === "") {return [];}
     var url = '/entries/' + searchterm;
-    var my_json;
-    fetch(url).then(res => {my_json = res.json(); console.log(my_json); return my_json}).then(res => {this.setState({entries: res})}).then(console.log(this.state.entries));
-
-    //console.log();
-
-    //return resultList;
+    fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res})});
   }
 
 
@@ -136,28 +101,11 @@ class App extends Component {
     ReactGA.pageview(window.location.hash);    
   };
 
-//   handleQueryChange = (value) => {
-// //    alert(value + " - " + value.length);
-//     if (value === "") {
-//       //this.setState({my_term: value});
-//       //history.pushState(null, null, "/");
-//     }
-//     //var new_query = value === "" ? "" : "?=" + encodeURIComponent(value);
-//     //this.setState({my_term: value});
-//     //history.pushState(null, null, "/" + new_query); //add term to url
-
-//     //COMMENT IN FOR PRODUCTION BUILD
-//     // ReactGA.pageview(window.location.pathname + window.location.search);    
-//   };
-
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
-    //this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     const terms = this.state.terms;
-    console.log(terms);
     const my_entries = this.state.entries;
-    //const my_entries = this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     const pageTitle = this.state.my_term === "" ? "queer undefined" : this.state.my_term + " | Queer Undefined" ;
     const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
 
@@ -181,8 +129,6 @@ class App extends Component {
         selectedPosition="above"
         label="enter a term"
         onChange={this.handleTermChange}
-        // onQueryChange={this.handleQueryChange}
-        //source={no_dup}
         source={terms}
         value={this.state.my_term}
         suggestionMatch="anywhere"

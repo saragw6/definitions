@@ -28,8 +28,6 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:term', async (req, res, next) => {
 //return entries with author id or name and identity???
-
-  //res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
@@ -112,7 +110,7 @@ router.delete('/:id', async (req, res) => {
     //delete author if no other entries have it
     await client.query(authorQueryString, [result.rows[0]["author"]]);
 
-    //synonyms??
+    //synonyms auto delete cascading
 
     res.send("Deleted entry by id: " + id);
   } catch (err) {

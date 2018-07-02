@@ -12,8 +12,6 @@ router.post('/:term/:synonym', async (req, res, next) => {
 
   const {term, synonym} = req.params;
 
-  //could also have ON CONSTRAINT fkey --> insert term ? no, don't insert terms that way.
-
   var queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
 
   try {

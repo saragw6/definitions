@@ -13,5 +13,4 @@ module.exports = (app) => {
   app.use('/requested/', requested)
   app.use('/potentials/', potentials)
   app.use('/authors/', authors)
-  // etc..
 }
