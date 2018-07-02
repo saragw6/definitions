@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 // COMMENT THESE IN FOR PRODUCTION BUILD
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-58549536-5');
@@ -21,11 +20,12 @@ const TooltipButton = Tooltip(Button);
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
 import {Helmet} from 'react-helmet'
 
-import DocumentTitle from 'react-document-title'
+import DocumentTitle from 'react-document-title';
 
 import './App.css';
 
 import ResultList from './ResultList.js';
+import PotentialDefs from './PotentialDefs.js'
 
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
@@ -112,6 +112,7 @@ class App extends Component {
 
   return(
     <DocumentTitle title={pageTitle}>
+    <PotentialDefs />
     <ThemeProvider theme={theme}>
     <div>
     <Helmet>
