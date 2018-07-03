@@ -69,7 +69,7 @@ class ResultCard extends Component {
         <CardTitle
           title={this.lowerCase(this.props.term)}
         />
-        <CardText>{this.paragraphsAndLinks(this.props.def)}<br /><br />{this.defWithLinks(this.props.explanation)}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.name}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.id}</p></CardText>
+        <CardText>{this.paragraphsAndLinks(this.props.definition)}<br /><br />{this.defWithLinks(this.props.explanation)}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.name}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.author_id}</p></CardText>
       </Card>
     </div>
     );
