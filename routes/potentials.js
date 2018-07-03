@@ -32,7 +32,12 @@ router.post('/', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  const {term, definition, explanation, name, identity} = req.body;
+  const {term, definition} = req.body;
+  name = req.body.name ? req.body.name : '';
+  identity = req.body.identity ? req.body.identity : '';
+  explanation = req.body.explanation ? req.body.explanation : '';
+
+
   var queryString = 'INSERT INTO potential(term, definition, explanation, name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),CAST($4 AS VARCHAR),CAST($5 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM potential WHERE term = $1 AND definition = $2 AND explanation = $3 AND name = $4 AND identity = $5);';
 
   try {

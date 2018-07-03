@@ -109,12 +109,11 @@ class App extends Component {
     const pageTitle = this.state.my_term === "" ? "queer undefined" : this.state.my_term + " | Queer Undefined" ;
     const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
 
-
   return(
     <DocumentTitle title={pageTitle}>
-    <PotentialDefs />
     <ThemeProvider theme={theme}>
     <div>
+    {(this.props.admin && !this.props.auth.isAuthenticated()) && <PotentialDefs auth={this.props.auth}/>}
     <Helmet>
       <meta property="og:image" content="http://queerundefined.com/quthumbnail.png" />
       <meta property="og:description" content={description} />
@@ -146,7 +145,7 @@ class App extends Component {
       style={{overflow:"scroll"}}
     >
 
-            <p>I'm making a site that defines terms having to do with gender and sexuality. This site will be for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
+            <p>This site defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
 
             <p>There are so many words used to describe gender and orientation. The variety of terms can be freeing, but it can also make things trickier for people who aren't familiar with the vocabulary yet. The aim of this project is to help people navigate the dozens and dozens of terms out there, whether they are looking to understand themselves or others better.</p>
 
@@ -168,7 +167,7 @@ class App extends Component {
       {(this.state.my_term !== "" && my_entries.length === 0) &&
         <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>
       }
-      {(this.state.my_term === "") &&
+      {(this.state.my_term === "" && window.location.pathname === "/") &&
         <div className="blurb">
         welcome to queer undefined, a site detailing  the many
 meanings of lgbtq+ labels and phrases. each definition
@@ -182,11 +181,13 @@ it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing, where we can collaboratively make meaning as a community. </div>
       }
-      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
+      <ResultList potentials={this.props.admin} style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
+        {this.props.auth.isAuthenticated() && <TooltipButton icon="clear" onClick={this.props.auth.logout} mini floating primary style={{margin: '5px'}} tooltip="logout"/>}
         <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="_blank" style={{margin: '5px'}} tooltip='define'/>
         <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="_blank" />
         <TooltipButton icon='info' onClick={this.aboutOnClick} mini floating primary style={{margin: '5px'}} tooltip="about"/>
+
 
       </div>
     </div>
