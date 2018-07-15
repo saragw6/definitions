@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  var queryString = 'SELECT * FROM entry';
+  var queryString = 'SELECT * FROM entry WHERE action = 2';
 
   try {
     const { rows } = await client.query(queryString);
@@ -34,7 +34,7 @@ router.get('/:term', async (req, res, next) => {
   //join inner/outer for where author is null?
 
   //get entries that match the term or synonyms
-  var queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE term = $1 OR term IN (SELECT sort_as FROM synonym WHERE term = $1) ';
+  var queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=2 AND (term = $1 OR term IN (SELECT sort_as FROM synonym WHERE term = $1))';
   //var authorQueryString = 'SLECT name, identity FROM author WHERE author_id = $1'
 
   try {
@@ -63,9 +63,10 @@ router.post('/', async (req, res) => {
   var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM author WHERE name = $1 AND identity = $2) RETURNING author_id;';
   //var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT name, identity FROM author INTERSECT SELECT $1, $2) RETURNING author_id;';
   var authorIdQueryString = 'SELECT author_id FROM author WHERE name = $1 AND identity = $2;';
-  var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);';
+  var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author, action) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4,2 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);';
   //this is too general but it works:
-  var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term) > 1;';
+  //change this to make it flip the fulfilled flag
+  var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;';
 
   try {
     //insert term
@@ -90,6 +91,48 @@ router.post('/', async (req, res) => {
 
 });
 
+router.post('/reject/:id', async (req, res) => {
+  const client = new Client({ connectionString: db_url, ssl: true });
+  client.connect();
+
+  console.log(req.body);
+
+  const {term, definition} = req.body;
+  name = req.body.name ? req.body.name : '';
+  identity = req.body.identity ? req.body.identity : '';
+  explanation = req.body.explanation ? req.body.explanation : '';
+
+  var termQueryString = 'INSERT INTO term(term) SELECT CAST($1 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM term WHERE term = $1);';
+  var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM author WHERE name = $1 AND identity = $2) RETURNING author_id;';
+  //var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT name, identity FROM author INTERSECT SELECT $1, $2) RETURNING author_id;';
+  var authorIdQueryString = 'SELECT author_id FROM author WHERE name = $1 AND identity = $2;';
+  var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author, action) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4,2 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);';
+  //this is too general but it works:
+  //change this to make it flip the fulfilled flag
+  var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;';
+
+  try {
+    //insert term
+    await client.query(termQueryString, [term]);
+    //insert author & get id
+    var result = await client.query(authorQueryString, [name, identity]);
+    if (result.rows.length === 0) {
+      result = await client.query(authorIdQueryString, [name, identity]);
+    }
+    const author_id = result.rows[0]["author_id"];
+    //delete requested if must
+    await client.query(requestedQueryString); //v general query but it works
+    // //insert entry!
+    await client.query(entryQueryString, [term, definition, explanation, author_id]);
+    res.send("Inserted entry for term: " + term);
+  } catch (err) {
+    console.error(err.stack);
+    res.status(500).send('Error while inserting entry'); //could make more specific
+  }
+
+  client.end();
+
+});
 
 router.delete('/:id', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });

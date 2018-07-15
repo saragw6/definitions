@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  var query = {text:'SELECT * FROM term', rowMode: 'array'};
+  var query = {text:'SELECT * FROM term WHERE EXISTS (SELECT * FROM entry WHERE entry.term=term.term AND action=2)', rowMode: 'array'};
 
   try {
     const { rows } = await client.query(query);

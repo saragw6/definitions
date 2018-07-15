@@ -27,7 +27,7 @@ class PotentialDefs extends Component {
 
   render() {
       //temp:
-  console.log(this.state.potentials);
+  //console.log(this.state.potentials);
 
 
     //fix this up:

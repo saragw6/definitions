@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  var query = {text:'SELECT * FROM requested', rowMode: 'array'};
+  var query = {text:'SELECT * FROM requested WHERE fulfilled=0', rowMode: 'array'};
 
   try {
     const { rows } = await client.query(query);
@@ -28,7 +28,7 @@ router.post('/:term', async (req, res) => {
 
   var term = req.params.term;
 
-  var queryString = 'INSERT INTO requested(term) SELECT CAST($1 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);';
+  var queryString = 'INSERT INTO requested(term, fulfilled) SELECT CAST($1 AS VARCHAR),0 WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);';
 
   try {
     const { rows } = await client.query(queryString, [term]);

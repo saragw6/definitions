@@ -52,7 +52,7 @@ class ResultCard extends Component {
   }
 
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     // var name;
     // var identity;
     // if (this.props.author !== undefined) {
