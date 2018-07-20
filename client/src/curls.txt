@@ -1,0 +1,38 @@
+curl -d '{"name":"sara", "identity":"white queer lesbian"}' -H "Content-Type: application/json" -X POST http://localhost:5000/api/insert_author
+
+
+curl -d '{"term":"sapiosexual", "definition":"attraction to intelligence", "explanation":"this term is important to me because i like conversations", "name":"nerd", "identity":"white gay man"}' -H "Content-Type: application/json" -X POST http://localhost:5000/api/insert_entry
+
+curl -d '{"term":"bisexual", "definition":"attraction to two or more genders", "explanation":"i identify as bisexual and I dont believe it excludes nonbinary people", "name":"bi bi bi", "action":2}' -H "Content-Type: application/json" -X POST http://localhost:5000/entries
+
+curl -d '{"term":"bi", "definition":"attraction to two or more genders", "explanation":"many ppl are opposed to this because it is binarist - it paints gender as binary", "action":2}' -H "Content-Type: application/json" -X POST http://localhost:5000/entries
+
+curl -d '{"term":"asexual", "definition":"not experiencing sexual attraction", "explanation":"this term is important to me because i thought i was weird but now i know other people feel the same way", "name":"aceofhearts", "identity":"", "action":2}' -H "Content-Type: application/json" -X POST http://localhost:5000/entries
+
+curl -d '{"term":"ace", "definition":"not experiencing sexual attraction", "explanation":"im asexual so i dont feel sexual attraction but i still want to date people thats romantic attraction", "name":"acenotaro", "identity":"asexual and alloromantic", "action":2}' -H "Content-Type: application/json" -X POST http://localhost:5000/entries
+
+curl -d '{"term":"ace", "definition":"doesnt feel sexual attraction", "action":2}' -H "Content-Type: application/json" -X POST http://localhost:5000/entries
+
+curl -X POST http://localhost:5000/synonyms/asexual/ace
+
+curl -X DELETE http://localhost:5000/potentials/1
+
+curl -X DELETE http://localhost:5000/entries/33
+
+INSERT INTO entry(term, definition, explanation, author) VALUES ('bisexual', 'attraction to two or more genders','i identify as bisexual and I don't believe it excludes nonbinary people','2');
+
+curl -d '{"term":"lesbian", "definition":"girl who likes girls", "explanation":"this doesnt necessarily mean only cis girls", "name":"nonterflesbo", "identity":"lesbian trans woman"}' -H "Content-Type: application/json" -X POST http://localhost:5000/potentials
+
+curl -d '{"term":"bisexual", "definition":"this is a trans exclusionary term bc it uses the prefix bi", "name":"panforever", "identity":"pansexual and alloromantic"}' -H "Content-Type: application/json" -X POST http://localhost:5000/potentials
+
+curl -d '{"term":"gwlg", "definition":"girl who likes girls", "explanation":"this doesnt necessarily mean only cis girls", "name":"nonterflesbo", "identity":"lesbian trans woman"}' -H "Content-Type: application/json" -X POST http://localhost:5000/potentials
+
+------migration draft--------
+
+defs.map((entry) => {
+  var url = http://localhost:5000/entry 
+
+  fetch(url)
+
+});
+
