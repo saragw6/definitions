@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
+import Button from 'react-toolbox/lib/button/Button';
 
 // import Button from 'react-toolbox/lib/button/Button';
 // import Tooltip from 'react-toolbox/lib/tooltip';
@@ -51,6 +52,18 @@ class ResultCard extends Component {
     });
   }
 
+   rejectPotential(){
+    alert("reject potential definition: " + this.props.term + " id: " + this.props.entry_id);
+    fetch('/entries/reject/' + this.props.entry_id, {method: 'POST'});
+    this.setState({visible: false});
+  }
+
+  acceptPotential(){
+    alert("accept potential definition: " + this.props.term + " id: " + this.props.entry_id);
+    fetch('/entries/accept/' + this.props.entry_id, {method: 'POST'});
+    this.setState({visible: false});
+  }
+
   render() {
     //console.log(this.props);
     // var name;
@@ -70,6 +83,8 @@ class ResultCard extends Component {
           title={this.lowerCase(this.props.term)}
         />
         <CardText>{this.paragraphsAndLinks(this.props.definition)}<br /><br />{this.defWithLinks(this.props.explanation)}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.name}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.author_id}</p></CardText>
+        {(this.props.action === 1) && <div><Button label="reject" onClick={this.rejectPotential} raised style={{"width":"175px"}}/>
+                                     <Button label="accept" onClick={this.acceptPotential} raised primary style={{"width":"175px"}}/></div>}
       </Card>
     </div>
     );

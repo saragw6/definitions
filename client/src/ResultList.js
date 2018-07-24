@@ -14,11 +14,13 @@ function ResultList(props) {
   const entries = props.entries;
   //const long_def = entry["definition"] + " \n" + entry["whatHasThisTermMeantInYourExperienceHowHaveYouEmbodiedThisTerm"];
   const listItems = entries.map((entry) => {
-    if (!props.potentials) {
-      return <ResultCard key={entry["entry_id"]} entry_id={entry["entry_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} /> //just pass the whole json object?
-    } else {
-      return <PotentialCard key={entry["potential_id"]} entry_id={entry["potential_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} /> //just pass the whole json object?
-    }
+    // if (!props.potentials) {
+    //   return <ResultCard key={entry["entry_id"]} entry_id={entry["entry_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} /> //just pass the whole json object?
+    // } else {
+    //   //return <PotentialCard key={entry["potential_id"]} entry_id={entry["potential_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} /> //just pass the whole json object?
+    //   return <PotentialCard key={entry["entry_id"]} entry_id={entry["entry_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} /> //just pass the whole json object?
+    // }
+    return <ResultCard key={entry["entry_id"]} entry_id={entry["entry_id"]} term={entry["term"]} definition={entry["definition"]} explanation={entry["explanation"]} name={entry["name"]} author_id={entry["identity"]} action={entry["action"]}/>
   });
 
   return (

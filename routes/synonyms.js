@@ -4,15 +4,26 @@ const router = new Router();
 const db_url = "postgres://cvbxymodwgcdog:6ca64c4362716069e239320eec8ae06097e66f573126ae33027e5e593fe663d2@ec2-54-243-235-153.compute-1.amazonaws.com:5432/d6i5mdoncrqtm0";
 const { Client } = require('pg');
 
+function decodeUrl(str) {
+  str = str.replace(/%28/g, "(");
+  str = str.replace(/%29/g, ")");
+  return decodeURIComponent(str);
+}
+
 module.exports = router;
 
 router.post('/:term/:synonym', async (req, res, next) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  const {term, synonym} = req.params;
+  var {term, synonym} = req.params;
+
+  term = decodeUrl(term);
+  synonym = decodeUrl(synonym);
 
   var queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
+
+  console.log("term: " + term + " synonym: " + synonym);
 
   try {
     const { rows } = await client.query(queryString, [term, synonym]);

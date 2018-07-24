@@ -15,11 +15,26 @@ class PotentialDefs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      potentials: []
+      potentials: [{
+        "timestamp": "2018-04-24T02:15:03.107Z",
+        "term": "aspec",
+        "definition": "\"Aspec\" means someone identifies on the asexual/aromantic spectrum. This can mean they're demisexual, aromantic, and much more!",
+        "explanation": "Aspec is typically only used by aspec people, as asexual/aromantics don't have much visibility. This is used to be a sweeping term for anyone that either don't or rarely experience romantic or sexual attraction, and includes everyone that identifies under the umbrella! ",
+        "identity": "Asexual Demiromantic (aspec!)",
+        "action":1
+    },
+    {
+        "timestamp": "2018-04-24T02:19:39.910Z",
+        "term": "Gatekeeping",
+        "definition": "Gatekeeping is where someone feels as if they are the ones in charge of deciding who is within a community or not, frequently excluding those who belong on poor opinions. ",
+        "explanation": "An example of gatekeeping is gender gatekeeping - as some people believe anyone who doesn't fit the trans man/woman template aren't LGBT,  attempting to keep non binary individuals and other out of the community where they do belong.",
+        "identity": "Asexual Demiromantic",
+        "action":1
+    }]
     };
-    if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
+    //if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
 
-    fetch('/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
+    //fetch('/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
 
   }
 //fix this up:
@@ -34,7 +49,7 @@ class PotentialDefs extends Component {
     return (
     <ThemeProvider theme={theme}>
       <div>
-        {this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.potentials} potentials={true}/>}
+        <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.potentials} potentials={true}/>
       </div>
     </ThemeProvider>
     );
@@ -43,6 +58,9 @@ class PotentialDefs extends Component {
 }
 
 export default PotentialDefs;
+//{this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.potentials} potentials={true}/>}
+
+
 
 // import Masonry from 'react-masonry-component';
 

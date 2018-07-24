@@ -12,22 +12,34 @@ class PotentialCard extends ResultCard {
     this.acceptPotential = this.acceptPotential.bind(this);
   }
 
+  // rejectPotential(){
+  //   alert("reject potential definition: " + this.props.term + " id: " + this.props.entry_id);
+  //   fetch('/potentials/' + this.props.entry_id, {method: 'DELETE'}); //error handling?
+  //   this.setState({visible: false});
+  // }
+
   rejectPotential(){
     alert("reject potential definition: " + this.props.term + " id: " + this.props.entry_id);
-    fetch('/potentials/' + this.props.entry_id, {method: 'DELETE'}); //error handling?
+    fetch('/entries/reject/' + this.props.entry_id, {method: 'POST'});
     this.setState({visible: false});
   }
 
-  acceptPotential(){
-    var fetchOptions = {
-      method: "POST",
-      headers: {"Content-Type": "application/json; charset=utf-8"},
-      body: JSON.stringify(this.props)};
+  // acceptPotential(){
+  //   var fetchOptions = {
+  //     method: "POST",
+  //     headers: {"Content-Type": "application/json; charset=utf-8"},
+  //     body: JSON.stringify(this.props)};
 
+  //   alert("accept potential definition: " + this.props.term + " id: " + this.props.entry_id);
+  //   fetch('/entries/', fetchOptions)
+  //     .then(fetch('/potentials/' + this.props.entry_id, {method: 'DELETE'}));
+  //    //error handling? !!!
+  //   this.setState({visible: false});
+  // }
+
+  acceptPotential(){
     alert("accept potential definition: " + this.props.term + " id: " + this.props.entry_id);
-    fetch('/entries/', fetchOptions)
-      .then(fetch('/potentials/' + this.props.entry_id, {method: 'DELETE'}));
-     //error handling? !!!
+    fetch('/entries/accept/' + this.props.entry_id, {method: 'POST'});
     this.setState({visible: false});
   }
 
