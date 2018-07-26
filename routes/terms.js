@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
   try {
     const { rows } = await client.query(query);
-    res.send(rows.map(term_array => {return term_array[0]}));
+    res.send(rows.map(term_array => {return term_array[0].toLowerCase()}));
   } catch (err) {
     console.log(err.stack);
   }
