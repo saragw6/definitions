@@ -16,10 +16,8 @@ router.post('/:term/:synonym', async (req, res, next) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  var {term, synonym} = req.params;
-
-  term = decodeUrl(term);
-  synonym = decodeUrl(synonym);
+  var term = decodeUrl(req.params.term);
+  var synonym = decodeUrl(req.params.synonym);
 
   var queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
 
@@ -41,7 +39,4 @@ router.get('/:term', async (req, res) => {
   client.connect();
 
     var queryString = 'SELECT * FROM synonym WHERE term = $1';
-
-    
-
 });

@@ -145,7 +145,7 @@ class App extends Component {
       style={{overflow:"scroll"}}
     >
 
-            <p>This site defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
+            <p>Queer Undefined defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
 
             <p>There are so many words used to describe gender and orientation. The variety of terms can be freeing, but it can also make things trickier for people who aren't familiar with the vocabulary yet. The aim of this project is to help people navigate the dozens and dozens of terms out there, whether they are looking to understand themselves or others better.</p>
 
@@ -158,7 +158,7 @@ class App extends Component {
             <p>These words have a lot of nuance and depth. For example, two people who identify as bisexual might have completely different explanations of what that word means to them. That's why I'm gathering informal definitions from LGBTQ+ people – to give multiple personal perspectives. That way people learning these words can get more of the full story, and if they're looking for a way to label themself they can find something they connect to.</p>
 
             <h6 className="_2J-aP" style={{marginTop: "16px"}}>About Me</h6>
-            <p>I'm a senior at Tufts University studying Gender Studies and Computer Science. I'm creating this site as my capstone for my Gender Studies Major.</p>
+            <p>I'm a recent grad of Tufts University studying Gender Studies and Computer Science. I created this site as my capstone for my Gender Studies Major.</p>
 
             
 

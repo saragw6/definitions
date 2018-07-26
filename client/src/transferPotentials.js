@@ -3,7 +3,8 @@ function PrintCurlFromJson(potentials) {
 }
 
 function jsonToCurl(entry) {
-  var curl = "curl -d \'" + JSON.stringify(entry).replace(/\'/g, "\'\\\'\'") + "\' -H \"Content-Type: application/json\" -X POST http://localhost:5000/potentials";
+  entry.action = 1;
+  var curl = "curl -d \'" + JSON.stringify(entry).replace(/\'/g, "\'\\\'\'") + "\' -H \"Content-Type: application/json\" -X POST http://localhost:5000/entries";
 
   return curl;
 }

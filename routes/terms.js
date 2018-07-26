@@ -6,6 +6,8 @@ const { Client } = require('pg');
 
 module.exports = router;
 
+
+//todo: no dups and lowercase
 router.get('/', async (req, res) => {
   //res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   const client = new Client({ connectionString: db_url, ssl: true });

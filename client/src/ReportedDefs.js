@@ -6,15 +6,15 @@ import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import './assets/react-toolbox/theme.css';
 
-class PotentialDefs extends Component {
+class ReportedDefs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      potentials: []
+      reported: []
     };
 
     if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
-    fetch('/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
+    fetch('/reported').then(res => {return res.json()}).then((res) => this.setState({reported: res}));
   }
 
   render() {
@@ -23,7 +23,7 @@ class PotentialDefs extends Component {
     return (
     <ThemeProvider theme={theme}>
       <div>
-        {this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.potentials}/>}
+        {this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.reported}/>}
       </div>
     </ThemeProvider>
     );
@@ -31,4 +31,4 @@ class PotentialDefs extends Component {
 
 }
 
-export default PotentialDefs;
+export default ReportedDefs;

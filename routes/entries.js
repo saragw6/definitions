@@ -34,12 +34,13 @@ router.get('/:term', async (req, res, next) => {
   //join inner/outer for where author is null?
 
   //get entries that match the term or synonyms
-  var queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=2 AND (term = $1 OR term IN (SELECT sort_as FROM synonym WHERE term = $1))';
+  var queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE (term = $1 OR term IN (SELECT sort_as FROM synonym WHERE term = $1)) AND action=2';
   //var authorQueryString = 'SLECT name, identity FROM author WHERE author_id = $1'
 
   try {
     const { rows } = await client.query(queryString, [req.params.term]);
     res.json(rows);
+    console.log(rows);
   } catch (err) {
     console.error(err.stack);
     res.status(500).send('Error while retrieving entries'); //could make more specific
@@ -47,26 +48,30 @@ router.get('/:term', async (req, res, next) => {
   client.end();
 });
 
-
+//done: get timestamps submitted in proper format - read more about this
+//done: update last_updated whenever u update an entry
+//done: change requested query to just flip fullfilled flag
 router.post('/', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
   console.log(req.body);
 
-  const {term, definition} = req.body;
+  const {term, definition, time_submitted, action} = req.body;
   name = req.body.name ? req.body.name : '';
   identity = req.body.identity ? req.body.identity : '';
   explanation = req.body.explanation ? req.body.explanation : '';
+  var last_updated = new Date().toISOString();
 
   var termQueryString = 'INSERT INTO term(term) SELECT CAST($1 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM term WHERE term = $1);';
   var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM author WHERE name = $1 AND identity = $2) RETURNING author_id;';
   //var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT name, identity FROM author INTERSECT SELECT $1, $2) RETURNING author_id;';
   var authorIdQueryString = 'SELECT author_id FROM author WHERE name = $1 AND identity = $2;';
-  var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author, action, time_submitted, last_updated) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4,2 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);';
+  var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author, action, time_submitted, last_updated) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4,$5,$6, $7 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);';
   //this is too general but it works:
-  //change this to make it flip the fulfilled flag
-  var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;';
+  //change this to make it flip the fulfilled flag -- TEST THIS
+  //var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;';
+  var requestedQueryString = 'UPDATE requested SET fulfilled = 1 FROM entry WHERE entry.term = requested.term AND (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;'
 
   try {
     //insert term
@@ -80,7 +85,7 @@ router.post('/', async (req, res) => {
     //delete requested if must
     await client.query(requestedQueryString); //v general query but it works
     // //insert entry!
-    await client.query(entryQueryString, [term, definition, explanation, author_id]);
+    await client.query(entryQueryString, [term, definition, explanation, author_id, action, time_submitted, last_updated]);
     res.send("Inserted entry for term: " + term);
   } catch (err) {
     console.error(err.stack);
@@ -91,68 +96,6 @@ router.post('/', async (req, res) => {
 
 });
 
-router.post('/accept/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
-
-  const { id} = req.params;
-
-  var entryQueryString = 'UPDATE entry SET action=2 WHERE entry_id = $1'
-
-  try {
-    // //update entry action
-    await client.query(entryQueryString,[id]);
-    res.send("Accepted potential entry with id: " + id);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while accepting potential entry'); //could make more specific
-  }
-
-  client.end();
-
-});
-
-router.post('/reject/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
-
-  console.log(req.body);
-
-  const { id } = req.params;
-  var entryQueryString = 'UPDATE entry SET action=3 WHERE entry_id=$1'
-
-  try {
-    await client.query(entryQueryString, [id]);
-    res.send("Rejected potential entry with id: " + id);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while rejecting potential entry'); //could make more specific
-  }
-
-  client.end();
-
-});
-
-router.post('/report/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
-
-  console.log(req.body);
-
-  const { id } = req.params;
-  var entryQueryString = 'UPDATE entry SET action=4 WHERE entry_id=$1'
-
-  try {
-    await client.query(entryQueryString, [id]);
-    res.send("Reported entry with id: " + id);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while reporting entry'); //could make more specific
-  }
-
-  client.end();
-
-});
 
 //test!! also maybe don't use both "action" and "status", pick one! probably status
 router.post('/setstatus/:action/id/:id', async (req, res) => {
@@ -162,10 +105,11 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
   console.log(req.body);
 
   const { action, id } = req.params;
-  var entryQueryString = 'UPDATE entry SET action=$1 WHERE entry_id=$2'
+  var last_updated = new Date().toISOString();
+  var entryQueryString = 'UPDATE entry SET action=$1, last_updated=$2 WHERE entry_id=$3'
 
   try {
-    await client.query(entryQueryString, [action, id]);
+    await client.query(entryQueryString, [action, last_updated, id]);
     res.send("Set status to " + action + " for entry with id: " + id);
   } catch (err) {
     console.error(err.stack);
@@ -176,35 +120,35 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
 
 });
 
-router.delete('/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
+// router.delete('/:id', async (req, res) => {
+//   const client = new Client({ connectionString: db_url, ssl: true });
+//   client.connect();
 
-  const { id } = req.params;
-  var getEntryQueryString = 'SELECT * FROM entry WHERE entry_id = $1;';
-  var delEntryQueryString = 'DELETE FROM entry WHERE entry_id = $1;';
-  var termQueryString = 'DELETE FROM term WHERE term = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE term = $1) ON CONFLICT ON CONSTRAINT synonym_term_fkey ;';
-  var authorQueryString = 'DELETE FROM author WHERE author_id = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE author = $1);';
+//   const { id } = req.params;
+//   var getEntryQueryString = 'SELECT * FROM entry WHERE entry_id = $1;';
+//   var delEntryQueryString = 'DELETE FROM entry WHERE entry_id = $1;';
+//   var termQueryString = 'DELETE FROM term WHERE term = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE term = $1) ON CONFLICT ON CONSTRAINT synonym_term_fkey ;';
+//   var authorQueryString = 'DELETE FROM author WHERE author_id = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE author = $1);';
 
-  try {
-    //get entry details
-    var result = await client.query(getEntryQueryString, [id]);
+//   try {
+//     //get entry details
+//     var result = await client.query(getEntryQueryString, [id]);
 
-    //delete entry
-    await client.query(delEntryQueryString, [id]);
-    //delete term if no other entries define it
-    await client.query(termQueryString, [result.rows[0]["term"]]);
-    //delete author if no other entries have it
-    await client.query(authorQueryString, [result.rows[0]["author"]]);
+//     //delete entry
+//     await client.query(delEntryQueryString, [id]);
+//     //delete term if no other entries define it
+//     await client.query(termQueryString, [result.rows[0]["term"]]);
+//     //delete author if no other entries have it
+//     await client.query(authorQueryString, [result.rows[0]["author"]]);
 
-    //synonyms auto delete cascading
+//     //synonyms auto delete cascading
 
-    res.send("Deleted entry by id: " + id);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while deleting entry'); //could make more specific
-  }
+//     res.send("Deleted entry by id: " + id);
+//   } catch (err) {
+//     console.error(err.stack);
+//     res.status(500).send('Error while deleting entry'); //could make more specific
+//   }
 
-  client.end();
+//   client.end();
 
-});
+// });

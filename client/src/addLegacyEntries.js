@@ -20,7 +20,7 @@ function allCurlsFromEntries(entries) {
 	entries.forEach((entry)=> {
         printCurlFromEntry(entry);
         printSynonymCurls(entry);
-    }); //(entry) => printCurlFromEntry(enrty)
+    });
 }
 
 
