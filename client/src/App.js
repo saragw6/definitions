@@ -69,7 +69,7 @@ class App extends Component {
 
   getDefListWithSortAs(searchterm) {
     if (searchterm === "") {return [];}
-    var url = '/entries/' + searchterm;
+    var url = '/entries/' + encodeURIComponent(searchterm);
     fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res})});
   }
 

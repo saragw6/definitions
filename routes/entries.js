@@ -31,6 +31,7 @@ router.get('/:term', async (req, res, next) => {
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
+
   //join inner/outer for where author is null?
 
   //get entries that match the term or synonyms
