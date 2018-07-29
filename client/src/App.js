@@ -68,7 +68,7 @@ class App extends Component {
   }
 
   getDefListWithSortAs(searchterm) {
-    if (searchterm === "") {return [];}
+    if (searchterm === "") {this.setState({entries: []}); return [];}
     var url = '/entries/' + encodeURIComponent(searchterm);
     fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res})});
   }
@@ -181,7 +181,7 @@ it is an attempt to decrease barriers to
 conversation and understanding by opening a
 space of learning and knowledge-sharing, where we can collaboratively make meaning as a community. </div>
       }
-      <ResultList potentials={this.props.admin} style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
+      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
         {this.props.auth.isAuthenticated() && <TooltipButton icon="clear" onClick={this.props.auth.logout} mini floating primary style={{margin: '5px'}} tooltip="logout"/>}
         <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="_blank" style={{margin: '5px'}} tooltip='define'/>
