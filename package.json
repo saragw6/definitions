@@ -6,7 +6,7 @@
     "pg": "^7.4.3"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js"
   },
   "devDependencies": {
     "mocha": "^5.2.0",
