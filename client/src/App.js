@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 ReactGA.initialize('UA-58549536-5');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-import Autocomplete from 'react-toolbox/lib/autocomplete/Autocomplete.js';
+import Autocomplete from './assets/react-toolbox/lib/autocomplete/Autocomplete.js';
 
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
