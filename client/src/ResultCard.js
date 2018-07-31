@@ -38,7 +38,7 @@ class ResultCard extends Component {
       return;
     }
     return def.split('`').map(function(word, index) {
-      var url = "/#/" + word;
+      var url = "/search/" + word;
       var newWord = index % 2 !== 0 ? <a href={url} key={url + index}>{word}</a> : word; ////
       return newWord;
     });

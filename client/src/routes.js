@@ -6,6 +6,7 @@ import Callback from './Callback';
 import PotentialDefs from './PotentialDefs';
 import ReportedDefs from './ReportedDefs';
 import About from './About';
+// import SearchResults from './SearchResults';
 import Auth from './Auth';
 import history from './history';
 
@@ -17,11 +18,20 @@ const handleAuthentication = ({location}) => {
   }
 }
 
+  function getTermFromPath(path){
+    var term = "";
+    if (path.startsWith("search")) {
+      term = path.substring(7);
+    }
+    return term;
+  }
+
+
 export const makeMainRoutes = () => {
   return (
       <Router history={history}>
         <div>
-          <Route path="/" render={(props) => <App auth={auth}/>} />
+          <Route path="/*" render={(props) => <App auth={auth} term={getTermFromPath(props.match.params[0])}/>} />
           <Route path="/potentials" render={(props) => <PotentialDefs auth={auth}/>} />
           <Route path="/reported" render={(props) => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
@@ -33,3 +43,6 @@ export const makeMainRoutes = () => {
       </Router>
   );
 }
+
+//<Route path="/search/*" exact render={(props) => <App auth={auth} term={props.match.params[0]} />} />
+//<Route path="/" render={(props) => <SearchResults term={props.match.params[0]} />} />

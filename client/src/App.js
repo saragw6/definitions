@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {withRouter} from 'react-router-dom';
 
 // COMMENT THESE IN FOR PRODUCTION BUILD
 import ReactGA from 'react-ga';
@@ -35,16 +35,19 @@ import history from './history';
 //TODO: change theme colors to be from rainblog
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
   super();
+  console.log(props.term);
     this.state = {
       searchTerm: 'filler text',
       def: '',
-      my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
+      // my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
+      my_term: props.term, //grab term from url
       info_modal: decodeURIComponent(window.location.hash) === "#/about",
       entries: [],
       terms: []
     };
+    console.log(this.state.my_term);
 
     fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
@@ -81,20 +84,23 @@ class App extends Component {
   }
 
   aboutOnClick = () => {
-    this.toggleAbout();
-    // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
-    // history.pushState(null, null, newURL);
-    if (!this.state.info_modal) {
-      //history.pushState(null, null, "/#/about");
-    } else {
-      var new_term = this.state.my_term === "about" ? "" : this.state.my_term;
-      this.handleTermChange(new_term);
-    }
+    // this.toggleAbout();
+    // // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
+    // // history.pushState(null, null, newURL);
+    // if (!this.state.info_modal) {
+    //   //history.pushState(null, null, "/#/about");
+    // } else {
+    //   var new_term = this.state.my_term === "about" ? "" : this.state.my_term;
+    //   this.handleTermChange(new_term);
+    // }
+    this.setState({my_term: ""});
+    this.getDefListWithSortAs("");
+    history.push("/about");
   }
 
 //took definitions out of link
   handleTermChange = (value) => {
-    var new_query = value === "" ? "" : "#/" + encodeURIComponent(value);
+    var new_query = value === "" ? "" : "search/" + encodeURIComponent(value);
     this.setState({my_term: value});
     //history.pushState(null, null, "/" + new_query); //add term to url
     history.push("/" + new_query);
@@ -189,7 +195,7 @@ space of learning and knowledge-sharing, where we can collaboratively make meani
         {this.props.auth.isAuthenticated() && <TooltipButton icon="clear" onClick={this.props.auth.logout} mini floating primary style={{margin: '5px'}} tooltip="logout"/>}
         <TooltipButton icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="_blank" style={{margin: '5px'}} tooltip='define'/>
         <TooltipButton icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="_blank" />
-        <TooltipButton icon='info' onClick={this.aboutOnClick} mini floating primary style={{margin: '5px'}} tooltip="about"/>
+        <TooltipButton icon='info' onClick={this.aboutOnClick} mini floating primary style={{margin: '5px'}} tooltip="info"/>
 
 
       </div>
@@ -200,4 +206,4 @@ space of learning and knowledge-sharing, where we can collaboratively make meani
   }
 }
 
-export default App;
+export default withRouter(App);
