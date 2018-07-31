@@ -119,7 +119,7 @@ class App extends Component {
     this.getDefListWithSortAs(value);
 
     //COMMENT IN FOR PRODUCTION BUILD
-    ReactGA.pageview(window.location.hash);    
+    ReactGA.pageview(window.location.pathname);    
   };
 
  //TODO: edit the request form to say the url/title instead of "the site"
