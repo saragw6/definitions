@@ -6,7 +6,7 @@ export default class Auth {
     domain: 'queerundefined.auth0.com',
     clientID: 'amJ8dm1X0ko-PhDvz3DOQkOd-kl3e42z',
     //redirectUri: 'http://queerundefined.com/callback', //change this soon
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: 'http://queer-undefined.herokuapp.com/callback',
     audience: 'https://queerundefined.auth0.com/userinfo', //?
     responseType: 'token id_token',
     scope: 'openid'
