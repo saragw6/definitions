@@ -5,7 +5,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'queerundefined.auth0.com',
     clientID: 'amJ8dm1X0ko-PhDvz3DOQkOd-kl3e42z',
-    //redirectUri: 'http://queerundefined.com/callback', //change this soon
+    //redirectUri: 'http://localhost:5000/callback', //change this soon
     redirectUri: 'http://queer-undefined.herokuapp.com/callback',
     audience: 'https://queerundefined.auth0.com/userinfo', //?
     responseType: 'token id_token',

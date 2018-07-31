@@ -60,6 +60,7 @@ class App extends Component {
       terms: []
     };
     console.log(this.state.my_term);
+    console.log("updates are effective");
 
     fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());

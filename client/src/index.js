@@ -18,6 +18,8 @@ import { makeMainRoutes } from './routes';
 
 const routes = makeMainRoutes();
 
+console.log("made it here -2");
+
 ReactDOM.render(
   routes,
   document.getElementById('root')
