@@ -17,7 +17,7 @@ import Button from 'react-toolbox/lib/button/Button';
 import Tooltip from 'react-toolbox/lib/tooltip';
 const TooltipButton = Tooltip(Button);
 
-import Dialog from 'react-toolbox/lib/dialog/Dialog';
+//import Dialog from 'react-toolbox/lib/dialog/Dialog';
 import {Helmet} from 'react-helmet'
 
 import DocumentTitle from 'react-document-title';
@@ -28,6 +28,18 @@ import ResultList from './ResultList.js';
 import PotentialDefs from './PotentialDefs.js'
 
 import history from './history';
+
+const welcomeBlurb = "welcome to queer undefined, a site detailing  the many" +
+"meanings of lgbtq+ labels and phrases. each definition" +
+"you see here was submitted by an individual and may" +
+"not align with your understanding or even with the" +
+"other definitions displayed alongside it. the lgbtq+" +
+"community is multifaceted and ever-shifting," +
+"as is our vernacular. none of these definitions is" +
+"official or final. this site is not all-encompassing." +
+"it is an attempt to decrease barriers to" +
+"conversation and understanding by opening a" +
+"space of learning and knowledge-sharing, where we can collaboratively make meaning as a community. ";
 
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
@@ -43,7 +55,7 @@ class App extends Component {
       def: '',
       // my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
       my_term: props.term, //grab term from url
-      info_modal: decodeURIComponent(window.location.hash) === "#/about",
+      // info_modal: decodeURIComponent(window.location.hash) === "#/about",
       entries: [],
       terms: []
     };
@@ -145,50 +157,12 @@ class App extends Component {
         multiple={false}
       />
     </div>
-    <Dialog
-      actions={ [{label: "Done", onClick: this.aboutOnClick}] }
-      active={this.state.info_modal}
-      onEscKeyDown={this.aboutOnClick}
-      onOverlayClick={this.aboutOnClick}
-      title='About queer undefined'
-      style={{overflow:"scroll"}}
-    >
 
-            <p>Queer Undefined defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
-
-            <p>There are so many words used to describe gender and orientation. The variety of terms can be freeing, but it can also make things trickier for people who aren't familiar with the vocabulary yet. The aim of this project is to help people navigate the dozens and dozens of terms out there, whether they are looking to understand themselves or others better.</p>
-
-            <p> If you want to contribute a definition use <a href="https://goo.gl/forms/Jk1DogBiCZ2asnJq1">this google form</a>!</p>
-
-            <h6 className="_2J-aP" style={{marginTop: "16px"}}>Background</h6>
-
-            <p>I often get questions about the meaning of LGBTQ+ terms. I use resources like Human Rights Campaign's <a href="https://www.hrc.org/resources/glossary-of-terms">Glossary of Terms</a> to explain terms that I don't personally identify with – but lists like that are limited. They only include so many words, and for each term they just give an impersonal dictionary definition.</p>
-
-            <p>These words have a lot of nuance and depth. For example, two people who identify as bisexual might have completely different explanations of what that word means to them. That's why I'm gathering informal definitions from LGBTQ+ people – to give multiple personal perspectives. That way people learning these words can get more of the full story, and if they're looking for a way to label themself they can find something they connect to.</p>
-
-            <h6 className="_2J-aP" style={{marginTop: "16px"}}>About Me</h6>
-            <p>I'm a recent grad of Tufts University studying Gender Studies and Computer Science. I created this site as my capstone for my Gender Studies Major.</p>
-
-            
-
-            <p> If you have any questions/feedback, email me at <a href="mailto:info@queerundefined.com">info@queerundefined.com</a>.</p>
-    </Dialog>
       {(this.state.my_term !== "" && my_entries.length === 0) &&
         <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>
       }
       {(this.state.my_term === "" && window.location.pathname === "/") &&
-        <div className="blurb">
-        welcome to queer undefined, a site detailing  the many
-meanings of lgbtq+ labels and phrases. each definition
-you see here was submitted by an individual and may
-not align with your understanding or even with the
-other definitions displayed alongside it. the lgbtq+
-community is multifaceted and ever-shifting,
-as is our vernacular. none of these definitions is
-official or final. this site is not all-encompassing.
-it is an attempt to decrease barriers to
-conversation and understanding by opening a
-space of learning and knowledge-sharing, where we can collaboratively make meaning as a community. </div>
+        <div className="blurb">{welcomeBlurb}</div>
       }
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>

@@ -6,7 +6,6 @@ import Callback from './Callback';
 import PotentialDefs from './PotentialDefs';
 import ReportedDefs from './ReportedDefs';
 import About from './About';
-// import SearchResults from './SearchResults';
 import Auth from './Auth';
 import history from './history';
 
@@ -43,6 +42,3 @@ export const makeMainRoutes = () => {
       </Router>
   );
 }
-
-//<Route path="/search/*" exact render={(props) => <App auth={auth} term={props.match.params[0]} />} />
-//<Route path="/" render={(props) => <SearchResults term={props.match.params[0]} />} />
