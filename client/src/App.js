@@ -27,6 +27,8 @@ import './App.css';
 import ResultList from './ResultList.js';
 import PotentialDefs from './PotentialDefs.js'
 
+import history from './history';
+
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
 
@@ -44,7 +46,7 @@ class App extends Component {
       terms: []
     };
 
-    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})});
+    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     this.handleChange = this.handleTermChange.bind(this);
   }
@@ -69,7 +71,7 @@ class App extends Component {
 
   getDefListWithSortAs(searchterm) {
     if (searchterm === "") {this.setState({entries: []}); return [];}
-    var url = '/entries/' + encodeURIComponent(searchterm);
+    var url = '/entries/' + encodeURIComponent(searchterm.toLowerCase());
     fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res})});
   }
 
@@ -94,7 +96,8 @@ class App extends Component {
   handleTermChange = (value) => {
     var new_query = value === "" ? "" : "#/" + encodeURIComponent(value);
     this.setState({my_term: value});
-    history.pushState(null, null, "/" + new_query); //add term to url
+    //history.pushState(null, null, "/" + new_query); //add term to url
+    history.push("/" + new_query);
     this.getDefListWithSortAs(value);
 
     //COMMENT IN FOR PRODUCTION BUILD

@@ -82,6 +82,10 @@ a:hover {
     left: calc(50vw - 580px);
     max-width: 1110px;
   }
+
+  .About {
+      margin: 0 100px;
+  }
 }
 
 /* 940px - min for 2col with 100px margin */
