@@ -12,7 +12,7 @@ class About extends Component {
   render() {
     return(
 <div className="About blurb">
-    <h6 className="_2J-aP"  style={{marginTop: "-56px"}}>About</h6>
+    <h6 className="_2J-aP">About</h6>
 
     <p>Queer Undefined defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
 

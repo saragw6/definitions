@@ -12,7 +12,7 @@ class PotentialDefs extends Component {
     this.state = {
       potentials: []
     };
-console.log("made it here 1");
+
     if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
     fetch('/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
   }

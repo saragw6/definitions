@@ -26,14 +26,11 @@ const handleAuthentication = ({location}) => {
   }
 
 export const makeMainRoutes = () => {
-  console.log(window.location + "made it here -1");
   return (
       <Router history={history}>
         <div>
           <Route path="/*" render={(props) => <App auth={auth} term={getTermFromPath(props.match.params[0])}/>} />
-          <Route path="/potentialdefs" render={(props) => {
-            console.log("made it here 0");
-            return <PotentialDefs auth={auth}/>}} />
+          <Route path="/potentialdefs" render={(props) => <PotentialDefs auth={auth}/>} />
           <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
           <Route path="/callback" render={(props) => {

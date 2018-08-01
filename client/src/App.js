@@ -49,7 +49,6 @@ const welcomeBlurb = "welcome to queer undefined, a site detailing  the many" +
 class App extends Component {
   constructor(props) {
   super();
-  console.log(props.term);
     this.state = {
       searchTerm: 'filler text',
       def: '',
@@ -59,8 +58,6 @@ class App extends Component {
       entries: [],
       terms: []
     };
-    console.log(this.state.my_term);
-    console.log("updates are effective");
 
     fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());

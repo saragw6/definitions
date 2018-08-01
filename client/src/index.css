@@ -44,7 +44,6 @@ a:hover {
   padding: 10vw 0;
 }
 
-
 @media only screen and (min-width: 495px) {
   .header {
     font-weight: 200;
@@ -59,6 +58,7 @@ a:hover {
     padding: 5vw 15vw;
     margin: 0px -25px;
   }
+
 }
 
 .defs {
@@ -75,6 +75,7 @@ a:hover {
   .defs {
     transition: left .5s;
   }
+
 }
 
 @media only screen and (min-width: 1159px) {
@@ -85,6 +86,7 @@ a:hover {
 
   .About {
       margin: 0 100px;
+     /* padding-top: 30px;*/
   }
 }
 
@@ -97,3 +99,7 @@ a:hover {
   }
 }
 
+
+.About {
+  padding-top: 30px;
+}
