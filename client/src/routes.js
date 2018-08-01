@@ -25,11 +25,20 @@ const handleAuthentication = ({location}) => {
     return term;
   }
 
+  function searchHashRedirect(){
+    var term = decodeURIComponent(window.location.hash.substring(2));
+    console.log(term);
+    if (term) {
+      console.log("redirecting");
+      window.location.replace("/search/" + term);
+    }
+  }
+
 export const makeMainRoutes = () => {
   return (
       <Router history={history}>
         <div>
-          <Route path="/*" render={(props) => <App auth={auth} term={getTermFromPath(props.match.params[0])}/>} />
+          <Route path="/*" render={(props) => {searchHashRedirect(); return <App auth={auth} term={getTermFromPath(props.match.params[0])}/>;} }/>
           <Route path="/potentialdefs" render={(props) => <PotentialDefs auth={auth}/>} />
           <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
