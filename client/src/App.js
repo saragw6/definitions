@@ -56,12 +56,14 @@ class App extends Component {
       my_term: props.term, //grab term from url
       // info_modal: decodeURIComponent(window.location.hash) === "#/about",
       entries: [],
-      terms: []
+      terms: [],
+      entriesLoading: true
     };
 
     fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
-    this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+    // this.getDefListWithSortAs(this.state.my_term.toLowerCase()); //moved because setState caused warning
     this.handleChange = this.handleTermChange.bind(this);
+
   }
 
   handleHashChange = () => {
@@ -75,6 +77,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.getDefListWithSortAs(this.state.my_term.toLowerCase());
     window.addEventListener("hashchange", this.handleHashChange, false);
   }
 
@@ -83,9 +86,14 @@ class App extends Component {
   }
 
   getDefListWithSortAs(searchterm) {
-    if (searchterm === "") {this.setState({entries: []}); return [];}
+    // console.log("called getdeflist");
+    this.setState({entries: []});
+    if (searchterm === "") {return [];}
+    this.setState({entriesLoading: true});
+
     var url = '/entries/' + encodeURIComponent(searchterm.toLowerCase());
-    fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res})});
+    fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res, entriesLoading: false})});
+    console.log(this.state.entriesLoading + " 2");
   }
 
 
@@ -114,6 +122,8 @@ class App extends Component {
     this.setState({my_term: value});
     //history.pushState(null, null, "/" + new_query); //add term to url
     history.push("/" + new_query);
+    // this.setState({entriesLoading: true});
+    console.log(this.state.entriesLoading + " 0");
     this.getDefListWithSortAs(value);
 
     //COMMENT IN FOR PRODUCTION BUILD
@@ -123,10 +133,13 @@ class App extends Component {
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
+    console.log(this.state.entries.length + " from render");
+    console.log(this.state.entriesLoading + " from render");
     const terms = this.state.terms;
     const my_entries = this.state.entries;
     const pageTitle = this.state.my_term === "" ? "Queer Undefined" : this.state.my_term + " | Queer Undefined" ;
     const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
+    const showLoading = this.state.entriesLoading;
 
   return(
     <DocumentTitle title={pageTitle}>
@@ -156,8 +169,11 @@ class App extends Component {
       />
     </div>
 
-      {(this.state.my_term !== "" && my_entries.length === 0) &&
+      {(!showLoading && this.state.my_term !== "" && my_entries.length === 0) &&
         <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>
+      }
+      {(this.state.my_term !== "" && showLoading) &&
+        <div className="blurb"> Loading definitions... </div>
       }
       {(this.state.my_term === "" && window.location.pathname === "/") &&
         <div className="blurb">{welcomeBlurb}</div>
