@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
-// import Dialog from 'react-toolbox/lib/dialog/Dialog';
-
-// import Button from 'react-toolbox/lib/button/Button';
-// import Tooltip from 'react-toolbox/lib/tooltip';
-// const TooltipButton = Tooltip(Button);
+import FontIcon from 'react-toolbox/lib/font_icon';
 
 class About extends Component {
 
@@ -30,7 +26,7 @@ class About extends Component {
             <p>If a definition generally disrespects the LGBTQ+ community or this project it will be rejected.</p>
 
 <p>A definition that dismisses/erases a particular LGBTQ+ identity will be rejected. That being said, explaining and contextualizing criticisms of a term or identity is encouraged. Queer Undefined aims to display the controversies within the community but does not allow intra-community discrimination or hate.</p>
-<p>You can report a definition as violating these guidelines by clicking the ! icon in the top right corner of the definition.</p>
+<p>You can report a definition as violating these guidelines by clicking the <FontIcon value='outlined_flag' style={{fontSize:'14px'}}/> icon in the top right corner of the definition.</p>
             <h6 className="_2J-aP" style={{marginTop: "16px"}}>Contact</h6>
             <p> If you have any questions/feedback, email me at <a href="mailto:info@queerundefined.com">info@queerundefined.com</a>.</p>
 </div>
