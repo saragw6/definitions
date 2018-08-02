@@ -86,14 +86,12 @@ class App extends Component {
   }
 
   getDefListWithSortAs(searchterm) {
-    // console.log("called getdeflist");
     this.setState({entries: []});
     if (searchterm === "") {return [];}
-    this.setState({entriesLoading: true});
 
+    this.setState({entriesLoading: true});
     var url = '/entries/' + encodeURIComponent(searchterm.toLowerCase());
     fetch(url).then(res => {return res.json()}).then(res => {this.setState({entries: res, entriesLoading: false})});
-    console.log(this.state.entriesLoading + " 2");
   }
 
 
@@ -102,15 +100,6 @@ class App extends Component {
   }
 
   aboutOnClick = () => {
-    // this.toggleAbout();
-    // // var newURL = this.state.info_modal ? "/definitions" : "/definitions/about"; //because its hosted on github for now
-    // // history.pushState(null, null, newURL);
-    // if (!this.state.info_modal) {
-    //   //history.pushState(null, null, "/#/about");
-    // } else {
-    //   var new_term = this.state.my_term === "about" ? "" : this.state.my_term;
-    //   this.handleTermChange(new_term);
-    // }
     this.setState({my_term: ""});
     this.getDefListWithSortAs("");
     history.push("/about");
@@ -122,8 +111,7 @@ class App extends Component {
     this.setState({my_term: value});
     //history.pushState(null, null, "/" + new_query); //add term to url
     history.push("/" + new_query);
-    // this.setState({entriesLoading: true});
-    console.log(this.state.entriesLoading + " 0");
+
     this.getDefListWithSortAs(value);
 
     //COMMENT IN FOR PRODUCTION BUILD
@@ -133,8 +121,6 @@ class App extends Component {
  //TODO: edit the request form to say the url/title instead of "the site"
 //the && for the ne defs section in this render causes it to only render when the 1st clause is true
   render() {
-    console.log(this.state.entries.length + " from render");
-    console.log(this.state.entriesLoading + " from render");
     const terms = this.state.terms;
     const my_entries = this.state.entries;
     const pageTitle = this.state.my_term === "" ? "Queer Undefined" : this.state.my_term + " | Queer Undefined" ;
