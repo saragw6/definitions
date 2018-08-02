@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "auth0-js": "^9.6.1",
+    "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
     "express-promise-router": "^3.0.2",
     "pg": "^7.4.3"
