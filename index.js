@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+var enforce = require('express-sslify');
 
 const app = express();
 const mountRoutes = require('./routes')
@@ -22,6 +23,7 @@ const client = new Client({
 
 //client connect inside each endpoint instead?
 client.connect();
+enforce.HTTPS({ trustProtoHeader: true });
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
