@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
-var enforce = require('express-sslify');
+//var enforce = require('express-sslify');
+
+var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
+
 
 const app = express();
 const mountRoutes = require('./routes')
@@ -23,7 +26,10 @@ const client = new Client({
 
 //client connect inside each endpoint instead?
 client.connect();
-enforce.HTTPS({ trustProtoHeader: true });
+// enforce.HTTPS({ trustProtoHeader: true });
+
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/]));
+
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));

@@ -3,6 +3,7 @@
     "auth0-js": "^9.6.1",
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
+    "express-http-to-https": "^1.1.4",
     "express-promise-router": "^3.0.2",
     "express-sslify": "^1.2.0",
     "pg": "^7.4.3"
