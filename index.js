@@ -15,10 +15,11 @@ function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], red
 
     if (isNotSecure || isHerokuUrl) {
       console.log("https get host: " + req.get('host'));
-      console.log("https .host: " + req.host);
       console.log("https url: " + req.url);
       console.log("orig url: " + req.originalUrl);
       console.log("heroku check: " + isHerokuUrl);
+      console.log("protocol: " + req.protocol);
+      console.log("not-secure check: " + isNotSecure);
       console.log("startsWith check: " + req.url.startsWith("//"));
       console.log("path: " + path);
       return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + path)
