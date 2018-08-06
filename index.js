@@ -9,7 +9,7 @@ function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], red
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
         (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
 
-    const isHerokuUrl = host === 'queer-undefined.herokuapp.com';
+    const isHerokuUrl = req.get('host') === 'queer-undefined.herokuapp.com';
 
     if (isNotSecure || isHerokuUrl) {
       console.log("https host: " + req.get('host'));
