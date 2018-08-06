@@ -20,13 +20,13 @@ const handleAuthentication = ({location}) => {
   function getTermFromPath(path){
     var term = "";
     if (path.startsWith("search")) {
-      term = path.substring(7);
+      term = decodeURIComponent(path.substring(7));
     }
     return term;
   }
 
   function searchHashRedirect(){
-    var term = decodeURIComponent(window.location.hash.substring(2));
+    var term = window.location.hash.substring(2);
     console.log(term);
     if (term) {
       console.log("redirecting");

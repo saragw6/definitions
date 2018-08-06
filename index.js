@@ -1,24 +1,7 @@
 const express = require('express');
 const path = require('path');
-//var enforce = require('express-sslify');
 
-//var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
-function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], redirectCode = 301) {
-  return function middlewareRedirectToHTTPS (req, res, next) {
-    const isNotSecure = (!req.get('x-forwarded-port') && req.protocol !== 'https') ||
-      parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
-        (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
-
-    const path = req.url.startsWith("//") ? req.url.substring(1) : req.url;
-
-    if (isNotSecure) {
-      return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + path)
-    }
-
-    next()
-  }
-}
-
+var redirectToHTTPSOrCustomDomain = require('./redirect.js').redirectToHTTPSOrCustomDomain
 
 const app = express();
 const mountRoutes = require('./routes')
@@ -42,18 +25,6 @@ const client = new Client({
 //client connect inside each endpoint instead?
 client.connect();
 // enforce.HTTPS({ trustProtoHeader: true });
-
-// app.use(function forceLiveDomain(req, res, next) {
-//   // Don't allow user to hit Heroku now that we have a domain
-//   var host = req.get('Host');
-//   if (host === 'queer-undefined.herokuapp.com') {
-//   	console.log("from 301, orig url: " + req.originalUrl);
-//   	console.log("from 301, url: " + req.url);
-//   	console.log('from 301: https://www.queerundefined.com' + req.originalUrl.substring(1));
-//     return res.redirect(301, 'https://www.queerundefined.com' + req.originalUrl.substring(1));
-//   }
-//   return next();
-// });
 
 app.use(redirectToHTTPSOrCustomDomain([/localhost:(\d{4})/], [/\/insecure/]));
 
