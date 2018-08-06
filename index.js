@@ -3,7 +3,7 @@ const path = require('path');
 //var enforce = require('express-sslify');
 
 //var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
-var redirectToHTTPS = function redirectToHTTPS (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
+function redirectToHTTPS (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
   return function middlewareRedirectToHTTPS (req, res, next) {
     const isNotSecure = (!req.get('x-forwarded-port') && req.protocol !== 'https') ||
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
