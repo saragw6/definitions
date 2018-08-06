@@ -39,7 +39,7 @@ app.use(function forceLiveDomain(req, res, next) {
   return next();
 });
 
-//app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/]));
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/]));
 
 
 // Serve static files from the React app
