@@ -3,17 +3,19 @@ const path = require('path');
 //var enforce = require('express-sslify');
 
 //var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
-function redirectToHTTPS (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
+function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
   return function middlewareRedirectToHTTPS (req, res, next) {
     const isNotSecure = (!req.get('x-forwarded-port') && req.protocol !== 'https') ||
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
         (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
 
-    if (isNotSecure) {
+    const isHerokuUrl = host === 'queer-undefined.herokuapp.com';
+
+    if (isNotSecure || isHerokuUrl) {
       console.log("https host: " + req.get('host'));
       console.log("https url: " + req.url);
       console.log("orig url: " + req.originalUrl);
-      return res.redirect(redirectCode, 'https://' + req.get('host') + req.url)
+      return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + req.url)
     }
 
     next()
@@ -44,19 +46,19 @@ const client = new Client({
 client.connect();
 // enforce.HTTPS({ trustProtoHeader: true });
 
-app.use(function forceLiveDomain(req, res, next) {
-  // Don't allow user to hit Heroku now that we have a domain
-  var host = req.get('Host');
-  if (host === 'queer-undefined.herokuapp.com') {
-  	console.log("from 301, orig url: " + req.originalUrl);
-  	console.log("from 301, url: " + req.url);
-  	console.log('from 301: https://www.queerundefined.com' + req.originalUrl.substring(1));
-    return res.redirect(301, 'https://www.queerundefined.com' + req.originalUrl.substring(1));
-  }
-  return next();
-});
+// app.use(function forceLiveDomain(req, res, next) {
+//   // Don't allow user to hit Heroku now that we have a domain
+//   var host = req.get('Host');
+//   if (host === 'queer-undefined.herokuapp.com') {
+//   	console.log("from 301, orig url: " + req.originalUrl);
+//   	console.log("from 301, url: " + req.url);
+//   	console.log('from 301: https://www.queerundefined.com' + req.originalUrl.substring(1));
+//     return res.redirect(301, 'https://www.queerundefined.com' + req.originalUrl.substring(1));
+//   }
+//   return next();
+// });
 
-app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/]));
+app.use(redirectToHTTPSOrCustomDomain([/localhost:(\d{4})/], [/\/insecure/]));
 
 
 // Serve static files from the React app
