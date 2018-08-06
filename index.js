@@ -47,9 +47,10 @@ app.use(function forceLiveDomain(req, res, next) {
   // Don't allow user to hit Heroku now that we have a domain
   var host = req.get('Host');
   if (host === 'queer-undefined.herokuapp.com') {
-  	console.log("from 301: " + req.originalUrl);
+  	console.log("from 301, orig url: " + req.originalUrl);
+  	console.log("from 301, url: " + req.url);
   	console.log('from 301: https://www.queerundefined.com' + req.originalUrl.substring(1));
-    return res.redirect(301, 'http://www.queerundefined.com' + req.originalUrl.substring(1));
+    return res.redirect(301, 'https://www.queerundefined.com' + req.originalUrl.substring(1));
   }
   return next();
 });
