@@ -3,25 +3,15 @@ const path = require('path');
 //var enforce = require('express-sslify');
 
 //var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
-function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
+function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], redirectCode = 301) {
   return function middlewareRedirectToHTTPS (req, res, next) {
     const isNotSecure = (!req.get('x-forwarded-port') && req.protocol !== 'https') ||
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
         (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
 
-    const isHerokuUrl = req.get('host').includes('queer-undefined.herokuapp.com');
-
     const path = req.url.startsWith("//") ? req.url.substring(1) : req.url;
 
-    if (isNotSecure || isHerokuUrl) {
-      console.log("https get host: " + req.get('host'));
-      console.log("https url: " + req.url);
-      console.log("orig url: " + req.originalUrl);
-      console.log("heroku check: " + isHerokuUrl);
-      console.log("protocol: " + req.protocol);
-      console.log("not-secure check: " + isNotSecure);
-      console.log("startsWith check: " + req.url.startsWith("//"));
-      console.log("path: " + path);
+    if (isNotSecure) {
       return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + path)
     }
 
