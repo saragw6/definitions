@@ -17,6 +17,7 @@ function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], red
       console.log("https host: " + req.get('host'));
       console.log("https url: " + req.url);
       console.log("orig url: " + req.originalUrl);
+      console.log("check: " + isHerokuUrl);
       console.log("path: " + path);
       return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + path)
     }
