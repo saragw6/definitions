@@ -28,6 +28,15 @@ const client = new Client({
 client.connect();
 // enforce.HTTPS({ trustProtoHeader: true });
 
+app.use(function forceLiveDomain(req, res, next) {
+  // Don't allow user to hit Heroku now that we have a domain
+  var host = req.get('Host');
+  if (host === 'queer-undefined.herokuapp.com') {
+    return res.redirect(301, 'https://queerundefined.com/' + req.originalUrl);
+  }
+  return next();
+});
+
 app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/]));
 
 
