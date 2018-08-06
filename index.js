@@ -2,7 +2,22 @@ const express = require('express');
 const path = require('path');
 //var enforce = require('express-sslify');
 
-var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
+//var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
+var redirectToHTTPS = function redirectToHTTPS (ignoreHosts = [], ignoreRoutes = [], redirectCode = 302) {
+  return function middlewareRedirectToHTTPS (req, res, next) {
+    const isNotSecure = (!req.get('x-forwarded-port') && req.protocol !== 'https') ||
+      parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
+        (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
+
+    if (isNotSecure) {
+      console.log("https host: " + req.get('host'));
+      console.log("https url: " + req.url);
+      return res.redirect(redirectCode, 'https://' + req.get('host') + req.url)
+    }
+
+    next()
+  }
+}
 
 
 const app = express();
@@ -33,8 +48,8 @@ app.use(function forceLiveDomain(req, res, next) {
   var host = req.get('Host');
   if (host === 'queer-undefined.herokuapp.com') {
   	console.log(req.originalUrl);
-  	console.log("with substring: " + req.originalUrl.substring(1));
-    return res.redirect(301, 'https://www.queerundefined.com/' + req.originalUrl.substring(1));
+  	console.log('https://www.queerundefined.com' + req.originalUrl.substring(1));
+    return res.redirect(301, 'http://www.queerundefined.com' + req.originalUrl.substring(1));
   }
   return next();
 });
