@@ -9,15 +9,17 @@ function redirectToHTTPSOrCustomDomain (ignoreHosts = [], ignoreRoutes = [], red
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
         (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
 
-    const isHerokuUrl = req.get('host') === 'queer-undefined.herokuapp.com';
+    const isHerokuUrl = req.get('host').contains('queer-undefined.herokuapp.com');
 
-    const path = isHerokuUrl ? req.url.substring(1) : req.url;
+    const path = req.url.startsWith("//") ? req.url.substring(1) : req.url;
 
     if (isNotSecure || isHerokuUrl) {
-      console.log("https host: " + req.get('host'));
+      console.log("https get host: " + req.get('host'));
+      console.log("https .host: " + req.host);
       console.log("https url: " + req.url);
       console.log("orig url: " + req.originalUrl);
-      console.log("check: " + isHerokuUrl);
+      console.log("heroku check: " + isHerokuUrl);
+      console.log("startsWith check: " + req.url.startsWith("//"));
       console.log("path: " + path);
       return res.redirect(redirectCode, 'https://' + 'www.queerundefined.com' + path)
     }
