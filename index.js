@@ -34,7 +34,7 @@ app.use(function forceLiveDomain(req, res, next) {
   if (host === 'queer-undefined.herokuapp.com') {
   	console.log(req.originalUrl);
   	console.log("with substring: " + req.originalUrl.substring(1));
-    return res.redirect(301, 'https://queerundefined.com/' + req.originalUrl.substring(1));
+    return res.redirect(301, 'https://www.queerundefined.com/' + req.originalUrl.substring(1));
   }
   return next();
 });
