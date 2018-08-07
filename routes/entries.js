@@ -10,18 +10,41 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 module.exports = router;
 
-router.get('/', async (req, res, next) => {
+//needs work, won't return name & id of author
+// router.get('/', async (req, res, next) => {
+//   const client = new Client({ connectionString: db_url, ssl: true });
+//   client.connect();
+
+//   var queryString = 'SELECT * FROM entry WHERE action = 2';
+
+//   try {
+//     const { rows } = await client.query(queryString);
+//     res.json(rows);
+//   } catch (err) {
+//     console.error(err.stack);
+//     res.status(500).send('Error while retrieving entries'); //could make more specific
+//   }
+//   client.end();
+// });
+
+router.get('/potentials', async (req, res, next) => {
+//return entries with author id or name and identity???
   const client = new Client({ connectionString: db_url, ssl: true });
   client.connect();
 
-  var queryString = 'SELECT * FROM entry WHERE action = 2';
+
+  //join inner/outer for where author is null?
+
+  //get entries with author name & id
+  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=1';
 
   try {
-    const { rows } = await client.query(queryString);
-    res.json(rows);
+    //get exact matches
+    var result = await client.query(exactQueryString);
+    res.json(result.rows);
   } catch (err) {
     console.error(err.stack);
-    res.status(500).send('Error while retrieving entries'); //could make more specific
+    res.status(500).send('Error while retrieving potential entries'); //could make more specific
   }
   client.end();
 });

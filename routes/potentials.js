@@ -10,25 +10,25 @@ const { Client } = require('pg');
 
 module.exports = router;
 
-router.get('/', async (req, res, next) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
+// router.get('/', async (req, res, next) => {
+//   const client = new Client({ connectionString: db_url, ssl: true });
+//   client.connect();
 
-  //var queryString = 'SELECT * FROM potential';
-  var queryString = 'SELECT * FROM entry WHERE action = 1';
+//   //var queryString = 'SELECT * FROM potential';
+//   var queryString = 'SELECT * FROM entry WHERE action = 1';
 
 
-  try {
-    const { rows } = await client.query(queryString);
-    res.json(rows);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while retrieving potential entries'); //could make more specific
-  }
+//   try {
+//     const { rows } = await client.query(queryString);
+//     res.json(rows);
+//   } catch (err) {
+//     console.error(err.stack);
+//     res.status(500).send('Error while retrieving potential entries'); //could make more specific
+//   }
 
-  client.end();
+//   client.end();
 
-});
+// });
 
 
 // router.post('/', async (req, res) => {
