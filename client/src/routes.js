@@ -28,7 +28,7 @@ const handleAuthentication = ({location}) => {
   function searchHashRedirect(){
     var term = window.location.hash.substring(2);
     console.log(term);
-    if (term) {
+    if (term && window.location.pathname === "") {
       console.log("redirecting");
       window.location.replace("/search/" + term);
     }

@@ -14,7 +14,7 @@ class PotentialDefs extends Component {
     };
 
     if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
-    fetch('/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
+    fetch('/entries/potentials').then(res => {return res.json()}).then((res) => this.setState({potentials: res}));
   }
 
   render() {
