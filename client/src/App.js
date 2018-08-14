@@ -126,6 +126,9 @@ class App extends Component {
     const pageTitle = this.state.my_term === "" ? "Queer Undefined" : this.state.my_term + " | Queer Undefined" ;
     const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
     const showLoading = this.state.entriesLoading;
+    const locationStrings = window.location.href.split(".com/");
+    const canonicalUrl = "https://www.queerundefined.com/" + locationStrings[1];
+    
 
   return(
     <DocumentTitle title={pageTitle}>
@@ -138,6 +141,8 @@ class App extends Component {
       <meta property="description" content={description} />
       <meta property="og:site_name" content="Queer Undefined"/>
       <meta property="og:title" content={pageTitle}/>
+      <link rel="canonical" href={canonicalUrl} />
+      
     </Helmet>
     <div className="header-wrapper">
       <div className="header">queer undefined</div>
