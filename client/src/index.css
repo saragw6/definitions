@@ -34,6 +34,11 @@ a:hover {
   font-family: "Helvetica Neue";
   font-size: 40px;
   font-weight: 200;
+  display: block;
+}
+
+.header:hover {
+  text-decoration: none;
 }
 
 .blurb {

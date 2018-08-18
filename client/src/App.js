@@ -145,7 +145,7 @@ class App extends Component {
       
     </Helmet>
     <div className="header-wrapper">
-      <div className="header">queer undefined</div>
+      <a className="header" href="/">queer undefined</a>
       <Autocomplete
         allowCreate
         direction="down"
