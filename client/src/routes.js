@@ -4,6 +4,8 @@ import App from './App';
 // import Home from './Home/Home';
 import Callback from './Callback';
 import PotentialDefs from './PotentialDefs';
+import DefineForm from './DefineForm';
+import RequestForm from './RequestForm';
 import ReportedDefs from './ReportedDefs';
 import About from './About';
 import Auth from './Auth';
@@ -40,6 +42,8 @@ export const makeMainRoutes = () => {
         <div>
           <Route path="/*" render={(props) => {searchHashRedirect(); return <App auth={auth} term={getTermFromPath(props.match.params[0])}/>;} }/>
           <Route path="/potentialdefs" render={(props) => <PotentialDefs auth={auth}/>} />
+          <Route path="/defineform" render={(props) => <DefineForm auth={auth}/>} />
+          <Route path="/requestform" render={(props) => <RequestForm auth={auth}/>} />
           <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
           <Route path="/callback" render={(props) => {
