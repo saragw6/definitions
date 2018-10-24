@@ -7,6 +7,7 @@ import PotentialDefs from './PotentialDefs';
 import DefineForm from './DefineForm';
 import RequestForm from './RequestForm';
 import ReportedDefs from './ReportedDefs';
+import Glossary from './Glossary';
 import About from './About';
 import Auth from './Auth';
 import history from './history';
@@ -46,6 +47,7 @@ export const makeMainRoutes = () => {
           <Route path="/requestform" render={(props) => <RequestForm auth={auth}/>} />
           <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
+          <Route path="/glossary" render={(props) =>  <Glossary auth={auth}/>} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback/>
