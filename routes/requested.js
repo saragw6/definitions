@@ -34,6 +34,7 @@ router.get('/', async (req, res) => {
 
 
 
+//TODO: make test db so can properly test this
 router.post('/:term', async (req, res) => {
 
   let queryString = 'INSERT INTO requested(term, fulfilled) SELECT CAST($1 AS VARCHAR),0 WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);';
