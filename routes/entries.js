@@ -1,8 +1,6 @@
 const Router = require('express-promise-router');
 const router = new Router();
-
-const db_url = process.env.DB_URL;
-const { Client } = require('pg');
+const pool = require('../db');
 
 var bodyParser = require('body-parser');
 router.use(bodyParser.json());
@@ -10,44 +8,28 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 module.exports = router;
 
-//needs work, won't return name & id of author
-// router.get('/', async (req, res, next) => {
-//   const client = new Client({ connectionString: db_url, ssl: true });
-//   client.connect();
-
-//   var queryString = 'SELECT * FROM entry WHERE action = 2';
-
-//   try {
-//     const { rows } = await client.query(queryString);
-//     res.json(rows);
-//   } catch (err) {
-//     console.error(err.stack);
-//     res.status(500).send('Error while retrieving entries'); //could make more specific
-//   }
-//   client.end();
-// });
-
 router.get('/potentials', async (req, res, next) => {
-//return entries with author id or name and identity???
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
-
-
+  //return entries with author id or name and identity???
   //join inner/outer for where author is null?
 
   //get entries with author name & id
-  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=1';
+  let queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=1';
 
-  try {
-    //get exact matches
-    var result = await client.query(exactQueryString);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while retrieving potential entries'); //could make more specific
-  }
-  client.end();
+  pool.connect((err, client, release) => {
+        if (err) return console.error('Error acquiring client', err.stack);
+        client.query(queryString, (err, result) => {
+            release();
+            if (err) {
+                res.status(500).send('Error while retrieving potential entries'); //could make more specific
+                return console.error('Error executing query', err.stack);
+            }
+            console.log(result.rows);
+            res.json(result.rows);
+        })
+    })
 });
+
+
 
 router.get('/:term', async (req, res, next) => {
 //return entries with author id or name and identity???
@@ -178,4 +160,23 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
 
 //   client.end();
 
+// });
+
+
+
+//needs work, won't return name & id of author
+// router.get('/', async (req, res, next) => {
+//   const client = new Client({ connectionString: db_url, ssl: true });
+//   client.connect();
+
+//   var queryString = 'SELECT * FROM entry WHERE action = 2';
+
+//   try {
+//     const { rows } = await client.query(queryString);
+//     res.json(rows);
+//   } catch (err) {
+//     console.error(err.stack);
+//     res.status(500).send('Error while retrieving entries'); //could make more specific
+//   }
+//   client.end();
 // });
