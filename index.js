@@ -33,4 +33,6 @@ app.listen(port);
 
 console.log(`Queer Undefined listening on ${port}`);
 
+module.exports = app;
+
 //module.exports = app.listen(5000);
