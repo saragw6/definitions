@@ -1,9 +1,6 @@
 const Router = require('express-promise-router');
 const router = new Router();
 
-const db_url = process.env.DB_URL;
-const { Client } = require('pg');
-
 function decodeUrl(str) {
   str = str.replace(/%28/g, "(");
   str = str.replace(/%29/g, ")");
@@ -13,26 +10,34 @@ function decodeUrl(str) {
 module.exports = router;
 
 router.post('/:term/:synonym', async (req, res, next) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
 
   var term = decodeUrl(req.params.term);
   var synonym = decodeUrl(req.params.synonym);
 
-  var queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
+  let queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
+  let values = [term, synonym];
 
   console.log("term: " + term + " synonym: " + synonym);
 
-  try {
-    const { rows } = await client.query(queryString, [term, synonym]);
-    res.send("added synonym: " + term + "\/" + synonym);
-  } catch (err) {
-    console.error(err.stack);
-    res.status(500).send('Error while inserting synonym: ' + term + "\/" + synonym); //could make more specific
-  }
-
-  client.end();
+  pool.connect((err, client, release) => {
+      if (err) return console.error('Error acquiring client', err.stack);
+        client.query(queryString, values, (err, result) => {
+            release();
+            if (err) {
+                res.status(500).send('Error while inserting synonym: ' + term + "\/" + synonym); //could make more specific
+                return console.error('Error executing query', err.stack);
+            }
+            console.log(result.rows);
+            res.send("added synonym: " + term + "\/" + synonym);
+        })
+    })
 });
+
+
+
+
+
+
 
 router.get('/:term', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: true });
