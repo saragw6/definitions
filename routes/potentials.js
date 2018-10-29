@@ -1,8 +1,8 @@
 const Router = require('express-promise-router');
 const router = new Router();
 
-const db_url = process.env.DB_URL;
-const { Client } = require('pg');
+// const db_url = process.env.DB_URL;
+// const { Client } = require('pg');
 
 // var bodyParser = require('body-parser');
 // router.use(bodyParser.json());
