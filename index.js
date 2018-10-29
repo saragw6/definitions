@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 var redirectToHTTPSOrCustomDomain = require('./redirect.js').redirectToHTTPSOrCustomDomain
 
@@ -13,20 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //use validator?
 
-const db_url = process.env.DB_URL;
-
-const { Client } = require('pg');
-//set up connection to db
-const client = new Client({
-  connectionString: db_url,
-  ssl: true,
-});
-
-
-//client connect inside each endpoint instead?
-client.connect();
 // enforce.HTTPS({ trustProtoHeader: true });
-
 app.use(redirectToHTTPSOrCustomDomain([/localhost:(\d{4})/], [/\/insecure/]));
 
 
