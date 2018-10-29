@@ -43,11 +43,11 @@ router.post('/:term', async (req, res) => {
     client.query(queryString, values, (err, result) => {
       release();
       if (err) {
-        res.status(500).send('Error while inserting requested term: ' + term); //could make more specific
+        res.status(500).send('Error while inserting requested term: ' + values[0]); //could make more specific
           return console.error('Error executing query', err.stack);
       }
       console.log(result.rows);
-      res.send("added requested term: " + term);
+      res.send("added requested term: " + values[0]);
     })
   })
 })
