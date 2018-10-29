@@ -12,8 +12,8 @@ module.exports = router;
 
 router.post('/:term/:synonym', async (req, res, next) => {
 
-  var term = decodeUrl(req.params.term);
-  var synonym = decodeUrl(req.params.synonym);
+  let term = decodeUrl(req.params.term);
+  let synonym = decodeUrl(req.params.synonym);
 
   let queryString = 'INSERT INTO synonym(term, sort_as) VALUES ($1,$2) ON CONFLICT ON CONSTRAINT synonym_pkey DO NOTHING;';
   let values = [term, synonym];
