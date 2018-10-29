@@ -2,9 +2,6 @@ const Router = require('express-promise-router');
 const router = new Router();
 const pool = require('../db')
 
-const db_url = process.env.DB_URL;
-const { Client } = require('pg');
-
 module.exports = router;
 
 router.get('/', async (req, res) => {
