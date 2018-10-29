@@ -2,9 +2,8 @@ const Router = require('express-promise-router');
 const router = new Router();
 const pool = require('../db');
 
-var bodyParser = require('body-parser');
-router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({extended: true}));
+const { Client } = require('pg');
+const db_url = process.env.DB_URL;
 
 module.exports = router;
 
