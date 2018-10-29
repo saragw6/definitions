@@ -1,7 +1,7 @@
 const Router = require('express-promise-router');
 const router = new Router();
 
-const db_url = "postgres://cvbxymodwgcdog:6ca64c4362716069e239320eec8ae06097e66f573126ae33027e5e593fe663d2@ec2-54-243-235-153.compute-1.amazonaws.com:5432/d6i5mdoncrqtm0";
+const db_url = process.env.DB_URL;
 const { Client } = require('pg');
 
 // var bodyParser = require('body-parser');
