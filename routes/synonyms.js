@@ -1,5 +1,6 @@
 const Router = require('express-promise-router');
 const router = new Router();
+const pool = require('../db');
 
 function decodeUrl(str) {
   str = str.replace(/%28/g, "(");
@@ -33,15 +34,10 @@ router.post('/:term/:synonym', async (req, res, next) => {
     })
 });
 
-
-
-
-
-
-
-router.get('/:term', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
-
-    var queryString = 'SELECT * FROM synonym WHERE term = $1';
-});
+//
+// router.get('/:term', async (req, res) => {
+//   const client = new Client({ connectionString: db_url, ssl: true });
+//   client.connect();
+//
+//     var queryString = 'SELECT * FROM synonym WHERE term = $1';
+// });
