@@ -1,5 +1,5 @@
 require('mocha');
-const { expect, assert } = require('chai');
+const { expect } = require('chai');
 const request = require('request');
 
 const app = require('../index');
