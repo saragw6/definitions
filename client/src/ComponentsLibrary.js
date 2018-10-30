@@ -7,7 +7,8 @@ import Glossary from './Glossary';
 import About from './About';
 import App from './App';
 import Auth from './Auth';
+import ResultList from './ResultList.js';
 
 
 export { Callback, PotentialDefs, DefineForm,
-    RequestForm, ReportedDefs, Glossary, About, App, Auth };
+    RequestForm, ReportedDefs, Glossary, About, App, Auth, ResultList };
