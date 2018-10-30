@@ -8,4 +8,5 @@ const tearDown = () => app.listen().close();
 startApp();
 require('./authorTest')();
 require('./reportedTest')();
+require('./requestedTest')();
 tearDown();
