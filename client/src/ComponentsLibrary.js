@@ -1,13 +1,13 @@
-import Callback from './Callback';
-import PotentialDefs from './PotentialDefs';
+import Callback from './Pages/Callback';
+import PotentialDefs from './Pages/PotentialDefs';
 import DefineForm from './Forms/DefineForm';
 import RequestForm from './Forms/RequestForm';
-import ReportedDefs from './ReportedDefs';
-import Glossary from './Glossary';
-import About from './About';
+import ReportedDefs from './Pages/ReportedDefs';
+import Glossary from './Pages/Glossary';
+import About from './Pages/About';
 import App from './App';
 import Auth from './Auth';
-import ResultList from './ResultList.js';
+import ResultList from './Pages/ResultList.js';
 
 
 export { Callback, PotentialDefs, DefineForm,

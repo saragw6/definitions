@@ -2,7 +2,7 @@ import React from 'react';
 
 import Masonry from 'react-masonry-component';
 
-import ResultCard from './ResultCard.js';
+import ResultCard from '../ResultCard.js';
 
 var masonryOptions = {
     transitionDuration: ".5s"
