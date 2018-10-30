@@ -22,7 +22,7 @@ const makeMainRoutes = () => {
           <Route path="/potentialdefs" render={() => <PotentialDefs auth={auth}/>} />
           <Route path="/defineform" render={() => <DefineForm/>} />
           <Route path="/requestform" render={() => <RequestForm/>} />
-          <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
+          <Route path="/reporteddefs" render={() => <ReportedDefs auth={auth}/>} />
           <Route path="/about" render={(props) => <About auth={auth}/>} />
           <Route path="/glossary" render={(props) =>  <Glossary auth={auth}/>} />
           <Route path="/callback" render={(props) => {
