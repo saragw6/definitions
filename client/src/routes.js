@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Router } from 'react-router-dom'; //yarn add
 import history from './history';
+import { getTermFromPath, searchHashRedirect } from "./utils/UtilityFunctions";
 
 import { Callback, PotentialDefs, DefineForm,
     RequestForm, ReportedDefs, Glossary, About, App, Auth } from './ComponentsLibrary';
@@ -12,23 +13,6 @@ const handleAuthentication = ({location}) => {
     auth.handleAuthentication();
   }
 }
-
-  function getTermFromPath(path){
-    var term = "";
-    if (path.startsWith("search")) {
-      term = decodeURIComponent(path.substring(7));
-    }
-    return term;
-  }
-
-  function searchHashRedirect(){
-    var term = window.location.hash.substring(2);
-    console.log(term);
-    if (term && window.location.pathname === "/") {
-      console.log("redirecting");
-      window.location.replace("/search/" + term);
-    }
-  }
 
 const makeMainRoutes = () => {
   return (
