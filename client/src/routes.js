@@ -19,7 +19,7 @@ const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route path="/*" render={(props) => {searchHashRedirect(); return <App auth={auth} term={getTermFromPath(props.match.params[0])}/>;} }/>
-          <Route path="/potentialdefs" render={(props) => <PotentialDefs auth={auth}/>} />
+          <Route path="/potentialdefs" render={() => <PotentialDefs auth={auth}/>} />
           <Route path="/defineform" render={(props) => <DefineForm auth={auth}/>} />
           <Route path="/requestform" render={(props) => <RequestForm auth={auth}/>} />
           <Route path="/reporteddefs" render={(props) => <ReportedDefs auth={auth}/>} />
