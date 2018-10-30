@@ -23,7 +23,7 @@ const makeMainRoutes = () => {
           <Route path="/defineform" render={() => <DefineForm/>} />
           <Route path="/requestform" render={() => <RequestForm/>} />
           <Route path="/reporteddefs" render={() => <ReportedDefs auth={auth}/>} />
-          <Route path="/about" render={(props) => <About auth={auth}/>} />
+          <Route path="/about" render={() => <About/>} />
           <Route path="/glossary" render={(props) =>  <Glossary auth={auth}/>} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
