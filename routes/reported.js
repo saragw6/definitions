@@ -10,17 +10,18 @@ router.get('/', async (req, res, next) => {
   let queryString = 'SELECT * FROM entry WHERE action = $1';
   let values = [4];
 
-    pool.connect((err, client, release) => {
-        if (err) return console.error('Error acquiring client', err.stack);
+    (async () => {
+        const client = await pool.connect();
 
-        client.query(queryString, values, (err, result) => {
-            release();
-            if (err) {
-                res.status(500).send('Error while retrieving reported entries'); //could make more specific
-                return console.error('Error executing query', err.stack);
-            }
-            console.log(result.rows);
+        try {
+            const result = await client.query(queryString, values);
             res.json(result.rows);
-        })
-    })
+        } finally {
+            client.release();
+        }
+    })().catch((err) => {
+        res.status(500).send('Error while retrieving reported entries'); //could make more specific
+        return console.error('Error executing query', err.stack);
+    });
+
 });
