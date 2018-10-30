@@ -2,14 +2,14 @@ require('mocha');
 const { expect } = require('chai');
 const request = require('request');
 
-const app = require('../index');
-const TEST_PORT = 4000;
-const startApp = () => app.listen(TEST_PORT);
-const tearDown = () => app.listen().close();
+// const app = require('../index');
+// const TEST_PORT = 4000;
+// const startApp = () => app.listen(TEST_PORT);
+// const tearDown = () => app.listen().close();
 
 describe('Authors route', () => {
-    before(startApp);
-    after(tearDown);
+    // before(startApp);
+    // after(tearDown);
 
     it('should return no authors for an author that does not exist yet', (done) => {
         request('http://localhost:4000/authors/93294673' , (error, response) => {
