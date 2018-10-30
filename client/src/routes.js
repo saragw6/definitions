@@ -1,16 +1,9 @@
 import React from 'react';
 import { Route, Router } from 'react-router-dom'; //yarn add
-import App from './App';
-// import Home from './Home/Home';
-import Callback from './Callback';
-import PotentialDefs from './PotentialDefs';
-import DefineForm from './DefineForm';
-import RequestForm from './RequestForm';
-import ReportedDefs from './ReportedDefs';
-import Glossary from './Glossary';
-import About from './About';
-import Auth from './Auth';
 import history from './history';
+
+import { Callback, PotentialDefs, DefineForm,
+    RequestForm, ReportedDefs, Glossary, About, App, Auth } from './ComponentsLibrary';
 
 const auth = new Auth();
 
