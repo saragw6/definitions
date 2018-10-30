@@ -9,4 +9,7 @@ startApp();
 require('./authorTest')();
 require('./reportedTest')();
 require('./requestedTest')();
+//require('./synonymsTest')();
+//require('./termsTest')();
+//require('./entriesTest');
 tearDown();
