@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && yarn && yarn run build",
-    "test": "mocha ./routesTest/routesTestRunner.js"
+    "test": "mocha ./routesTest"
   },
   "devDependencies": {
     "chai": "^4.2.0",
