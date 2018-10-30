@@ -11,24 +11,21 @@ router.get('/', async (req, res) => {
       rowMode: 'array'
   };
 
-    pool.connect((err, client, release) => {
-        if (err) return console.error('Error acquiring client', err.stack);
+    (async () => {
+        const client = await pool.connect();
 
-        client.query(query, (err, result) => {
-            release();
-            if (err) {
-                res.status(500).send('Error while retrieving requested entries'); //could make more specific
-                return console.error('Error executing query', err.stack);
-            }
-            console.log(result.rows);
+        try {
+            const result = await client.query(query);
             res.send(result.rows.map(term_array => {return term_array[0]}));
-        })
-    })
+        } finally {
+            client.release();
+        }
+    })().catch((err) => {
+        res.status(500).send('Error while retrieving requested entries'); //could make more specific
+        return console.error('Error executing query', err.stack);
+    });
+
 })
-
-
-
-
 
 
 //TODO: make test db so can properly test this
