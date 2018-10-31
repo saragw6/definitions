@@ -12,7 +12,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 //import Dialog from 'react-toolbox/lib/dialog/Dialog';
 
 import './assets/react-toolbox/theme.css';
-import './App.css';
+import './stylesheets/App.css';
 
 import { Autocomplete, theme, ThemeProvider, TooltipButton } from './Libraries/ReactToolboxLibrary';
 import { ResultList, PotentialDefs } from './Libraries/ComponentsLibrary';
