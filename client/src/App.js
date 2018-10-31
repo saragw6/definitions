@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet'
 
 // COMMENT THESE IN FOR PRODUCTION BUILD
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-58549536-5');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-import Autocomplete from './assets/react-toolbox/lib/autocomplete/Autocomplete.js';
-
-import theme from './assets/react-toolbox/theme.js';
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
-import './assets/react-toolbox/theme.css';
 //import logo from './logo.svg';
-
-import Button from 'react-toolbox/lib/button/Button';
-import Tooltip from 'react-toolbox/lib/tooltip';
-const TooltipButton = Tooltip(Button);
-
 //import Dialog from 'react-toolbox/lib/dialog/Dialog';
-import {Helmet} from 'react-helmet'
 
-import DocumentTitle from 'react-document-title';
-
+import './assets/react-toolbox/theme.css';
 import './App.css';
 
+import { Autocomplete, theme, ThemeProvider, TooltipButton } from './ReactToolboxLibrary';
 import { ResultList, PotentialDefs } from './ComponentsLibrary';
 import history from './history';
 import { welcomeBlurb } from "./utils/TextBlurbs";
