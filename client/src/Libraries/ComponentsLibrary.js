@@ -8,7 +8,7 @@ import About from '../Pages/About';
 import App from '../App';
 import Auth from '../Auth';
 import ResultList from '../Pages/ResultList.js';
-import ResultCard from '../ResultCard';
+import ResultCard from '../Pages/ResultCard';
 
 
 export { Callback, PotentialDefs, DefineForm,
