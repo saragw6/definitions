@@ -14,8 +14,8 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 import './assets/react-toolbox/theme.css';
 import './App.css';
 
-import { Autocomplete, theme, ThemeProvider, TooltipButton } from './ReactToolboxLibrary';
-import { ResultList, PotentialDefs } from './ComponentsLibrary';
+import { Autocomplete, theme, ThemeProvider, TooltipButton } from './Libraries/ReactToolboxLibrary';
+import { ResultList, PotentialDefs } from './Libraries/ComponentsLibrary';
 import history from './history';
 import { welcomeBlurb } from "./utils/TextBlurbs";
 

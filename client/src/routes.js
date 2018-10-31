@@ -4,7 +4,7 @@ import history from './history';
 import { getTermFromPath, searchHashRedirect } from "./utils/UtilityFunctions";
 
 import { Callback, PotentialDefs, DefineForm,
-    RequestForm, ReportedDefs, Glossary, About, App, Auth } from './ComponentsLibrary';
+    RequestForm, ReportedDefs, Glossary, About, App, Auth } from './Libraries/ComponentsLibrary';
 
 const auth = new Auth();
 
