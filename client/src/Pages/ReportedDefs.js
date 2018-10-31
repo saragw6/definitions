@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 //import Auth from './Auth.js';
 import { ResultList } from '../Libraries/ComponentsLibrary';
+import { theme, ThemeProvider } from '../Libraries/ReactToolboxLibrary';
 
-import theme from '../assets/react-toolbox/theme.js';
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import '../assets/react-toolbox/theme.css';
 
 class ReportedDefs extends Component {
