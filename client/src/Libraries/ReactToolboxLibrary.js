@@ -4,7 +4,8 @@ import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import Button from 'react-toolbox/lib/button/Button';
 import Tooltip from 'react-toolbox/lib/tooltip';
 import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
+import FontIcon from 'react-toolbox/lib/font_icon';
 
 let TooltipButton = new Tooltip(Button);
 
-export { Autocomplete, theme, ThemeProvider, Button, TooltipButton, Card, CardTitle, CardText };
+export { Autocomplete, theme, ThemeProvider, Button, TooltipButton, Card, CardTitle, CardText, FontIcon };

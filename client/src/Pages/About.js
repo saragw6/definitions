@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FontIcon from 'react-toolbox/lib/font_icon';
+import { FontIcon } from "../Libraries/ReactToolboxLibrary";
 
 const About = () => {
     return(
