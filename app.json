@@ -1,0 +1,15 @@
+{
+  "name": "Queer Undefined",
+  "description": "A crowd-sourced LGBTQ+ vocabulary resource",
+  "keywords": [
+    "LGBTQ+",
+    "queer",
+    "dictionary"
+  ],
+  "website": "https://queerundefined.com/",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
+}
