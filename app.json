@@ -1,15 +1,24 @@
 {
-  "name": "Queer Undefined",
-  "description": "A crowd-sourced LGBTQ+ vocabulary resource",
-  "keywords": [
-    "LGBTQ+",
-    "queer",
-    "dictionary"
+  "name": "definitions",
+  "scripts": {
+    "postdeploy": "cd client && yarn && yarn run build"
+  },
+  "env": {
+    "DATABASE_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
   ],
-  "website": "https://queerundefined.com/",
   "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+      "url": "heroku/nodejs"
     }
   ]
 }
