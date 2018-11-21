@@ -18,16 +18,14 @@
 
 // export default Callback;
 
-import React, { Component } from 'react';
+import React from 'react';
 
-class Callback extends Component {
-  render() {
+const Callback = () => {
     return (
       <div>
         Loading
       </div>
     );
-  }
 }
 
 export default Callback;

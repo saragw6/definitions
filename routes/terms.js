@@ -1,8 +1,6 @@
 const Router = require('express-promise-router');
 const router = new Router();
-
-const db_url = "postgres://cvbxymodwgcdog:6ca64c4362716069e239320eec8ae06097e66f573126ae33027e5e593fe663d2@ec2-54-243-235-153.compute-1.amazonaws.com:5432/d6i5mdoncrqtm0";
-const { Client } = require('pg');
+const pool = require('../db');
 
 module.exports = router;
 
@@ -10,20 +8,27 @@ module.exports = router;
 //todo: no dups and lowercase
 router.get('/', async (req, res) => {
   //res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-  const client = new Client({ connectionString: db_url, ssl: true });
-  client.connect();
 
-  var query = {text:'SELECT * FROM term WHERE EXISTS (SELECT * FROM entry WHERE entry.term=term.term AND action=2)', rowMode: 'array'};
+  var query = {
+      text:'SELECT * FROM term WHERE EXISTS (SELECT * FROM entry WHERE entry.term=term.term AND action=2)',
+      rowMode: 'array'
+  };
 
-  try {
-    const { rows } = await client.query(query);
-    res.send(rows.map(term_array => {return term_array[0].toLowerCase()}));
-  } catch (err) {
-    console.log(err.stack);
-  }
-
-  client.end(); 
+    pool.connect((err, client, release) => {
+        if (err) return console.error('Error acquiring client', err.stack);
+        client.query(query, (err, result) => {
+            release();
+            if (err) {
+                res.status(500).send('Error while retrieving term'); //could make more specific
+                return console.error('Error executing query', err.stack);
+            }
+            console.log(result.rows);
+            res.send(result.rows.map(term_array => {return term_array[0].toLowerCase()}));
+        })
+    })
 })
+
+
 
 // router.post('/:term', async (req, res) => {
 //   const client = new Client({ connectionString: db_url, ssl: true });

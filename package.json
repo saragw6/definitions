@@ -2,6 +2,7 @@
   "dependencies": {
     "auth0-js": "^9.6.1",
     "babel-polyfill": "^6.26.0",
+    "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "express-http-to-https": "^1.1.4",
     "express-promise-router": "^3.0.2",
@@ -10,10 +11,13 @@
   },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "cd client && yarn && yarn run build",
+    "test": "mocha ./routesTest"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "request": "^2.88.0",
     "supertest": "^3.1.0"
   }
 }

@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 var redirectToHTTPSOrCustomDomain = require('./redirect.js').redirectToHTTPSOrCustomDomain
 
@@ -12,20 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //use validator?
 
-const db_url = "postgres://cvbxymodwgcdog:6ca64c4362716069e239320eec8ae06097e66f573126ae33027e5e593fe663d2@ec2-54-243-235-153.compute-1.amazonaws.com:5432/d6i5mdoncrqtm0";
-
-const { Client } = require('pg');
-//set up connection to db
-const client = new Client({
-  connectionString: db_url,
-  ssl: true,
-});
-
-
-//client connect inside each endpoint instead?
-client.connect();
 // enforce.HTTPS({ trustProtoHeader: true });
-
 app.use(redirectToHTTPSOrCustomDomain([/localhost:(\d{4})/], [/\/insecure/]));
 
 
@@ -41,8 +29,10 @@ app.get('*', (req, res) => {
 
 
 const port = process.env.PORT || 5000;
-app.listen(port);
+app.listen(port, () => {
+    console.log(`Queer Undefined listening on ${port}`);
+});
 
-console.log(`Queer Undefined listening on ${port}`);
+module.exports = app;
 
 //module.exports = app.listen(5000);

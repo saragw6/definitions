@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
-//import Button from 'react-toolbox/lib/button/Button';
-
-import Button from 'react-toolbox/lib/button/Button';
-import Tooltip from 'react-toolbox/lib/tooltip';
-const TooltipButton = Tooltip(Button);
-
+import { TooltipButton, Button, Card, CardTitle, CardText } from "../Libraries/ReactToolboxLibrary";
 
 //TODO: tooltip explanation that one is the author and one is the author's identity?
 //TODO: stop inline styling
