@@ -9,10 +9,10 @@ const reported = require('./reported');
 
 module.exports = (app) => {
   app.use('/terms', terms)
-  app.use('/entries', entries)
-  app.use('/synonyms', synonyms)
-  app.use('/requested', requested)
-  app.use('/potentials', potentials)
-  app.use('/authors', authors)
-  app.use('/reported', reported)
+  app.use('/entries/', entries)
+  app.use('/synonyms/', synonyms)
+  app.use('/requested/', requested)
+  app.use('/potentials/', potentials)
+  app.use('/authors/', authors)
+  app.use('/reported/', reported)
 }

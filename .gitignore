@@ -16,12 +16,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.idea/
-definitions.iml
-
-# packages
-package-lock.json
-
-# env variables
-.env
 

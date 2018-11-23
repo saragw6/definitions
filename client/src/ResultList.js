@@ -1,16 +1,19 @@
 import React from 'react';
+
 import Masonry from 'react-masonry-component';
 
-import { ResultCard } from '../Libraries/ComponentsLibrary';
+import ResultCard from './ResultCard.js';
 
 var masonryOptions = {
     transitionDuration: ".5s"
 };
 
-const ResultList = (props) => {
+function ResultList(props) {
 
-  const { entries } = props;
-  const listItems = entries.map((entry) => <ResultCard key={entry["entry_id"]} entry={entry}/>);
+  const entries = props.entries;
+  const listItems = entries.map((entry) => {
+    return <ResultCard key={entry["entry_id"]} entry={entry}/>
+  });
 
   return (
     <Masonry className="defs" options={masonryOptions}>{listItems}</Masonry>

@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 //import Auth from './Auth.js';
-import { ResultList } from '../Libraries/ComponentsLibrary';
-import { theme, ThemeProvider } from '../Libraries/ReactToolboxLibrary';
+import ResultList from './ResultList';
 
-import '../assets/react-toolbox/theme.css';
+import theme from './assets/react-toolbox/theme.js';
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import './assets/react-toolbox/theme.css';
 
 class ReportedDefs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      reported: []
+    };
 
-  componentDidMount(){
-    let { auth } = this.props;
-
-    if(!auth.isAuthenticated()) { auth.login(); }
+    if(!this.props.auth.isAuthenticated()) { this.props.auth.login(); }
     fetch('/reported').then(res => {return res.json()}).then((res) => this.setState({reported: res}));
   }
 
   render() {
+
     //fix this up:
     return (
     <ThemeProvider theme={theme}>
