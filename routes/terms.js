@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
                 res.status(500).send('Error while retrieving term'); //could make more specific
                 return console.error('Error executing query', err.stack);
             }
-            console.log(result.rows);
             res.send(result.rows.map(term_array => {return term_array[0].toLowerCase()}));
         })
     })
