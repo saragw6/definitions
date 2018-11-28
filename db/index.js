@@ -1,4 +1,4 @@
-const db_url = process.env.DB_URL;
+const db_url = process.env.DATABASE_URL;
 console.log("DB url: " + db_url);
 
 const { Pool } = require('pg');
