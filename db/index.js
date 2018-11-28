@@ -1,5 +1,4 @@
 const db_url = process.env.DATABASE_URL;
-console.log("DB url: " + db_url);
 
 const { Pool } = require('pg');
 //set up connection to db
