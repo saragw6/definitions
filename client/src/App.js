@@ -28,7 +28,6 @@ class App extends Component {
   constructor(props) {
   super();
     this.state = {
-      searchTerm: 'filler text',
       def: '',
       // my_term: decodeURIComponent(window.location.hash.substring(2)), //grab term from url
       my_term: props.term, //grab term from url
