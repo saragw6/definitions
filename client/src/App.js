@@ -25,7 +25,6 @@ class App extends Component {
 
     super();
     this.state = {
-      searchTerm: 'filler text',
       def: '',
       my_term: props.term,
       entries: [],
