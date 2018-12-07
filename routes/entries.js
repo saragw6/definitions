@@ -1,9 +1,11 @@
 const Router = require('express-promise-router');
 const router = new Router();
 const pool = require('../db');
+const ssl_setting = !process.env.DATABASE_URL.startsWith("postgres://localhost")
+
 
 const { Client } = require('pg');
-const db_url = process.env.DB_URL;
+const db_url = process.env.DATABASE_URL;
 
 module.exports = router;
 
@@ -32,7 +34,7 @@ router.get('/potentials', async (req, res, next) => {
 
 router.get('/:term', async (req, res, next) => {
 //return entries with author id or name and identity???
-  const client = new Client({ connectionString: db_url, ssl: true });
+  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
 
 
@@ -60,7 +62,7 @@ router.get('/:term', async (req, res, next) => {
 //done: update last_updated whenever u update an entry
 //done: change requested query to just flip fullfilled flag
 router.post('/', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
+  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
 
   console.log(req.body);
@@ -107,7 +109,7 @@ router.post('/', async (req, res) => {
 
 //test!! also maybe don't use both "action" and "status", pick one! probably status
 router.post('/setstatus/:action/id/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: true });
+  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
 
   console.log(req.body);
