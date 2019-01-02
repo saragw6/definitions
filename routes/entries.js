@@ -7,6 +7,10 @@ const ssl_setting = !process.env.DATABASE_URL.startsWith("postgres://localhost")
 const { Client } = require('pg');
 const db_url = process.env.DATABASE_URL;
 
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended: true}));
+
 module.exports = router;
 
 router.get('/potentials', async (req, res, next) => {
