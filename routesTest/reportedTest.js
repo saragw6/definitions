@@ -11,8 +11,11 @@ const reportedTest = () => {
             request('http://localhost:4000/reported' , (error, response) => {
                 expect(response.statusCode).to.equal(200);
                 if (response.body.length){
-                    let actionCode = response.body.split("action")[1][2];
-                    expect(actionCode).to.equal('4');
+                    let responseJSON = JSON.parse(response.body)
+
+                    responseJSON.forEach((entry) => {
+                        expect(entry.action).to.equal(4); 
+                    })
                 }
                 done();
             });
