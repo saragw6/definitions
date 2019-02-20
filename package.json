@@ -14,7 +14,7 @@
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "test": "mocha ./routesTest",
     "db:init": "scripts/initDb.js",
-    "db:clear": "scripts/clearDb.js"
+    "db:clean": "scripts/cleanDb.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
