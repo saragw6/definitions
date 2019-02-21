@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && yarn && yarn run build",
-    "test": "NODE_ENV=test mocha ./routesTest",
+    "test": "NODE_ENV=test mocha ./routesTest --exit",
     "db:init": "scripts/initDb.js development test",
     "db:clean": "scripts/cleanDb.js"
   },
