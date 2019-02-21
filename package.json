@@ -13,7 +13,7 @@
     "start": "node index.js",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "test": "NODE_ENV=test mocha ./routesTest",
-    "db:init": "scripts/initDb.js",
+    "db:init": "scripts/initDb.js development test",
     "db:clean": "scripts/cleanDb.js"
   },
   "devDependencies": {

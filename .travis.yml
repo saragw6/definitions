@@ -4,4 +4,4 @@ node_js:
 services:
   - postgresql
 before_script:
-  - ./scripts/initDb.js
+  - ./scripts/initDb.js test

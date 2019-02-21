@@ -4,7 +4,12 @@ const configFor = require('../db/config');
 const connectionPool = require('../db/connectionPool');
 const { createUser, createDb, createTables } = require('../db/manage');
 
-function initialize(config) {
+let envs = process.argv.slice(2);
+if (envs.length === 0) {
+  envs = ['development', 'test']
+}
+
+async function initialize(config) {
   createUser(config.user, config.pass);
   createDb(config.name);
   
@@ -12,9 +17,8 @@ function initialize(config) {
   const pool = connectionPool(config.connectionString, config.ssl);
 
   // We also close the pool so the script will end immediately
-  return createTables(pool).then(() => pool.end());
+  await createTables(pool).then(() => pool.end());
 }
 
-initialize(configFor('development'))
-  .then(initialize(configFor('test')))
-  .catch(e => setImmediate(() => {throw e}));
+envs.forEach(env => initialize(configFor(env)));
+
