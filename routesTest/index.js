@@ -1,3 +1,11 @@
+
+before(async function resetDb() {
+  const pool = require('../db');
+  const { deleteTables, createTables } = require('../db/manage');
+  await deleteTables(pool);
+  await createTables(pool); 
+});
+
 const app = require('../index')
 const TEST_PORT = 4000;
 const startApp = () => app.listen(TEST_PORT, () => {
