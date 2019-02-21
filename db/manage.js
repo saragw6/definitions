@@ -16,6 +16,7 @@ function createUser (user, pass) {
 }
 
 function deleteUser (user) {
+  console.log(`Deleting user ${user}...`);
   console.log(exec(psql(`DROP USER IF EXISTS ${user}`)));
 }
 
@@ -28,6 +29,7 @@ function createDb (name) {
 }
 
 function deleteDb (name) {
+  console.log(`Deleting database ${name}`);
   console.log(exec(psql(`DROP DATABASE IF EXISTS ${name}`)));
 }
 

@@ -7,7 +7,6 @@ function executeInSequence (pool, queries) {
     .reduce(
       (chain, q) => chain.then(() => pool.query(q)),
       Promise.resolve())
-    .then(() => console.log("success!"))
     .catch(e => setImmediate(() => {throw e}));
 }
 

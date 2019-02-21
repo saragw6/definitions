@@ -1,15 +1,20 @@
 #!/usr/bin/env node
 
-// Initialize development database
-const config = require('../db/config')('development');
+const configFor = require('../db/config');
+const connectionPool = require('../db/connectionPool');
 const { createUser, createDb, createTables } = require('../db/manage');
 
-createUser(config.user, config.pass);
-createDb(config.name);
+function initialize(config) {
+  createUser(config.user, config.pass);
+  createDb(config.name);
+  
+  // We only try to start a connection pool after the db has been created
+  const pool = connectionPool(config.connectionString, config.ssl);
 
-// We only try to start a connection pool after the db has been created
-const pool = require('../db');
+  // We also close the pool so the script will end immediately
+  return createTables(pool).then(() => pool.end());
+}
 
-// We also close the pool so the script will end immediately
-createTables(pool).then(() => pool.end());
-
+initialize(configFor('development'))
+  .then(initialize(configFor('test')))
+  .catch(e => setImmediate(() => {throw e}));
