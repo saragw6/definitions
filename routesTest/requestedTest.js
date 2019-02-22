@@ -1,29 +1,26 @@
 require('mocha');
 const { expect } = require('chai');
 const request = require('request');
+const { post, get, requestNewTerm } = require('./requestHelper.js');
 
 const requestedTest = () => {
 
     describe('Requested route', () => {
 
-        let term = 'test124';
+        it('POST: should request an entry', async () => {
+	  const {statusCode, body} = await post('/requested/test124');
+	  
+	  expect(statusCode).to.equal(200);
+	  expect(body).to.equal('added requested term: test124');
+	});
 
-        it('POST: should request an entry', (done) => {
-            request.post({
-                url: `http://localhost:4000/requested/${term}`
-            }, (error, response) => {
-                expect(response.statusCode).to.equal(200);
-                expect(response.body).to.equal(`added requested term: ${term}`);
-                done();
-            });
-        });
+        it('GET: should return requested entries', async () => {
+	    await requestNewTerm('test124');
 
-        it('GET: should return requested entries', (done) => {
-            request('http://localhost:4000/requested' , (error, response) => {
-                expect(response.statusCode).to.equal(200);
-                expect(response.body.includes(term)).to.equal(true);
-                done();
-            });
+	    const {statusCode, body} = await get('/requested', { json: true });
+
+            expect(statusCode).to.equal(200);
+            expect(body).to.eql(['test124']);
         });
     });
 

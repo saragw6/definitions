@@ -1,5 +1,5 @@
 
-before(async function resetDb() {
+beforeEach(async function resetDb() {
   const pool = require('../db');
   const { deleteTables, createTables } = require('../db/manage');
   await deleteTables(pool);
