@@ -19,7 +19,9 @@ OR
 
 Back end:
 
+* run `yarn client:build` to prepare the static assets for the server
 * run `yarn start` in the root directory to start the server
+
 
 #### Helpful commands
 * `yarn test` to run the tests

@@ -1,6 +1,6 @@
 const Router = require('express-promise-router');
 const router = new Router();
-const pool = require('../db');
+const pool = require('../../db');
 const ssl_setting = !process.env.DATABASE_URL.startsWith("postgres://localhost")
 
 
