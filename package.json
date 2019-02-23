@@ -10,12 +10,13 @@
     "pg": "^7.4.3"
   },
   "scripts": {
-    "start": "node src/server/index.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build",
+    "setup": "./scripts/setup.sh",
+    "db:init": "./scripts/initDb.js development test",
+    "db:clean": "./scripts/cleanDb.js",
     "test": "NODE_ENV=test mocha ./test --exit",
-    "db:init": "scripts/initDb.js development test",
-    "db:clean": "scripts/cleanDb.js",
-    "client:build": "cd client && yarn build && rm -r ../src/server/static/ && mv build/ ../src/server/static/"
+    "client:build": "cd client && yarn build && rm -rf ../src/server/static/ && mv build/ ../src/server/static/",
+    "start": "node src/server/index.js",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "devDependencies": {
     "chai": "^4.2.0",
