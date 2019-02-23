@@ -5,10 +5,9 @@
 
 ##### Database
 * Requires postgresql to be installed.
-* The command `yarn run db:init` will create a user and a database for the application to use, as well as perform the initial migration to create the tables.
-  * This should work with postgres out of the box, otherwise set your configuration so that the following command opens up the psql shell: `psql -U postgres -d postgres`
-  * If this doesn't work / you configure the database yourself, set the DATABASE_URL environment variable to a valid postgres connection string matching your configuration.
-* The command `yarn run db:clean` will undo everything `db:init` does.
+* `yarn run db:init`: create a user and a database, then create the empty tables
+* `yarn run db:clean`: delete the user and database
+* The commands use `db/config.js` for the connection info, which you can override by setting DATABASE_URL to a valid postgres connection string
 
 #### To run locally
 

@@ -1,5 +1,4 @@
 // Utilities for managing the dev and test databases
-// Each function aims to be idempotent and return a promise
 
 const { executeInSequence } = require('./util');
 const { execSync } = require('child_process');
@@ -8,8 +7,9 @@ const psql = query => `psql -U postgres -d postgres -tAc "${query}"`;
 const exec = command => execSync(command).toString().trim();
 
 function createUser (user, pass) {
-  const userExists = `SELECT 'exists' FROM pg_roles WHERE rolname='${user}'`;
-  if (exec(psql(userExists)) !== 'exists') {
+  const doesUserExist = `SELECT 'exists' FROM pg_roles WHERE rolname='${user}'`;
+
+  if (exec(psql(doesUserExist)) !== 'exists') {
     console.log(`Creating user ${user}...`);
     console.log(exec(psql(`CREATE USER ${user} WITH PASSWORD '${pass}'`)));
   }
@@ -21,15 +21,16 @@ function deleteUser (user) {
 }
 
 function createDb (name) {
-  const dbExists = `SELECT 'exists' FROM pg_database WHERE datname='${name}'`;
-  if (exec(psql(dbExists)) !== 'exists') {  
+  const doesDbExist = `SELECT 'exists' FROM pg_database WHERE datname='${name}'`;
+  
+  if (exec(psql(doesDbExist)) !== 'exists') {  
     console.log(`Creating database ${name}...`);
     console.log(exec(psql(`CREATE DATABASE ${name}`)));
   }
 }
 
 function deleteDb (name) {
-  console.log(`Deleting database ${name}`);
+  console.log(`Deleting database ${name}...`);
   console.log(exec(psql(`DROP DATABASE IF EXISTS ${name}`)));
 }
 

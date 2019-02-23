@@ -1,9 +1,8 @@
+const pool = require('../db');
+const { truncateTables } = require('../db/manage');
 
 beforeEach(async function resetDb() {
-  const pool = require('../db');
-  const { deleteTables, createTables } = require('../db/manage');
-  await deleteTables(pool);
-  await createTables(pool); 
+  await truncateTables(pool);
 });
 
 const app = require('../index')
