@@ -12,9 +12,9 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && yarn && yarn run build",
-    "test": "mocha ./routesTest",
-    "db:init": "scripts/initDb.js",
-    "db:clear": "scripts/clearDb.js"
+    "test": "NODE_ENV=test mocha ./routesTest --exit",
+    "db:init": "scripts/initDb.js development test",
+    "db:clean": "scripts/cleanDb.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",

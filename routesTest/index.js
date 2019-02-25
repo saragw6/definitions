@@ -1,3 +1,10 @@
+const pool = require('../db');
+const { truncateTables } = require('../db/manage');
+
+beforeEach(async function resetDb() {
+  await truncateTables(pool);
+});
+
 const app = require('../index')
 const TEST_PORT = 4000;
 const startApp = () => app.listen(TEST_PORT, () => {

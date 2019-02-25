@@ -2,10 +2,12 @@
 
 #### Setup
 * run `yarn install` to install dependencies
-* set DATABASE_URL as an environment variable
-  * It should be a postgres connection string of the form `postgres://$user:$pass@localhost:5432/$dbname` which matches the database you have set up for the project
-* run `yarn run db:init` to create the (empty) tables the app expects
-  * run `yarn run db:clear` to wipe the tables but leave the database
+
+##### Database
+* Requires postgresql to be installed.
+* `yarn run db:init`: create a user and a database, then create the empty tables
+* `yarn run db:clean`: delete the user and database
+* The commands use `db/config.js` for the connection info, which you can override by setting DATABASE_URL to a valid postgres connection string
 
 #### To run locally
 
