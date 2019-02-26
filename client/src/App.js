@@ -18,6 +18,7 @@ import { Autocomplete, theme, ThemeProvider, TooltipButton } from './Libraries/R
 import { ResultList, PotentialDefs } from './Libraries/ComponentsLibrary';
 import history from './history';
 import { welcomeBlurb } from "./utils/TextBlurbs";
+import Boop from "./Pages/Boop";
 
 //TODO: separate out buttons div into new component?
 //TODO stop inline styling -- use className on buttons
@@ -123,6 +124,7 @@ class App extends Component {
       
     </Helmet>
     <div className="header-wrapper">
+      <Boop/>
       <a className="header" href="/">queer undefined</a>
       <Autocomplete
         allowCreate
