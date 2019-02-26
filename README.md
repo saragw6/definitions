@@ -38,7 +38,7 @@ _Production Mode:_
 * `yarn run db:init`: create a user and a database, then create the empty tables
 * `yarn run db:clean`: delete the user and database
 * The commands use `db/config.js` for the connection info, which you can override by setting DATABASE_URL to a valid postgres connection string
-
+* The postgres client must be installed on the development machine regardless where the DB is running.
 # Some history:
 This started as a prototype that I made relatively quickly and thought no one would have interest in, which means there's a lot of anti-patterns.
 I used Google forms and spreadsheets to collect definitions online before I even had the site built (to gauge interest).

@@ -3,7 +3,7 @@
 const { executeInSequence } = require('./util');
 const { execSync } = require('child_process');
 
-const psql = query => `psql -U postgres -d postgres -tAc "${query}"`;
+const psql = query => `psql -h localhost -p 5432 -U postgres -d postgres -tAc "${query}"`;
 const exec = command => execSync(command).toString().trim();
 
 function createUser (user, pass) {
