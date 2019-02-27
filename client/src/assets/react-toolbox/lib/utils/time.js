@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
+})
 
-var _hasOwnProperty = require('./hasOwnProperty');
+var _hasOwnProperty = require('./hasOwnProperty')
 
-var _hasOwnProperty2 = _interopRequireDefault(_hasOwnProperty);
+var _hasOwnProperty2 = _interopRequireDefault(_hasOwnProperty)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault (obj) { return obj && obj.__esModule ? obj : { default: obj } }
 
 var dateLocales = {
   de: {
@@ -172,153 +172,153 @@ var dateLocales = {
     weekdaysShort: '週日_週一_週二_週三_週四_週五_週六'.split('_'),
     weekdaysLetter: '日_一_二_三_四_五_六'.split('_')
   }
-};
+}
 
 var time = {
-  getDaysInMonth: function getDaysInMonth(d) {
-    var resultDate = this.getFirstDayOfMonth(d);
-    resultDate.setMonth(resultDate.getMonth() + 1);
-    resultDate.setDate(resultDate.getDate() - 1);
-    return resultDate.getDate();
+  getDaysInMonth: function getDaysInMonth (d) {
+    var resultDate = this.getFirstDayOfMonth(d)
+    resultDate.setMonth(resultDate.getMonth() + 1)
+    resultDate.setDate(resultDate.getDate() - 1)
+    return resultDate.getDate()
   },
-  getFirstDayOfMonth: function getFirstDayOfMonth(d) {
-    return new Date(d.getFullYear(), d.getMonth(), 1);
+  getFirstDayOfMonth: function getFirstDayOfMonth (d) {
+    return new Date(d.getFullYear(), d.getMonth(), 1)
   },
-  getFirstWeekDay: function getFirstWeekDay(d) {
-    return this.getFirstDayOfMonth(d).getDay();
+  getFirstWeekDay: function getFirstWeekDay (d) {
+    return this.getFirstDayOfMonth(d).getDay()
   },
-  getTimeMode: function getTimeMode(d) {
-    return d.getHours() >= 12 ? 'pm' : 'am';
+  getTimeMode: function getTimeMode (d) {
+    return d.getHours() >= 12 ? 'pm' : 'am'
   },
-  getFullMonth: function getFullMonth(d) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  getFullMonth: function getFullMonth (d) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
-    var month = d.getMonth();
-    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en;
-    return (0, _hasOwnProperty2.default)(l, 'months') ? l.months[month] || 'Unknown' : 'Unknown';
+    var month = d.getMonth()
+    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en
+    return (0, _hasOwnProperty2.default)(l, 'months') ? l.months[month] || 'Unknown' : 'Unknown'
   },
-  getShortMonth: function getShortMonth(d) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  getShortMonth: function getShortMonth (d) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
-    var month = d.getMonth();
-    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en;
-    return (0, _hasOwnProperty2.default)(l, 'monthsShort') ? l.monthsShort[month] || 'Unknown' : 'Unknown';
+    var month = d.getMonth()
+    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en
+    return (0, _hasOwnProperty2.default)(l, 'monthsShort') ? l.monthsShort[month] || 'Unknown' : 'Unknown'
   },
-  getFullDayOfWeek: function getFullDayOfWeek(day) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  getFullDayOfWeek: function getFullDayOfWeek (day) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
-    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en;
-    return (0, _hasOwnProperty2.default)(l, 'weekdays') ? l.weekdays[day] || 'Unknown' : 'Unknown';
+    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en
+    return (0, _hasOwnProperty2.default)(l, 'weekdays') ? l.weekdays[day] || 'Unknown' : 'Unknown'
   },
-  getShortDayOfWeek: function getShortDayOfWeek(day) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  getShortDayOfWeek: function getShortDayOfWeek (day) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
-    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en;
-    return (0, _hasOwnProperty2.default)(l, 'weekdaysShort') ? l.weekdaysShort[day] || 'Unknown' : 'Unknown';
+    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en
+    return (0, _hasOwnProperty2.default)(l, 'weekdaysShort') ? l.weekdaysShort[day] || 'Unknown' : 'Unknown'
   },
-  getDayOfWeekLetter: function getDayOfWeekLetter(day) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  getDayOfWeekLetter: function getDayOfWeekLetter (day) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
-    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en;
-    return (0, _hasOwnProperty2.default)(l, 'weekdaysLetter') ? l.weekdaysLetter[day] || this.getFullDayOfWeek(day, locale).charAt(0) : 'Unknown';
+    var l = (typeof locale === 'string' ? dateLocales[locale] : locale) || dateLocales.en
+    return (0, _hasOwnProperty2.default)(l, 'weekdaysLetter') ? l.weekdaysLetter[day] || this.getFullDayOfWeek(day, locale).charAt(0) : 'Unknown'
   },
-  clone: function clone(d) {
-    return new Date(d.getTime());
+  clone: function clone (d) {
+    return new Date(d.getTime())
   },
-  cloneAsDate: function cloneAsDate(d) {
-    var clonedDate = this.clone(d);
-    clonedDate.setHours(0, 0, 0, 0);
-    return clonedDate;
+  cloneAsDate: function cloneAsDate (d) {
+    var clonedDate = this.clone(d)
+    clonedDate.setHours(0, 0, 0, 0)
+    return clonedDate
   },
-  isDateObject: function isDateObject(d) {
-    return d instanceof Date;
+  isDateObject: function isDateObject (d) {
+    return d instanceof Date
   },
-  addDays: function addDays(d, days) {
-    var newDate = this.clone(d);
-    newDate.setDate(d.getDate() + days);
-    return newDate;
+  addDays: function addDays (d, days) {
+    var newDate = this.clone(d)
+    newDate.setDate(d.getDate() + days)
+    return newDate
   },
-  addMonths: function addMonths(d, months) {
-    var newDate = this.clone(d);
-    newDate.setMonth(d.getMonth() + months, 1);
-    return newDate;
+  addMonths: function addMonths (d, months) {
+    var newDate = this.clone(d)
+    newDate.setMonth(d.getMonth() + months, 1)
+    return newDate
   },
-  addYears: function addYears(d, years) {
-    var newDate = this.clone(d);
-    newDate.setFullYear(d.getFullYear() + years);
-    return newDate;
+  addYears: function addYears (d, years) {
+    var newDate = this.clone(d)
+    newDate.setFullYear(d.getFullYear() + years)
+    return newDate
   },
-  setDay: function setDay(d, day) {
-    var newDate = this.clone(d);
-    newDate.setDate(day);
-    return newDate;
+  setDay: function setDay (d, day) {
+    var newDate = this.clone(d)
+    newDate.setDate(day)
+    return newDate
   },
-  setMonth: function setMonth(d, month) {
-    var newDate = this.clone(d);
-    newDate.setMonth(month);
-    return newDate;
+  setMonth: function setMonth (d, month) {
+    var newDate = this.clone(d)
+    newDate.setMonth(month)
+    return newDate
   },
-  setYear: function setYear(d, year) {
-    var newDate = this.clone(d);
-    newDate.setFullYear(year);
-    return newDate;
+  setYear: function setYear (d, year) {
+    var newDate = this.clone(d)
+    newDate.setFullYear(year)
+    return newDate
   },
-  setHours: function setHours(d, hours) {
-    var newDate = this.clone(d);
-    newDate.setHours(hours);
-    return newDate;
+  setHours: function setHours (d, hours) {
+    var newDate = this.clone(d)
+    newDate.setHours(hours)
+    return newDate
   },
-  setMinutes: function setMinutes(d, minutes) {
-    var newDate = this.clone(d);
-    newDate.setMinutes(minutes);
-    return newDate;
+  setMinutes: function setMinutes (d, minutes) {
+    var newDate = this.clone(d)
+    newDate.setMinutes(minutes)
+    return newDate
   },
-  toggleTimeMode: function toggleTimeMode(d) {
-    var newDate = this.clone(d);
-    var hours = newDate.getHours();
+  toggleTimeMode: function toggleTimeMode (d) {
+    var newDate = this.clone(d)
+    var hours = newDate.getHours()
 
-    newDate.setHours(hours - (hours > 12 ? -12 : 12));
-    return newDate;
+    newDate.setHours(hours - (hours > 12 ? -12 : 12))
+    return newDate
   },
-  formatTime: function formatTime(date, format) {
-    var hours = date.getHours();
-    var mins = date.getMinutes().toString();
+  formatTime: function formatTime (date, format) {
+    var hours = date.getHours()
+    var mins = date.getMinutes().toString()
 
     if (format === 'ampm') {
-      var isAM = hours < 12;
-      var additional = isAM ? ' am' : ' pm';
+      var isAM = hours < 12
+      var additional = isAM ? ' am' : ' pm'
 
-      hours %= 12;
-      hours = (hours || 12).toString();
-      if (mins.length < 2) mins = '0' + mins;
+      hours %= 12
+      hours = (hours || 12).toString()
+      if (mins.length < 2) mins = '0' + mins
 
-      return hours + (mins === '00' ? '' : ':' + mins) + additional;
+      return hours + (mins === '00' ? '' : ':' + mins) + additional
     }
 
-    hours = hours.toString();
-    if (hours.length < 2) hours = '0' + hours;
-    if (mins.length < 2) mins = '0' + mins;
-    return hours + ':' + mins;
+    hours = hours.toString()
+    if (hours.length < 2) hours = '0' + hours
+    if (mins.length < 2) mins = '0' + mins
+    return hours + ':' + mins
   },
-  dateOutOfRange: function dateOutOfRange(date, minDate, maxDate) {
-    return minDate && !(date >= minDate) || maxDate && !(date <= maxDate);
+  dateOutOfRange: function dateOutOfRange (date, minDate, maxDate) {
+    return minDate && !(date >= minDate) || maxDate && !(date <= maxDate)
   },
-  closestDate: function closestDate(to, date1, date2) {
-    var toTime = to.getTime();
+  closestDate: function closestDate (to, date1, date2) {
+    var toTime = to.getTime()
 
-    var diff1 = Math.abs(toTime - date1.getTime());
-    var diff2 = Math.abs(toTime - date2.getTime());
+    var diff1 = Math.abs(toTime - date1.getTime())
+    var diff2 = Math.abs(toTime - date2.getTime())
 
-    return diff1 < diff2 ? date1 : date2;
+    return diff1 < diff2 ? date1 : date2
   },
-  formatDate: function formatDate(date) {
-    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
+  formatDate: function formatDate (date) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en'
 
     if (locale === 'en') {
-      return date.getDate() + ' ' + time.getFullMonth(date, locale) + ' ' + date.getFullYear();
+      return date.getDate() + ' ' + time.getFullMonth(date, locale) + ' ' + date.getFullYear()
     }
-    return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+    return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
   }
-};
+}
 
-exports.default = time;
+exports.default = time

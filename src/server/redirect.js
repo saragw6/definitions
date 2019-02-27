@@ -1,3 +1,6 @@
+/* eslint-disable no-mixed-operators, no-self-compare, no-undef */
+/* TODO clean up these linter warnings */
+
 function searchIgnore (value, ignores) {
   return ignores.some(function (search) {
     return search.test(value)
@@ -10,11 +13,11 @@ var redirectToHTTPSOrCustomDomain = (ignoreHosts = [], ignoreRoutes = [], redire
       parseInt(req.get('x-forwarded-port'), 10) !== 443 &&
         (parseInt(req.get('x-forwarded-port'), 10) === parseInt(req.get('x-forwarded-port'), 10))
 
-    const isProductionHerokuUrl = req.get('host').includes("queer-undefined.heroku");
-    const path = req.url.startsWith("//") ? req.url.substring(1) : req.url;
+    const isProductionHerokuUrl = req.get('host').includes('queer-undefined.heroku')
+    const path = req.url.startsWith('//') ? req.url.substring(1) : req.url
 
     if (isProductionHerokuUrl || (isNotSecure && !searchIgnore(req.get('host'), ignoreHosts) &&
-      !searchIgnore(req.path, ignoreRoutes))){
+      !searchIgnore(req.path, ignoreRoutes))) {
       host = isProductionHerokuUrl ? 'www.queerundefined.com' : req.get('host')
       console.log(`Redirecting from ${req.protocol}://${req.host} to https://${host}`)
       return res.redirect(redirectCode, 'https://' + host + path)

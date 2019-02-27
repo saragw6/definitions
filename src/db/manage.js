@@ -1,37 +1,37 @@
 // Utilities for managing the dev and test databases
 
-const { executeInSequence } = require('./util');
-const { execSync } = require('child_process');
+const { executeInSequence } = require('./util')
+const { execSync } = require('child_process')
 
-const psql = query => `psql -h localhost -p 5432 -U postgres -d postgres -tAc "${query}"`;
-const exec = command => execSync(command).toString().trim();
+const psql = query => `psql -h localhost -p 5432 -U postgres -d postgres -tAc "${query}"`
+const exec = command => execSync(command).toString().trim()
 
 function createUser (user, pass) {
-  const doesUserExist = `SELECT 'exists' FROM pg_roles WHERE rolname='${user}'`;
+  const doesUserExist = `SELECT 'exists' FROM pg_roles WHERE rolname='${user}'`
 
   if (exec(psql(doesUserExist)) !== 'exists') {
-    console.log(`Creating user ${user}...`);
-    console.log(exec(psql(`CREATE USER ${user} WITH PASSWORD '${pass}'`)));
+    console.log(`Creating user ${user}...`)
+    console.log(exec(psql(`CREATE USER ${user} WITH PASSWORD '${pass}'`)))
   }
 }
 
 function deleteUser (user) {
-  console.log(`Deleting user ${user}...`);
-  console.log(exec(psql(`DROP USER IF EXISTS ${user}`)));
+  console.log(`Deleting user ${user}...`)
+  console.log(exec(psql(`DROP USER IF EXISTS ${user}`)))
 }
 
 function createDb (name) {
-  const doesDbExist = `SELECT 'exists' FROM pg_database WHERE datname='${name}'`;
-  
-  if (exec(psql(doesDbExist)) !== 'exists') {  
-    console.log(`Creating database ${name}...`);
-    console.log(exec(psql(`CREATE DATABASE ${name}`)));
+  const doesDbExist = `SELECT 'exists' FROM pg_database WHERE datname='${name}'`
+
+  if (exec(psql(doesDbExist)) !== 'exists') {
+    console.log(`Creating database ${name}...`)
+    console.log(exec(psql(`CREATE DATABASE ${name}`)))
   }
 }
 
 function deleteDb (name) {
-  console.log(`Deleting database ${name}...`);
-  console.log(exec(psql(`DROP DATABASE IF EXISTS ${name}`)));
+  console.log(`Deleting database ${name}...`)
+  console.log(exec(psql(`DROP DATABASE IF EXISTS ${name}`)))
 }
 
 const tables = {
@@ -45,23 +45,23 @@ const tables = {
 
 // Creates each table if needed
 function createTables (pool) {
-  const queries = Object.values(tables);
+  const queries = Object.values(tables)
 
-  return executeInSequence(pool, queries);
+  return executeInSequence(pool, queries)
 }
 
 // Delete the content of each table, but leave the table
 function truncateTables (pool) {
-  const str = Object.keys(tables).join(', ');
+  const str = Object.keys(tables).join(', ')
 
-  return pool.query(`TRUNCATE ${str} RESTART IDENTITY CASCADE`);
+  return pool.query(`TRUNCATE ${str} RESTART IDENTITY CASCADE`)
 }
 
 function deleteTables (pool) {
   const queries = Object.keys(tables)
-    .map(tableName => `DROP TABLE IF EXISTS ${tableName} CASCADE;`);
-  
-  return executeInSequence(pool, queries);
+    .map(tableName => `DROP TABLE IF EXISTS ${tableName} CASCADE;`)
+
+  return executeInSequence(pool, queries)
 }
 
 module.exports = {
@@ -72,5 +72,4 @@ module.exports = {
   deleteDb,
   createUser,
   deleteUser
-};
-
+}

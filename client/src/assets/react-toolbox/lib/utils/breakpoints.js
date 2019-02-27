@@ -1,8 +1,8 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
+})
 exports.default = {
   xxs: 480,
   xs: 600,
@@ -14,4 +14,4 @@ exports.default = {
   xl: 1440,
   xxl: 1600,
   xxxl: 1920
-};
+}

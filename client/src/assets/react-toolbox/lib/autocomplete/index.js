@@ -1,28 +1,28 @@
-'use strict';
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.Autocomplete = undefined;
+})
+exports.Autocomplete = undefined
 
-var _reactCssThemr = require('react-css-themr');
+var _reactCssThemr = require('react-css-themr')
 
-var _identifiers = require('../identifiers');
+var _identifiers = require('../identifiers')
 
-var _Autocomplete = require('./Autocomplete');
+var _Autocomplete = require('./Autocomplete')
 
-var _chip = require('../chip');
+var _chip = require('../chip')
 
-var _input = require('../input');
+var _input = require('../input')
 
-var _theme = require('./theme.css');
+var _theme = require('./theme.css')
 
-var _theme2 = _interopRequireDefault(_theme);
+var _theme2 = _interopRequireDefault(_theme)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault (obj) { return obj && obj.__esModule ? obj : { default: obj } }
 
-var Autocomplete = (0, _Autocomplete.autocompleteFactory)(_chip.Chip, _input.Input);
-var ThemedAutocomplete = (0, _reactCssThemr.themr)(_identifiers.AUTOCOMPLETE, _theme2.default)(Autocomplete);
+var Autocomplete = (0, _Autocomplete.autocompleteFactory)(_chip.Chip, _input.Input)
+var ThemedAutocomplete = (0, _reactCssThemr.themr)(_identifiers.AUTOCOMPLETE, _theme2.default)(Autocomplete)
 
-exports.default = ThemedAutocomplete;
-exports.Autocomplete = ThemedAutocomplete;
+exports.default = ThemedAutocomplete
+exports.Autocomplete = ThemedAutocomplete

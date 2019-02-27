@@ -1,20 +1,20 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.overrideComponentTypeChecker = overrideComponentTypeChecker;
-exports.defaultChecker = defaultChecker;
-exports.default = isComponentOfType;
-var customChecker = void 0;
+})
+exports.overrideComponentTypeChecker = overrideComponentTypeChecker
+exports.defaultChecker = defaultChecker
+exports.default = isComponentOfType
+var customChecker = void 0
 
 /**
  *  Sets customChecker which will be used for all components.
  *
  * @param providedChecker {Function} - Checker function
  */
-function overrideComponentTypeChecker(providedChecker) {
-  customChecker = providedChecker;
+function overrideComponentTypeChecker (providedChecker) {
+  customChecker = providedChecker
 }
 
 /**
@@ -23,8 +23,8 @@ function overrideComponentTypeChecker(providedChecker) {
  * @param classType {ReactElement class} - the class of a React Element
  * @param reactElement {ReactElement} - any React Element (not a real DOM node)
  */
-function defaultChecker(classType, reactElement) {
-  return reactElement && reactElement.type === classType;
+function defaultChecker (classType, reactElement) {
+  return reactElement && reactElement.type === classType
 }
 
 /**
@@ -33,6 +33,6 @@ function defaultChecker(classType, reactElement) {
  * @param classType {ReactElement class} - the class of a React Element
  * @param reactElement {ReactElement} - any React Element (not a real DOM node)
  */
-function isComponentOfType(classType, reactElement) {
-  return customChecker ? customChecker(classType, reactElement) : defaultChecker(classType, reactElement);
+function isComponentOfType (classType, reactElement) {
+  return customChecker ? customChecker(classType, reactElement) : defaultChecker(classType, reactElement)
 }

@@ -1,5 +1,5 @@
-const Router = require('express-promise-router');
-const router = new Router();
+const Router = require('express-promise-router')
+const router = new Router()
 
 // const db_url = process.env.DATABASE_URL;
 // const { Client } = require('pg');
@@ -8,7 +8,7 @@ const router = new Router();
 // router.use(bodyParser.json());
 // router.use(bodyParser.urlencoded({extended: true}));
 
-module.exports = router;
+module.exports = router
 
 // router.get('/', async (req, res, next) => {
 //   const client = new Client({ connectionString: db_url, ssl: true });
@@ -16,7 +16,6 @@ module.exports = router;
 
 //   //var queryString = 'SELECT * FROM potential';
 //   var queryString = 'SELECT * FROM entry WHERE action = 1';
-
 
 //   try {
 //     const { rows } = await client.query(queryString);
@@ -29,7 +28,6 @@ module.exports = router;
 //   client.end();
 
 // });
-
 
 // router.post('/', async (req, res) => {
 //   const client = new Client({ connectionString: db_url, ssl: true });
@@ -68,7 +66,6 @@ module.exports = router;
 //   client.end();
 
 // });
-
 
 // router.delete('/:id', async (req, res) => {
 //   const client = new Client({ connectionString: db_url, ssl: true });
@@ -140,7 +137,6 @@ module.exports = router;
 //   name = req.body.name ? req.body.name : '';
 //   identity = req.body.identity ? req.body.identity : '';
 //   explanation = req.body.explanation ? req.body.explanation : '';
-
 
 //   //var queryString = 'INSERT INTO potential(term, definition, explanation, name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),CAST($4 AS VARCHAR),CAST($5 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM potential WHERE term = $1 AND definition = $2 AND explanation = $3 AND name = $4 AND identity = $5);';
 

@@ -1,26 +1,18 @@
-require('mocha');
-const { expect } = require('chai');
-const request = require('request');
+/* eslint-env mocha */
 
+const { expect } = require('chai')
+const { get } = require('./requestHelper')
 
 const reportedTest = () => {
+  describe('Reported route', () => {
+    // TODO make this a real test
+    it('should return currently reported entries with an action code of 4', async () => {
+      const { statusCode, body } = await get('/reported', { json: true })
 
-    describe('Reported route', () => {
-
-        it('should return currently reported entries with an action code of 4', (done) => {
-            request('http://localhost:4000/reported' , (error, response) => {
-                expect(response.statusCode).to.equal(200);
-                if (response.body.length){
-                    let responseJSON = JSON.parse(response.body)
-
-                    responseJSON.forEach((entry) => {
-                        expect(entry.action).to.equal(4); 
-                    })
-                }
-                done();
-            });
-        });
-    });
+      expect(statusCode).to.eql(200)
+      expect(body).to.eql([])
+    })
+  })
 }
 
-module.exports = reportedTest;
+module.exports = reportedTest

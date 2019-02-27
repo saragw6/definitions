@@ -7,10 +7,9 @@ function executeInSequence (pool, queries) {
     .reduce(
       (chain, q) => chain.then(() => pool.query(q)),
       Promise.resolve())
-    .catch(e => setImmediate(() => {throw e}));
+    .catch(e => setImmediate(() => { throw e }))
 }
 
-
 module.exports = {
- executeInSequence 
+  executeInSequence
 }

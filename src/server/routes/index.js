@@ -1,11 +1,10 @@
-const terms = require('./terms');
-const entries = require('./entries');
-const synonyms = require('./synonyms');
-const requested = require('./requested');
-const potentials = require('./potentials');
-const authors = require('./authors');
-const reported = require('./reported');
-
+const terms = require('./terms')
+const entries = require('./entries')
+const synonyms = require('./synonyms')
+const requested = require('./requested')
+const potentials = require('./potentials')
+const authors = require('./authors')
+const reported = require('./reported')
 
 module.exports = (app) => {
   app.use('/terms', terms)
