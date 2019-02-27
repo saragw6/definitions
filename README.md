@@ -22,6 +22,7 @@ _Production Mode:_
 
 #### Helpful commands
 * `yarn test` to run the tests
+* `yarn fix` to run the linter and fix all fixable issues
 * `heroku logs` to check the logs
 
 #### Deploy process

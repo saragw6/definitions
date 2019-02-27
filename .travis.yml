@@ -1,7 +1,13 @@
 language: node_js
 node_js:
   - "node"
+
 services:
   - postgresql
+
 before_script:
   - ./scripts/initDb.js test
+
+script:
+  - yarn lint
+  - yarn test
