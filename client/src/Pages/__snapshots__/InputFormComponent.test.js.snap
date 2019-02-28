@@ -1,6 +1,6 @@
 exports[`test termRequest? 1`] = `
 <div
-  className="formInput">
+  className={undefined}>
   <label>
     What term do you want defined?
   </label>
@@ -13,7 +13,7 @@ exports[`test termRequest? 1`] = `
       defaultValue={undefined}
       disabled={false}
       maxLength={50}
-      name="name"
+      name={undefined}
       onChange={[Function]}
       onKeyPress={undefined}
       required={false}
@@ -24,7 +24,7 @@ exports[`test termRequest? 1`] = `
         }
       }
       type="Text"
-      value="" />
+      value={undefined} />
     <span
       className={undefined} />
     <span
@@ -44,7 +44,7 @@ exports[`test termRequest? 1`] = `
 
 exports[`test termRequest? 2`] = `
 <div
-  className="formInput">
+  className={undefined}>
   <label>
     What term do you want defined?
   </label>
@@ -61,7 +61,7 @@ exports[`test termRequest? 2`] = `
       defaultValue={undefined}
       disabled={false}
       maxLength={50}
-      name="name"
+      name={undefined}
       onChange={[Function]}
       onKeyPress={undefined}
       required={false}
@@ -72,7 +72,7 @@ exports[`test termRequest? 2`] = `
         }
       }
       type="Text"
-      value="" />
+      value={undefined} />
     <span
       className={undefined} />
     <span
