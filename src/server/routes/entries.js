@@ -20,7 +20,7 @@ router.get('/potentials', async (req, res, next) => {
   // join inner/outer for where author is null?
 
   // get entries with author name & id
-  let queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.authorId WHERE action=1'
+  let queryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE action=1'
 
   pool.connect((err, client, release) => {
     if (err) return console.error('Error acquiring client', err.stack)
@@ -44,9 +44,9 @@ router.get('/:term', async (req, res, next) => {
   // join inner/outer for where author is null?
 
   // get entries that match the term or synonyms
-  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.authorId WHERE lower(term) = $1 AND action=2'
-  var synonymQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.authorId WHERE lower(term) IN (SELECT lower(sort_as) FROM synonym WHERE lower(term) = $1) AND action = 2 AND lower(term) != $1'
-  // var authorQueryString = 'SLECT name, identity FROM author WHERE authorId = $1'
+  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) = $1 AND action=2'
+  var synonymQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) IN (SELECT lower(sort_as) FROM synonym WHERE lower(term) = $1) AND action = 2 AND lower(term) != $1'
+  // var authorQueryString = 'SLECT name, identity FROM author WHERE author_id = $1'
 
   try {
     // get exact matches
@@ -77,9 +77,9 @@ router.post('/', async (req, res) => {
   var lastUpdated = new Date().toISOString()
 
   var termQueryString = 'INSERT INTO term(term) SELECT CAST($1 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM term WHERE term = $1);'
-  var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM author WHERE name = $1 AND identity = $2) RETURNING authorId;'
-  // var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT name, identity FROM author INTERSECT SELECT $1, $2) RETURNING authorId;';
-  var authorIdQueryString = 'SELECT authorId FROM author WHERE name = $1 AND identity = $2;'
+  var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT 1 FROM author WHERE name = $1 AND identity = $2) RETURNING author_id;'
+  // var authorQueryString = 'INSERT INTO author(name, identity) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR) WHERE NOT EXISTS (SELECT name, identity FROM author INTERSECT SELECT $1, $2) RETURNING author_id;';
+  var authorIdQueryString = 'SELECT author_id FROM author WHERE name = $1 AND identity = $2;'
   var entryQueryString = 'INSERT INTO entry(term, definition, explanation, author, action, timeSubmitted, lastUpdated) SELECT CAST($1 AS VARCHAR),CAST($2 AS VARCHAR),CAST($3 AS VARCHAR),$4,$5,$6, $7 WHERE NOT EXISTS (SELECT 1 FROM entry WHERE term = $1 AND definition = $2 AND explanation = $3 AND author = $4);'
   // this is too general but it works:
   // change this to make it flip the fulfilled flag -- TEST THIS
@@ -94,7 +94,7 @@ router.post('/', async (req, res) => {
     if (result.rows.length === 0) {
       result = await client.query(authorIdQueryString, [name, identity])
     }
-    const authorId = result.rows[0]['authorId']
+    const authorId = result.rows[0]['author_id']
     // delete requested if must
     await client.query(requestedQueryString) // v general query but it works
     // //insert entry!
@@ -138,7 +138,7 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
 //   var getEntryQueryString = 'SELECT * FROM entry WHERE entry_id = $1;';
 //   var delEntryQueryString = 'DELETE FROM entry WHERE entry_id = $1;';
 //   var termQueryString = 'DELETE FROM term WHERE term = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE term = $1) ON CONFLICT ON CONSTRAINT synonym_term_fkey ;';
-//   var authorQueryString = 'DELETE FROM author WHERE authorId = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE author = $1);';
+//   var authorQueryString = 'DELETE FROM author WHERE author_id = $1 AND NOT EXISTS (SELECT 1 FROM entry WHERE author = $1);';
 
 //   try {
 //     //get entry details
