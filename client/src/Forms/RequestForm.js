@@ -21,10 +21,8 @@ export default class RequestForm extends Component {
   createContent = () => {
     return (<div>
       <p>I'm collecting informal definitions to help people understand LGBTQ+ terms they don't know!</p>
-      <p>You can request a term here that you want someone else to define on <a
-        href='queerundefined.com'>queerundefined.com</a></p>
-      <p>You can read more about this project here: <a
-        href='http://queerundefined.com/about'>http://queerundefined.com/about</a></p>
+      <p>You can request a term here that you want someone else to define.</p>
+      <p> Check out the <a href='http://queerundefined.com/about'>about</a> page to read more about this project.</p>
     </div>)
   }
 
@@ -68,7 +66,7 @@ export default class RequestForm extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <Form title='Request a Term | Queer Undefined'
+        <Form title='Request a Term'
               content={this.createContent()}
               inputs={[
                 {labelInput: 'What term do you want defined?', isRequired: true, label:'Term', value: Term,

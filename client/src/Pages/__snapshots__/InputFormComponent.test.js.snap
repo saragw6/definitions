@@ -6,7 +6,7 @@ exports[`test termRequest? 1`] = `
   </label>
    
   <div
-    className=""
+    className="queerInput"
     data-react-toolbox="input">
     <input
       className=""
@@ -54,7 +54,7 @@ exports[`test termRequest? 2`] = `
     *
   </span>
   <div
-    className=""
+    className="queerInput"
     data-react-toolbox="input">
     <input
       className=""

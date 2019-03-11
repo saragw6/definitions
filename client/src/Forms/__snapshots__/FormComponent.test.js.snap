@@ -32,7 +32,7 @@ exports[`test termRequest? 1`] = `
             *
           </span>
           <div
-            className=""
+            className="queerInput"
             data-react-toolbox="input">
             <input
               className=""
@@ -70,7 +70,7 @@ exports[`test termRequest? 1`] = `
       <div
         className="submitBox">
         <button
-          className=""
+          className=" queerButton"
           data-react-toolbox="button"
           disabled={false}
           href={undefined}

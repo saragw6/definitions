@@ -37,7 +37,7 @@ export default class Form extends Component {
               {this.createInputs(inputs)}
             </div>
             <div className='submitBox'>
-              <Button onMouseUp={onSubmit} label='Submit' raised primary/>
+              <Button className='queerButton' onMouseUp={onSubmit} label='Submit' raised primary/>
             </div>
 
           </div>
@@ -48,9 +48,10 @@ export default class Form extends Component {
           active={stateBar}
           label={snackbarMessage}
           timeout={3000}
-          type='cancel'
+          type='accept'
           onClick={onClickSnackBar}
           onTimeout={onTimeoutSnackBar}
+          className='queerSnackbar'
         />
 
       </div>
