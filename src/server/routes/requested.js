@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 
 router.post('/:term', async (req, res) => {
 
-  let queryString = 'INSERT INTO requested(term, fulfilled) SELECT CAST($1 AS VARCHAR),0 WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);';
+  let queryString = 'INSERT INTO requested(term, fulfilled, action) SELECT CAST($1 AS VARCHAR),0,0 WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);';
   let values = [req.params.term];
 
   (async () => {
