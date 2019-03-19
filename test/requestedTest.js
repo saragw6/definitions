@@ -23,7 +23,7 @@ const requestedTest = () => {
           expect(rows.length).to.equal(1)
           expect(rows[0]).to.eql({
             term: 'test124',
-            action: 0,
+            action: 1,
             fulfilled: 0
           })
 	      });
@@ -79,7 +79,7 @@ const requestedTest = () => {
             const { statusCode, body } = await post('/requested/test124?action=accept', { json: true })
 
             const [ term ] = await unwrap(db, 'SELECT * FROM requested')
-            expect(term.action).to.equal(1)
+            expect(term.action).to.equal(2)
           })
         })
 
@@ -97,19 +97,25 @@ const requestedTest = () => {
             const { statusCode, body } = await post('/requested/test124?action=reject', { json: true })
 
             const [ term ] = await unwrap(db, 'SELECT * FROM requested')
-            expect(term.action).to.equal(3)
+            expect(term.action).to.equal(4)
           })
         })
       })
     })
 
-    it('GET: should return requested entries', async () => {
-	    await requestNewTerm('test124');
-
-	    const {statusCode, body} = await get('/requested', { json: true });
-      expect(statusCode).to.equal(200);
-      expect(body).to.eql(['test124']);
-    });
+    describe('GET /requested', () => {
+      it('responds with all the requested terms', async () => {
+	      await requestNewTerm('test124');
+      
+	      const {statusCode, body} = await get('/requested', { json: true });
+        expect(body).to.eql([{
+          term: 'test124',
+          fulfilled: 0,
+          action: 1
+        }]);
+        expect(statusCode).to.equal(200);
+      });
+    })
   });
 }
 

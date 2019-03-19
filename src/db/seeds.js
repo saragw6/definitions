@@ -9,10 +9,10 @@ const seedActions = db => db.query('SELECT COUNT(*) FROM action')
   .then(result => result.rows[0].count === '4'
     ? Promise.resolve()
     : executeInSequence(db, [
-        insertAction(0, 'potential'),
-        insertAction(1, 'accepted'),
-        insertAction(2, 'reported'),
-        insertAction(3, 'rejected')
+        insertAction(1, 'potential'),
+        insertAction(2, 'accepted'),
+        insertAction(3, 'reported'),
+        insertAction(4, 'rejected')
     ])
   )
 

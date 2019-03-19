@@ -1,37 +1,25 @@
 const Router = require('express-promise-router');
 const router = new Router();
 const db = require('../../db')
-const unwrap = require('../../db/util')
+const { unwrap } = require('../../db/util')
 
 module.exports = router;
 
 router.get('/', async (req, res) => {
-
-  let query = {
-      text:'SELECT * FROM requested WHERE fulfilled=0',
-      rowMode: 'array'
-  };
-
-    (async () => {
-        const client = await db.connect();
-
-        try {
-            const result = await client.query(query);
-            res.send(result.rows.map(term_array => {return term_array[0]}));
-        } finally {
-            client.release();
-        }
-    })().catch((err) => {
-        res.status(500).send('Error while retrieving requested entries'); //could make more specific
-        return console.error('Error executing query', err.stack);
-    });
-
+  try {
+    const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0')
+    
+    res.send(requestedTerms)
+  } catch (err) {
+    console.log(err)
+    res.status(500).send({ message: 'Error while retrieving requested entries' }); //could make more specific
+  }
 })
 
 const updates = {
   accept: async function (term) {
     await db.query(
-      `UPDATE requested SET action = 1 WHERE term = $1`,
+      `UPDATE requested SET action = 2 WHERE term = $1`,
       [term]
     )
     
@@ -40,7 +28,7 @@ const updates = {
 
   reject: async function (term) {
     await db.query(
-      `UPDATE requested SET action = 3 WHERE term = $1`,
+      `UPDATE requested SET action = 4 WHERE term = $1`,
       [term]
     )
     
@@ -51,7 +39,7 @@ const updates = {
 async function create (term) {
   await db.query(
     `INSERT INTO requested(term, fulfilled, action)
-     SELECT CAST($1 AS VARCHAR),0,0
+     SELECT CAST($1 AS VARCHAR),0,1
      WHERE NOT EXISTS (SELECT 1 FROM requested WHERE term = $1);`,
     [term]);
 
@@ -79,6 +67,7 @@ router.post('/:term', async (req, res) => {
   try {
     await upsert(term, action, res)
   } catch (err) {
+    console.log(err)
     res.status(500).send('Error while inserting requested term: ' + term); //could make more specific
   }
 })
