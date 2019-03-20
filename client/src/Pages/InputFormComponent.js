@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import '../stylesheets/Forms.css'; // Import css modules stylesheet as styles
 import { Input } from '../Libraries/ReactToolboxLibrary';
 
+const normalStyle = 'formInput';
+const errorStyle = 'formInput formInputError';
+
 export default class InputForm extends Component {
   // Set default props
   static defaultProps = {
@@ -16,16 +19,16 @@ export default class InputForm extends Component {
 
   handleChange = (label, isRequired, value) => {
     const {onChange} = this.props;
-    const errorStyle = 'errorStyle'.concat(label);
     const showError = 'showError'.concat(label);
-    onChange(label, isRequired, showError, errorStyle, value);
+    onChange(label, isRequired, showError, value);
   };
 
   render() {
-    const { inputType, labelInput, inputHint, labelRequiredMessage, isRequired, value, label, showError, errorStyle, maxLength } = this.props;
+    const { inputType, labelInput, inputHint, labelRequiredMessage, isRequired, value, label, showError, maxLength } = this.props;
+    const style = showError ? errorStyle : normalStyle;
 
     return (
-      <div className={errorStyle}>
+      <div className={style}>
         <label>{labelInput}</label>&nbsp;{(isRequired  && <span className="error">*</span> )}
         <Input className="queerInput" style={{background: 'transparent'}} type={inputType} hint={inputHint} value={value} onChange={this.handleChange.bind(this, label, isRequired)} maxLength={maxLength} />
         {(showError  &&

@@ -1,6 +1,6 @@
 exports[`test termRequest? 1`] = `
 <div
-  className={undefined}>
+  className="formInput">
   <label>
     What term do you want defined?
   </label>
@@ -44,7 +44,7 @@ exports[`test termRequest? 1`] = `
 
 exports[`test termRequest? 2`] = `
 <div
-  className={undefined}>
+  className="formInput">
   <label>
     What term do you want defined?
   </label>

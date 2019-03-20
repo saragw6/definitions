@@ -22,7 +22,7 @@ exports[`test termRequest? 1`] = `
       <div
         className="inputsBox">
         <div
-          className={undefined}>
+          className="formInput">
           <label>
             What term do you want defined?
           </label>

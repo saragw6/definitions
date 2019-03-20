@@ -2,20 +2,10 @@ import React, {Component} from 'react';
 import Form from './FormComponent';
 import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
-/*const RequestForm = () => {
-    return(
-      <div style={{"display":"flex","width":"100%","justifyContent":"center"}}>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJjF6QREqxIZDOc5t6QmXtAbjTxTVjaMZoUOJU1TX-gyk9bw/viewform?embedded=true" width="80%" height="562px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-      </div>
-    );
-}
-
-export default RequestForm;*/
-
 export default class RequestForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {Term:'', showErrorTerm: false, errorStyleTerm: 'formInput', stateBar: false, snackbarMessage: ''};
+    this.state = {Term:'', showErrorTerm: false, stateBar: false, snackbarMessage: ''};
   }
 
   createContent = () => {
@@ -31,8 +21,7 @@ export default class RequestForm extends Component {
     const term = this.state.Term;
     if(term.trim().length === 0) {
       const snackBarMessage = 'You should provide a term!'
-      this.setState({...this.state,
-        stateBar: true, showErrorTerm: true, errorStyleTerm:'formInput formInputError', snackbarMessage: snackBarMessage})
+      this.setState({stateBar: true, showErrorTerm: true, snackbarMessage: snackBarMessage})
     }
     else {
       fetch('/requested/' + term, {method: 'POST'})
@@ -41,7 +30,7 @@ export default class RequestForm extends Component {
           if(response.status !== 200)
             snackBarMessage = 'Oh no! Something went wrong, please try again.'
 
-          this.setState({...this.state, stateBar: true, Term: '', snackbarMessage: snackBarMessage})
+          this.setState({stateBar: true, Term: '', snackbarMessage: snackBarMessage})
         });
     }
   }
@@ -54,15 +43,15 @@ export default class RequestForm extends Component {
     this.setState({ ...this.state, stateBar: false});
   };
 
-  handleChange = (label, isRequired, showError, errorStyle ,value) => {
+  handleChange = (label, isRequired, showError, value) => {
     if(value.length === 0 && isRequired)
-      this.setState({...this.state, [label]: value, [showError]: true, [errorStyle]: 'formInput formInputError'});
+      this.setState({...this.state, [label]: value, [showError]: true});
     else
-      this.setState({...this.state, [label]: value, [showError]: false, [errorStyle]: 'formInput'});
+      this.setState({...this.state, [label]: value, [showError]: false});
   };
 
   render() {
-    const { showErrorTerm, errorStyleTerm, Term, stateBar, snackbarMessage } = this.state;
+    const { showErrorTerm, Term, stateBar, snackbarMessage } = this.state;
 
     return (
       <ThemeProvider theme={theme}>
@@ -70,7 +59,7 @@ export default class RequestForm extends Component {
               content={this.createContent()}
               inputs={[
                 {labelInput: 'What term do you want defined?', isRequired: true, label:'Term', value: Term,
-                  onChange:this.handleChange, showError: showErrorTerm, errorStyle: errorStyleTerm }
+                  onChange:this.handleChange, showError: showErrorTerm}
                 ]}
               onSubmit={this.handleSubmit.bind(this)}
               onClickSnackBar={this.handleSnackbarClick.bind(this)}
