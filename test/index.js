@@ -5,7 +5,7 @@ beforeEach(async function resetDb() {
   await truncateTables(pool);
 });
 
-const app = require('../src/server/index')
+const app = require('../src/server/app')
 const TEST_PORT = 4000;
 const startApp = () => app.listen(TEST_PORT, () => {
     console.log(`Tests running on port ${TEST_PORT}`);
