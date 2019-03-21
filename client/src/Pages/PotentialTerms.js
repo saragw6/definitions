@@ -13,7 +13,21 @@ export default class PotentialTerms extends Component {
   componentDidMount () {
     fetch('/requested')
       .then(res => res.json())
-      .then(data => data.map((term, index) => Object.assign(term, { entry_id: index })))
+      .then(data => data.map((term, index) => Object.assign(term, {
+        entry_id: index,
+
+        rejectCb: function () {
+          fetch(`/requested/${this.term}?action=reject`, {
+            method: 'POST'
+          })
+        },
+
+        acceptCb: function () {
+          fetch(`/requested/${this.term}?action=accept`, {
+            method: 'POST'
+          })
+        }
+      })))
       .then(data => this.setState({ terms: data }))
   }
 

@@ -26,7 +26,6 @@ class ResultCard extends Component {
     return str.toLowerCase();
   }
 
-
   defWithLinks(def) {
     if (def === undefined) {
       return;
@@ -52,16 +51,24 @@ class ResultCard extends Component {
   }
 
    rejectPotential(){
-    alert("reject potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
-    fetch('/entries/setstatus/3/id/' + this.props.entry.entry_id, {method: 'POST'});
+     if (this.props.entry.rejectCb) {
+       this.props.entry.rejectCb()
+     } else {
+       alert("reject potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
+       fetch('/entries/setstatus/3/id/' + this.props.entry.entry_id, {method: 'POST'});
+     }
 
-
-    this.setState({visible: false});
-  }
+     this.setState({visible: false});
+   }
 
   acceptPotential(){
-    alert("accept potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
-    fetch('/entries/setstatus/2/id/' + this.props.entry.entry_id, {method: 'POST'});
+    if (this.props.entry.acceptCb) {
+      this.props.entry.acceptCb()
+    } else {
+      alert("accept potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
+      fetch('/entries/setstatus/2/id/' + this.props.entry.entry_id, {method: 'POST'});
+    }
+
     this.setState({visible: false});
   }
 
