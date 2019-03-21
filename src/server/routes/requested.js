@@ -6,8 +6,17 @@ const { unwrap } = require('../../db/util')
 module.exports = router;
 
 router.get('/', async (req, res) => {
+  const status = req.query.status
+  const statuses = {
+    potential: 1,
+    accepted: 2,
+    reported: 3,
+    rejected: 4
+  }
+  const action = statuses[req.query.status] || 1
+
   try {
-    const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0')
+    const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0 AND action=$1', [action])
     
     res.send(requestedTerms)
   } catch (err) {

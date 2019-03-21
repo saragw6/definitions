@@ -32,12 +32,15 @@ export default class PotentialTerms extends Component {
   }
 
   render() {
+    const results = this.state.terms.length === 0
+      ? <h5 style={{textAlign: 'center'}}>No potential terms</h5>
+      : <ResultList
+            style={{display:"flex", flexDirection:"column", alignContent:"center"}}
+            entries={this.state.terms} />
     return (
       <ThemeProvider theme={theme}>
         <div>
-          <ResultList
-            style={{display:"flex", flexDirection:"column", alignContent:"center"}}
-            entries={this.state.terms} />
+          {results}
         </div>
       </ThemeProvider>
     )

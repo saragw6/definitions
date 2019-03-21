@@ -104,8 +104,10 @@ const requestedTest = () => {
     })
 
     describe('GET /requested', () => {
-      it('responds with all the requested terms', async () => {
-	      await requestNewTerm('test124');
+      it('responds with all the potential requested terms by default', async () => {
+        await post('/requested/test124')
+        await post('/requested/test125')
+        await post('/requested/test125?action=accept')
       
 	      const {statusCode, body} = await get('/requested', { json: true });
         expect(body).to.eql([{
@@ -115,6 +117,20 @@ const requestedTest = () => {
         }]);
         expect(statusCode).to.equal(200);
       });
+
+      it('responds with all the requested terms with a status of accepted', async () => {
+        await post('/requested/test124')
+        await post('/requested/test125')
+        await post('/requested/test125?action=accept')
+      
+	      const {statusCode, body} = await get('/requested?status=accepted', { json: true });
+        expect(body).to.eql([{
+          term: 'test125',
+          fulfilled: 0,
+          action: 2
+        }]);
+        expect(statusCode).to.equal(200);
+      })
     })
   });
 }
