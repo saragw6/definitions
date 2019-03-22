@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Boop from './Boop';
+import Boop from '../Boop';
 
 test('works?', () => {
   const component = renderer.create(<Boop/>);
