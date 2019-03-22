@@ -5,42 +5,53 @@ import { theme, ThemeProvider } from '../Libraries/ReactToolboxLibrary';
 
 import '../assets/react-toolbox/theme.css';
 
+const formatForResultList = apiResponse => apiResponse.map((record, index) => ({
+  term: record.term,
+  action: record.action,
+  entry_id: index,
+
+  rejectCb: function () {
+    fetch(`/requested/${record.term}?action=reject`, {
+      method: 'POST'
+    })
+  },
+
+  acceptCb: function () {
+    fetch(`/requested/${record.term}?action=accept`, {
+      method: 'POST'
+    })
+  }
+}))
+
+
 export default class PotentialTerms extends Component {
   state = {
     terms: []
   }
 
   componentDidMount () {
+    const { auth } = this.props
+    if (!auth.isAuthenticated()) { auth.login(); }
+
     fetch('/requested')
       .then(res => res.json())
-      .then(data => data.map((term, index) => Object.assign(term, {
-        entry_id: index,
-
-        rejectCb: function () {
-          fetch(`/requested/${this.term}?action=reject`, {
-            method: 'POST'
-          })
-        },
-
-        acceptCb: function () {
-          fetch(`/requested/${this.term}?action=accept`, {
-            method: 'POST'
-          })
-        }
-      })))
-      .then(data => this.setState({ terms: data }))
+      .then(formatForResultList)
+      .then(terms => this.setState({ terms }))
   }
 
   render() {
-    const results = this.state.terms.length === 0
+    const { terms } = this.state
+    const { auth } = this.props
+
+    const results = terms.length === 0
       ? <h5 style={{textAlign: 'center'}}>No potential terms</h5>
       : <ResultList
             style={{display:"flex", flexDirection:"column", alignContent:"center"}}
-            entries={this.state.terms} />
+            entries={terms} />
     return (
       <ThemeProvider theme={theme}>
         <div>
-          {results}
+          {auth.isAuthenticated() && results}
         </div>
       </ThemeProvider>
     )

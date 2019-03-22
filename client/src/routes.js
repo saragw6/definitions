@@ -20,7 +20,7 @@ const makeMainRoutes = () => {
         <div>
           <Route path="/*" render={(props) => {searchHashRedirect(); return <App auth={auth} term={getTermFromPath(props.match.params[0])}/>;} }/>
           <Route path="/potentialdefs" render={() => <PotentialDefs auth={auth}/>} />
-          <Route path="/potentialterms" render={() => <PotentialTerms />} />
+          <Route path="/potentialterms" render={() => <PotentialTerms auth={auth}/>} />
           <Route path="/defineform" render={() => <DefineForm/>} />
           <Route path="/requestform" render={() => <RequestForm/>} />
           <Route path="/reporteddefs" render={() => <ReportedDefs auth={auth}/>} />
