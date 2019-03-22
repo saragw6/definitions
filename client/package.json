@@ -5,7 +5,8 @@
       "CARD",
       "BUTTON",
       "TOOLTIP",
-      "DIALOG"
+      "DIALOG",
+      "SNACKBAR"
     ],
     "customProperties": {
       "animation-duration": "0.3s",
@@ -37,6 +38,7 @@
     "webpack-core": "^0.6.9"
   },
   "devDependencies": {
+    "react-test-renderer": "^16.8.3",
     "react-toolbox-themr": "^1.0.2"
   },
   "scripts": {
@@ -44,7 +46,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=./rafPolyfill.js",
     "eject": "react-scripts eject",
     "toolbox": "react-toolbox-themr"
   },
