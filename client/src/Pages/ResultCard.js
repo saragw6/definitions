@@ -51,26 +51,14 @@ class ResultCard extends Component {
   }
 
    rejectPotential(){
-     if (this.props.entry.rejectCb) {
-       this.props.entry.rejectCb()
-     } else {
-       alert("reject potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
-       fetch('/entries/setstatus/3/id/' + this.props.entry.entry_id, {method: 'POST'});
-     }
-
+     this.props.entry.rejectCb()
      this.setState({visible: false});
    }
 
-  acceptPotential(){
-    if (this.props.entry.acceptCb) {
-      this.props.entry.acceptCb()
-    } else {
-      alert("accept potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
-      fetch('/entries/setstatus/2/id/' + this.props.entry.entry_id, {method: 'POST'});
-    }
-
-    this.setState({visible: false});
-  }
+   acceptPotential(){
+     this.props.entry.acceptCb()
+     this.setState({visible: false});
+   }
 
   reportEntry(){
     if (confirm("Are you sure you want to report this definition for " + this.props.entry.term + "? ")) {
