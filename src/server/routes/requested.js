@@ -6,14 +6,13 @@ const { unwrap } = require('../../db/util')
 module.exports = router;
 
 router.get('/', async (req, res) => {
-  const status = req.query.status
-  const statuses = {
+  const actions = {
     potential: 1,
     accepted: 2,
     reported: 3,
     rejected: 4
   }
-  const action = statuses[req.query.status] || 1
+  const action = actions[req.query.action] || 1
 
   try {
     const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0 AND action=$1', [action])
@@ -26,7 +25,7 @@ router.get('/', async (req, res) => {
 })
 
 const updates = {
-  accept: async function (term) {
+  accepted: async function (term) {
     await db.query(
       `UPDATE requested SET action = 2 WHERE term = $1`,
       [term]
@@ -35,7 +34,7 @@ const updates = {
     return { message: `Accepted term "${term}"` }
   },
 
-  reject: async function (term) {
+  rejected: async function (term) {
     await db.query(
       `UPDATE requested SET action = 4 WHERE term = $1`,
       [term]

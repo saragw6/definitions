@@ -11,13 +11,13 @@ const formatForResultList = apiResponse => apiResponse.map((record, index) => ({
   entry_id: index,
 
   rejectCb: function () {
-    fetch(`/requested/${record.term}?action=reject`, {
+    fetch(`/requested/${record.term}?action=rejected`, {
       method: 'POST'
     })
   },
 
   acceptCb: function () {
-    fetch(`/requested/${record.term}?action=accept`, {
+    fetch(`/requested/${record.term}?action=accepted`, {
       method: 'POST'
     })
   }

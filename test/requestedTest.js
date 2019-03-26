@@ -65,9 +65,9 @@ const requestedTest = () => {
           })
         })
 
-        describe('when the action is "accept"', () => {
+        describe('when the action is "accepted"', () => {
           it('responds with success', async () => {
-            const { statusCode, body } = await post('/requested/test124?action=accept', { json: true })
+            const { statusCode, body } = await post('/requested/test124?action=accepted', { json: true })
 
             expect(body).to.eql({
               message: 'Accepted term "test124"'
@@ -76,16 +76,16 @@ const requestedTest = () => {
           })
         
           it('sets the action to accepted', async () => {
-            const { statusCode, body } = await post('/requested/test124?action=accept', { json: true })
+            const { statusCode, body } = await post('/requested/test124?action=accepted', { json: true })
 
             const [ term ] = await unwrap(db, 'SELECT * FROM requested')
             expect(term.action).to.equal(2)
           })
         })
 
-        describe('when the action is "reject"', () => {
+        describe('when the action is "rejected"', () => {
           it('responds with success', async () => {
-            const { statusCode, body } = await post('/requested/test124?action=reject', { json: true })
+            const { statusCode, body } = await post('/requested/test124?action=rejected', { json: true })
 
             expect(body).to.eql({
               message: 'Rejected term "test124" :('
@@ -94,7 +94,7 @@ const requestedTest = () => {
           })
         
           it('sets the action to rejected', async () => {
-            const { statusCode, body } = await post('/requested/test124?action=reject', { json: true })
+            const { statusCode, body } = await post('/requested/test124?action=rejected', { json: true })
 
             const [ term ] = await unwrap(db, 'SELECT * FROM requested')
             expect(term.action).to.equal(4)
@@ -104,11 +104,13 @@ const requestedTest = () => {
     })
 
     describe('GET /requested', () => {
-      it('responds with all the potential requested terms by default', async () => {
+      beforeEach(async () => {
         await post('/requested/test124')
         await post('/requested/test125')
-        await post('/requested/test125?action=accept')
-      
+        await post('/requested/test125?action=accepted')
+      })
+
+      it('responds with all the potential requested terms by default', async () => {
 	      const {statusCode, body} = await get('/requested', { json: true });
         expect(body).to.eql([{
           term: 'test124',
@@ -119,11 +121,7 @@ const requestedTest = () => {
       });
 
       it('responds with all the requested terms with a status of accepted', async () => {
-        await post('/requested/test124')
-        await post('/requested/test125')
-        await post('/requested/test125?action=accept')
-      
-	      const {statusCode, body} = await get('/requested?status=accepted', { json: true });
+	      const {statusCode, body} = await get('/requested?action=accepted', { json: true });
         expect(body).to.eql([{
           term: 'test125',
           fulfilled: 0,
