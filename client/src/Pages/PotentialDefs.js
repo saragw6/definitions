@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import Auth from './Auth.js';
 
 import { ResultList } from '../Libraries/ComponentsLibrary';
 import { theme, ThemeProvider } from '../Libraries/ReactToolboxLibrary';
@@ -19,6 +18,7 @@ const formatForResultList = apiResponse => apiResponse.map(record =>
     }
   })
 )
+
 class PotentialDefs extends Component {
 
   constructor() {
@@ -34,6 +34,7 @@ class PotentialDefs extends Component {
 
     fetch('/entries/potentials')
       .then(res => {return res.json()})
+      .then(formatForResultList)
       .then(res => this.setState({potentials: res}));
   }
 
