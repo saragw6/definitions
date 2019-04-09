@@ -113,6 +113,9 @@ class App extends Component {
       {(this.state.my_term !== "" && showLoading) &&
         <div className="blurb"> Loading definitions... </div>
       }
+      {(my_entries && my_entries.length > 0) &&
+        <div className="blurb">If you disagree with a definition, please add your own definition <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">here</a>.</div>
+      }
       {(this.state.my_term === "" && window.location.pathname === "/") &&
         <div className="blurb">{welcomeBlurb}</div>
       }
