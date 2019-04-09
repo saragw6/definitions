@@ -5,6 +5,8 @@ const connectionPool = require('../src/db/connectionPool');
 const { createUser, createDb, createTables } = require('../src/db/manage');
 const { addActionToRequested } = require('../src/db/migrations')
 const { seedActions } = require('../src/db/seeds')
+const { seedEntries } = require('../src/db/seedEntries')
+const { entries } = require('../src/db/testEntries')
 
 let envs = process.argv.slice(2);
 if (envs.length === 0) {
@@ -26,10 +28,18 @@ function initialize(config) {
 
     .then(() => console.log('Running seeds...'))
     .then(() => seedActions(pool))
+    .then(() => config.name === 'queerdev'
+      ? seedEntries(pool, entries)
+      : null)
 
     .then(() => console.log('Closing connection...'))
     .then(() => pool.end())
     .then(() => console.log('...done\n'))
+    .catch(e => {
+      console.log('ERROR while initializing database')
+      console.log(e)
+      process.exit(1)
+    })
 }
 
 envs.reduce(
