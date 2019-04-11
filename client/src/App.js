@@ -100,7 +100,10 @@ class App extends Component {
     const showLoading = this.state.entriesLoading;
     const locationStrings = window.location.href.split(".com/");
     const canonicalUrl = "https://www.queerundefined.com/" + locationStrings[1];
-    
+
+    const any_term = this.state.my_term !== "";
+    const any_entries = my_entries && my_entries.length > 0;
+    const at_starting_url = window.location.pathname === "/";
 
   return(
     <DocumentTitle title={pageTitle}>
@@ -132,10 +135,10 @@ class App extends Component {
       />
     </div>
 
-      <LoadingDefinitionsBlurb requirement={this.state.my_term !== "" && showLoading} />
-      <NoDefinitionsBlurb requirement={!showLoading && this.state.my_term !== "" && my_entries.length === 0} />
-      <DisagreementBlurb requirement={my_entries && my_entries.length > 0} />
-      <WelcomeBlurb requirement={this.state.my_term === "" && window.location.pathname === "/"} />
+      <LoadingDefinitionsBlurb requirement={any_term && showLoading} />
+      <NoDefinitionsBlurb requirement={!showLoading && any_term && !any_entries} />
+      <DisagreementBlurb requirement={any_entries} />
+      <WelcomeBlurb requirement={!any_term && at_starting_url} />
 
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
