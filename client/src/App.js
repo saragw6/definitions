@@ -116,10 +116,10 @@ class App extends Component {
       />
     </div>
 
-      <LoadingDefinitionsBlurb requirement={any_term && showLoading} />
-      <NoDefinitionsBlurb requirement={!showLoading && any_term && !any_entries} />
-      <DisagreementBlurb requirement={any_entries} />
-      <WelcomeBlurb requirement={!any_term && at_starting_url} />
+    {(any_term && showLoading) && <LoadingDefinitionsBlurb />}
+    {(!showLoading && any_term && !any_entries) && <NoDefinitionsBlurb />}
+    {(any_entries) && <DisagreementBlurb />}
+    {(!any_term && at_starting_url) && <WelcomeBlurb />}
 
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <Tooltips auth={this.props.auth} aboutOnClick={this.aboutOnClick.bind(this)}/>

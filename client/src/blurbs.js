@@ -5,17 +5,17 @@ const add_definition_url = "https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5
 const request_definition_url = "https://goo.gl/forms/xrZyTzaVo8Addq8d2";
 
 function DisagreementBlurb(props) {
-  return props.requirement && (
+  return (
     <div className="blurb">Disagree with these definitions? <a href={add_definition_url} target="new">Add your own</a></div>
   );
 }
 
 function LoadingDefinitionsBlurb(props) {
-  return props.requirement && (<div className="blurb"> Loading definitions... </div>);
+  return (<div className="blurb"> Loading definitions... </div>);
 }
 
 function NoDefinitionsBlurb(props) {
-  return props.requirement && (
+  return (
     <div className="blurb">
       No definitions yet. You can <a href={add_definition_url} target="new">add one</a> or <a href={request_definition_url} target="new">request</a> that this term be defined.
     </div>
@@ -23,7 +23,7 @@ function NoDefinitionsBlurb(props) {
 }
 
 function WelcomeBlurb(props) {
-  return props.requirement && (<div className="blurb">{welcomeBlurb}</div>);
+  return (<div className="blurb">{welcomeBlurb}</div>);
 }
 
 export {
