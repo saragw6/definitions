@@ -15,6 +15,31 @@ import { ResultList } from './Libraries/ComponentsLibrary';
 import history from './history';
 import { welcomeBlurb } from "./utils/TextBlurbs";
 
+const add_definition_url = "https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link";
+const request_definition_url = "https://goo.gl/forms/xrZyTzaVo8Addq8d2";
+
+function LoadingDefinitionsBlurb(props) {
+  return props.requirement && (<div className="blurb"> Loading definitions... </div>);
+}
+
+function WelcomeBlurb(props) {
+  return props.requirement && (<div className="blurb">{welcomeBlurb}</div>);
+}
+
+function DisagreementBlurb(props) {
+  return props.requirement && (
+    <div className="blurb">Disagree with these definitions? <a href={add_definition_url} target="new">Add your own</a></div>
+  );
+}
+
+function NoDefinitionsBlurb(props) {
+  return props.requirement && (
+    <div className="blurb">
+      No definitions yet. You can <a href={add_definition_url} target="new">add one</a> or <a href={request_definition_url} target="new">request</a> that this term be defined.
+    </div>
+  );
+}
+
 class App extends Component {
   constructor(props) {
 
@@ -107,18 +132,11 @@ class App extends Component {
       />
     </div>
 
-      {(!showLoading && this.state.my_term !== "" && my_entries.length === 0) &&
-        <div className="blurb"> No definitions yet. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">add one</a> or <a href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="new">request</a> that this term be defined. </div>
-      }
-      {(this.state.my_term !== "" && showLoading) &&
-        <div className="blurb"> Loading definitions... </div>
-      }
-      {(my_entries && my_entries.length > 0) &&
-        <div className="blurb">Disagree with these definitions? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="new">Add your own</a></div>
-      }
-      {(this.state.my_term === "" && window.location.pathname === "/") &&
-        <div className="blurb">{welcomeBlurb}</div>
-      }
+      <LoadingDefinitionsBlurb requirement={this.state.my_term !== "" && showLoading} />
+      <NoDefinitionsBlurb requirement={!showLoading && this.state.my_term !== "" && my_entries.length === 0} />
+      <DisagreementBlurb requirement={my_entries && my_entries.length > 0} />
+      <WelcomeBlurb requirement={this.state.my_term === "" && window.location.pathname === "/"} />
+
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
       <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
         {this.props.auth.isAuthenticated() && <TooltipButton icon="clear" onClick={this.props.auth.logout} mini floating primary style={{margin: '5px'}} tooltip="logout"/>}
