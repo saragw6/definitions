@@ -10,16 +10,16 @@ import './stylesheets/queerButton.css';
 import './stylesheets/queerInput.css';
 import './stylesheets/queerSnackbar.css';
 
-import {Autocomplete, theme, ThemeProvider, TooltipButton} from './Libraries/ReactToolboxLibrary';
+import {Autocomplete, theme, ThemeProvider} from './Libraries/ReactToolboxLibrary';
 import { ResultList } from './Libraries/ComponentsLibrary';
 import history from './history';
-import { welcomeBlurb } from "./utils/TextBlurbs";
 import {
   DisagreementBlurb,
   LoadingDefinitionsBlurb,
   NoDefinitionsBlurb,
   WelcomeBlurb
 } from "./blurbs";
+import { Tooltips } from "./tooltips";
 
 class App extends Component {
   constructor(props) {
@@ -122,13 +122,7 @@ class App extends Component {
       <WelcomeBlurb requirement={!any_term && at_starting_url} />
 
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
-      <div style={{position: 'fixed', bottom: '15px', right: '15px'}}>
-        {this.props.auth.isAuthenticated() && <TooltipButton icon="clear" onClick={this.props.auth.logout} mini floating primary style={{margin: '5px'}} tooltip="logout"/>}
-        <TooltipButton className="queerButton" icon='feedback' mini floating primary href="https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link" target="_blank" style={{margin: '5px'}} tooltip='define'/>
-        <TooltipButton className="queerButton" icon='live_help' mini floating primary style={{margin: '5px'}} tooltip='request' href="https://goo.gl/forms/xrZyTzaVo8Addq8d2" target="_blank" />
-        <TooltipButton className="queerButton" icon='info' onClick={this.aboutOnClick} mini floating primary style={{margin: '5px'}} tooltip="info"/>
-
-      </div>
+      <Tooltips auth={this.props.auth} aboutOnClick={this.aboutOnClick.bind(this)}/>
     </div>
     </ThemeProvider>
     </DocumentTitle>
