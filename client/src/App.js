@@ -21,6 +21,9 @@ import {
 } from "./blurbs";
 import { Tooltips } from "./tooltips";
 
+const add_definition_url = "https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link";
+const request_definition_url = "https://goo.gl/forms/xrZyTzaVo8Addq8d2";
+
 class App extends Component {
   constructor(props) {
 
@@ -117,12 +120,22 @@ class App extends Component {
     </div>
 
     {(any_term && showLoading) && <LoadingDefinitionsBlurb />}
-    {(!showLoading && any_term && !any_entries) && <NoDefinitionsBlurb />}
-    {(any_entries) && <DisagreementBlurb />}
+    {(!showLoading && any_term && !any_entries) &&
+        <NoDefinitionsBlurb
+          addDefinitionUrl={add_definition_url}
+          requestDefinitionUrl={request_definition_url}
+        />
+    }
+    {(any_entries) && <DisagreementBlurb addDefinitionUrl={add_definition_url} />}
     {(!any_term && at_starting_url) && <WelcomeBlurb />}
 
       <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
-      <Tooltips auth={this.props.auth} aboutOnClick={this.aboutOnClick.bind(this)}/>
+      <Tooltips
+        auth={this.props.auth}
+        aboutOnClick={this.aboutOnClick.bind(this)}
+        addDefinitionUrl={add_definition_url}
+        requestDefinitionUrl={request_definition_url}
+      />
     </div>
     </ThemeProvider>
     </DocumentTitle>
