@@ -3,7 +3,7 @@ import history from './history';
 
 export default class Auth {
   hostnames = {production: "queerundefined.com", staging: "qu-staging.herokuapp.com", local: "localhost:3000"};
-  qu_env = process.env["QU_ENV"] || "local";
+  qu_env = process.env.REACT_APP_QU_ENV || "local";
   hostname = this.hostnames[this.qu_env];
 
   auth0 = new auth0.WebAuth({
