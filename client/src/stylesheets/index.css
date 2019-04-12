@@ -108,3 +108,9 @@ a:hover {
 .About {
   padding-top: 30px;
 }
+
+.defs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
