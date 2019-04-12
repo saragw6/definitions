@@ -130,7 +130,7 @@ class App extends Component {
     {(any_entries) && <DisagreementBlurb addDefinitionUrl={add_definition_url} />}
     {(!any_term && at_starting_url) && <WelcomeBlurb />}
 
-      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
+      <ResultList entries={my_entries} />
       <Tooltips
         auth={this.props.auth}
         aboutOnClick={this.aboutOnClick.bind(this)}
