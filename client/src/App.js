@@ -9,6 +9,7 @@ import './stylesheets/App.css';
 import './stylesheets/queerButton.css';
 import './stylesheets/queerInput.css';
 import './stylesheets/queerSnackbar.css';
+import './stylesheets/tooltips.css';
 
 import {Autocomplete, theme, ThemeProvider} from './Libraries/ReactToolboxLibrary';
 import { ResultList } from './Libraries/ComponentsLibrary';
