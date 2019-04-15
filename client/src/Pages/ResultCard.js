@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { TooltipButton, Button, Card, CardTitle, CardText } from "../Libraries/ReactToolboxLibrary";
 
 //TODO: tooltip explanation that one is the author and one is the author's identity?
-//TODO: stop inline styling
 
 //todo: link identities too?
 //todo: why did i make a lowerCase() fn?
@@ -71,15 +70,25 @@ class ResultCard extends Component {
     return(
       <div>
        {this.state.visible && 
-        <Card style={{width: '350px', margin: '10px'}}>
+        <Card className="result-card">
         <CardTitle
           title={this.lowerCase(this.props.entry["term"])}
         />
-        <div style={{textAlign: 'right', marginTop: '-65px', marginBottom: '25px', paddingRight: '5px'}}>
+        <div className="actions">
          {(this.props.entry["action"] === 1) && this.props.entry["entry_id"]}
-         <TooltipButton icon='outlined_flag' tooltip="flag for removal"  onClick={this.reportEntry} style={{minWidth:'30px', padding:'0', paddingLeft:'6px', marginRight:'-6px', color:'#BABABA'}}/>
+         <TooltipButton className="flag-for-removal-button" icon='outlined_flag' tooltip="flag for removal" onClick={this.reportEntry} />
        </div>
-        <CardText>{this.paragraphsAndLinks(this.props.entry["definition"])}<br /><br />{this.defWithLinks(this.props.entry["explanation"])}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.entry["name"]}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.entry["identity"]}</p></CardText>
+       <CardText>
+         <span className="definition">
+           {this.paragraphsAndLinks(this.props.entry["definition"])}
+         </span>
+         <br /><br />
+         <span className="explanation">
+           {this.defWithLinks(this.props.entry["explanation"])}
+         </span>
+         <p className="name">{this.props.entry["name"]}</p>
+         <p className="identity">{this.props.entry["identity"]}</p>
+        </CardText>
         {(this.props.entry["action"] === 1) && <div><Button label="reject" onClick={this.rejectPotential} raised style={{"width":"175px"}}/>
                                      <Button label="accept" onClick={this.acceptPotential} raised primary style={{"width":"175px"}}/></div>}
         {(this.props.entry["action"] === 4) && <div><Button label="dismiss" onClick={this.acceptPotential} raised style={{"width":"175px"}}/>
