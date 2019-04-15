@@ -56,12 +56,6 @@ it('Renders form and submit term', async () => {
 
   // Act
   fireEvent.click(snackbarDismissBttn)
-  try {
-    await waitForElement(() => getByText(/Your request for Queer was successful/))
-  } catch (e) {
-    // Assert
-    expect(e.message).toBe('Unable to find the element')
-  }
 
   // Assert
   expect(requestForm).not.toContainElement(snackbar)
