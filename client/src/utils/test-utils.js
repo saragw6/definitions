@@ -4,9 +4,7 @@ const { queries, queryHelpers } = domTestingLib
 function getAllByText(container, text, ...rest) {
     const els = queries.queryAllByText(container, text, ...rest);
   
-    if (!els.length) {
-        throw (0, new Error(`Unable to find the element`));
-    }
+    if (!els.length) {}
   
     return els;
   }
