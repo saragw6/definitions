@@ -31,3 +31,7 @@
   font-size: 12px;
   line-height: 12px;
 }
+
+.result-card .accept, .result-card .reject {
+  width: 175px;
+}

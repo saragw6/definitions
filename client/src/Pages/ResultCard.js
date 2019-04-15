@@ -89,10 +89,10 @@ class ResultCard extends Component {
          <p className="name">{this.props.entry["name"]}</p>
          <p className="identity">{this.props.entry["identity"]}</p>
         </CardText>
-        {(this.props.entry["action"] === 1) && <div><Button label="reject" onClick={this.rejectPotential} raised style={{"width":"175px"}}/>
-                                     <Button label="accept" onClick={this.acceptPotential} raised primary style={{"width":"175px"}}/></div>}
-        {(this.props.entry["action"] === 4) && <div><Button label="dismiss" onClick={this.acceptPotential} raised style={{"width":"175px"}}/>
-                                     <Button label="reject" onClick={this.rejectPotential} raised primary style={{"width":"175px"}}/></div>}
+        {(this.props.entry["action"] === 1) && <div><Button className="reject" label="reject" onClick={this.rejectPotential} raised />
+                                     <Button className="accept" label="accept" onClick={this.acceptPotential} raised primary /></div>}
+        {(this.props.entry["action"] === 4) && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
+                                     <Button className="reject" label="reject" onClick={this.rejectPotential} raised primary /></div>}
       </Card>}
     </div>
     );
