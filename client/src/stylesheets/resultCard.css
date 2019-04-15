@@ -1,0 +1,33 @@
+.result-card {
+  width: 350px;
+  margin: 10px;
+}
+
+.result-card .actions {
+  text-align: right;
+  margin-top: -65px;
+  margin-bottom: 25px;
+  padding-right: 5px;
+}
+
+.result-card .actions .flag-for-removal-button {
+  min-width: 30px;
+  padding: 0;
+  padding-left: 6px;
+  margin-right: -6px;
+  color: #BABABA;
+}
+
+.result-card .name {
+  text-align: right;
+  color: #606060;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.result-card .identity {
+  text-align: right;
+  color: #606060;
+  font-size: 12px;
+  line-height: 12px;
+}
