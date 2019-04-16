@@ -68,6 +68,8 @@ class ResultCard extends Component {
   }
 
   render() {
+    const { reportCb } = this.props
+
     return(
       <div>
        {this.state.visible && 
@@ -77,7 +79,7 @@ class ResultCard extends Component {
         />
         <div style={{textAlign: 'right', marginTop: '-65px', marginBottom: '25px', paddingRight: '5px'}}>
          {(this.props.entry["action"] === 1) && this.props.entry["entry_id"]}
-         <TooltipButton icon='outlined_flag' tooltip="flag for removal"  onClick={this.reportEntry} style={{minWidth:'30px', padding:'0', paddingLeft:'6px', marginRight:'-6px', color:'#BABABA'}}/>
+         <TooltipButton icon='outlined_flag' tooltip="flag for removal"  onClick={reportCb} style={{minWidth:'30px', padding:'0', paddingLeft:'6px', marginRight:'-6px', color:'#BABABA'}}/>
        </div>
         <CardText>{this.paragraphsAndLinks(this.props.entry["definition"])}<br /><br />{this.defWithLinks(this.props.entry["explanation"])}<p style={{textAlign: 'right', color: '#606060', fontSize: '16px', paddingTop: '10px'}}>{this.props.entry["name"]}</p><p style={{textAlign: 'right', color: '#606060', fontSize: '12px', lineHeight: '12px'}}>{this.props.entry["identity"]}</p></CardText>
         {(this.props.entry["action"] === 1) && <div><Button label="reject" onClick={this.rejectPotential} raised style={{"width":"175px"}}/>
