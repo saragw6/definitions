@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TooltipButton } from './Libraries/ReactToolboxLibrary';
 
 function Tooltips(props) {
