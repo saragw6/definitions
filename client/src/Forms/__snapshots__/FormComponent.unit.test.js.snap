@@ -73,7 +73,7 @@ exports[`test termRequest? 1`] = `
       <div
         className="submitBox">
         <button
-          className=" queerButton"
+          className="queerButton"
           data-react-toolbox="button"
           disabled={false}
           href={undefined}
