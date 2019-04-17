@@ -30,7 +30,14 @@ export default class InputForm extends Component {
     return (
       <div className={style}>
         <label>{labelInput}</label>&nbsp;{(isRequired  && <span className="error">*</span> )}
-        <Input className="queerInput" style={{background: 'transparent'}} type={inputType} hint={inputHint} value={value} onChange={this.handleChange.bind(this, label, isRequired)} maxLength={maxLength} />
+        <Input className="queerInput"
+          style={{background: 'transparent'}}
+          type={inputType}
+          hint={inputHint}
+          value={value}
+          onChange={this.handleChange.bind(this, label, isRequired)}
+          onBlur={this.handleChange.bind(this, label, isRequired)}
+          maxLength={maxLength} />
         {(showError  &&
           <label className='error errorMessage'>{labelRequiredMessage}</label>)
         }
