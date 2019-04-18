@@ -124,3 +124,7 @@ a:hover {
 .form .error {
    padding: 0rem 1rem;
 }
+
+.logout-button {
+    margin: 5px;
+}

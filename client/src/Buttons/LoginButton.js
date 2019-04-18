@@ -34,7 +34,7 @@ class LoginButton extends Component {
             }
             {
               isAuthenticated() && (
-                  <TooltipButton icon='feedback' mini floating primary onClick={this.logout.bind(this)} style={{margin: '5px'}} tooltip='Log Out'/>
+                  <TooltipButton className='logout-button' icon='feedback' mini floating primary onClick={this.logout.bind(this)} tooltip='Log Out'/>
                 )
             }
       </div>
