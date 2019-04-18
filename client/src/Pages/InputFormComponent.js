@@ -24,7 +24,8 @@ export default class InputForm extends Component {
   };
 
   render() {
-    const { inputType, labelInput, inputHint, labelRequiredMessage, isRequired, value, label, showError, maxLength } = this.props;
+    const { inputType, labelInput, inputHint, labelRequiredMessage,
+      isRequired, value, label, showError, maxLength, onBlur } = this.props;
     const style = showError ? errorStyle : normalStyle;
 
     return (
@@ -36,7 +37,7 @@ export default class InputForm extends Component {
           hint={inputHint}
           value={value}
           onChange={this.handleChange.bind(this, label, isRequired)}
-          onBlur={this.handleChange.bind(this, label, isRequired)}
+          onBlur={onBlur}
           maxLength={maxLength} />
         {(showError  &&
           <label className='error errorMessage'>{labelRequiredMessage}</label>)
