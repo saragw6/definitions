@@ -40,8 +40,10 @@ router.get('/potentials', async (req, res, next) => {
 
 router.get('/:term', async (req, res, next) => {
 //return entries with author id or name and identity???
+    console.log("db_url:", db_url, "ssl_setting:", ssl_setting);
   const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
+  console.log("successfully created client");
 
 
   //join inner/outer for where author is null?
@@ -54,13 +56,16 @@ router.get('/:term', async (req, res, next) => {
   try {
     //get exact matches
     var res1 = await client.query(exactQueryString, [req.params.term.toLowerCase()]);
+      console.log("successfully got res1:", res1.rows);
     //get synonym matches
     var res2 = await client.query(synonymQueryString, [req.params.term.toLowerCase()]);
+      console.log("successfully got res2:", res2.rows);
     res.json(res1.rows.concat(res2.rows));
   } catch (err) {
     console.error(err.stack);
     res.status(500).send('Error while retrieving entries'); //could make more specific
   }
+  console.log("about to client.end");
   client.end();
 });
 
