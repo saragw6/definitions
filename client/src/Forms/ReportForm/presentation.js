@@ -16,7 +16,10 @@ const definitionStyle = {
   paddingBottom: '1em',
 }
 
-const authorP = entry => {
+const ReportFormTitle = entry => 
+  `Report "${safely(entry, 'term')}"`
+
+const Author = entry => {
   const name = safely(entry, 'name')
   const identity = safely(entry, 'identity')
 
@@ -26,16 +29,24 @@ const authorP = entry => {
   return <p>Definition submitted by {nameStr} who identifies as <span style={identityStyle}>{identity}</span>:</p>
 }
 
-const ReportFormTitle = entry => 
-  `Report "${safely(entry, 'term')}"`
-
 const ReportFormContent = entry => (
   <div>
-    {authorP(entry)}
+    {Author(entry)}
     <p style={definitionStyle}>{safely(entry, 'definition')}</p>
     <p>Thank you for taking the time to report a definition you find offensive. Please include a brief explanation of why this definition should not be included. We also request that you provide your email.</p>
   </div>
 )
+
+const InputParams = (emailParams, reasonParams) => 
+  [{
+    labelInput: 'Email address',
+    isRequired: true,
+    ...emailParams
+  }, {
+    labelInput: 'Why should this definition be taken down?',
+    isRequired: true,
+    ...reasonParams
+  }]
 
 const ModalButtons = (reportCb, hideCb) => 
   [{
@@ -48,7 +59,7 @@ const ModalButtons = (reportCb, hideCb) =>
     onClick: reportCb
   }]
 
-export const ReportForm = ({entry, active, hideCb, reportCb, inputParams}) =>
+export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reasonParams }) =>
   <ThemeProvider theme={theme}>
     <Dialog actions={ModalButtons(reportCb, hideCb)}
             active={active}
@@ -58,7 +69,7 @@ export const ReportForm = ({entry, active, hideCb, reportCb, inputParams}) =>
             <Form hideTitle={true}
                   hideButton={true}
                   content={ReportFormContent(entry)}
-                  inputs={inputParams} />
+                  inputs={InputParams(emailParams, reasonParams)} />
     </Dialog>
   </ThemeProvider>
 
