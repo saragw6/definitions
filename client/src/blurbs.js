@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { welcomeBlurb } from "./utils/TextBlurbs";
 
 function DisagreementBlurb(props) {

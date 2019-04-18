@@ -1,10 +1,10 @@
 const Router = require('express-promise-router');
 const router = new Router();
-const pool = require('../../db');
+const pool = require('../db');
 
 // TODO use client singleton instead of creating one ourselves
 // for now we ensure the ssl setting matches the environment
-const dbConfig = require('../../db/config')(process.env.NODE_ENV || 'development');
+const dbConfig = require('../db/config')(process.env.NODE_ENV || 'development');
 const ssl_setting = dbConfig.ssl;
 const db_url = dbConfig.connectionString;
 const { Client } = require('pg');
@@ -42,7 +42,6 @@ router.get('/:term', async (req, res, next) => {
 //return entries with author id or name and identity???
   const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
-
 
   //join inner/outer for where author is null?
 

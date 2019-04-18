@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const configFor = require('../src/db/config');
-const connectionPool = require('../src/db/connectionPool');
-const { createUser, createDb, createTables } = require('../src/db/manage');
-const { addActionToRequested } = require('../src/db/migrations')
-const { seedActions } = require('../src/db/seeds')
-const { seedEntries } = require('../src/db/seedEntries')
-const { entries } = require('../src/db/testEntries')
+const configFor = require('../server/db/config');
+const connectionPool = require('../server/db/connectionPool');
+const { createUser, createDb, createTables } = require('../server/db/manage');
+const { addActionToRequested } = require('../server/db/migrations')
+const { seedActions } = require('../server/db/seeds')
+const { seedEntries } = require('../server/db/seedEntries')
+const { entries } = require('../server/db/testEntries')
 
 let envs = process.argv.slice(2);
 if (envs.length === 0) {
