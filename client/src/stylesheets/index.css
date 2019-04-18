@@ -114,3 +114,9 @@ a:hover {
   flex-direction: column;
   align-content: center;
 }
+
+.define-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
