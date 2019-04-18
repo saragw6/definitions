@@ -120,3 +120,7 @@ a:hover {
   width: 100%;
   justify-content: center;
 }
+
+.form .error {
+   padding: 0rem 1rem;
+}

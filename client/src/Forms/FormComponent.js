@@ -31,7 +31,7 @@ export default class Form extends Component {
           <div className='form'>
             <div className='page-title'>{title}</div>
             {content}
-            <span className='error' style={{padding: '0rem 1rem'}}>* Required</span>
+            <span className='error'>* Required</span>
 
             <div className='inputsBox'>
               {this.createInputs(inputs)}
