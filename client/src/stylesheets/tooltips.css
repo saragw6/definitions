@@ -1,0 +1,9 @@
+.tooltips {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.tooltips .queerButton {
+  margin: 5px;
+}
