@@ -5,7 +5,7 @@ const configGroup = (name, user, pass, ssl) => ({
 });
 
 const config = {
-  production: {ssl: true},
+  production: {connectionString: process.env.DATABASE_URL, ssl: true},
   development: configGroup('queerdev', 'queerdeveloper', 'secure', false),
   test: configGroup('queertest', 'queertester', 'secure', false),
   //TODO forward environments
