@@ -109,6 +109,14 @@ a:hover {
   padding-top: 30px;
 }
 
+.About h6 {
+  margin-top: 16px;
+}
+
+.About .flag-icon {
+  font-size: 14px;
+}
+
 .defs {
   display: flex;
   flex-direction: column;
