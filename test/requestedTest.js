@@ -2,8 +2,8 @@ require('mocha');
 const { expect } = require('chai');
 const request = require('request');
 const { post, get, requestNewTerm } = require('./requestHelper.js');
-const db = require('../src/db')
-const { unwrap } = require('../src/db/util')
+const db = require('../server/db')
+const { unwrap } = require('../server/db/util')
 
 const requestedTest = () => {
   describe('Requested route', () => {
