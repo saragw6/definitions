@@ -37,9 +37,20 @@ const ReportFormContent = entry => (
   </div>
 )
 
-export const ReportForm = ({entry, active, hideCb, buttonParams, inputParams}) =>
+const ModalButtons = (reportCb, hideCb) => 
+  [{
+    label: 'Cancel',
+    onClick: hideCb
+   }, {
+    label: 'Report',
+    primary: true,
+    raised: true,
+    onClick: reportCb
+  }]
+
+export const ReportForm = ({entry, active, hideCb, reportCb, inputParams}) =>
   <ThemeProvider theme={theme}>
-    <Dialog actions={buttonParams}
+    <Dialog actions={ModalButtons(reportCb, hideCb)}
             active={active}
             title={ReportFormTitle(entry)}
             onOverlayClick={hideCb}>

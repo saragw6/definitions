@@ -14,20 +14,11 @@ export default class ReportFormContainer extends React.Component {
     const { active, entry, hideCb, reportCb } = this.props
 
     const inputParams = this.reportFormState.createInputParams(this.state)
-    const buttonParams = [{
-      label: 'Cancel',
-      onClick: hideCb
-    }, {
-      label: 'Report',
-      primary: true,
-      raised: true,
-      onClick: () => reportCb(entry)
-    }]
   
     return <ReportForm entry={entry}
                        active={active}
                        hideCb={hideCb}
-                       buttonParams={buttonParams}
+                       reportCb={() => reportCb(entry)}
                        inputParams={inputParams} />
   }
 }
