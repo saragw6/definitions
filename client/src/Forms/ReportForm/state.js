@@ -34,7 +34,7 @@ export const TextInputState = (component, key) => {
      * - Only to be called from component render method
      * - result will be passed as props to `client/src/Pages/InputFormComponent`
      */
-    createInputParams: function(state) {
+    createInputParams: function (state) {
       return {
         onChange: onChange,
         onBlur: onBlur,
@@ -43,11 +43,15 @@ export const TextInputState = (component, key) => {
       }
     },
 
-    reset() {
+    isErrorOrEmpty: function (state) {
+      return state[key].error || state[key].value === ''
+    },
+
+    reset: function () {
       component.setState({
         [key]: defaultState
       })
-    }
+    },
   }
 }
 

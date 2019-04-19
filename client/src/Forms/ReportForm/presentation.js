@@ -48,7 +48,7 @@ const InputParams = (emailParams, reasonParams) =>
     ...reasonParams
   }]
 
-const ModalButtons = (reportCb, hideCb) => 
+const ModalButtons = (reportCb, hideCb, preventSubmission) => 
   [{
     label: 'Cancel',
     onClick: hideCb
@@ -56,12 +56,13 @@ const ModalButtons = (reportCb, hideCb) =>
     label: 'Report',
     primary: true,
     raised: true,
-    onClick: reportCb
+    onClick: reportCb,
+    disabled: preventSubmission
   }]
 
-export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reasonParams }) =>
+export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reasonParams, preventSubmission }) =>
   <ThemeProvider theme={theme}>
-    <Dialog actions={ModalButtons(reportCb, hideCb)}
+    <Dialog actions={ModalButtons(reportCb, hideCb, preventSubmission)}
             active={active}
             title={ReportFormTitle(entry)}
             onOverlayClick={hideCb}>
