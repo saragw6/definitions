@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from "react-test-renderer";
-import RequestForm from '../RequestForm';
+import RequestForm from './RequestForm';
 
 test('Request Form?', () => {
   const component = renderer.create(<RequestForm />);
