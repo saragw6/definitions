@@ -1,6 +1,11 @@
 
 // Manages the state for a single text input in the form
-export const TextInputState = function(component, key) {
+export const TextInputState = (component, key) => {
+  const defaultState = {
+    value: '',
+    error: false
+  }
+
   const onChange = (label, isRequired, showError, value) => {
     component.setState(prevState => ({
       [key]: {
@@ -22,10 +27,7 @@ export const TextInputState = function(component, key) {
   return {
     // Only to be called from component constructor
     initialize: function () {
-      component.state[key] = {
-        value: '',
-        error: false
-      }
+      component.state[key] = defaultState
     },
 
     /* 
@@ -39,6 +41,12 @@ export const TextInputState = function(component, key) {
         showError: state[key].error,
         value: state[key].value
       }
+    },
+
+    reset() {
+      component.setState({
+        [key]: defaultState
+      })
     }
   }
 }

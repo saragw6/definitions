@@ -21,10 +21,21 @@ export default class ReportFormContainer extends React.Component {
     const emailParams = this.emailState.createInputParams(this.state)
     const reasonParams = this.reasonState.createInputParams(this.state)
 
+    const hideAndClear = () => {
+      hideCb()
+      this.emailState.reset()
+      this.reasonState.reset()
+    }
+    const reportAndClear = () => {
+      reportCb(entry)
+      this.emailState.reset()
+      this.reasonState.reset()
+    }
+
     return <ReportForm entry={entry}
                        active={active}
-                       hideCb={hideCb}
-                       reportCb={() => reportCb(entry)}
+                       hideCb={hideAndClear}
+                       reportCb={reportAndClear}
                        emailParams={emailParams}
                        reasonParams={reasonParams } />
   }
