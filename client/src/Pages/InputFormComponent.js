@@ -32,6 +32,7 @@ export default class InputForm extends Component {
       <div className={style}>
         <label>{labelInput}</label>&nbsp;{(isRequired  && <span className="error">*</span> )}
         <Input className="queerInput"
+          data-testid='request-input'
           style={{background: 'transparent'}}
           type={inputType}
           hint={inputHint}

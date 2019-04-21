@@ -34,12 +34,12 @@ export default class Form extends Component {
     )
 
     return (
-      <div className="flex-container">
-        <form onSubmit={onSubmit}>
+      <div className="flex-container" data-testid='form-container'>
+        <form onSubmit={onSubmit} data-testid='request-form'>
           <div className='form'>
             {titleDiv}
             {content}
-            <span className='error' style={{padding: '0rem 1rem'}}>* Required</span>
+            <span className='error'>* Required</span>
 
             <div className='inputsBox'>
               {this.createInputs(inputs)}
