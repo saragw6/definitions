@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from "react-test-renderer";
-import InputForm from '../InputFormComponent';
+import InputForm from './InputFormComponent';
 
 test('termRequest?', () => {
   const component = renderer.create(<InputForm labelInput="What term do you want defined?"/>);
