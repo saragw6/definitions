@@ -11,6 +11,7 @@ import './stylesheets/queerInput.css';
 import './stylesheets/queerSnackbar.css';
 import './stylesheets/tooltips.css';
 import './stylesheets/resultCard.css';
+import './stylesheets/defineForm.css';
 
 import {Autocomplete, theme, ThemeProvider} from './Libraries/ReactToolboxLibrary';
 import { ResultList } from './Libraries/ComponentsLibrary';
