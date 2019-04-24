@@ -2,6 +2,9 @@
     display: block;
     max-width: 35em;
     margin: 0 auto;
+    color: #5c5c5c;
+    font-weight: 100;
+    line-height: 24px;
 }
 
 .define-form p.required {
@@ -9,7 +12,7 @@
 }
 
 .define-form label {
-    font-size: 140%;
+    font-size: 120%;
 }
 
 .define-form .required label::after {
