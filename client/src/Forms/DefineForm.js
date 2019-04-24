@@ -41,6 +41,10 @@ const DefineForm = () => {
               <span className="subtitle">(Optional. Ex: race, location, age, gender identity, socioeconomic status, etc)</span>
               <input type="text" name="submitter-identities" />
           </div>
+
+          <div>
+              <input type="submit" value="Submit" />
+          </div>
       </form>
     );
 }

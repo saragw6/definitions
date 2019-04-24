@@ -1,0 +1,38 @@
+.define-form {
+    display: block;
+    max-width: 35em;
+    margin: 0 auto;
+}
+
+.define-form p.required {
+    color: red;
+}
+
+.define-form label {
+    font-size: 140%;
+}
+
+.define-form .required label::after {
+    color: red;
+    content: " *";
+}
+
+.define-form .subtitle {
+    font-size: 80%;
+    margin-top: 0.2em;
+}
+
+.define-form input {
+    margin-top: 1.0em;
+    margin-bottom: 2.0em;
+}
+
+.define-form input[type="text"] {
+    width: 50em;
+}
+
+.define-form label,
+.define-form .subtitle,
+.define-form input {
+    display: block;
+}
