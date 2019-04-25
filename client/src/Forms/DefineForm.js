@@ -1,6 +1,6 @@
 import React from 'react';
 
-class DefineForm extends React.Component {
+export default class DefineForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -88,5 +88,3 @@ class DefineForm extends React.Component {
         );
     }
 }
-
-export default DefineForm;
