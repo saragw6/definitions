@@ -1,4 +1,6 @@
 import React from 'react';
+import Form from './FormComponent';
+import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
 export default class DefineForm extends React.Component {
   constructor(props) {
@@ -15,10 +17,8 @@ export default class DefineForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    const target = event.target;
-
-    this.setState({ [target.name]: target.value });
+  handleChange(label, isRequired, showError, value) {
+    this.setState({ [label]: value });
   }
 
   handleSubmit(event) {
@@ -39,9 +39,9 @@ export default class DefineForm extends React.Component {
     event.preventDefault();
   }
 
-  render() {
+  content() {
     return(
-      <form className="define-form" onSubmit={this.handleSubmit}>
+      <div className="define-form">
         <p>I'm collecting informal definitions to help people understand LGBTQ+ terms they don't know!</p>
 
         <p>Help me out by picking a word and telling me what it means to you. Choose any word you think deserves to be in this collection. If you want, you can tell me a bit about your identity to help me make sure I'm including definitions from people with various identities.</p>
@@ -51,40 +51,66 @@ export default class DefineForm extends React.Component {
         <p>People have requested definitions for these terms:</p>
 
         <p>Bisexual Jesus | tea | paroromantic | pomosexual  | demifluid | therian | kiki | apressexual | binarism | demiflux | gendervague | pondusgender | omnisensual | pillow princess | bicurious | gynosexual | epicene | ventulian | fingender | wtfsexual | transfeminine | transmasculine | fraysexual | nonbinary femme | body dysphoria | pass | radfem | zedsexual | brotherboy | sistergirl | nblw | split attraction model | juxera | cassgender | metamour | nonbinary girl | greyromantic | intergender | minsexual | alterous attraction | trisexual | lesbian labrys | librafluid | juxera | blue jean femme | ceterosexual | aperiosexual | bellusromantic | genderfuck | two spirit | gendernull | allosexual | queerplatonic | bossy bottom | to read | doe | stag | asexy | generous | biromantic homosexual | fluidflux | aquarigender | arithmagender</p>
+      </div>
+    );
+  }
 
-        <p className="required">* Required</p>
+  render() {
+    const {
+      submitterName,
+      termName,
+      termDefinition,
+      termMeaningToSubmitter,
+      submitterIdentities
+    } = this.state;
 
-        <div>
-          <label>Name</label>
-          <span className="subtitle">(Only if you want credit)</span>
-          <input type="text" name="submitterName" value={this.state.submitterName} onChange={this.handleChange} />
-        </div>
-
-        <div className="required">
-          <label>What term are you defining?</label>
-          <input type="text" name="termName" value={this.state.termName} onChange={this.handleChange} />
-        </div>
-
-        <div className="required">
-          <label>Define the term and/or say what it means to you:</label>
-          <input type="text" name="termDefinition" value={this.state.termDefinition} onChange={this.handleChange} />
-        </div>
-
-        <div>
-          <label>What has this term meant in your experience? How have you embodied this term?</label>
-          <input type="text" name="termMeaningToSubmitter" value={this.state.termMeaningToSubmitter} onChange={this.handleChange} />
-        </div>
-
-        <div>
-          <label>How do you identify?</label>
-          <span className="subtitle">(Optional. Ex: race, location, age, gender identity, socioeconomic status, etc)</span>
-          <input type="text" name="submitterIdentities" value={this.state.submitterIdentities} onChange={this.handleChange} />
-        </div>
-
-        <div>
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
+    return(
+      <ThemeProvider theme={theme}>
+        <Form title='Submit a Definition'
+              onSubmit={this.handleSubmit}
+              content={this.content()}
+              inputs={[
+                {
+                  labelInput: 'Name',
+                  subtitle: '(Only if you want credit)',
+                  isRequired: false,
+                  label: 'submitterName',
+                  value: submitterName,
+                  onChange: this.handleChange
+                },
+                {
+                  labelInput: 'What term are you defining?',
+                  isRequired: true,
+                  label: 'termName',
+                  value: termName,
+                  onChange: this.handleChange
+                },
+                {
+                  labelInput: 'Define the term and/or say what it means to you:',
+                  isRequired: true,
+                  label: 'termDefinition',
+                  value: termDefinition,
+                  onChange: this.handleChange
+                },
+                {
+                  labelInput: 'What has this term meant in your experience? How have you embodied this term?',
+                  isRequired: false,
+                  label: 'termMeaningToSubmitter',
+                  value: termMeaningToSubmitter,
+                  onChange: this.handleChange
+                },
+                {
+                  labelInput: 'How do you identify?',
+                  subtitle: '(Optional. Ex: race, location, age, gender identity, socioeconomic status, etc)',
+                  isRequired: false,
+                  label: 'submitterIdentities',
+                  value: submitterIdentities,
+                  onChange: this.handleChange
+                },
+              ]}
+        >
+        </Form>
+      </ThemeProvider>
     );
   }
 }
