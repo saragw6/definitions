@@ -3,6 +3,11 @@ import Form from './FormComponent';
 import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
 const snackbarMessage = "One or more required fields are blank";
+const submissionFailureMessage = "Oh no! Something went wrong, please try again.";
+
+const submissionSuccessMessage = (termName) => {
+  "Your proposed definition for ".concat(termName).concat(" was submitted successfully")
+};
 
 export default class DefineForm extends React.Component {
   constructor(props) {
@@ -48,7 +53,14 @@ export default class DefineForm extends React.Component {
       explanatin: state.termMeaningToSubmitter
     };
 
-    console.log("Submitting!", payload);
+    const respondToFetch = (response) => {
+      let wasSuccessful = response.status === 200;
+      let snackBarMessage = wasSuccessful ? submissionSuccessMessage(state.termName) : submissionFailureMessage;
+
+      this.setState({stateBar: true, snackbarMessage: snackBarMessage})
+    }
+
+    fetch('/entries', {method: 'POST', body: JSON.stringify(payload)}).then(respondToFetch);
   }
 
   content() {
