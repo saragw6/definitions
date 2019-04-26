@@ -66,15 +66,13 @@ export default class DefineForm extends React.Component {
   content() {
     return(
       <div className="define-form">
-        <p>I'm collecting informal definitions to help people understand LGBTQ+ terms they don't know!</p>
+        <p>Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don't know!</p>
 
-        <p>Help me out by picking a word and telling me what it means to you. Choose any word you think deserves to be in this collection. If you want, you can tell me a bit about your identity to help me make sure I'm including definitions from people with various identities.</p>
+        <p>Help us out by picking a word and telling us what it means to you. Choose any word you think deserves to be in this collection, and feel free to include your personal perspective and explain why the word is meaningful to you. If you want, you can tell us a bit about your identity to help make sure we're including definitions from people with various identities.</p>
 
-        <p>To link to other words use tick marks (NOT single quotes). For example, `LGBTQ+` will link to the definition of LGBTQ+.</p>
+        <p>To link to other words use tick marks (NOT single quotes). For example, <code>`LGBTQ+`</code> will link to the definition of LGBTQ+.</p>
 
-        <p>People have requested definitions for these terms:</p>
-
-        <p>Bisexual Jesus | tea | paroromantic | pomosexual  | demifluid | therian | kiki | apressexual | binarism | demiflux | gendervague | pondusgender | omnisensual | pillow princess | bicurious | gynosexual | epicene | ventulian | fingender | wtfsexual | transfeminine | transmasculine | fraysexual | nonbinary femme | body dysphoria | pass | radfem | zedsexual | brotherboy | sistergirl | nblw | split attraction model | juxera | cassgender | metamour | nonbinary girl | greyromantic | intergender | minsexual | alterous attraction | trisexual | lesbian labrys | librafluid | juxera | blue jean femme | ceterosexual | aperiosexual | bellusromantic | genderfuck | two spirit | gendernull | allosexual | queerplatonic | bossy bottom | to read | doe | stag | asexy | generous | biromantic homosexual | fluidflux | aquarigender | arithmagender</p>
+        <p>Check out the about page to read more about this project.</p>
       </div>
     );
   }
