@@ -50,7 +50,7 @@ export default class DefineForm extends React.Component {
       definition: state.termDefinition,
       action: 1,
       identity: state.submitterIdentities,
-      explanatin: state.termMeaningToSubmitter
+      explanation: state.termMeaningToSubmitter
     };
 
     const respondToFetch = (response) => {
