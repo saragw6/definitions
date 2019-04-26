@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './FormComponent';
 import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
+const snackbarMessage = "One or more required fields are blank";
+
 export default class DefineForm extends React.Component {
   constructor(props) {
     super(props);
@@ -10,18 +12,31 @@ export default class DefineForm extends React.Component {
       termName: "",
       termDefinition: "",
       termMeaningToSubmitter: "",
-      submitterIdentities: ""
+      submitterIdentities: "",
+      stateBar: false,
+      snackbarMessage: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(label, isRequired, showError, value) {
-    this.setState({ [label]: value });
+  handleChange(label, isRequired, showErrorInput, value) {
+    this.setState({[label]: value});
   }
 
   handleSubmit(event) {
+    event.preventDefault();
+
+    if(this.formChild.hasErrors()) {
+      this.setState({
+        stateBar: true,
+        snackbarMessage: snackbarMessage
+      });
+
+      return;
+    }
+
     const state = this.state;
 
     const payload = {
@@ -33,10 +48,7 @@ export default class DefineForm extends React.Component {
       explanatin: state.termMeaningToSubmitter
     };
 
-    console.log("Submitting!", this.state);
     console.log("Submitting!", payload);
-
-    event.preventDefault();
   }
 
   content() {
@@ -55,20 +67,35 @@ export default class DefineForm extends React.Component {
     );
   }
 
+  handleSnackbarClick = (event, instance) => {
+    this.setState({ stateBar: false, snackbarMessage: ''});
+  };
+
+  handleSnackbarTimeout = (event, instance) => {
+    this.setState({ stateBar: false, snackbarMessage: '' });
+  };
+
   render() {
     const {
       submitterName,
       termName,
       termDefinition,
       termMeaningToSubmitter,
-      submitterIdentities
+      submitterIdentities,
+      stateBar,
+      snackbarMessage
     } = this.state;
 
     return(
       <ThemeProvider theme={theme}>
         <Form title='Submit a Definition'
+              ref={instance => { this.formChild = instance; }}
               onSubmit={this.handleSubmit}
               content={this.content()}
+              onClickSnackBar={this.handleSnackbarClick.bind(this)}
+              onTimeoutSnackBar={this.handleSnackbarTimeout.bind(this)}
+              stateBar={stateBar}
+              snackbarMessage={snackbarMessage}
               inputs={[
                 {
                   labelInput: 'Name',
