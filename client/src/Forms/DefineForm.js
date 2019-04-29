@@ -6,7 +6,7 @@ const snackbarMessage = "One or more required fields are blank";
 const submissionFailureMessage = "Oh no! Something went wrong, please try again.";
 
 const submissionSuccessMessage = (termName) => {
-  "Your proposed definition for ".concat(termName).concat(" was submitted successfully")
+  return `Your proposed definition for ${termName} was submitted successfully`
 };
 
 export default class DefineForm extends React.Component {
