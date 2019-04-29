@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './FormComponent';
 import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
+import '../stylesheets/defineForm.css';
+
 const snackbarMessage = "One or more required fields are blank";
 const submissionFailureMessage = "Oh no! Something went wrong, please try again.";
 
