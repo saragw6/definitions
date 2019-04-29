@@ -123,11 +123,6 @@ a:hover {
   align-content: center;
 }
 
-.define-form {
-  width: 100%;
-  justify-content: center;
-}
-
 .form .error {
    padding: 0rem 1rem;
 }
