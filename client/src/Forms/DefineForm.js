@@ -62,7 +62,17 @@ export default class DefineForm extends React.Component {
       this.setState({stateBar: true, snackbarMessage: snackBarMessage})
     }
 
-    fetch('/entries', {method: 'POST', body: JSON.stringify(payload)}).then(respondToFetch);
+    const headers = {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    };
+
+    fetch('/entries', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    })
+      .then(respondToFetch);
   }
 
   content() {
