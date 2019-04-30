@@ -51,7 +51,7 @@ export default class DefineForm extends React.Component {
     const state = this.state;
 
     const payload = {
-      /* ???: submitterName */
+      name: state.submitterName,
       term: state.termName,
       definition: state.termDefinition,
       action: 1,
