@@ -50,7 +50,7 @@ function renderWithRouter(
 it('Renders main page and searches for a term', async () => {
     // Arrange
     const defaultQueries = customQueries.default
-    const { getByTestId, getByText, history } = renderWithRouter(<App auth={auth} term="" />,
+    const { getByTestId, getByText, history, container } = renderWithRouter(<App auth={auth} term="" />,
     { queries: { ...queries, ...defaultQueries }, })
     const input_for_SearchTerm = getByTestId('mainInputSearchTerm')
     // Assert
@@ -74,9 +74,10 @@ it('Renders main page and searches for a term', async () => {
     const resultCardDescriptionContainer = await waitForElement(() => getByText(/I define it as a sort of layer gender/))
 
     // Arrange
-    const resultCard = resultCardDescriptionContainer.parentElement
+    const resultCard = container.querySelector('.result-card')
     const termHeaderInResultCard = resultCard.querySelector('h5')
 
     // Assert
     expect(termHeaderInResultCard.innerHTML).toBe('abrogender')
+    expect(resultCard).toContainElement(resultCardDescriptionContainer)
   });
