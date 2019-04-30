@@ -60,10 +60,12 @@ export default class DefineForm extends React.Component {
     };
 
     const respondToFetch = (response) => {
-      this.setState(defaultFieldValues);
-
       let wasSuccessful = response.status === 200;
       let snackBarMessage = wasSuccessful ? submissionSuccessMessage(state.termName) : submissionFailureMessage;
+
+      if (wasSuccessful) {
+        this.setState(defaultFieldValues);
+      }
 
       this.setState({stateBar: true, snackbarMessage: snackBarMessage})
     }
