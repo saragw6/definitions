@@ -108,3 +108,31 @@ a:hover {
 .About {
   padding-top: 30px;
 }
+
+.About h6 {
+  margin-top: 16px;
+}
+
+.About .flag-icon {
+  font-size: 14px;
+}
+
+.defs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.define-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.form .error {
+   padding: 0rem 1rem;
+}
+
+.logout-button {
+    margin: 5px;
+}

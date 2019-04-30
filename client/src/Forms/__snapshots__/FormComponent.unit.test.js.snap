@@ -13,12 +13,7 @@ exports[`test termRequest? 1`] = `
       </div>
       <div />
       <span
-        className="error"
-        style={
-          Object {
-            "padding": "0rem 1rem",
-          }
-        }>
+        className="error">
         * Required
       </span>
       <div

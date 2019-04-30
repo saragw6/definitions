@@ -20,23 +20,9 @@ class LoginButton extends Component {
 
     return (
       <div>
-            {
-              !isAuthenticated() && (
-                //don't show login button
-                  // <Button
-                  //   bsStyle="primary"
-                  //   className="btn-margin"
-                  //   onClick={this.login.bind(this)}
-                  // >
-                  //   Log In
-                  // </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <TooltipButton icon='feedback' mini floating primary onClick={this.logout.bind(this)} style={{margin: '5px'}} tooltip='Log Out'/>
-                )
-            }
+        isAuthenticated() && (
+          <TooltipButton className='logout-button' icon='feedback' mini floating primary onClick={this.logout.bind(this)} tooltip='Log Out'/>
+        )
       </div>
     );
   }

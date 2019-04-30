@@ -9,6 +9,8 @@ import './stylesheets/App.css';
 import './stylesheets/queerButton.css';
 import './stylesheets/queerInput.css';
 import './stylesheets/queerSnackbar.css';
+import './stylesheets/tooltips.css';
+import './stylesheets/resultCard.css';
 
 import {Autocomplete, theme, ThemeProvider} from './Libraries/ReactToolboxLibrary';
 import { ResultList } from './Libraries/ComponentsLibrary';
@@ -21,8 +23,7 @@ import {
 } from "./blurbs";
 import { Tooltips } from "./tooltips";
 
-const add_definition_url = "https://docs.google.com/forms/d/e/1FAIpQLSfKF0yyleI5XdPVtl-bEuQUGy2HZPfnUU-e2sDjL31eLuygUA/viewform?usp=sf_link";
-const request_definition_url = "https://goo.gl/forms/xrZyTzaVo8Addq8d2";
+import { add_definition_url, request_definition_url } from "./urls";
 
 class App extends Component {
   constructor(props) {
@@ -130,7 +131,7 @@ class App extends Component {
     {(any_entries) && <DisagreementBlurb addDefinitionUrl={add_definition_url} />}
     {(!any_term && at_starting_url) && <WelcomeBlurb />}
 
-      <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={my_entries} />
+      <ResultList entries={my_entries} />
       <Tooltips
         auth={this.props.auth}
         aboutOnClick={this.aboutOnClick.bind(this)}
