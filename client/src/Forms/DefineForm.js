@@ -11,17 +11,21 @@ const submissionSuccessMessage = (termName) => {
   return `Your proposed definition for ${termName} was submitted successfully`
 };
 
+const defaultFieldValues = {
+  submitterName: "",
+  termName: "",
+  termDefinition: "",
+  termMeaningToSubmitter: "",
+  submitterIdentities: "",
+};
+
 export default class DefineForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      submitterName: "",
-      termName: "",
-      termDefinition: "",
-      termMeaningToSubmitter: "",
-      submitterIdentities: "",
       stateBar: false,
-      snackbarMessage: ''
+      snackbarMessage: '',
+      ...defaultFieldValues
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -56,6 +60,8 @@ export default class DefineForm extends React.Component {
     };
 
     const respondToFetch = (response) => {
+      this.setState(defaultFieldValues);
+
       let wasSuccessful = response.status === 200;
       let snackBarMessage = wasSuccessful ? submissionSuccessMessage(state.termName) : submissionFailureMessage;
 
