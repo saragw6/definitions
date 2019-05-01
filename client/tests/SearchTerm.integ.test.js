@@ -52,20 +52,20 @@ it('Renders main page and searches for a term', async () => {
     const defaultQueries = customQueries.default
     const { getByTestId, getByText, history, container } = renderWithRouter(<App auth={auth} term="" />,
     { queries: { ...queries, ...defaultQueries }, })
-    const input_for_SearchTerm = getByTestId('mainInputSearchTerm')
+    const inputForSearchTerm = getByTestId('mainInputSearchTerm')
     // Assert
     expect(history.location.pathname).toBe('/*')
-    expect(input_for_SearchTerm.value).toBe('')
+    expect(inputForSearchTerm.value).toBe('')
     expect(fetch).toHaveBeenCalledWith('/terms')
   
     // Act
-    await fireEvent.change(input_for_SearchTerm, {target: {value: 'abrogender'}})
+    await fireEvent.change(inputForSearchTerm, {target: {value: 'abrogender'}})
 
     // Assert
-    expect(input_for_SearchTerm.value).toBe('abrogender')
+    expect(inputForSearchTerm.value).toBe('abrogender')
 
     // Act
-    await fireEvent.keyDown(input_for_SearchTerm, { key: 'Enter', keyCode: 13})
+    await fireEvent.keyDown(inputForSearchTerm, { key: 'Enter', keyCode: 13})
 
     // Assert
     expect(fetch).toHaveBeenCalledWith('/entries/abrogender')
@@ -80,4 +80,4 @@ it('Renders main page and searches for a term', async () => {
     // Assert
     expect(termHeaderInResultCard.innerHTML).toBe('abrogender')
     expect(resultCard).toContainElement(resultCardDescriptionContainer)
-  });
+});
