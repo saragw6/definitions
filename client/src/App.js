@@ -117,6 +117,7 @@ class App extends Component {
         showSuggestionsWhenValueIsSet={false}
         multiple={false}
         className="queerInput"
+        data-testid='mainInputSearchTerm'
       />
     </div>
 
