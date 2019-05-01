@@ -1,0 +1,276 @@
+exports[`test Definition Form? 1`] = `
+<div
+  className="flex-container"
+  data-testid="form-container">
+  <form
+    data-testid="request-form"
+    onSubmit={[Function]}>
+    <div
+      className="form">
+      <div
+        className="page-title">
+        Submit a Definition
+      </div>
+      <div
+        className="define-form">
+        <p>
+          Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don\'t know!
+        </p>
+        <p>
+          Help us out by picking a word and telling us what it means to you. Choose any word you think deserves to be in this collection, and feel free to include your personal perspective and explain why the word is meaningful to you. If you want, you can tell us a bit about your identity to help make sure we\'re including definitions from people with various identities.
+        </p>
+        <p>
+          To link to other words use tick marks (NOT single quotes). For example, 
+          <code>
+            \`LGBTQ+\`
+          </code>
+           will link to the definition of LGBTQ+.
+        </p>
+        <p>
+          Check out the about page to read more about this project.
+        </p>
+      </div>
+      <span
+        className="error">
+        * Required
+      </span>
+      <div
+        className="inputsBox">
+        <div
+          className="formInput">
+          <label>
+            Name
+          </label>
+           
+          <div
+            className="lFVgC queerInput"
+            data-react-toolbox="input">
+            <input
+              className="_4bZUj"
+              data-testid="request-input"
+              defaultValue={undefined}
+              disabled={false}
+              maxLength={50}
+              name={undefined}
+              onChange={[Function]}
+              onKeyPress={undefined}
+              required={false}
+              role="input"
+              style={
+                Object {
+                  "background": "transparent",
+                }
+              }
+              type="Text"
+              value="" />
+            <span
+              className="_3FySS" />
+            <span
+              className="bMyi_"
+              hidden={undefined}>
+              Your answer
+            </span>
+            <span
+              className="_1oTuT">
+              0
+              /
+              50
+            </span>
+          </div>
+        </div>
+        <div
+          className="formInput">
+          <label>
+            What term are you defining?
+          </label>
+           
+          <span
+            className="error">
+            *
+          </span>
+          <div
+            className="lFVgC queerInput"
+            data-react-toolbox="input">
+            <input
+              className="_4bZUj"
+              data-testid="request-input"
+              defaultValue={undefined}
+              disabled={false}
+              maxLength={50}
+              name={undefined}
+              onChange={[Function]}
+              onKeyPress={undefined}
+              required={false}
+              role="input"
+              style={
+                Object {
+                  "background": "transparent",
+                }
+              }
+              type="Text"
+              value="" />
+            <span
+              className="_3FySS" />
+            <span
+              className="bMyi_"
+              hidden={undefined}>
+              Your answer
+            </span>
+            <span
+              className="_1oTuT">
+              0
+              /
+              50
+            </span>
+          </div>
+        </div>
+        <div
+          className="formInput">
+          <label>
+            Define the term and/or say what it means to you:
+          </label>
+           
+          <span
+            className="error">
+            *
+          </span>
+          <div
+            className="lFVgC queerInput"
+            data-react-toolbox="input">
+            <input
+              className="_4bZUj"
+              data-testid="request-input"
+              defaultValue={undefined}
+              disabled={false}
+              maxLength={50}
+              name={undefined}
+              onChange={[Function]}
+              onKeyPress={undefined}
+              required={false}
+              role="input"
+              style={
+                Object {
+                  "background": "transparent",
+                }
+              }
+              type="Text"
+              value="" />
+            <span
+              className="_3FySS" />
+            <span
+              className="bMyi_"
+              hidden={undefined}>
+              Your answer
+            </span>
+            <span
+              className="_1oTuT">
+              0
+              /
+              50
+            </span>
+          </div>
+        </div>
+        <div
+          className="formInput">
+          <label>
+            What has this term meant in your experience? How have you embodied this term?
+          </label>
+           
+          <div
+            className="lFVgC queerInput"
+            data-react-toolbox="input">
+            <input
+              className="_4bZUj"
+              data-testid="request-input"
+              defaultValue={undefined}
+              disabled={false}
+              maxLength={50}
+              name={undefined}
+              onChange={[Function]}
+              onKeyPress={undefined}
+              required={false}
+              role="input"
+              style={
+                Object {
+                  "background": "transparent",
+                }
+              }
+              type="Text"
+              value="" />
+            <span
+              className="_3FySS" />
+            <span
+              className="bMyi_"
+              hidden={undefined}>
+              Your answer
+            </span>
+            <span
+              className="_1oTuT">
+              0
+              /
+              50
+            </span>
+          </div>
+        </div>
+        <div
+          className="formInput">
+          <label>
+            How do you identify?
+          </label>
+           
+          <div
+            className="lFVgC queerInput"
+            data-react-toolbox="input">
+            <input
+              className="_4bZUj"
+              data-testid="request-input"
+              defaultValue={undefined}
+              disabled={false}
+              maxLength={50}
+              name={undefined}
+              onChange={[Function]}
+              onKeyPress={undefined}
+              required={false}
+              role="input"
+              style={
+                Object {
+                  "background": "transparent",
+                }
+              }
+              type="Text"
+              value="" />
+            <span
+              className="_3FySS" />
+            <span
+              className="bMyi_"
+              hidden={undefined}>
+              Your answer
+            </span>
+            <span
+              className="_1oTuT">
+              0
+              /
+              50
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="submitBox">
+        <button
+          className="_2Agdx _221ic _2Agdx _2GH_L _1ZxqC _3tTAW queerButton"
+          data-react-toolbox="button"
+          disabled={false}
+          href={undefined}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchStart={[Function]}
+          type="button">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

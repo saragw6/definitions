@@ -23,6 +23,10 @@ export default class Form extends Component {
     })
   }
 
+  hasErrors() {
+    return this.props.inputs.some((input) => input.isRequired && input.value.trim().length === 0);
+  }
+
   render() {
     const {title, content, inputs, onSubmit, onClickSnackBar, onTimeoutSnackBar, stateBar, snackbarMessage} = this.props;
     return (
