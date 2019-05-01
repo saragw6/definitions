@@ -19,6 +19,10 @@
   },
   "homepage": "https://www.queerundefined.com",
   "name": "testapp",
+  "jest": {
+    "verbose": true,
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,8 +52,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test unit --env=jsdom --setupTestFrameworkScriptFile=./rafPolyfill.js",
-    "integration": "react-scripts test integ --env=jsdom --setupTestFrameworkScriptFile=./rafPolyfill.js",
+    "test": "react-scripts test unit --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
+    "integration": "react-scripts test integ --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
     "eject": "react-scripts eject",
     "toolbox": "react-toolbox-themr"
   },
