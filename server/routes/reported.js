@@ -25,3 +25,14 @@ router.get('/', async (req, res, next) => {
     });
 
 });
+
+router.post('/', async (req, res) => {
+  const {entryId, email, reason} = req.body
+  const now = new Date()
+
+  await pool.query(
+    `INSERT INTO report VALUES($1,$2,$3,$4)`,
+    [entryId, email, reason, now])
+
+  res.json({success: true})
+})

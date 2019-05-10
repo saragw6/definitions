@@ -114,9 +114,6 @@ router.post('/', async (req, res) => {
 
 //test!! also maybe don't use both "action" and "status", pick one! probably status
 router.post('/setstatus/:action/id/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
-  client.connect();
-
   console.log(req.body);
 
   const { action, id } = req.params;
@@ -130,9 +127,6 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
     console.error(err.stack);
     res.status(500).send('Error while upating entry status to: ' + action); //could make more specific
   }
-
-  client.end();
-
 });
 
 // router.delete('/:id', async (req, res) => {

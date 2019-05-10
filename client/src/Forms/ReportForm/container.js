@@ -27,7 +27,7 @@ export default class ReportFormContainer extends React.Component {
       this.reasonState.reset()
     }
     const hide = resetAnd(hideCb)
-    const report = resetAnd(() => reportCb(entry))
+    const report = resetAnd(() => reportCb(entry, emailParams.value, reasonParams.value))
 
     const preventSubmission = this.emailState.isErrorOrEmpty(this.state)
       || this.reasonState.isErrorOrEmpty(this.state)

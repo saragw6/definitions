@@ -26,9 +26,16 @@ class ResultList extends React.Component {
     })
   }
 
-  report = entry => {
+  report = (entry, email, reason) => {
     this.hideReportForm()
-    console.log(`reported '${entry.term}' to the cyber police!`)
+    fetch('/reported', {
+      method: 'POST',
+      body: {
+        entryId: entry.entry_id,
+        email,
+        reason
+      }
+    })
   }
 
   render() {

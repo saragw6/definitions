@@ -9,6 +9,17 @@ const addActionToRequested = db => db.query(
   } 
 })
 
+const addReportTable = db => db.query(
+  `CREATE TABLE IF NOT EXISTS report(
+    id SERIAL PRIMARY KEY,
+    entry_id SERIAL NOT NULL REFERENCES entry(entry_id),
+    email VARCHAR (50) NOT NULL,
+    reason VARCHAR (3000) NOT NULL,
+    time_submited TIMESTAMPTZ
+  );`
+)
+
 module.exports = {
-  addActionToRequested
+  addActionToRequested,
+  addReportTable
 }
