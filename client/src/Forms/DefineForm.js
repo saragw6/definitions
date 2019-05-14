@@ -147,14 +147,18 @@ export default class DefineForm extends React.Component {
                   isRequired: true,
                   label: 'termDefinition',
                   value: termDefinition,
-                  onChange: this.handleChange
+                  onChange: this.handleChange,
+                  multiline: true,
+                  maxLength: 3000
                 },
                 {
                   labelInput: 'What has this term meant in your experience? How have you embodied this term?',
                   isRequired: false,
                   label: 'termMeaningToSubmitter',
                   value: termMeaningToSubmitter,
-                  onChange: this.handleChange
+                  onChange: this.handleChange,
+                  multiline: true,
+                  maxLength: 3000
                 },
                 {
                   labelInput: 'How do you identify?',
