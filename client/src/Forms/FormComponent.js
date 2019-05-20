@@ -12,14 +12,15 @@ export default class Form extends Component {
     stateBar: false,
     onSubmit: (e) => { e.preventDefault() },
     onClickSnackBar: (e, i) => { e.preventDefault() },
-    onTimeoutSnackBar: (e,i) => { e.preventDefault() }
+    onTimeoutSnackBar: (e,i) => { e.preventDefault() },
+    isUnitTest: false,
   }
 
-  createInputs = (inputs) => {
+  createInputs = (inputs, isUnitTest) => {
     return inputs.map((input, index) => {
       return (<InputForm key={index} label={input.label} value={input.value} labelInput={input.labelInput}
                          isRequired={input.isRequired} showError={input.showError} errorStyle={input.errorStyle}
-                         onChange={input.onChange}/>)
+                         onChange={input.onChange} multiline={input.multiline} isUnitTest={isUnitTest} />)
     })
   }
 
@@ -28,7 +29,7 @@ export default class Form extends Component {
   }
 
   render() {
-    const {title, content, inputs, onSubmit, onClickSnackBar, onTimeoutSnackBar, stateBar, snackbarMessage} = this.props;
+    const {title, content, inputs, onSubmit, onClickSnackBar, onTimeoutSnackBar, stateBar, snackbarMessage, isUnitTest} = this.props;
     return (
       <div className="flex-container" data-testid='form-container'>
         <form onSubmit={onSubmit} data-testid='request-form'>
@@ -38,7 +39,7 @@ export default class Form extends Component {
             <span className='error'>* Required</span>
 
             <div className='inputsBox'>
-              {this.createInputs(inputs)}
+              {this.createInputs(inputs, isUnitTest)}
             </div>
             <div className='submitBox'>
               <Button className='queerButton' onMouseUp={onSubmit} label='Submit' raised primary/>

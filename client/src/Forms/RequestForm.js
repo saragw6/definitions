@@ -52,6 +52,9 @@ export default class RequestForm extends Component {
 
   render() {
     const { showErrorTerm, Term, stateBar, snackbarMessage } = this.state;
+    const {
+      isUnitTest,
+    } = this.props;
 
     return (
       <ThemeProvider theme={theme}>
@@ -66,6 +69,7 @@ export default class RequestForm extends Component {
               onTimeoutSnackBar={this.handleSnackbarTimeout.bind(this)}
               stateBar={stateBar}
               snackbarMessage={snackbarMessage}
+              isUnitTest={isUnitTest}
         >
         </Form>
       </ThemeProvider>

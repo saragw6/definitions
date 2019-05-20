@@ -17,6 +17,7 @@ const defaultFieldValues = {
   termDefinition: "",
   termMeaningToSubmitter: "",
   submitterIdentities: "",
+  isUnitTest: false,
 };
 
 export default class DefineForm extends React.Component {
@@ -113,8 +114,11 @@ export default class DefineForm extends React.Component {
       termMeaningToSubmitter,
       submitterIdentities,
       stateBar,
-      snackbarMessage
+      snackbarMessage,
     } = this.state;
+    const {
+      isUnitTest,
+    } = this.props;
 
     return(
       <ThemeProvider theme={theme}>
@@ -126,6 +130,7 @@ export default class DefineForm extends React.Component {
               onTimeoutSnackBar={this.handleSnackbarTimeout.bind(this)}
               stateBar={stateBar}
               snackbarMessage={snackbarMessage}
+              isUnitTest={isUnitTest}
               inputs={[
                 {
                   labelInput: 'Name',

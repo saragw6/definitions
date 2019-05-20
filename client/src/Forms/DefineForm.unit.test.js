@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import DefineForm from './DefineForm';
 
 test('Definition Form?', () => {
-  const component = renderer.create(<DefineForm />);
+  const component = renderer.create(<DefineForm isUnitTest={true} />);
   const jsonForm = component.toJSON();
   expect(jsonForm).toMatchSnapshot();
 });
