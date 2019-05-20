@@ -50,7 +50,14 @@ module.exports = {
             definition: "Pansexual is attraction to anyone regardless of their `gender identity` or gender expression. Attraction to the whole person, e.g. aesthetic, personality, over their gender. Pansexual is experiencing sexual attraction and `panromantic` is feeling romantic attraction- the two are quite different and should not be interchanged. Pansexual is not the same thing as `bisexual` (attraction to two genders).",
             identity: "Pansexual Aromantic",
             sort_as: ["pan", "pansexual", "pansexuality"]
-        }
+        },
+        {
+            time_submitted: "2017-12-27T09:24:35.208Z",
+            term: "bigenderal/pangenderal/polygenderal",
+            definition: "Pansexual is attraction to anyone regardless of their `gender identity` or gender expression. Attraction to the whole person, e.g. aesthetic, personality, over their gender. Pansexual is experiencing sexual attraction and `panromantic` is feeling romantic attraction- the two are quite different and should not be interchanged. Pansexual is not the same thing as `bisexual` (attraction to two genders).",
+            identity: "Pansexual Aromantic",
+            sort_as: ["pan", "pansexual", "pansexuality"]
+        },
     ]
 };
 

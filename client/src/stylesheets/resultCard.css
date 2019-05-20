@@ -1,13 +1,26 @@
 .result-card {
   width: 350px;
   margin: 10px;
+  position: relative;
 }
 
 .result-card .actions {
   text-align: right;
-  margin-top: -65px;
   margin-bottom: 25px;
   padding-right: 5px;
+  position: absolute;
+  right:0;
+}
+
+.result-card .result-card-title{
+  width: 100%;
+}
+
+.result-card .result-card-title h5{
+  overflow-wrap: break-word;
+}
+.result-card .result-card-title div{
+  width: 100%;
 }
 
 .result-card .actions .flag-for-removal-button {
