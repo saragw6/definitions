@@ -26,13 +26,14 @@ export default class InputForm extends Component {
   };
 
   render() {
-    const { inputType, labelInput, inputHint, labelRequiredMessage, isRequired, value, label, showError, maxLength, multiline, isUnitTest } = this.props;
+    const { inputType, labelInput, inputHint, labelRequiredMessage, isRequired, value, label, showError, maxLength, isUnitTest } = this.props;
     const style = showError ? errorStyle : normalStyle;
+    const multiline = this.props.multiline && !isUnitTest; /* Disabled during tests due to a bug in react-toolbox that breaks specs when multiline is enabled in the context of unit tests */
 
     return (
       <div className={style}>
         <label>{labelInput}</label>&nbsp;{(isRequired  && <span className="error">*</span> )}
-        <Input data-testid='request-input' className="queerInput" style={{background: 'transparent'}} type={inputType} hint={inputHint} value={value} onChange={this.handleChange.bind(this, label, isRequired)} maxLength={maxLength} multiline={multiline && !isUnitTest} />
+        <Input data-testid='request-input' className="queerInput" style={{background: 'transparent'}} type={inputType} hint={inputHint} value={value} onChange={this.handleChange.bind(this, label, isRequired)} maxLength={maxLength} multiline={multiline} />
         {(showError  &&
           <label className='error errorMessage'>{labelRequiredMessage}</label>)
         }
