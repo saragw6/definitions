@@ -7,6 +7,8 @@ var redirectToHTTPSOrCustomDomain = require('./redirect.js').redirectToHTTPSOrCu
 const app = express();
 const mountRoutes = require('./routes')
 mountRoutes(app);
+const mountSitemap = require('./sitemap')
+mountSitemap(app);
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
