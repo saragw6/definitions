@@ -71,7 +71,7 @@ class ResultCard extends Component {
       <div>
        {this.state.visible && 
         <Card className="result-card">
-        <CardTitle
+        <CardTitle className="result-card-title"
           title={this.lowerCase(this.props.entry["term"])}
         />
         <div className="actions">
