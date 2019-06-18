@@ -49,6 +49,10 @@ a:hover {
   padding: 10vw 0;
 }
 
+.blurb.less-padding {
+  padding: 24px 0;
+}
+
 @media only screen and (min-width: 495px) {
   .header {
     font-weight: 200;

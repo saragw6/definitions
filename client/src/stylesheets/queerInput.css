@@ -19,12 +19,16 @@
 .queerInput span::after {
     background-color: #D083FC;
 }
-.queerInput ._4bZUj:focus:not([disabled]):not([readonly]) ~ ._34120:not(.GRQEP) {
+
+.queerInput ._4bZUj._34NWn~._34120:not(.GRQEP), ._4bZUj:focus:not([disabled]):not([readonly])~._34120:not(.GRQEP), ._4bZUj[type=date]~._34120:not(.GRQEP), ._4bZUj[type=time]~._34120:not(.GRQEP) {
     color: white;
 }
-.queerInput ._4bZUj[type=time]~._34120:not(.GRQEP) {
-    color: white;
-}
+
 .queerInput label {
     left: 4px;
+}
+
+.queerInput textarea {
+    min-height: 36px;
+    resize: vertical;
 }

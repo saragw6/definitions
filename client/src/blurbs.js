@@ -3,7 +3,7 @@ import { welcomeBlurb } from "./utils/TextBlurbs";
 
 function DisagreementBlurb(props) {
   return (
-    <div className="blurb">Disagree with these definitions? <a href={props.addDefinitionUrl} target="new">Add your own</a></div>
+    <div className="blurb less-padding">Disagree with these definitions? <a href={props.addDefinitionUrl} target="new">Add your own</a></div>
   );
 }
 
