@@ -5,13 +5,36 @@ import { theme, ThemeProvider } from '../Libraries/ReactToolboxLibrary';
 
 import '../assets/react-toolbox/theme.css';
 
+const formatForResultList = apiResponse => apiResponse.map(record =>
+    Object.assign(record, {
+      rejectCb: function () {
+        alert("reject reported definition: " + this.term + " id: " + this.entry_id);
+        fetch('/entries/setstatus/3/id/' + this.entry_id, {method: 'POST'});
+      },
+
+      acceptCb: function () {
+        alert("dismiss (accept) reported definition: " + this.term + " id: " + this.entry_id);
+        fetch('/entries/setstatus/2/id/' + this.entry_id, {method: 'POST'});
+      }
+    })
+)
+
 class ReportedDefs extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reported: []
+    }
+  }
 
   componentDidMount(){
     let { auth } = this.props;
 
     if(!auth.isAuthenticated()) { auth.login(); }
-    fetch('/reported').then(res => {return res.json()}).then((res) => this.setState({reported: res}));
+    fetch('/reported')
+        .then(res => {return res.json()})
+        .then(formatForResultList)
+        .then((res) => this.setState({reported: res}));
   }
 
   render() {

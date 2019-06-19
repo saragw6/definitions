@@ -13,7 +13,7 @@ const formatForResultList = apiResponse => apiResponse.map(record =>
     },
 
     acceptCb: function () {
-       alert("reject potential definition: " + this.term + " id: " + this.entry_id);
+       alert("accept potential definition: " + this.term + " id: " + this.entry_id);
        fetch('/entries/setstatus/2/id/' + this.entry_id, {method: 'POST'});
     }
   })
