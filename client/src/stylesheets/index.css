@@ -20,7 +20,7 @@ a:hover {
 
 .header-wrapper {
   margin: -25px -25px 10px -25px;
-  padding: 25px 25px 0px 25px;
+  padding: 25px 25px 0 25px;
   background-image: url("../assets/grainblog.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,10 +31,20 @@ a:hover {
 .header {
   text-align: right;
   color:white;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 40px;
   font-weight: 200;
   display: block;
+}
+
+.sub-header {
+  text-align: right;
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 19px;
+  font-weight: 200;
+  display: block;
+  margin: 0 0 -20px;
 }
 
 .header:hover {
@@ -60,12 +70,12 @@ a:hover {
   }
 
   .header-wrapper {
-    padding: 25px 100px 0px 100px;
+    padding: 25px 100px 0 100px;
   }
 
   .blurb {
     padding: 5vw 15vw;
-    margin: 0px -25px;
+    margin: 0 -25px;
   }
 
 }
@@ -128,7 +138,7 @@ a:hover {
 }
 
 .form .error {
-   padding: 0rem 1rem;
+   padding: 0 1rem;
 }
 
 .logout-button {

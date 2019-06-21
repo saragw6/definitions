@@ -120,6 +120,7 @@ class App extends Component {
     </Helmet>
     <div className="header-wrapper">
       <a className="header" href="/">queer undefined</a>
+      <p className="sub-header">a crowdsourced lgbtq+ dictionary</p>
       <Autocomplete
         allowCreate
         direction="down"
