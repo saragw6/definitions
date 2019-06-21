@@ -11,7 +11,7 @@ const About = () => {
         <p>Queer Undefined defines terms having to do with gender and sexuality. This site is for people who are questioning their gender or sexual identity, and for allies looking to know more about LGBTQ+ terms. </p>
         <p>There are so many words used to describe gender and orientation. The variety of terms can be freeing, but it can also make things trickier for people who aren't familiar with the vocabulary yet.
             The aim of this project is to help people navigate the dozens and dozens of terms out there, whether they are looking to understand themselves or others better.</p>
-        <p> If you want to contribute a definition use <a href={{add_definition_url}} target="_blank">this google form</a>!</p>
+        <p> If you want to contribute a definition use <a href={{add_definition_url}}>this form</a>!</p>
         <h6 className="_2J-aP">Background</h6>
         <p>I often get questions about the meaning of LGBTQ+ terms. I use resources like Human Rights Campaign's <a href="https://www.hrc.org/resources/glossary-of-terms" target="_blank">Glossary of Terms</a>
             &nbsp;to explain terms that I don't personally identify with – but lists like that are limited. They only include so many words, and for each term they just give an impersonal dictionary definition.</p>

@@ -3,7 +3,7 @@ import { welcomeBlurb } from "./utils/TextBlurbs";
 
 function DisagreementBlurb(props) {
   return (
-    <div className="blurb less-padding">Disagree with these definitions? <a href={props.addDefinitionUrl} target="new">Add your own</a></div>
+    <div className="blurb less-padding">Disagree with these definitions? <a href={props.addDefinitionUrl}>Add your own</a></div>
   );
 }
 
@@ -14,7 +14,7 @@ function LoadingDefinitionsBlurb(props) {
 function NoDefinitionsBlurb(props) {
   return (
     <div className="blurb">
-      No definitions yet. You can <a href={props.addDefinitionUrl} target="new">add one</a> or <a href={props.requestDefinitionUrl} target="new">request</a> that this term be defined.
+      No definitions yet. You can <a href={props.addDefinitionUrl}>add one</a> or <a href={props.requestDefinitionUrl}>request</a> that this term be defined.
     </div>
   );
 }

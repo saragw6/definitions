@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom'; //yarn add
+import { Route, Router } from 'react-router-dom';
 import history from './history';
 import { getTermFromPath, searchHashRedirect } from "./utils/UtilityFunctions";
 
@@ -19,13 +19,13 @@ const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route path="/*" render={(props) => {searchHashRedirect(); return <App auth={auth} term={getTermFromPath(props.match.params[0])}/>;} }/>
-          <Route path="/potentialdefs" render={() => <PotentialDefs auth={auth}/>} />
-          <Route path="/potentialterms" render={() => <PotentialTerms auth={auth}/>} />
-          <Route path="/defineform" render={() => <DefineForm/>} />
-          <Route path="/requestform" render={() => <RequestForm/>} />
-          <Route path="/reporteddefs" render={() => <ReportedDefs auth={auth}/>} />
+          <Route path="/define" render={() => <DefineForm/>} />
+          <Route path="/request" render={() => <RequestForm/>} />
           <Route path="/about" render={() => <About/>} />
           <Route path="/glossary" render={() =>  <Glossary/>} />
+          <Route path="/potentialdefs" render={() => <PotentialDefs auth={auth}/>} />
+          <Route path="/potentialterms" render={() => <PotentialTerms auth={auth}/>} />
+          <Route path="/reporteddefs" render={() => <ReportedDefs auth={auth}/>} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback/>

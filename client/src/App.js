@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet'
 import ReactGA from 'react-ga';
-import { trackPageViewInGoogleAnalytics } from "./utils/UtilityFunctions";
+import {getTermFromPath, trackPageViewInGoogleAnalytics} from "./utils/UtilityFunctions";
 import './assets/react-toolbox/theme.css';
 import './stylesheets/App.css';
 import './stylesheets/queerButton.css';
@@ -49,6 +49,12 @@ class App extends Component {
 
   componentDidMount() {
     this.getDefListWithSortAs(this.state.my_term.toLowerCase());
+
+    window.onpopstate = (event) => {
+      let termFromPath = getTermFromPath(window.location.pathname.slice(1)); //slice to remove leading slash
+      this.setState({my_term: termFromPath});
+      this.getDefListWithSortAs(termFromPath.toLowerCase());
+    };
   }
 
   getDefListWithSortAs(searchterm) {
@@ -65,6 +71,15 @@ class App extends Component {
     this.getDefListWithSortAs("");
     history.push("/about");
     trackPageViewInGoogleAnalytics();
+  };
+
+  onTooltipClick = (path) => {
+    return () => {
+      this.setState({my_term: ""});
+      this.getDefListWithSortAs("");
+      history.push(path);
+      trackPageViewInGoogleAnalytics();
+    };
   };
 
   handleTermChange = (value) => {
@@ -134,9 +149,9 @@ class App extends Component {
       <ResultList entries={my_entries} />
       <Tooltips
         auth={this.props.auth}
-        aboutOnClick={this.aboutOnClick.bind(this)}
-        addDefinitionUrl={add_definition_url}
-        requestDefinitionUrl={request_definition_url}
+        aboutOnClick={this.onTooltipClick("/about").bind(this)}
+        addDefinitionOnClick={this.onTooltipClick("/define").bind(this)}
+        requestDefinitionOnClick={this.onTooltipClick("/request").bind(this)}
       />
     </div>
     </ThemeProvider>
