@@ -10,24 +10,24 @@ module.exports = router;
 
 router.get('/', async (req, res, next) => {
 
-  //var queryString = 'SELECT * FROM potential';
-  let queryString = 'SELECT * FROM entry WHERE action = $1';
-  let values = [4];
+  const reportedDefResults = await pool.query(
+    'SELECT * FROM entry WHERE action = $1',
+    [4]
+  )
 
-    (async () => {
-        const client = await pool.connect();
+  reportedDefsWithReason = await Promise.all(reportedDefResults.rows.map(async def => {
+    const reports = await pool.query(
+      'SELECT email, reason, time_submited FROM report WHERE entry_id = $1',
+      [def.entry_id]
+    )
 
-        try {
-            const result = await client.query(queryString, values);
-            res.json(result.rows);
-        } finally {
-            client.release();
-        }
-    })().catch((err) => {
-        res.status(500).send('Error while retrieving reported entries'); //could make more specific
-        return console.error('Error executing query', err.stack);
-    });
+    return {
+      ...def,
+      reports: reports.rows
+    }
+  }))
 
+  res.json(reportedDefsWithReason)
 });
 
 router.post('/', async (req, res) => {
