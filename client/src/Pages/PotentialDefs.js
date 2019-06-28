@@ -13,8 +13,8 @@ const formatForResultList = apiResponse => apiResponse.map(record =>
     },
 
     acceptCb: function () {
-       alert("reject potential definition: " + this.props.entry.term + " id: " + this.props.entry.entry_id);
-       fetch('/entries/setstatus/3/id/' + this.props.entry.entry_id, {method: 'POST'});
+       alert("accept potential definition: " + this.term + " id: " + this.entry_id);
+       fetch('/entries/setstatus/2/id/' + this.entry_id, {method: 'POST'});
     }
   })
 )

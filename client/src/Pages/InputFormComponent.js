@@ -14,7 +14,8 @@ export default class InputForm extends Component {
     inputHint: 'Your answer',
     onChange: () => {},
     labelRequiredMessage: 'This is a required question',
-    maxLength: 50
+    maxLength: 50,
+    multiline: false
   }
 
   handleChange = (label, isRequired, value) => {
@@ -24,8 +25,20 @@ export default class InputForm extends Component {
   };
 
   render() {
-    const { inputType, labelInput, inputHint, labelRequiredMessage,
-      isRequired, value, label, showError, maxLength, onBlur } = this.props;
+    const {
+      inputType,
+      labelInput,
+      inputHint,
+      labelRequiredMessage,
+      isRequired,
+      value,
+      label,
+      showError,
+      maxLength,
+      onBlur,
+      multiline
+    } = this.props;
+
     const style = showError ? errorStyle : normalStyle;
 
     return (
@@ -39,6 +52,7 @@ export default class InputForm extends Component {
           value={value}
           onChange={this.handleChange.bind(this, label, isRequired)}
           onBlur={onBlur}
+          multiline={multiline}
           maxLength={maxLength} />
         {(showError  &&
           <label className='error errorMessage'>{labelRequiredMessage}</label>)
