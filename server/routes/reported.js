@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
 
   reportedDefsWithReason = await Promise.all(reportedDefResults.rows.map(async def => {
     const reports = await pool.query(
-      'SELECT email, reason, time_submited FROM report WHERE entry_id = $1',
+      'SELECT email, reason, time_submitted FROM report WHERE entry_id = $1',
       [def.entry_id]
     )
 
@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
   const now = new Date()
 
   await pool.query(
-    `INSERT INTO report(entry_id, email, reason, time_submited) VALUES($1,$2,$3,$4)`,
+    `INSERT INTO report(entry_id, email, reason, time_submitted) VALUES($1,$2,$3,$4)`,
     [entryId, email, reason, now]
   )
 

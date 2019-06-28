@@ -15,7 +15,7 @@ const addReportTable = db => db.query(
     entry_id SERIAL NOT NULL REFERENCES entry(entry_id),
     email VARCHAR (50) NOT NULL,
     reason VARCHAR (3000) NOT NULL,
-    time_submited TIMESTAMPTZ
+    time_submitted TIMESTAMPTZ
   );`
 )
 
