@@ -28,13 +28,20 @@ class ResultList extends React.Component {
 
   report = (entry, email, reason) => {
     this.hideReportForm()
+
+    const headers = {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    };
+
     fetch('/reported', {
       method: 'POST',
-      body: {
+      headers: headers,
+      body: JSON.stringify({
         entryId: entry.entry_id,
         email,
         reason
-      }
+      })
     })
   }
 
