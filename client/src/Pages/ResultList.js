@@ -46,13 +46,14 @@ class ResultList extends React.Component {
   }
 
   render() {
-    const { entries } = this.props
+    const { entries, auth } = this.props
     const { reportFormActive, reportedEntry } = this.state
 
     const listItems = entries.map((entry) =>
       <ResultCard
         key={entry["entry_id"]}
         entry={entry}
+        isAuthenticated={auth && auth.isAuthenticated()}
         reportCb={() => this.showReportForm(entry)}
       />);
   

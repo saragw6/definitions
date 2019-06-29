@@ -46,7 +46,11 @@ router.get('/:term', async (req, res, next) => {
   //join inner/outer for where author is null?
 
   //get entries that match the term or synonyms
-  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) = $1 AND action=2';
+  var exactQueryString = `SELECT *
+                          FROM entry
+                          INNER JOIN author ON entry.author = author.author_id
+                          WHERE lower(term) = $1 AND (action=2 OR action=4)`;
+
   var synonymQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) IN (SELECT lower(sort_as) FROM synonym WHERE lower(term) = $1) AND action = 2 AND lower(term) != $1'
   //var authorQueryString = 'SLECT name, identity FROM author WHERE author_id = $1'
 

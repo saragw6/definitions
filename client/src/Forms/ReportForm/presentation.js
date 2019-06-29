@@ -4,11 +4,6 @@ import Form from '../FormComponent';
 
 const safely = (entry, field) => entry ? entry[field] : null
 
-// TODO extract styles to CSS
-const identityStyle = {
-  textDecoration: 'underline'
-}
-
 const definitionStyle = {
   fontWeight: 'bold',
   paddingLeft: '2em',

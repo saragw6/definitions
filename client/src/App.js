@@ -147,7 +147,7 @@ class App extends Component {
     {(any_entries) && <DisagreementBlurb addDefinitionUrl={add_definition_url} />}
     {(!any_term && at_starting_url) && <WelcomeBlurb />}
 
-      <ResultList entries={my_entries} />
+      <ResultList entries={my_entries} auth={this.props.auth}/>
       <Tooltips
         auth={this.props.auth}
         aboutOnClick={this.onTooltipClick("/about").bind(this)}

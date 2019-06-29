@@ -8,10 +8,11 @@ import { TooltipButton, Button, Card, CardTitle, CardText } from "../Libraries/R
 
 class ResultCard extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {visible: true}
     this.rejectPotential = this.rejectPotential.bind(this);
     this.acceptPotential = this.acceptPotential.bind(this);
+    this.isAuthenticated = props.isAuthenticated
   }
 
   titleCase(str) {
@@ -49,7 +50,7 @@ class ResultCard extends Component {
   }
 
   reportsFor(def) {
-    if (def === undefined) {
+    if (def === undefined || def.reports === undefined) {
       return
     }
 
@@ -108,7 +109,7 @@ class ResultCard extends Component {
         </CardText>
         {(this.props.entry["action"] === 1) && <div><Button className="reject" label="reject" onClick={this.rejectPotential} raised />
                                      <Button className="accept" label="accept" onClick={this.acceptPotential} raised primary /></div>}
-        {(this.props.entry["action"] === 4) && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
+        {(this.props.entry["action"] === 4 && this.isAuthenticated) && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
                                      <Button className="reject" label="reject" onClick={this.rejectPotential} raised primary /></div>}
       </Card>}
     </div>
