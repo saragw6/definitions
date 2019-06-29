@@ -9,10 +9,11 @@ router.use(bodyParser.urlencoded({extended: true}));
 module.exports = router;
 
 router.get('/', async (req, res, next) => {
-
   const reportedDefResults = await pool.query(
-    'SELECT * FROM entry WHERE action = $1',
-    [4]
+    `SELECT *
+     FROM entry 
+     INNER JOIN author ON entry.author = author.author_id
+     WHERE action=4`
   )
 
   reportedDefsWithReason = await Promise.all(reportedDefResults.rows.map(async def => {

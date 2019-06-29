@@ -48,12 +48,33 @@ class ResultCard extends Component {
     });
   }
 
-   rejectPotential(){
-     this.props.entry.rejectCb()
-     this.setState({visible: false});
-   }
+  reportsFor(def) {
+    if (def === undefined) {
+      return
+    }
 
-   acceptPotential(){
+    const formatDate = isoStr => new Date(isoStr).toLocaleString()
+    const reports = def.reports.map((report, key) =>
+      <div key={key}>
+        <p>
+          {report.reason}
+        </p>
+        <p>
+          - {report.email}, {formatDate(report.time_submitted)}
+        </p>
+        <hr />
+      </div>
+    )
+
+    return (<div><b>Reports:</b>{reports}</div>) 
+  }
+
+  rejectPotential(){
+    this.props.entry.rejectCb()
+    this.setState({visible: false});
+  }
+
+  acceptPotential(){
      this.props.entry.acceptCb()
      this.setState({visible: false});
    }
@@ -82,6 +103,8 @@ class ResultCard extends Component {
          </span>
          <p className="name">{this.props.entry["name"]}</p>
          <p className="identity">{this.props.entry["identity"]}</p>
+
+         {(this.props.entry["action"] === 4) && this.reportsFor(this.props.entry)}
         </CardText>
         {(this.props.entry["action"] === 1) && <div><Button className="reject" label="reject" onClick={this.rejectPotential} raised />
                                      <Button className="accept" label="accept" onClick={this.acceptPotential} raised primary /></div>}
