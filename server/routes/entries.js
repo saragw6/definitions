@@ -120,15 +120,12 @@ router.post('/', async (req, res) => {
 router.post('/setstatus/:action/id/:id', async (req, res) => {
   console.log(req.body);
 
-  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
-  client.connect();
-
   const { action, id } = req.params;
   var last_updated = new Date().toISOString();
   var entryQueryString = 'UPDATE entry SET action=$1, last_updated=$2 WHERE entry_id=$3'
 
   try {
-    await client.query(entryQueryString, [action, last_updated, id]);
+    await pool.query(entryQueryString, [action, last_updated, id]);
     res.send("Set status to " + action + " for entry with id: " + id);
   } catch (err) {
     console.error(err.stack);
