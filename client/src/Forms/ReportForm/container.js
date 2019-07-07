@@ -8,7 +8,9 @@ export default class ReportFormContainer extends React.Component {
     super(props)
     this.state = {}
 
-    this.emailState = TextInputState(this, 'email')
+    this.emailState = TextInputState(this, 'email', [
+      value => value.match(/[^@]+@[^.]+\..+/) ? null : 'Valid email required'
+    ])
     this.emailState.initialize()
 
     this.reasonState = TextInputState(this, 'reason')

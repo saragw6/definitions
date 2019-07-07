@@ -19,7 +19,8 @@ export default class Form extends Component {
     return inputs.map((input, index) => {
       return (<InputForm key={index} label={input.label} value={input.value} labelInput={input.labelInput}
                          isRequired={input.isRequired} showError={input.showError} errorStyle={input.errorStyle}
-                         onChange={input.onChange} multiline={input.multiline} onBlur={input.onBlur}/>)
+                         onChange={input.onChange} multiline={input.multiline} onBlur={input.onBlur}
+                         labelRequiredMessage={input.errorMessage} />)
     })
   }
 

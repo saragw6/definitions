@@ -1,6 +1,10 @@
 
 // Manages the state for a single text input in the form
-const TextInputState = (component, key) => {
+const TextInputState = (component, key, validations = []) => {
+  const _validations = [
+    value => value === '' ? 'This is a required question' : null
+  ].concat(validations)
+  
   const defaultState = {
     value: '',
     error: false
@@ -9,19 +13,26 @@ const TextInputState = (component, key) => {
   const onChange = (label, isRequired, showError, value) => {
     component.setState(prevState => ({
       [key]: {
-        error: value === '',
+        error: prevState.error,
         value
       }
     }))
   }
 
   const onBlur = () => {
-    component.setState(prevState => ({
-      [key]: {
-        error: prevState[key].value === '',
-        value: prevState[key].value
+    return component.setState(prevState => {
+      const errorMessage = _validations
+        .map(validation => validation(prevState[key].value))
+        .find(message => message !== null)
+
+      return {
+        [key]: {
+          error: errorMessage !== undefined,
+          errorMessage,
+          value: prevState[key].value
+        }
       }
-    }))
+    })
   }
 
   return {
@@ -39,6 +50,7 @@ const TextInputState = (component, key) => {
         onChange: onChange,
         onBlur: onBlur,
         showError: state[key].error,
+        errorMessage: state[key].errorMessage,
         value: state[key].value
       }
     },
