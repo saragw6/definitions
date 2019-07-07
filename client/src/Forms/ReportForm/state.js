@@ -1,6 +1,6 @@
 
 // Manages the state for a single text input in the form
-export const TextInputState = (component, key) => {
+const TextInputState = (component, key) => {
   const defaultState = {
     value: '',
     error: false
@@ -55,3 +55,31 @@ export const TextInputState = (component, key) => {
   }
 }
 
+const SnackbarState = component => {
+  const key = 'snackbarState'
+  const defaultState = {
+    active: false
+  }
+  const show = () => component.setState({ [key]: { active: true } })
+  const hide = () => component.setState({ [key]: { active: false } })
+
+  return {
+    initialize: function() {
+      component.state[key] = defaultState
+    },
+
+    createSnackbarParams: function(state) {
+      return {
+        active: state[key].active,
+        hide: hide
+      }
+    },
+
+    show: show
+  }
+}
+
+export {
+  TextInputState,
+  SnackbarState
+}

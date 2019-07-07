@@ -1,6 +1,7 @@
 import React from 'react';
 import {theme, ThemeProvider, Dialog} from "../../Libraries/ReactToolboxLibrary";
 import Form from '../FormComponent';
+import {Snackbar} from '../../Libraries/ReactToolboxLibrary';
 
 const safely = (entry, field) => entry ? entry[field] : null
 
@@ -55,17 +56,29 @@ const ModalButtons = (reportCb, hideCb, preventSubmission) =>
     disabled: preventSubmission
   }]
 
-export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reasonParams, preventSubmission }) =>
+export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reasonParams, preventSubmission, snackbarParams }) =>
   <ThemeProvider theme={theme}>
-    <Dialog actions={ModalButtons(reportCb, hideCb, preventSubmission)}
-            active={active}
-            title={ReportFormTitle(entry)}
-            onOverlayClick={hideCb}>
-  
-            <Form hideTitle={true}
-                  hideButton={true}
-                  content={ReportFormContent(entry)}
-                  inputs={InputParams(emailParams, reasonParams)} />
-    </Dialog>
+    <div>
+      <Dialog actions={ModalButtons(reportCb, hideCb, preventSubmission)}
+              active={active}
+              title={ReportFormTitle(entry)}
+              onOverlayClick={hideCb}>
+    
+              <Form hideTitle={true}
+                    hideButton={true}
+                    content={ReportFormContent(entry)}
+                    inputs={InputParams(emailParams, reasonParams)} />
+      </Dialog>
+      <Snackbar
+        action='Dismiss'
+        type='accept'
+        label='Thank you for helping improve the quality of Queer Undefined!'
+        className='queerSnackbar'
+        active={snackbarParams.active}
+        timeout={3000}
+        onClick={snackbarParams.hide}
+        onTimeout={snackbarParams.hide}
+      />
+    </div>
   </ThemeProvider>
 

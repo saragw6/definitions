@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInputState } from './state'
+import { TextInputState, SnackbarState } from './state'
 import { ReportForm } from './presentation'
 
 export default class ReportFormContainer extends React.Component {
@@ -13,6 +13,9 @@ export default class ReportFormContainer extends React.Component {
 
     this.reasonState = TextInputState(this, 'reason')
     this.reasonState.initialize()
+
+    this.snackbarState = SnackbarState(this)
+    this.snackbarState.initialize()
   }
 
   render() {
@@ -20,6 +23,7 @@ export default class ReportFormContainer extends React.Component {
 
     const emailParams = this.emailState.createInputParams(this.state)
     const reasonParams = this.reasonState.createInputParams(this.state)
+    const snackbarParams = this.snackbarState.createSnackbarParams(this.state)
 
     const resetAnd = fn => () => {
       fn()
@@ -27,7 +31,10 @@ export default class ReportFormContainer extends React.Component {
       this.reasonState.reset()
     }
     const hide = resetAnd(hideCb)
-    const report = resetAnd(() => reportCb(entry, emailParams.value, reasonParams.value))
+    const report = resetAnd(() => {
+      reportCb(entry, emailParams.value, reasonParams.value)
+      this.snackbarState.show()
+    })
 
     const preventSubmission = this.emailState.isErrorOrEmpty(this.state)
       || this.reasonState.isErrorOrEmpty(this.state)
@@ -38,6 +45,7 @@ export default class ReportFormContainer extends React.Component {
                        reportCb={report}
                        emailParams={emailParams}
                        reasonParams={reasonParams}
+                       snackbarParams={snackbarParams}
                        preventSubmission={preventSubmission} />
   }
 }
