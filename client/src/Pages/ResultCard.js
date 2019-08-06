@@ -8,11 +8,11 @@ import { TooltipButton, Button, Card, CardTitle, CardText } from "../Libraries/R
 
 class ResultCard extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {visible: true}
     this.rejectPotential = this.rejectPotential.bind(this);
     this.acceptPotential = this.acceptPotential.bind(this);
-    this.reportEntry = this.reportEntry.bind(this);
+    this.isAuthenticated = props.isAuthenticated
   }
 
   titleCase(str) {
@@ -49,24 +49,40 @@ class ResultCard extends Component {
     });
   }
 
-   rejectPotential(){
-     this.props.entry.rejectCb()
-     this.setState({visible: false});
-   }
+  reportsFor(def) {
+    if (def === undefined || def.reports === undefined) {
+      return
+    }
 
-   acceptPotential(){
+    const formatDate = isoStr => new Date(isoStr).toLocaleString()
+    const reports = def.reports.map((report, key) =>
+      <div key={key}>
+        <p>
+          {report.reason}
+        </p>
+        <p>
+          - {report.email}, {formatDate(report.time_submitted)}
+        </p>
+        <hr />
+      </div>
+    )
+
+    return (<div><b>Reports:</b>{reports}</div>) 
+  }
+
+  rejectPotential(){
+    this.props.entry.rejectCb()
+    this.setState({visible: false});
+  }
+
+  acceptPotential(){
      this.props.entry.acceptCb()
      this.setState({visible: false});
    }
 
-  reportEntry(){
-    if (confirm("Are you sure you want to report this definition for " + this.props.entry.term + "? ")) {
-      fetch('/entries/setstatus/4/id/' + this.props.entry.entry_id, {method: 'POST'});
-      alert("Reported definition for " + this.props.entry.term + ". This will be reviewed ASAP.\nIf you have time, please email info@queerundefined.com with a brief explanation of why you reported this definition. Please include the definition id: " + this.props.entry.entry_id + ". Thank you!");
-    }
-  }
-
   render() {
+    const { reportCb } = this.props
+
     return(
       <div>
        {this.state.visible && 
@@ -76,7 +92,7 @@ class ResultCard extends Component {
         />
         <div className="actions">
          {(this.props.entry["action"] === 1) && this.props.entry["entry_id"]}
-         <TooltipButton className="flag-for-removal-button" icon='outlined_flag' tooltip="flag for removal" onClick={this.reportEntry} />
+         <TooltipButton className="flag-for-removal-button" icon='outlined_flag' tooltip="flag for removal" onClick={reportCb} />
        </div>
        <CardText>
          <span className="definition">
@@ -88,10 +104,12 @@ class ResultCard extends Component {
          </span>
          <p className="name">{this.props.entry["name"]}</p>
          <p className="identity">{this.props.entry["identity"]}</p>
+
+         {(this.props.entry["action"] === 4) && this.reportsFor(this.props.entry)}
         </CardText>
         {(this.props.entry["action"] === 1) && <div><Button className="reject" label="reject" onClick={this.rejectPotential} raised />
                                      <Button className="accept" label="accept" onClick={this.acceptPotential} raised primary /></div>}
-        {(this.props.entry["action"] === 4) && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
+        {(this.props.entry["action"] === 4 && this.isAuthenticated) && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
                                      <Button className="reject" label="reject" onClick={this.rejectPotential} raised primary /></div>}
       </Card>}
     </div>

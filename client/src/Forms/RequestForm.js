@@ -32,8 +32,7 @@ export default class RequestForm extends Component {
 
           this.setState({stateBar: true, Term: '', snackbarMessage: snackBarMessage})
         });
-    }
-  }
+    } }
 
   handleSnackbarClick = (event, instance) => {
     this.setState({ stateBar: false, snackbarMessage: ''});

@@ -46,7 +46,11 @@ router.get('/:term', async (req, res, next) => {
   //join inner/outer for where author is null?
 
   //get entries that match the term or synonyms
-  var exactQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) = $1 AND action=2';
+  var exactQueryString = `SELECT *
+                          FROM entry
+                          INNER JOIN author ON entry.author = author.author_id
+                          WHERE lower(term) = $1 AND (action=2 OR action=4)`;
+
   var synonymQueryString = 'SELECT * FROM entry INNER JOIN author ON entry.author = author.author_id WHERE lower(term) IN (SELECT lower(sort_as) FROM synonym WHERE lower(term) = $1) AND action = 2 AND lower(term) != $1'
   //var authorQueryString = 'SLECT name, identity FROM author WHERE author_id = $1'
 
@@ -114,9 +118,6 @@ router.post('/', async (req, res) => {
 
 //test!! also maybe don't use both "action" and "status", pick one! probably status
 router.post('/setstatus/:action/id/:id', async (req, res) => {
-  const client = new Client({ connectionString: db_url, ssl: ssl_setting });
-  client.connect();
-
   console.log(req.body);
 
   const { action, id } = req.params;
@@ -124,15 +125,12 @@ router.post('/setstatus/:action/id/:id', async (req, res) => {
   var entryQueryString = 'UPDATE entry SET action=$1, last_updated=$2 WHERE entry_id=$3'
 
   try {
-    await client.query(entryQueryString, [action, last_updated, id]);
+    await pool.query(entryQueryString, [action, last_updated, id]);
     res.send("Set status to " + action + " for entry with id: " + id);
   } catch (err) {
     console.error(err.stack);
     res.status(500).send('Error while upating entry status to: ' + action); //could make more specific
   }
-
-  client.end();
-
 });
 
 // router.delete('/:id', async (req, res) => {

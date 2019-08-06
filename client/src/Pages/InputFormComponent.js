@@ -35,6 +35,7 @@ export default class InputForm extends Component {
       label,
       showError,
       maxLength,
+      onBlur,
       multiline
     } = this.props;
 
@@ -43,7 +44,16 @@ export default class InputForm extends Component {
     return (
       <div className={style}>
         <label>{labelInput}</label>&nbsp;{(isRequired  && <span className="error">*</span> )}
-        <Input data-testid='request-input' className="queerInput" style={{background: 'transparent'}} type={inputType} hint={inputHint} value={value} onChange={this.handleChange.bind(this, label, isRequired)} maxLength={maxLength} multiline={multiline} />
+        <Input className="queerInput"
+          data-testid='request-input'
+          style={{background: 'transparent'}}
+          type={inputType}
+          hint={inputHint}
+          value={value}
+          onChange={this.handleChange.bind(this, label, isRequired)}
+          onBlur={onBlur}
+          multiline={multiline}
+          maxLength={maxLength} />
         {(showError  &&
           <label className='error errorMessage'>{labelRequiredMessage}</label>)
         }
