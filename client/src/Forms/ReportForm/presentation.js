@@ -50,7 +50,8 @@ export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reaso
               <Form hideTitle={true}
                     hideButton={true}
                     content={ReportFormContent(entry)}
-                    inputs={InputParams(emailParams, reasonParams)} />
+                    inputs={InputParams(emailParams, reasonParams)}
+                    reporting={true} />
       </Dialog>
       <Snackbar
         action='Dismiss'
