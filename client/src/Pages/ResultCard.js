@@ -67,7 +67,7 @@ class ResultCard extends Component {
       </div>
     )
 
-    return (<div><b>Reports:</b>{reports}</div>) 
+    return (<div><b>Reports:</b>{reports}</div>)
   }
 
   rejectPotential(){
@@ -82,17 +82,24 @@ class ResultCard extends Component {
 
   render() {
     const { reportCb } = this.props
+    const tooltipButton = this.props.reporting
+      ? null
+      : <TooltipButton
+        className='flag-for-removal-button'
+        icon='outlined_flag'
+        tooltip='flag for removal'
+        onClick={reportCb} />
 
     return(
       <div>
-       {this.state.visible && 
-        <Card className="result-card">
+       {this.state.visible &&
+        <Card className='result-card' style={{color: 'black'}}>
         <CardTitle className="result-card-title"
           title={this.lowerCase(this.props.entry["term"])}
         />
         <div className="actions">
          {(this.props.entry["action"] === 1) && this.props.entry["entry_id"]}
-         <TooltipButton className="flag-for-removal-button" icon='outlined_flag' tooltip="flag for removal" onClick={reportCb} />
+         {tooltipButton}
        </div>
        <CardText>
          <span className="definition">
