@@ -38,6 +38,10 @@ export default class Form extends Component {
       </div>
     )
 
+    const reportFormStyles = this.props.reporting
+      ? {padding: '0'}
+      : null
+
     return (
       <div className="flex-container" data-testid='form-container'>
         <form onSubmit={onSubmit} data-testid='request-form'>
