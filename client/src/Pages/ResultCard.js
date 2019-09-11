@@ -82,6 +82,13 @@ class ResultCard extends Component {
 
   render() {
     const { reportCb } = this.props
+    const tooltipButton = this.props.reporting
+      ? null
+      : <TooltipButton
+        className='flag-for-removal-button'
+        icon='outlined_flag'
+        tooltip='flag for removal'
+        onClick={reportCb} />
 
     return(
       <div>
