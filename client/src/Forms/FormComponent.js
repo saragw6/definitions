@@ -41,7 +41,7 @@ export default class Form extends Component {
     return (
       <div className="flex-container" data-testid='form-container'>
         <form onSubmit={onSubmit} data-testid='request-form'>
-          <div className='form'>
+          <div className={'form ' + this.props.formType}>
             {titleDiv}
             {content}
             <span className='error'>* Required</span>
