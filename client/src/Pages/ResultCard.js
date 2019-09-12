@@ -86,7 +86,7 @@ class ResultCard extends Component {
     return(
       <div>
        {this.state.visible &&
-        <Card className='result-card' style={{color: 'black'}}>
+        <Card className='result-card'>
         <CardTitle className="result-card-title"
           title={this.lowerCase(this.props.entry["term"])}
         />
