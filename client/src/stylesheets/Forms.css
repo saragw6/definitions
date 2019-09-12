@@ -1,12 +1,16 @@
 .form {
     background-color: white;
-    padding: 2.7rem 1.7rem;
     font-size: .85rem;
     max-width: 650px;
 }
 
 .form p {
     padding-left: 1rem;
+}
+
+.define,
+.request {
+  padding: 2.7rem 1.7rem;
 }
 
 .page-title {
@@ -49,4 +53,3 @@
     display: flex;
     justify-content: center;
 }
-

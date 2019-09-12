@@ -119,6 +119,7 @@ export default class DefineForm extends React.Component {
     return(
       <ThemeProvider theme={theme}>
         <Form title='Submit a Definition'
+              formType='define'
               ref={instance => { this.formChild = instance; }}
               onSubmit={this.handleSubmit}
               content={this.content()}

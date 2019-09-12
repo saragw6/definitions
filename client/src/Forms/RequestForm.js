@@ -55,6 +55,7 @@ export default class RequestForm extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Form title='Request a Term'
+              formType='request'
               content={this.createContent()}
               inputs={[
                 {labelInput: 'What term do you want defined?', isRequired: true, label:'Term', value: Term,
