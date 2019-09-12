@@ -6,18 +6,11 @@ import ResultCard from '../../Pages/ResultCard';
 
 const safely = (entry, field) => entry ? entry[field] : null
 
-const reportFormContentStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
-
 const ReportFormTitle = entry =>
   `Report "${safely(entry, 'term')}"`
 
 const ReportFormContent = entry => (
-  <div style={reportFormContentStyles}>
+  <div className='report'>
     <ResultCard entry={entry} reporting={true} />
     <p>Thank you for taking the time to report a definition you find offensive. Please include a brief explanation of why this definition should not be included. We also request that you provide your email.</p>
   </div>
@@ -57,8 +50,7 @@ export const ReportForm = ({ entry, active, hideCb, reportCb, emailParams, reaso
               <Form hideTitle={true}
                     hideButton={true}
                     content={ReportFormContent(entry)}
-                    inputs={InputParams(emailParams, reasonParams)}
-                    reporting={true} />
+                    inputs={InputParams(emailParams, reasonParams)} />
       </Dialog>
       <Snackbar
         action='Dismiss'
