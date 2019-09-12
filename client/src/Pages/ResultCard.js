@@ -82,13 +82,6 @@ class ResultCard extends Component {
 
   render() {
     const { reportCb } = this.props
-    const tooltipButton = this.props.reporting
-      ? null
-      : <TooltipButton
-        className='flag-for-removal-button'
-        icon='outlined_flag'
-        tooltip='flag for removal'
-        onClick={reportCb} />
 
     return(
       <div>
@@ -99,7 +92,13 @@ class ResultCard extends Component {
         />
         <div className="actions">
          {(this.props.entry["action"] === 1) && this.props.entry["entry_id"]}
-         {tooltipButton}
+         { !this.props.reporting && (
+           <TooltipButton
+             className='flag-for-removal-button'
+             icon='outlined_flag'
+             tooltip='flag for removal'
+             onClick={reportCb} />
+         )}
        </div>
        <CardText>
          <span className="definition">
