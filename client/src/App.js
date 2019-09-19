@@ -38,11 +38,11 @@ class App extends Component {
       def: '',
       my_term: props.term,
       entries: [],
+      countedTerms: [],
       terms: [],
       entriesLoading: true
     };
 
-    fetch('/terms').then(res => {return res.json()}).then(res => {this.setState({terms: res.sort()})}); //i think this is causing an error
     this.handleChange = this.handleTermChange.bind(this);
 
   }
@@ -55,6 +55,21 @@ class App extends Component {
       this.setState({my_term: termFromPath});
       this.getDefListWithSortAs(termFromPath.toLowerCase());
     };
+
+    fetch('/terms/counts')
+      .then(res => res.json())
+      .then(countedTerms => {
+        this.setState({
+          countedTerms: countedTerms
+        })
+      })
+      .then(() => {
+        this.setState({
+          terms: this.state.countedTerms.map(term => {
+            return term.term
+          })
+        })
+      })
   }
 
   getDefListWithSortAs(searchterm) {
@@ -116,7 +131,7 @@ class App extends Component {
       <meta property="og:site_name" content="Queer Undefined"/>
       <meta property="og:title" content={pageTitle}/>
       <link rel="canonical" href={canonicalUrl} />
-      
+
     </Helmet>
     <div className="header-wrapper">
       <a className="header" href="/">queer undefined</a>
