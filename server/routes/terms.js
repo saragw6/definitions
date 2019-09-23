@@ -40,7 +40,7 @@ router.get('/counts', async (req, res) => {
         res.status(500).send('Error while retrieving term');
         return console.error('Error executing query', err.stack);
       }
-      res.send(result.rows.map(counted_terms => {return counted_terms}));
+      res.send(result.rows);
     })
   })
 })
