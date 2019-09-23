@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/counts', async (req, res) => {
   var query = {
-    text: 'SELECT DISTINCT term, COUNT (term) FROM entry GROUP BY term'
+    text: 'SELECT DISTINCT LOWER(term) AS term, COUNT(term) FROM entry WHERE action=2 GROUP BY term ORDER BY count DESC, term ASC'
   };
 
   pool.connect((err, client, release) => {
