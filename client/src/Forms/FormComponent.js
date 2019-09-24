@@ -19,8 +19,8 @@ export default class Form extends Component {
     return inputs.map((input, index) => {
       return (<InputForm key={index} label={input.label} value={input.value} labelInput={input.labelInput}
                          isRequired={input.isRequired} showError={input.showError} errorStyle={input.errorStyle}
-                         onChange={input.onChange} multiline={input.multiline} maxLength={input.maxLength}
-              />)
+                         onChange={input.onChange} multiline={input.multiline} onBlur={input.onBlur}
+                         labelRequiredMessage={input.errorMessage} />)
     })
   }
 
@@ -29,22 +29,27 @@ export default class Form extends Component {
   }
 
   render() {
-    const {title, content, inputs, onSubmit, onClickSnackBar, onTimeoutSnackBar, stateBar, snackbarMessage} = this.props;
+    const {title, hideTitle, hideButton, content, inputs, onSubmit, onClickSnackBar, onTimeoutSnackBar, stateBar, snackbarMessage} = this.props;
+
+    const titleDiv = hideTitle ? null : (<div className='page-title'>{title}</div>)
+    const buttonDiv = hideButton ? null : (
+      <div className='submitBox'>
+        <Button className='queerButton' onMouseUp={onSubmit} label='Submit' raised primary/>
+      </div>
+    )
+
     return (
       <div className="flex-container" data-testid='form-container'>
         <form onSubmit={onSubmit} data-testid='request-form'>
-          <div className='form'>
-            <div className='page-title'>{title}</div>
+          <div className={'form ' + this.props.formType}>
+            {titleDiv}
             {content}
             <span className='error'>* Required</span>
 
             <div className='inputsBox'>
               {this.createInputs(inputs)}
             </div>
-            <div className='submitBox'>
-              <Button className='queerButton' onMouseUp={onSubmit} label='Submit' raised primary/>
-            </div>
-
+            {buttonDiv}
           </div>
         </form>
 

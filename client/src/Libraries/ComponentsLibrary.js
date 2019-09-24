@@ -2,6 +2,7 @@ import Callback from '../Pages/Callback';
 import PotentialDefs from '../Pages/PotentialDefs';
 import DefineForm from '../Forms/DefineForm';
 import RequestForm from '../Forms/RequestForm';
+import ReportForm from '../Forms/ReportForm';
 import ReportedDefs from '../Pages/ReportedDefs';
 import Glossary from '../Pages/Glossary';
 import About from '../Pages/About';
@@ -12,7 +13,7 @@ import ResultCard from '../Pages/ResultCard';
 import PotentialTerms from '../Pages/PotentialTerms';
 
 
-export { Callback, PotentialDefs, DefineForm,
+export { Callback, PotentialDefs, DefineForm, ReportForm,
     RequestForm, ReportedDefs, Glossary, About, App, Auth, ResultList, ResultCard, PotentialTerms };
 
 

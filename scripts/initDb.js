@@ -3,7 +3,7 @@
 const configFor = require('../server/db/config');
 const connectionPool = require('../server/db/connectionPool');
 const { createUser, createDb, createTables } = require('../server/db/manage');
-const { addActionToRequested } = require('../server/db/migrations')
+const { addActionToRequested, addReportTable } = require('../server/db/migrations')
 const { seedActions } = require('../server/db/seeds')
 const { seedEntries } = require('../server/db/seedEntries')
 const { entries } = require('../server/db/testEntries')
@@ -24,7 +24,7 @@ function initialize(config) {
 
   return createTables(pool)
     .then(() => console.log('Running Migrations...'))
-    .then(() => addActionToRequested(pool))
+    .then(() => addActionToRequested(pool)) .then(() => addReportTable(pool))
 
     .then(() => console.log('Running seeds...'))
     .then(() => seedActions(pool))
