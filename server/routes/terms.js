@@ -27,6 +27,24 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.get('/counts', async (req, res) => {
+  var query = {
+    text: 'SELECT DISTINCT LOWER(term) AS term, COUNT(term) FROM entry WHERE action=2 GROUP BY term ORDER BY count DESC, term ASC'
+  };
+
+  pool.connect((err, client, release) => {
+    if (err) return console.error('Error acquiring client', err.stack);
+    client.query(query, (err, result) => {
+      release();
+      if (err) {
+        res.status(500).send('Error while retrieving term');
+        return console.error('Error executing query', err.stack);
+      }
+      res.send(result.rows);
+    })
+  })
+})
+
 
 
 // router.post('/:term', async (req, res) => {
