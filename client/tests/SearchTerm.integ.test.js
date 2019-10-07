@@ -56,8 +56,8 @@ it('Renders main page and searches for a term', async () => {
     // Assert
     expect(history.location.pathname).toBe('/*')
     expect(inputForSearchTerm.value).toBe('')
-    expect(fetch).toHaveBeenCalledWith('/terms')
-  
+    expect(fetch).toHaveBeenCalledWith('/terms/counts')
+
     // Act
     await fireEvent.change(inputForSearchTerm, {target: {value: 'abrogender'}})
 
