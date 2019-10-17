@@ -113,10 +113,20 @@ class ResultCard extends Component {
 
          {(this.props.entry["action"] === 4) && this.reportsFor(this.props.entry)}
         </CardText>
-        {(this.props.entry["action"] === 1) && <div><Button className="reject" label="reject" onClick={this.rejectPotential} raised />
-                                     <Button className="accept" label="accept" onClick={this.acceptPotential} raised primary /></div>}
-        {(this.props.entry["action"] === 4 && this.isAuthenticated && window.location.pathname === '/reporteddefs') && <div><Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
-                                     <Button className="reject" label="reject" onClick={this.rejectPotential} raised primary /></div>}
+        {
+          (this.props.entry["action"] === 1) &&
+            <div>
+              <Button className="reject" label="reject" onClick={this.rejectPotential} raised />
+              <Button className="accept queerButton" label="accept" onClick={this.acceptPotential} raised />
+            </div>
+        }
+        {
+          (this.props.entry["action"] === 4 && this.isAuthenticated && window.location.pathname === '/reporteddefs') &&
+            <div>
+              <Button className="accept" label="dismiss" onClick={this.acceptPotential} raised />
+              <Button className="reject queerButton" label="reject" onClick={this.rejectPotential} raised />
+            </div>
+        }
       </Card>}
     </div>
     );
