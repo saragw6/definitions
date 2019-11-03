@@ -33,7 +33,7 @@ const ModalButtons = (reportCb, hideCb, preventSubmission) =>
     onClick: hideCb
    }, {
     label: 'Report',
-    primary: true,
+    className: 'queerButton',
     raised: true,
     onClick: reportCb,
     disabled: preventSubmission
