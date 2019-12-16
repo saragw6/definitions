@@ -10,7 +10,7 @@ jobs:
       script: yarn test
     - name: "Unit Tests"
       before_script: cd client && yarn install
-      script: yarn test
+      script: yarn unit
     - name: "Integration Tests"
       before_script: cd client && yarn install
       script: yarn integration

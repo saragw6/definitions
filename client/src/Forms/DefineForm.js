@@ -85,14 +85,14 @@ export default class DefineForm extends React.Component {
 
   content() {
     return(
-      <div className="define-form">
+      <div className="form-header">
         <p>Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don't know!</p>
 
         <p>Help us out by picking a word and telling us what it means to you. Choose any word you think deserves to be in this collection, and feel free to include your personal perspective and explain why the word is meaningful to you. If you want, you can tell us a bit about your identity to help make sure we're including definitions from people with various identities.</p>
 
         <p>To link to other words use tick marks (NOT single quotes). For example, <code>`LGBTQ+`</code> will link to the definition of LGBTQ+.</p>
 
-        <p>Check out the about page to read more about this project.</p>
+        <p>Check out the <a href='https://queerundefined.com/about'>about</a> page to read more about this project.</p>
       </div>
     );
   }

@@ -9,10 +9,10 @@ export default class RequestForm extends Component {
   }
 
   createContent = () => {
-    return (<div>
-      <p>I'm collecting informal definitions to help people understand LGBTQ+ terms they don't know!</p>
+    return (<div className="form-header">
+      <p>Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don't know!</p>
       <p>You can request a term here that you want someone else to define.</p>
-      <p> Check out the <a href='http://queerundefined.com/about'>about</a> page to read more about this project.</p>
+      <p> Check out the <a href='https://queerundefined.com/about'>about</a> page to read more about this project.</p>
     </div>)
   }
 

@@ -12,7 +12,7 @@ exports[`test Definition Form? 1`] = `
         Submit a Definition
       </div>
       <div
-        className="define-form">
+        className="form-header">
         <p>
           Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don\'t know!
         </p>
@@ -27,7 +27,12 @@ exports[`test Definition Form? 1`] = `
            will link to the definition of LGBTQ+.
         </p>
         <p>
-          Check out the about page to read more about this project.
+          Check out the 
+          <a
+            href="https://queerundefined.com/about">
+            about
+          </a>
+           page to read more about this project.
         </p>
       </div>
       <span
