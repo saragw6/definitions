@@ -8,9 +8,9 @@ jobs:
       before_script:
         - ./scripts/initDb.js test
       script: yarn test
-    - stage: "Unit Tests"
-      before_script: cd client
-      script: yarn install && yarn test
-    - stage: "Integration Tests"
-      before_script: cd client
-      script: yarn install && yarn integration
+    - stage: "Unit & Integration Tests"
+      before_script: cd client && yarn install
+      name: "Unit Tests"
+      script: yarn test
+    - name: "Integration Tests"
+      script: yarn integration
