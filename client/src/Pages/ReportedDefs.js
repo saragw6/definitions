@@ -42,7 +42,7 @@ class ReportedDefs extends Component {
     return (
     <ThemeProvider theme={theme}>
       <div>
-        {this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.reported}/>}
+        {this.props.auth.isAuthenticated() && <ResultList style={{display:"flex", flexDirection:"column", alignContent:"center"}} entries={this.state.reported} auth={props.auth}/>}
       </div>
     </ThemeProvider>
     );
