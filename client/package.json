@@ -52,7 +52,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test unit --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
+    "test": "react-scripts test unit integ --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
+    "unit": "react-scripts test unit --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
     "integration": "react-scripts test integ --env=jsdom --setupTestFrameworkScriptFile=./testSetup.js",
     "eject": "react-scripts eject",
     "toolbox": "react-toolbox-themr"

@@ -10,7 +10,7 @@ jobs:
       script: yarn test
     - stage: "Unit Tests"
       before_script: cd client
-      script: yarn install && yarn test
+      script: yarn install && yarn unit
     - stage: "Integration Tests"
       before_script: cd client
       script: yarn install && yarn integration
