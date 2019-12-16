@@ -24,6 +24,8 @@ const InputParams = (emailParams, reasonParams) =>
   }, {
     labelInput: 'Why should this definition be taken down?',
     isRequired: true,
+    maxLength: 3000,
+    multiline: true,
     ...reasonParams
   }]
 
