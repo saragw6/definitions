@@ -115,7 +115,7 @@ class App extends Component {
     const locationStrings = window.location.href.split(".com/");
     const canonicalUrl = "https://www.queerundefined.com/" + locationStrings[1];
 
-    const description = this.state.entries ?
+    const description = this.state.entries[0] ?
       this.state.my_term + ": " + this.state.entries[0]["definition"] :
       "Queer Undefined: a crowd-sourced dictionary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined.";
 
