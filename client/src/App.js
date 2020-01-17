@@ -110,11 +110,14 @@ class App extends Component {
   render() {
     const terms = this.state.terms;
     const my_entries = this.state.entries;
-    const pageTitle = this.state.my_term === "" ? "Queer Undefined" : this.state.my_term + " | Queer Undefined" ;
-    const description = this.state.my_term === "about" ? "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined." : "Queer Undefined: a crowd-sourced dictonary of LGBTQ+ terms. Find the definition of " + this.state.my_term + " and more! You can also submit your own definitions or request a word you want to be defined."
+    const pageTitle = this.state.my_term === "" ? "Queer Undefined" : "Meaning of " + this.state.my_term + " | Queer Undefined" ;
     const showLoading = this.state.entriesLoading;
     const locationStrings = window.location.href.split(".com/");
     const canonicalUrl = "https://www.queerundefined.com/" + locationStrings[1];
+
+    const description = this.state.entries[0] ?
+      this.state.my_term + ": " + this.state.entries[0]["definition"] :
+      "Queer Undefined: a crowd-sourced dictionary of LGBTQ+ terms. You can also submit your own definitions or request a word you want to be defined.";
 
     const any_term = this.state.my_term !== "";
     const any_entries = my_entries && my_entries.length > 0;
