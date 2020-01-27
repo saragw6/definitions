@@ -127,11 +127,16 @@ export default class DefineForm extends React.Component {
     return result;
   }
 
+  parseTerms(data) {
+    console.log("data", data);
+    return data.map(row => {return row.term})
+  }
+
   componentDidMount() {
-    fetch('/requested')
+    fetch('/requested?action=accepted')
         .then(response => response.json())
         .then(data => {
-          let requestedTerms = data.length ? this.getRandom(data, 10) : ['No requests yet'];
+          let requestedTerms = data.length ? this.getRandom(this.parseTerms(data), 10) : ['No requests yet'];
           this.setState({ requestedTerms: requestedTerms })
         });
   }

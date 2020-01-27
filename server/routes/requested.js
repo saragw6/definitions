@@ -15,9 +15,9 @@ router.get('/', async (req, res) => {
   const action = actions[req.query.action] || 1
 
   try {
-    const requestedTerms = await unwrap(db, 'SELECT term FROM requested WHERE fulfilled=0 AND action=$1', [action])
-    
-    res.send(requestedTerms.map(row => {return row.term.toLowerCase()}))
+    const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0 AND action=$1', [action])
+
+    res.send(requestedTerms)
   } catch (err) {
     console.log(err)
     res.status(500).send({ message: 'Error while retrieving requested entries' }); //could make more specific
