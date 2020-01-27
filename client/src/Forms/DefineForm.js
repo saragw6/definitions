@@ -85,7 +85,7 @@ export default class DefineForm extends React.Component {
   }
 
   content() {
-    let requestedChips = this.state.requestedTerms.map(term => {return <Chip>{term}</Chip>});
+    let requestedChips = this.state.requestedTerms.map(term => {return <Chip key={term}>{term}</Chip>});
 
     return(
       <div className="form-header">

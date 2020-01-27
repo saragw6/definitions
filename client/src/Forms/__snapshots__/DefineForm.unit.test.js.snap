@@ -34,11 +34,21 @@ exports[`test Definition Form? 1`] = `
           </a>
            page to read more about this project.
         </p>
+        <p>
+          The following terms were requested by other users. If you know what one means, please contribute a definition!
+        </p>
+        <div
+          className="_3Iv9P"
+          data-react-toolbox="chip">
+          <span>
+            Loading requests...
+          </span>
+        </div>
       </div>
-      <span
+      <p
         className="error">
         * Required
-      </span>
+      </p>
       <div
         className="inputsBox">
         InputFormComponent(Mock)

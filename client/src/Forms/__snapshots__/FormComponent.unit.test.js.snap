@@ -12,10 +12,10 @@ exports[`test termRequest? 1`] = `
         Request a Term
       </div>
       <div />
-      <span
+      <p
         className="error">
         * Required
-      </span>
+      </p>
       <div
         className="inputsBox">
         <div
