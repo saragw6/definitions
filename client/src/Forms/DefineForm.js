@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from './FormComponent';
-import {theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
+import {Chip, theme, ThemeProvider} from "../Libraries/ReactToolboxLibrary";
 
 import '../stylesheets/defineForm.css';
 
@@ -23,6 +23,7 @@ export default class DefineForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      requestedTerms: ['Loading requests...'],
       stateBar: false,
       snackbarMessage: '',
       ...defaultFieldValues
@@ -84,6 +85,8 @@ export default class DefineForm extends React.Component {
   }
 
   content() {
+    let requestedChips = this.state.requestedTerms.map(term => {return <Chip>{term}</Chip>});
+
     return(
       <div className="form-header">
         <p>Queer Undefined is a collection of informal definitions to help people understand LGBTQ+ terms they don't know!</p>
@@ -93,6 +96,10 @@ export default class DefineForm extends React.Component {
         <p>To link to other words use tick marks (NOT single quotes). For example, <code>`LGBTQ+`</code> will link to the definition of LGBTQ+.</p>
 
         <p>Check out the <a href='https://queerundefined.com/about'>about</a> page to read more about this project.</p>
+
+        <p>The following terms were requested by other users. If you know what one means, please contribute a definition!</p>
+
+        {requestedChips}
       </div>
     );
   }
@@ -104,6 +111,30 @@ export default class DefineForm extends React.Component {
   handleSnackbarTimeout = (event, instance) => {
     this.setState({ stateBar: false, snackbarMessage: '' });
   };
+
+  //randomly display 10 requested terms
+  getRandom(arr, n) {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+      return arr;
+    while (n--) {
+      var x = Math.floor(Math.random() * len);
+      result[n] = arr[x in taken ? taken[x] : x];
+      taken[x] = --len in taken ? taken[len] : len;
+    }
+    return result;
+  }
+
+  componentDidMount() {
+    fetch('/requested')
+        .then(response => response.json())
+        .then(data => {
+          let requestedTerms = this.getRandom(data, 10) || ['No requests yet!'];
+          this.setState({ requestedTerms: requestedTerms })
+        });
+  }
 
   render() {
     const {

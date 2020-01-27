@@ -8,7 +8,8 @@ import Tooltip from 'react-toolbox/lib/tooltip';
 import { Card, CardTitle, CardText} from 'react-toolbox/lib/card';
 import FontIcon from 'react-toolbox/lib/font_icon';
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
+import Chip from 'react-toolbox/lib/chip/Chip';
 
 let TooltipButton = new Tooltip(Button);
 
-export { Input, Autocomplete, theme, ThemeProvider, Button, Snackbar, TooltipButton, Card, CardTitle, CardText, FontIcon, Dialog };
+export { Input, Autocomplete, theme, ThemeProvider, Button, Snackbar, TooltipButton, Card, CardTitle, CardText, FontIcon, Dialog, Chip };

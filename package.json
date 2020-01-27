@@ -16,6 +16,7 @@
     "db:clean": "./scripts/cleanDb.js",
     "test": "NODE_ENV=test mocha ./test --exit",
     "client:build": "cd client && yarn build && rm -rf ../server/static/ && mv build/ ../server/static/",
+    "client:start": "cd client && yarn start",
     "start": "node server/index.js",
     "start:watch": "supervisor server/index.js",
     "heroku-postbuild": "cd client && yarn && yarn build && rm -rf ../server/static/ && mv build/ ../server/static/"
