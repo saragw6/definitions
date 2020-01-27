@@ -28,10 +28,10 @@ exports[`test Request Form? 1`] = `
            page to read more about this project.
         </p>
       </div>
-      <span
+      <p
         className="error">
         * Required
-      </span>
+      </p>
       <div
         className="inputsBox">
         <div

@@ -20,5 +20,5 @@ require('./reportedTest')();
 require('./requestedTest')();
 //require('./synonymsTest')();
 //require('./termsTest')();
-//require('./entriesTest');
+require('./entriesTest')();
 tearDown();

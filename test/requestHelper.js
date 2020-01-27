@@ -15,7 +15,7 @@ const transform = (config) => response => {
   return response;
 }
 
-const verb = f => (path, config = {}) => f(uri(path)).then(transform(config));
+const verb = f => (path, config = {}, options) => f(uri(path), options).then(transform(config));
 const get = verb(getPm);
 const post = verb(postPm);
 

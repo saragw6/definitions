@@ -6,7 +6,8 @@
       "BUTTON",
       "TOOLTIP",
       "DIALOG",
-      "SNACKBAR"
+      "SNACKBAR",
+      "CHIP"
     ],
     "customProperties": {
       "animation-duration": "0.3s",
