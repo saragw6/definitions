@@ -131,7 +131,7 @@ export default class DefineForm extends React.Component {
     fetch('/requested')
         .then(response => response.json())
         .then(data => {
-          let requestedTerms = this.getRandom(data, 10) || ['No requests yet!'];
+          let requestedTerms = data.length ? this.getRandom(data, 10) : ['No requests yet'];
           this.setState({ requestedTerms: requestedTerms })
         });
   }
