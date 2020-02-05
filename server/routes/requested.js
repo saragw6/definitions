@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
   try {
     const requestedTerms = await unwrap(db, 'SELECT * FROM requested WHERE fulfilled=0 AND action=$1', [action])
-    
+
     res.send(requestedTerms)
   } catch (err) {
     console.log(err)

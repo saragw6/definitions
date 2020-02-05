@@ -30,7 +30,6 @@ router.get('/potentials', async (req, res, next) => {
                 res.status(500).send('Error while retrieving potential entries'); //could make more specific
                 return console.error('Error executing query', err.stack);
             }
-            console.log(result.rows);
             res.json(result.rows);
         })
     })
@@ -74,7 +73,6 @@ router.post('/', async (req, res) => {
   const client = new Client({ connectionString: db_url, ssl: ssl_setting });
   client.connect();
 
-  console.log(req.body);
 
   const {term, definition, time_submitted, action} = req.body;
   name = req.body.name ? req.body.name : '';
@@ -90,7 +88,7 @@ router.post('/', async (req, res) => {
   //this is too general but it works:
   //change this to make it flip the fulfilled flag -- TEST THIS
   //var requestedQueryString = 'DELETE FROM requested USING entry WHERE (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;';
-  var requestedQueryString = 'UPDATE requested SET fulfilled = 1 FROM entry WHERE entry.term = requested.term AND (SELECT COUNT (entry.term) FROM entry WHERE term=requested.term AND action=2) > 1;'
+  // var requestedQueryString = 'UPDATE requested SET fulfilled = 1 FROM entry WHERE EXISTS (SELECT entry.term FROM entry WHERE entry.term=requested.term AND entry.action=2);'
 
   try {
     //insert term
@@ -101,8 +99,8 @@ router.post('/', async (req, res) => {
       result = await client.query(authorIdQueryString, [name, identity]);
     }
     const author_id = result.rows[0]["author_id"];
-    //delete requested if must
-    await client.query(requestedQueryString); //v general query but it works
+    //delete requested if must //should this be in /setstatus instead?
+    // await client.query(requestedQueryString); //v general query but it works
     // //insert entry!
     await client.query(entryQueryString, [term, definition, explanation, author_id, action, time_submitted, last_updated]);
     res.send("Inserted entry for term: " + term);
@@ -117,14 +115,23 @@ router.post('/', async (req, res) => {
 
 
 //test!! also maybe don't use both "action" and "status", pick one! probably status
-router.post('/setstatus/:action/id/:id', async (req, res) => {
-  console.log(req.body);
+router.post('/setstatus/:action/id/:id/term/:term', async (req, res) => {
 
-  const { action, id } = req.params;
+  const { action, id, term } = req.params;
   var last_updated = new Date().toISOString();
   var entryQueryString = 'UPDATE entry SET action=$1, last_updated=$2 WHERE entry_id=$3'
 
+  // UPDATE requested SET fulfilled = 1 FROM entry WHERE requested.term=$1 AND (SELECT COUNT (entry.term) FROM entry WHERE entry.term=$1 AND entry.action=2) > 1);
+
+  // var requestedQueryString = 'UPDATE requested SET fulfilled = 1 FROM entry WHERE requested.term=$1 AND (SELECT COUNT (entry.term) FROM entry WHERE entry.term=$1 AND entry.action=2) > 1);'
+  //UPDATE requested SET fulfilled = 1 FROM entry WHERE EXISTS (SELECT term FROM entry WHERE entry.term= AND entry.action=2) AND requested.term=$1
+  var requestedQueryString = 'UPDATE requested SET fulfilled = 1 FROM entry WHERE EXISTS (SELECT term FROM entry WHERE entry.term=$1 AND entry.action=2) AND requested.term=$1;'
+
   try {
+    if (action === "2") {
+      console.log("term: ", term, " action: 2")
+      await pool.query(requestedQueryString, [term]);
+    }
     await pool.query(entryQueryString, [action, last_updated, id]);
     res.send("Set status to " + action + " for entry with id: " + id);
   } catch (err) {

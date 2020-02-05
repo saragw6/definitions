@@ -44,7 +44,7 @@ export default class Form extends Component {
           <div className={'form ' + this.props.formType}>
             {titleDiv}
             {content}
-            <span className='error'>* Required</span>
+            <p className='error'>* Required</p>
 
             <div className='inputsBox'>
               {this.createInputs(inputs)}

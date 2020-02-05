@@ -9,12 +9,12 @@ const formatForResultList = apiResponse => apiResponse.map(record =>
   Object.assign(record, {
     rejectCb: function () {
        alert("reject potential definition: " + this.term + " id: " + this.entry_id);
-       fetch('/entries/setstatus/3/id/' + this.entry_id, {method: 'POST'});
+       fetch('/entries/setstatus/3/id/' + this.entry_id + '/term/' + this.term, {method: 'POST'});
     },
 
     acceptCb: function () {
        alert("accept potential definition: " + this.term + " id: " + this.entry_id);
-       fetch('/entries/setstatus/2/id/' + this.entry_id, {method: 'POST'});
+       fetch('/entries/setstatus/2/id/' + this.entry_id + '/term/' + this.term, {method: 'POST'});
     }
   })
 )

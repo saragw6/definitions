@@ -4,10 +4,6 @@
     max-width: 650px;
 }
 
-.form p {
-    padding-left: 1rem;
-}
-
 .define,
 .request {
   padding: 2.7rem 1.7rem;
@@ -22,14 +18,13 @@
 
 .page-title {
     font-size: 2.3rem;
-    padding-left: 1rem;
     padding-bottom: 1rem;
 }
 
 .formInput {
     width: 100%;
     background-color: white;
-    padding: 1.3rem 1rem;
+    padding: 1.3rem 0;
     font-size: 1.3rem;
     margin: 0.15rem 0rem;
 }
@@ -41,7 +36,6 @@
 
 .submitBox {
     margin-top: 34px;
-    padding-left: 1rem;
 }
 
 .formInputError {
