@@ -42,12 +42,12 @@ _Production Mode:_
 # Some history:
 This started as a prototype that I made relatively quickly and thought no one would have interest in, which means there's a lot of anti-patterns.
 I used Google forms and spreadsheets to collect definitions online before I even had the site built (to gauge interest).
-So right now unfortunately users submit entries and requested terms through a google form which feeds into a google spreadsheet.
-I download the entries as JSON and run a script to enter them in the db.
-Ideally there will soon be forms hosted on queer undefined itself that post directly to the db.
+So at first users submit entries and requested terms through a google form which feeds into a google spreadsheet.
+I downloaded the entries as JSON and ran a script to enter them in the db.
+Now there are forms directly on QU where users can define & request terms. There's also a form for reporting an offensive definition.
 
 #### About Auth0:
-* There are two pages (potentialdefs & reporteddefs) that should only be accessible to an Admin user, these are secured using Auth0
+* There are some pages (potentialdefs, reporteddefs, and potentialterms) that should only be accessible to an Admin user, these are secured using Auth0
 
 ## About the data:
 
@@ -66,11 +66,11 @@ Ideally there will soon be forms hosted on queer undefined itself that post dire
 * Don't currently have a UI to insert them in the db
 
 ### Requested terms:
-* Currently they go into a spreadsheet and I edit the google form to display the requested terms that haven’t been defined yet
-* Ideally they would be submitted into the db and there would be a native (non google) form on QU where people could define terms, and that would query the db to display the requested terms that have not been “fulfilled” aka defined
+* Users submit them through a form. they go into the db with "potential" status just like definitions
+* Currently working on a feature to show requested terms – that have been moderator-approved but haven't been defined – on the definition form to inspire folks to define them.
 
 ### Actions
-* Should probably be called Statuses. potential, accepted, reported, rejected.
+* Should probably be called Statuses. potential, accepted, reported, rejected. Enum 1-4.
 
 ## App.js
 `client/App.js` needs to be refactored. Here's a breakdown to make the current mass of code a little more understandable.
