@@ -24,7 +24,10 @@ function initialize(config) {
 
   return createTables(pool)
     .then(() => console.log('Running Migrations...'))
-    .then(() => addActionToRequested(pool)) .then(() => addReportTable(pool))
+    .then(() => addActionToRequested(pool))
+    .then(() => console.log('added action to requested'))
+    .then(() => addReportTable(pool))
+    .then(()  => console.log("Added report table"))
 
     .then(() => console.log('Running seeds...'))
     .then(() => seedActions(pool))

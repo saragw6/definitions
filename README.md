@@ -4,6 +4,13 @@
 * Requires postgresql >=9.2 to be installed and running
 * `yarn setup` installs dependencies, configures database, runs the tests, and finally runs the app
 
+#### Setup with docker
+* Requires Docker to be installed and running
+* Run `docker run --rm --name pg-docker --env-file .env.list -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data  postgres`
+* Run `QUEER_DOCKER=ofc npm run db:init`
+  * Note: the 'QUEER_DOCKER' environment variable can have any value, we only check if it exists
+  * Note: You can use "npm run db:init" or "yarn run db:init"
+
 #### To run locally
 
 _Development:_
