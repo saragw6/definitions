@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "auth0-js": "^9.6.1",
+    "auth0-js": "^9.13.2",
     "babel-polyfill": "^6.26.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
